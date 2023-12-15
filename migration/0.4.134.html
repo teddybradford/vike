@@ -40,9 +40,8 @@
 <span class="line"><span style="color:#24292F">   const pageContext = await renderPage(pageContextInit)</span></span>
 <span class="line"><span style="color:#24292F">   const { httpResponse } = pageContext</span></span>
 <span class="line"><span style="color:#24292F">   if (!httpResponse) return next()</span></span>
-<span class="line"><span style="color:#82071E">-  const { body, statusCode, contentType, earlyHints } = httpResponse</span></span>
-<span class="line"><span style="color:#116329">+  const { body, statusCode, headers, earlyHints } = httpResponse</span></span>
-<span class="line"><span style="color:#24292F">   if (res.writeEarlyHints) res.writeEarlyHints({ link: earlyHints.map((e) =&gt; e.earlyHintLink) })</span></span>
+<span class="line"><span style="color:#82071E">-  const { body, statusCode, contentType } = httpResponse</span></span>
+<span class="line"><span style="color:#116329">+  const { body, statusCode, headers } = httpResponse</span></span>
 <span class="line"><span style="color:#24292F">   res.status(statusCode)</span></span>
 <span class="line"><span style="color:#82071E">-  res.type(contentType)</span></span>
 <span class="line"><span style="color:#116329">+  headers.forEach(([name, value]) =&gt; res.setHeader(name, value))</span></span>
