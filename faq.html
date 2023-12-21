@@ -30,8 +30,7 @@
 <h2 id="can-i-use-vike-to-achieve-what-i-want">Can I use Vike to achieve what I want?</h2>
 <p>Vike praises itself of being a highly (if not the most) flexible frontend framework: if you stumble upon a use case you believe you cannot achieve with Vike then <a href="https://github.com/vikejs/vike/discussions">let us know</a>.</p>
 <h2 id="why-is-css-leaked-to-other-pages">Why is CSS leaked to other pages?</h2>
-<p>With <a href="/client-routing">Client Routing</a>, when navigating from one page to another, the CSS of the previous page isn&#x27;t removed. This means the CSS of the previous page will also apply to the next page.</p>
-<p>In a nutshell: CSS is leaky.</p>
+<p>With <a href="/client-routing">Client Routing</a>, when navigating from one page to another, the CSS of the previous page isn&#x27;t removed. This means the CSS of the previous page will also apply to the next page. In other words: CSS is leaky.</p>
 <p>For example:</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="jsx" data-theme="default"><code data-language="jsx" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/terms-of-service/+Page.jsx</span></span>
 <span class="line"></span>
@@ -60,7 +59,7 @@
 <p>If you use <strong>Vue</strong> with <code>.vue</code> files, then Vue already scopes the CSS for you: the CSS you define in a <code>.vue</code> file is guaranteed to apply only to the component defined in that <code>.vue</code> file.</p>
 </blockquote>
 <blockquote>
-<p>If you use <strong>React</strong> or <strong>Solid</strong>, then we recommend using inline styles and/or CSS-in-JS libraries (or Tailwind), while minimizing global CSS. Inline style aren&#x27;t global and, therfore, aren&#x27;t leaky.</p>
+<p>If you use <strong>React</strong> or <strong>Solid</strong>, then we recommend using inline styles and/or a CSS-in-JS library (or Tailwind), while minimizing global CSS. Inline style aren&#x27;t global and, therfore, aren&#x27;t leaky.</p>
 </blockquote>
 <blockquote>
 <p><strong>CSS is injected by Vite</strong> in the form of <code>&lt;style&gt;</code> tags. If you&#x27;re curious why Vite doesn&#x27;t remove old <code>&lt;style&gt;</code> tags, consider that removing CSS is problematic during the transient state upon page navigation (it would lead to <a href="https://en.wikipedia.org/wiki/Flash_of_unstyled_content">FOUC</a>). In general, regardless of Vite&#x27;s behavior, it&#x27;s a good practice to narrow down CSS selectors.</p>
