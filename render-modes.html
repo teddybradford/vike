@@ -58,11 +58,11 @@
 <span class="line"><span style="color:#953800">}</span></span></code></pre></div>
 <p>SPA + SSR React example:</p>
 <ul>
-<li>Custom <code>renderMode</code> config: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes-v1/renderer/+config.h.ts">/examples/render-modes-v1/renderer/+config.h.ts</a></li>
-<li>SPA page: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes-v1/pages/spa/+Page.jsx">/examples/render-modes-v1/pages/spa/+Page.jsx</a></li>
-<li>SPA page&#x27;s <code>renderMode</code> config value: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes-v1/pages/spa/+renderMode.js">/examples/render-modes-v1/pages/spa/+renderMode.js</a></li>
-<li>SSR page: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes-v1/pages/ssr/+Page.jsx">/examples/render-modes-v1/pages/ssr/+Page.jsx</a></li>
-<li>SSR page&#x27;s <code>renderMode</code> config value: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes-v1/pages/ssr/+renderMode.js">/examples/render-modes-v1/pages/ssr/+renderMode.js</a></li>
+<li>Custom <code>renderMode</code> config: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes/renderer/+config.h.ts">/examples/render-modes/renderer/+config.h.ts</a></li>
+<li>SPA page: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes/pages/spa/+Page.jsx">/examples/render-modes/pages/spa/+Page.jsx</a></li>
+<li>SPA page&#x27;s <code>renderMode</code> config value: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes/pages/spa/+renderMode.js">/examples/render-modes/pages/spa/+renderMode.js</a></li>
+<li>SSR page: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes/pages/ssr/+Page.jsx">/examples/render-modes/pages/ssr/+Page.jsx</a></li>
+<li>SSR page&#x27;s <code>renderMode</code> config value: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes/pages/ssr/+renderMode.js">/examples/render-modes/pages/ssr/+renderMode.js</a></li>
 </ul>
 <p><strong>2. Render hooks (SPA only)</strong></p>
 <p>If we only have SPA pages, then we adapt our <code>onRenderHtml()</code> and <code>onRenderClient()</code> hooks like the following.</p>
@@ -201,15 +201,15 @@ only defined in the browser.</p>
 <span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">hydrateDom</span><span style="color:#24292F">(root, Page)</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<p>React example: <a href="https://github.com/vikejs/vike/tree/main/examples/render-modes-v1/">/examples/render-modes-v1/</a>.</p>
+<p>React example: <a href="https://github.com/vikejs/vike/tree/main/examples/render-modes/">/examples/render-modes/</a>.</p>
 <ul>
-<li>Server-side hook: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes-v1/renderer/+onRenderHtml.jsx">/examples/render-modes-v1/renderer/+onRenderHtml.jsx</a></li>
-<li>Client-side hook: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes-v1/renderer/+onRenderClient.jsx">/examples/render-modes-v1/renderer/+onRenderClient.jsx</a></li>
-<li>Custom <code>renderMode</code> config: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes-v1/renderer/+config.h.ts">/examples/render-modes-v1/renderer/+config.h.ts</a></li>
-<li>SPA page: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes-v1/pages/spa/+Page.jsx">/examples/render-modes-v1/pages/spa/+Page.jsx</a></li>
-<li>SPA page&#x27;s <code>renderMode</code> config value: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes-v1/pages/spa/+renderMode.js">/examples/render-modes-v1/pages/spa/+renderMode.js</a></li>
-<li>SSR page: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes-v1/pages/ssr/+Page.jsx">/examples/render-modes-v1/pages/ssr/+Page.jsx</a></li>
-<li>SSR page&#x27;s <code>renderMode</code> config value: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes-v1/pages/ssr/+renderMode.js">/examples/render-modes-v1/pages/ssr/+renderMode.js</a></li>
+<li>Server-side hook: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes/renderer/+onRenderHtml.jsx">/examples/render-modes/renderer/+onRenderHtml.jsx</a></li>
+<li>Client-side hook: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes/renderer/+onRenderClient.jsx">/examples/render-modes/renderer/+onRenderClient.jsx</a></li>
+<li>Custom <code>renderMode</code> config: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes/renderer/+config.h.ts">/examples/render-modes/renderer/+config.h.ts</a></li>
+<li>SPA page: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes/pages/spa/+Page.jsx">/examples/render-modes/pages/spa/+Page.jsx</a></li>
+<li>SPA page&#x27;s <code>renderMode</code> config value: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes/pages/spa/+renderMode.js">/examples/render-modes/pages/spa/+renderMode.js</a></li>
+<li>SSR page: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes/pages/ssr/+Page.jsx">/examples/render-modes/pages/ssr/+Page.jsx</a></li>
+<li>SSR page&#x27;s <code>renderMode</code> config value: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes/pages/ssr/+renderMode.js">/examples/render-modes/pages/ssr/+renderMode.js</a></li>
 </ul>
 <h2 id="ssr">SSR</h2>
 <p>The Vike boilerplates and documentation use SSR by default.</p>
@@ -256,8 +256,8 @@ only defined in the browser.</p>
 <span class="line"><span style="color:#24292F">console.</span><span style="color:#8250DF">log</span><span style="color:#24292F">(</span><span style="color:#0A3069">&quot;I&#x27;m the page&#x27;s only browser-side JavaScript line.&quot;</span><span style="color:#24292F">)</span></span></code></pre></div>
 <p>React example:</p>
 <ul>
-<li>Zero JavaScript: <a href="https://github.com/vikejs/vike/tree/main/examples/render-modes-v1/pages/html-only/">/examples/render-modes-v1/pages/html-only/</a></li>
-<li>Minimal JavaScript: <a href="https://github.com/vikejs/vike/tree/main/examples/render-modes-v1/pages/html-js/">/examples/render-modes-v1/pages/html-js/</a></li>
+<li>Zero JavaScript: <a href="https://github.com/vikejs/vike/tree/main/examples/render-modes/pages/html-only/">/examples/render-modes/pages/html-only/</a></li>
+<li>Minimal JavaScript: <a href="https://github.com/vikejs/vike/tree/main/examples/render-modes/pages/html-js/">/examples/render-modes/pages/html-js/</a></li>
 </ul>
 <p>See also <a href="/client">API<!-- --> &gt; <!-- -->Client Entry</a>.</p><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/render-modes.page.server.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
         
