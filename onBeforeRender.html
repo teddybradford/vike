@@ -169,8 +169,10 @@ automatically integrating data fetching tools (RPC with Telefunc/tRPC, REST with
 <span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// `cache` contains the data fetched by GraphQL</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">cache</span><span style="color:#24292F">, </span><span style="color:#0550AE">html</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderToHtml</span><span style="color:#24292F">(&lt;</span><span style="color:#116329">Page</span><span style="color:#24292F"> /&gt;)</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    pageHtml: html,</span></span>
-<span class="line"><span style="color:#24292F">    cache</span></span>
+<span class="line"><span style="color:#24292F">    pageContext: {</span></span>
+<span class="line"><span style="color:#24292F">      pageHtml: html,</span></span>
+<span class="line"><span style="color:#24292F">      cache</span></span>
+<span class="line"><span style="color:#24292F">    }</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
 <div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+onBeforeRenderClient.jsx</span></span>
