@@ -75,15 +75,12 @@ you call <a href="/render"><code>throw render(abortStatusCode)</code></a>.</p>
 <p>The <a href="/usePageContext">API<!-- --> &gt; <code>usePageContext()</code></a> UI component hook allows you to access <a href="/pageContext"><code>pageContext</code></a> from any UI component.</p>
 </blockquote>
 <p>The <code>pageContext.abortReason</code> and <code>pageContext.abortStatusCode</code> values are set by <a href="/render"><code>throw render(abortStatusCode, abortReason)</code></a>, and <code>pageContext.is404</code> is set by Vike.</p>
-<p>The error page is rendered if:</p>
+<p>The error page is rendered when:</p>
 <ol>
 <li>The URL didn&#x27;t match the route of any of your pages (<code>404 Page Not Found</code>).</li>
-<li>One of your hooks threw an error (<code>500 Internal Error</code>).</li>
-<li>You called <a href="/render"><code>throw render(abortStatusCode)</code></a>.</li>
+<li>Your code has a bug (<code>500 Internal Error</code>), technically speaking: one of your hooks threw an error.</li>
+<li>One of your hooks used <a href="/render"><code>throw render(abortStatusCode)</code></a>, for examle: <code>throw render(401, &quot;You don&#x27;t have the permission to access this page.&quot;)</code>.</li>
 </ol>
-<blockquote>
-<p>The error page is also rendered when Vike throws an unexpected error (it has a bug), but since Vike has <a href="https://github.com/vikejs/vike/issues?q=is%3Aissue+is%3Aopen+label%3A%22bug+%3Aboom%3A%22">no known bug</a> this is very rare.</p>
-</blockquote>
 <h2 id="pre-rendering">Pre-rendering</h2>
 <p>If you use <a href="/pre-rendering">pre-rendering</a>, then Vike uses the error page to generate
 <code>/dist/client/404.html</code>.</p>
