@@ -42,7 +42,7 @@
 <p>Allowing you to install the error tracking code of services such as <a href="https://sentry.io/">Sentry</a>, <a href="https://www.bugsnag.com/">Bugsnag</a>, <a href="https://rollbar.com/">Rollbar</a>, or your own custom error tracking.</p>
 <h2 id="verbose">Verbose</h2>
 <p>Vike prettifies transpilation errors, such as errors thrown by <a href="https://esbuild.github.io/">esbuild</a> and <a href="https://babeljs.io/">Babel</a>.</p>
-<p>While Vike is careful about not removing relevant information, it may mistakenly do so. In that case <a href="https://github.com/vikejs/vike/issues/new?assignees=&amp;labels=bug+%3Aboom%3A&amp;projects=&amp;template=bug_report.yml">create a new GitHub issue</a>. Until a Vike maintainer fixes the issue you can use the debug flag <code>DEBUG=vike:error</code>.</p>
+<p>While Vike is careful about not removing relevant information, it may mistakenly do so. In that case <a href="https://github.com/vikejs/vike/issues/new">create a new GitHub issue</a>. Until a Vike maintainer fixes the issue you can use the debug flag <code>DEBUG=vike:error</code>.</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="shell" data-theme="default"><code data-language="shell" data-theme="default"><span class="line"><span style="color:#6E7781"># Show verbose and original errors</span></span>
 <span class="line"><span style="color:#24292F">DEBUG=vike:error npm run dev</span></span></code></pre></div>
 <p>For even more verbose errors:</p>
