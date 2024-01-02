@@ -45,19 +45,18 @@
 <span class="line"><span style="color:#116329">+ // /renderer/+onRenderClient.js</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#82071E">- export { render }</span></span>
-<span class="line"><span style="color:#116329">+ export default render</span></span></code></pre></div>
+<span class="line"><span style="color:#116329">+ export { render as onRenderClient }</span></span></code></pre></div>
 <div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- // /renderer/_default.page.server.js</span></span>
 <span class="line"><span style="color:#116329">+ // /renderer/+onRenderHtml.js</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#82071E">- export { render }</span></span>
-<span class="line"><span style="color:#116329">+ export default render</span></span></code></pre></div>
+<span class="line"><span style="color:#116329">+ export { render as onRenderHtml }</span></span></code></pre></div>
 <p>If you&#x27;ve defined a global <code>onBeforeRender()</code> hook and/or <code>passToClient</code>:</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- // /renderer/_default.page.server.js</span></span>
 <span class="line"><span style="color:#116329">+ // /renderer/+onBeforeRender.js</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#82071E">- export { onBeforeRender }</span></span>
-<span class="line"><span style="color:#82071E">- export const passToClient = [&#x27;pageProps&#x27;]</span></span>
-<span class="line"><span style="color:#116329">+ export default onBeforeRender</span></span></code></pre></div>
+<span class="line"><span style="color:#24292F">  export { onBeforeRender }</span></span>
+<span class="line"><span style="color:#82071E">- export const passToClient = [&#x27;pageProps&#x27;]</span></span></code></pre></div>
 <div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#116329">+ // /renderer/+config.h.js</span></span>
 <span class="line"><span style="color:#116329">+ </span></span>
 <span class="line"><span style="color:#116329">+ export default {</span></span>
@@ -86,23 +85,20 @@
 <div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- // /renderer/_error.page.js</span></span>
 <span class="line"><span style="color:#116329">+ // /pages/_error/+Page.js</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#82071E">- export { Page }</span></span>
-<span class="line"><span style="color:#116329">+ export default Page</span></span></code></pre></div>
+<span class="line"><span style="color:#24292F">  export { Page }</span></span></code></pre></div>
 <p><strong>2. Migrate <code>/pages/**/*.page.*</code></strong></p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- // /pages/some-page/index.page.ts</span></span>
 <span class="line"><span style="color:#116329">+ // /pages/some-page/+Page.ts</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#82071E">- export { Page }</span></span>
-<span class="line"><span style="color:#116329">+ export default Page</span></span></code></pre></div>
+<span class="line"><span style="color:#24292F">  export { Page }</span></span></code></pre></div>
 <div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- // /pages/some-page/index.page.server.ts</span></span>
 <span class="line"><span style="color:#116329">+ // /pages/some-page/+onBeforeRender.ts</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#82071E">- export { onBeforeRender }</span></span>
-<span class="line"><span style="color:#116329">+ export default onBeforeRender</span></span></code></pre></div>
+<span class="line"><span style="color:#24292F">  export { onBeforeRender }</span></span></code></pre></div>
 <div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- // /pages/some-page/index.page.route.ts</span></span>
 <span class="line"><span style="color:#116329">+ // /pages/some-page/+route.ts</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#24292F">export default route</span></span></code></pre></div>
+<span class="line"><span style="color:#24292F">  export default route</span></span></code></pre></div>
 <blockquote>
 <p>Each page now lives in its own directory.</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="bash" data-theme="default"><code data-language="bash" data-theme="default"><span class="line"><span style="color:#6E7781"># ✅ V1 design</span></span>
