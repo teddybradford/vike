@@ -27,10 +27,9 @@
 <a href="/data"><code>data()</code> hook</a> instead, and/or <a href="/vike-packages">Vike extensions</a> for
 automatically integrating data fetching tools (RPC with Telefunc/tRPC, REST with Tanstack Query, GraphQL with Apollo/Relay, etc).</p>
 </blockquote>
-<p>The <code>onBeforeRender()</code> hook enables deep and complex integrations with data fetching tools and techniques.</p>
-<p>For simple data fetching needs, use the <a href="/data"><code>data()</code> hook</a> instead.</p>
-<p>As a strategy to decide which one to use, first try to use the <code>data()</code> hook: use <code>onBeforeRender()</code> only as a fallback if <code>data()</code> doesn&#x27;t work out for you.</p>
-<p>You can use the <code>onBeforeRender()</code> hook to orchestrate multiple <a href="/meta">custom hooks and settings</a>, see:</p>
+<p>The most notable use case for the <code>onBeforeRender()</code> hook is deep integration with data fetching tools.</p>
+<p>For simple data fetching needs, use the <a href="/data"><code>data()</code> hook</a> instead. As a strategy to decide which one to use, always first try to use <code>data()</code> and only use <code>onBeforeRender()</code> as a fallback if <code>data()</code> doesn&#x27;t work out.</p>
+<p>The <code>onBeforeRender()</code> hook can be used to orchestrate multiple <a href="/meta">custom hooks and settings</a>, see:</p>
 <ul>
 <li>
 <a href="#onbeforerender-meta"><code>onBeforeRender()</code> + <code>meta</code></a>
@@ -39,8 +38,9 @@ automatically integrating data fetching tools (RPC with Telefunc/tRPC, REST with
 <a href="#advanced-example">Advanced example</a>
 </li>
 </ul>
+<p>Another common use case is to use <code>onBeforeRender()</code> as a global initializing hook. (As a temporary workaround until <a href="https://github.com/vikejs/vike/issues/962">#962 - New hook <code>onBoot()</code></a> is implemented.)</p>
 <h2 id="onbeforerender-vs-data"><code>onBeforeRender()</code> VS <code>data()</code></h2>
-<p>The central difference between the two hooks is that the value returned by the <code>data()</code> hook always sets the value of <code>pageContext.data</code>, whereas <code>onBeforeRender()</code> can set any and multiple <code>pageContext</code> values.</p>
+<p>The central difference between the two hooks is that the value returned by <code>data()</code> always sets the value of <code>pageContext.data</code>, whereas <code>onBeforeRender()</code> can set multiple <code>pageContext</code> values.</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/some-page/+data.js</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">data</span><span style="color:#24292F">() {</span></span>
@@ -64,7 +64,6 @@ automatically integrating data fetching tools (RPC with Telefunc/tRPC, REST with
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
 <p>Another difference is that the entire <code>pageContext.data</code> value is always sent to the client-side, whereas with <code>onBeforeRender()</code> you can (and have to) decide which values are sent to the client-side by using <a href="/passToClient"><code>passToClient</code></a>.</p>
 <p>In a nutshell: while <code>onBeforeRender()</code> requires more manual work, it also gives you more control.</p>
-<p>Also, a common use case is to use <code>onBeforeRender()</code> as a global initializing hook.</p>
 <h2 id="onbeforerender-meta"><code>onBeforeRender()</code> + <code>meta</code></h2>
 <p>Using <code>onBeforeRender()</code> together with custom hooks and settings (see <a href="/meta"><code>meta</code></a>) is a powerful technique enabling you to implement your own tailored DX.</p>
 <p>For example.</p>
