@@ -33,6 +33,11 @@
 <span class="line"><span style="color:#24292F">    noExternal: [</span><span style="color:#0A3069">&#x27;some-library&#x27;</span><span style="color:#24292F">]</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<p>You may need to add several npm packages to <code>ssr.noExternal</code>, because CJS/ESM issues sometime cascade down along the &quot;<code>noExternal</code> boundary&quot; as you add npm packages to <code>ssr.noExternal</code>.</p>
+<p>If you were to add all your npm packages to <code>ssr.noExternal</code> then you&#x27;d likely get rid of all CJS/ESM issues, but you&#x27;d slow down development speed in a non-negligible way (because of <a href="/lazy-transpiling">Vite&#x27;s lazy transpiling approach</a>). Therefore, a sensible strategy is to eagerly add npm packages to <code>ssr.noExternal</code> until you get rid of all your CJS/ESM issues and, then, remove npm packages from <code>ssr.noExternal</code> to fasten development speed.</p>
+<blockquote>
+<p>Don&#x27;t hesitate to <a href="/faq#can-i-reach-out-for-help">reach out for help</a> if you run into CJS/ESM issues.</p>
+</blockquote>
 <blockquote>
 <p>The reason why many npm packages contain erroneous code is because frameworks like Next.js transpile the server-side code of npm packages. (Whereas Vite lets Node.js directly execute npm packages in order to improve DX speed: Vite transpiles only what is strictly needed). Where Next.js is permissive and is able to process invalid code, Node.js is strict and crashes upon invalid code. By adding npm packages to <a href="https://vitejs.dev/config/ssr-options.html#ssr-noexternal"><code>vite.config.js &gt; ssr.noExternal</code></a> we replicate the behavior of frameworks like Next.js.</p>
 </blockquote>
@@ -148,6 +153,66 @@ Did you mean to import ./some-dir/index.js?
 exception is being raised, making it harder to understand which library is broken. See
 <a href="https://github.com/vikejs/vike/discussions/1235">here</a> an example of this.</p>
 </blockquote>
+<h3 id="react-invalid-component">React invalid component</h3>
+<p>The following is a very common React error and the root cause is usually a CJS/ESM issue.</p>
+<div class="with-line-break_white-space"><pre><code>Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it&#x27;s defined in, or you might have mixed up default and named imports.
+    at renderElement (/home/romu/code/vike/node_modules/.pnpm/react-dom@18.2.0_react@18.2.0/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6047:9)
+    at renderNodeDestructiveImpl (/home/romu/code/vike/node_modules/.pnpm/react-dom@18.2.0_react@18.2.0/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6108:11)
+    at renderNodeDestructive (/home/romu/code/vike/node_modules/.pnpm/react-dom@18.2.0_react@18.2.0/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6080:14)
+    at renderElement (/home/romu/code/vike/node_modules/.pnpm/react-dom@18.2.0_react@18.2.0/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:5975:9)
+    at renderNodeDestructiveImpl (/home/romu/code/vike/node_modules/.pnpm/react-dom@18.2.0_react@18.2.0/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6108:11)
+    at renderNodeDestructive (/home/romu/code/vike/node_modules/.pnpm/react-dom@18.2.0_react@18.2.0/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6080:14)
+    at retryTask (/home/romu/code/vike/node_modules/.pnpm/react-dom@18.2.0_react@18.2.0/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6532:5)
+    at performWork (/home/romu/code/vike/node_modules/.pnpm/react-dom@18.2.0_react@18.2.0/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6580:7)
+    at /home/romu/code/vike/node_modules/.pnpm/react-dom@18.2.0_react@18.2.0/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6904:12
+    at scheduleWork (/home/romu/code/vike/node_modules/.pnpm/react-dom@18.2.0_react@18.2.0/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:78:3)
+</code></pre></div>
+<p>And <code>but got: object</code> is also common.</p>
+<div class="with-line-break_white-space"><pre><code>Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it&#x27;s defined in, or you might have mixed up default and named imports.
+</code></pre></div>
+<p>The problem here is that the stack trace doesn&#x27;t say which React component is invalid. The following patch will provide you with that information.</p>
+<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// node_modules/react/cjs/react.production.min.js</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E7781">// ...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E7781">// Insert this at this end of the file</span></span>
+<span class="line"><span style="color:#0550AE">exports</span><span style="color:#24292F">.createElement </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">debugEl</span><span style="color:#24292F">(</span><span style="color:#0550AE">exports</span><span style="color:#24292F">.createElement);</span></span>
+<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">debugEl</span><span style="color:#24292F">(</span><span style="color:#953800">fn</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> (</span><span style="color:#CF222E">...</span><span style="color:#953800">args</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">el</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> args[</span><span style="color:#0550AE">0</span><span style="color:#24292F">];</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (</span><span style="color:#CF222E">typeof</span><span style="color:#24292F"> el </span><span style="color:#CF222E">===</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;object&#x27;</span><span style="color:#24292F"> </span><span style="color:#CF222E">&amp;&amp;</span><span style="color:#24292F"> </span><span style="color:#CF222E">!</span><span style="color:#24292F">el.$$typeof </span><span style="color:#CF222E">&amp;&amp;</span><span style="color:#24292F"> </span><span style="color:#CF222E">!</span><span style="color:#24292F">el.getModuleId) {</span></span>
+<span class="line"><span style="color:#24292F">      console.</span><span style="color:#8250DF">error</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;Error: INVALID REACT ELEMENT:&#x27;</span><span style="color:#24292F">);</span></span>
+<span class="line"><span style="color:#24292F">      console.</span><span style="color:#8250DF">error</span><span style="color:#24292F">(el);</span></span>
+<span class="line"><span style="color:#24292F">      console.</span><span style="color:#8250DF">error</span><span style="color:#24292F">(</span><span style="color:#CF222E">new</span><span style="color:#24292F"> </span><span style="color:#0550AE">Error</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;INVALID REACT ELEMENT, ORIGIN:&#x27;</span><span style="color:#24292F">));</span></span>
+<span class="line"><span style="color:#24292F">      globalThis.process?.</span><span style="color:#8250DF">exit</span><span style="color:#24292F">?.(</span><span style="color:#0550AE">1</span><span style="color:#24292F">);</span></span>
+<span class="line"><span style="color:#24292F">    }</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#8250DF">fn</span><span style="color:#24292F">(</span><span style="color:#CF222E">...</span><span style="color:#24292F">args);</span></span>
+<span class="line"><span style="color:#24292F">  }</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// node_modules/react/cjs/react-jsx-runtime.production.min.js</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E7781">// ...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E7781">// Insert this at this end of the file</span></span>
+<span class="line"><span style="color:#0550AE">exports</span><span style="color:#24292F">.jsx </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">debugEl</span><span style="color:#24292F">(</span><span style="color:#0550AE">exports</span><span style="color:#24292F">.jsx);</span></span>
+<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">debugEl</span><span style="color:#24292F">(</span><span style="color:#953800">fn</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> (</span><span style="color:#CF222E">...</span><span style="color:#953800">args</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">el</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> args[</span><span style="color:#0550AE">0</span><span style="color:#24292F">];</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (</span><span style="color:#CF222E">typeof</span><span style="color:#24292F"> el </span><span style="color:#CF222E">===</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;object&#x27;</span><span style="color:#24292F"> </span><span style="color:#CF222E">&amp;&amp;</span><span style="color:#24292F"> </span><span style="color:#CF222E">!</span><span style="color:#24292F">el.$$typeof </span><span style="color:#CF222E">&amp;&amp;</span><span style="color:#24292F"> </span><span style="color:#CF222E">!</span><span style="color:#24292F">el.getModuleId) {</span></span>
+<span class="line"><span style="color:#24292F">      console.</span><span style="color:#8250DF">error</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;Error: INVALID REACT ELEMENT:&#x27;</span><span style="color:#24292F">);</span></span>
+<span class="line"><span style="color:#24292F">      console.</span><span style="color:#8250DF">error</span><span style="color:#24292F">(el);</span></span>
+<span class="line"><span style="color:#24292F">      console.</span><span style="color:#8250DF">error</span><span style="color:#24292F">(</span><span style="color:#CF222E">new</span><span style="color:#24292F"> </span><span style="color:#0550AE">Error</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;INVALID REACT ELEMENT, ORIGIN:&#x27;</span><span style="color:#24292F">));</span></span>
+<span class="line"><span style="color:#24292F">      globalThis.process?.</span><span style="color:#8250DF">exit</span><span style="color:#24292F">?.(</span><span style="color:#0550AE">1</span><span style="color:#24292F">);</span></span>
+<span class="line"><span style="color:#24292F">    }</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#8250DF">fn</span><span style="color:#24292F">(</span><span style="color:#CF222E">...</span><span style="color:#24292F">args);</span></span>
+<span class="line"><span style="color:#24292F">  }</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<blockquote>
+<p>This patch works with React <code>18.2.0</code> (and probably with most other React versions). Let us know if it doesn&#x27;t work with your React version.</p>
+</blockquote>
+<p>The debug logs will help you find which React component is <code>undefined</code> (or an <code>object</code>). You&#x27;ll likely discover that the React component is imported, while the import value is <code>undefined</code> (or an object instead of a React component function/class) because of some CJS/ESM interoperability quirks.</p>
+<p>If the component lives inside <code>node_modules/</code>, then consider <a href="#solution">adding the npm package(s) to <code>ssr.noExternal</code></a>.</p>
+<p>Once you fixed the problem, you can remove the patch.</p>
 <h2 id="see-also">See also</h2>
 <ul>
 <li><a href="https://github.com/vikejs/vike/issues/621">List of examples</a></li>
