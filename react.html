@@ -29,10 +29,10 @@
 <p>The design can be broken down into three parts:</p>
 <ul>
 <li>✅ Server Actions</li>
-<li>✅ Partial Hydration</li>
+<li>✅ Progressive Hydration</li>
 <li><img style="height: 1.275em; width: 1.275em; vertical-align: -20%" draggable="false" alt="🚧" src="https://twemoji.maxcdn.com/v/13.1.1/svg/1f6a7.svg"/> Server Components</li>
 </ul>
-<p>Vike supports <a href="/stream#partial-hydration">Partial Hydration</a> as well as <a href="/RPC">Server Actions</a>. Server Components is work-in-progress.</p>
+<p>Vike supports <a href="/stream#progressive-hydration">Progressive Hydration</a> as well as <a href="/RPC">Server Actions</a>. Server Components is work-in-progress.</p>
 <blockquote>
 <p>Instead of using <a href="https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations">Server Actions using <code>&#x27;use server&#x27;</code></a>, we recommend using <a href="https://telefunc.com/">Telefunc</a> which we believe to be a superior design. That said, a <a href="https://github.com/vikejs/vike-react"><code>vike-react</code></a> fork can be developed that supports <code>&#x27;use server&#x27;</code>.</p>
 </blockquote>
@@ -43,7 +43,7 @@
 </blockquote>
 <p>The most significant added value of the RSC architecture is its novel approach to SSR streaming which unlocks many exciting features around data fetching. Not only does Vike has first-class support for SSR streaming, but it also supports it in a unique way that enables both an easy DX as well as flexibility: you can integrate tools with the SSR stream manually yourself (e.g. using <a href="https://github.com/brillout/react-streaming#readme">react-streaming</a>), or you can use built-in integrations such as <a href="https://github.com/vikejs/vike-react/tree/main/packages/vike-react-query#readme"><code>vike-react-query</code></a> and <a href="https://telefunc.com">Telefunc</a>.</p>
 <blockquote>
-<p>SSR streaming enables you to define components that can fetch data, while each of these data-fetching components are loaded and rendered independently of each other: the user sees a UI with non-data-fetching parts that are rendered quickly, and data-fetching parts that are rendered as data comes in. This leads to a significantly improved (perceived) page speed. See <a href="/stream#partial-hydration">Partial Hydration</a>.</p>
+<p>SSR streaming enables you to define components that can fetch data, while each of these data-fetching components are loaded and rendered independently of each other: the user sees a UI with non-data-fetching parts that are rendered quickly, and data-fetching parts that are rendered as data comes in. This leads to a significantly improved (perceived) page speed. See <a href="/stream#progressive-hydration">Progressive Hydration</a>.</p>
 </blockquote>
 <h2 id="manual-integration">Manual Integration</h2>
 <p>Instead of using a Vike extension, you can manually integrate React yourself, giving you full control over the integration of not only React itself but also React libraries.</p>
