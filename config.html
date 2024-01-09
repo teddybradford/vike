@@ -143,7 +143,7 @@
 <span class="line"><span style="color:#953800">  </span><span style="color:#24292F">title: </span><span style="color:#0A3069">&#x27;My Vike app&#x27;</span></span>
 <span class="line"><span style="color:#953800">}</span></span></code></pre></div>
 <blockquote>
-<p><code>config.title</code> is provided by the <a href="/extensions#ui-framework">Vike extension <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code></a>. If you don&#x27;t use <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code> then you can define <code>config.title</code> yourself, see <a href="/meta">API<!-- --> &gt; <code>meta</code></a>.</p>
+<p><code>config.title</code> is provided by the <a href="/extensions#ui-framework">UI framework Vike extension (<code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>)</a>. If you don&#x27;t use <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code> then you can define <code>config.title</code> yourself, see <a href="/meta">API<!-- --> &gt; <code>meta</code></a>.</p>
 </blockquote>
 <p>The <code>+config.h.js</code> file of pages (<code>/pages/some-page/+config.h.js</code>) can override default values defined by <code>/pages/+config.h.js</code>.</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/about/+config.h.js</span></span>
@@ -183,7 +183,7 @@ admin-panel/pages/index/+Page.js
 <p>The hooks <code>admin-panel/renderer/+onRender{Html,Client}.js</code> apply as default to all pages <code>admin-panel/**/+Page.js</code>.</p>
 <p>The <code>renderer/</code> directory doesn&#x27;t add any functionality: <code>/renderer/+config.h.js</code> is equivalent to <code>/pages/+config.h.js</code>. It&#x27;s just an (optional) convenience for moving renderer files outside of <code>pages/</code> (to avoid cluttering the <code>pages/</code> directory). That way, the entire renderer logic can be organized and tucked into a single place <code>renderer/</code>.</p>
 <blockquote>
-<p>The <code>renderer/</code> directory is usually only used by users who don&#x27;t use a <a href="/extensions#ui-framework">Vike extension <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code></a>.</p>
+<p>The <code>renderer/</code> directory is usually only used by users who don&#x27;t use a <a href="/extensions#ui-framework">UI framework Vike extension (<code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>)</a>.</p>
 </blockquote><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/config.page.server.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
         
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
