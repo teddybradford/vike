@@ -46,12 +46,12 @@
 <blockquote>
 <p>You can also define the <code>Page</code> value by setting <a href="/config#config-h-js"><code>+config.h.js &gt; export default { Page }</code></a>.</p>
 </blockquote>
-<p>What happens with the <code>Page</code> value is determined by the <a href="/vike-packages#ui-framework">UI framework integration package <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code></a>. Alternatively, for complete control over the UI framework integration, you can <a href="#manual-integration">manually integrate</a> the UI framework yourself.</p>
+<p>What happens with the <code>Page</code> value is determined by the <a href="/extensions#ui-framework">Vike extension <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code></a>. Alternatively, for complete control over the UI framework integration, you can <a href="#manual-integration">manually integrate</a> the UI framework yourself.</p>
 <h2 id="manual-integration">Manual integration</h2>
-<p>Vike in itself never uses the <code>Page</code> value: it just makes the value available at <code>pageContext.Page</code>.
+<p>Vike itself never uses the <code>Page</code> value: it just makes the value available at <code>pageContext.Page</code>.
 The <code>pageContext.Page</code> value is typically used by the <a href="/onRenderHtml"><code>onRenderHtml()</code></a> and <a href="/onRenderClient"><code>onRenderClient()</code></a> hooks: these two hooks essentially determine how the <code>Page</code> value is rendered to HTML and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM</a>.</p>
-<p>The <a href="/vike-packages#ui-framework">UI framework integration package <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code></a> implements the <code>onRenderHtml()</code> and <code>onRenderClient()</code> hooks, so that you don&#x27;t have to implement them: everything just works like a regular framework such as Next.js or Nuxt.</p>
-<p>Instead of using a UI framework integration package, you can integrate your favorite UI framework yourself: you then have complete control over the UI framework integration.</p>
+<p>The <a href="/extensions#ui-framework">Vike extension <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code></a> implements the <code>onRenderHtml()</code> and <code>onRenderClient()</code> hooks, so that you don&#x27;t have to implement them: everything just works like a regular framework such as Next.js or Nuxt.</p>
+<p>Instead of using <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>, you can integrate your favorite UI framework yourself: you then have complete control over the UI framework integration.</p>
 <p>Here is a minimal example of manually integrating a UI framework:</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/hello/+Page.js</span></span>
 <span class="line"><span style="color:#6E7781">// Environment: browser and server (configurable)</span></span>
