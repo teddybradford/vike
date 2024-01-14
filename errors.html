@@ -37,10 +37,12 @@
 <span class="line"></span>
 <span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (pageContext.errorWhileRendering) {</span></span>
 <span class="line"><span style="color:#24292F">      console.</span><span style="color:#8250DF">error</span><span style="color:#24292F">(pageContext.errorWhileRendering)</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">/* Or if you&#x27;re using a server middleware that handles errors:</span></span>
-<span class="line"><span style="color:#6E7781">      throw pageContext.errorWhileRendering</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">/* If you&#x27;re using a server middleware that handles errors:</span></span>
+<span class="line"><span style="color:#6E7781">      if (!pageContext.httpResponse) {</span></span>
+<span class="line"><span style="color:#6E7781">        throw pageContext.errorWhileRendering</span></span>
+<span class="line"><span style="color:#6E7781">      }</span></span>
 <span class="line"><span style="color:#6E7781">      */</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">/* Or an error tracker:</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">/* If you&#x27;re using a error tracker:</span></span>
 <span class="line"><span style="color:#6E7781">      myErrorTracker.intercept(pageContext.errorWhileRendering)</span></span>
 <span class="line"><span style="color:#6E7781">      */</span></span>
 <span class="line"><span style="color:#24292F">    }</span></span>
