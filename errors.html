@@ -36,23 +36,34 @@
 <span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageContext</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderPage</span><span style="color:#24292F">({ urlOriginal: request.url })</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (pageContext.errorWhileRendering) {</span></span>
-<span class="line"><span style="color:#24292F">      console.</span><span style="color:#8250DF">error</span><span style="color:#24292F">(pageContext.errorWhileRendering)</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">/* If you&#x27;re using a server middleware that handles errors:</span></span>
-<span class="line"><span style="color:#6E7781">      if (!pageContext.httpResponse) {</span></span>
-<span class="line"><span style="color:#6E7781">        throw pageContext.errorWhileRendering</span></span>
-<span class="line"><span style="color:#6E7781">      }</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">/* Vike already calls console.error() so we don&#x27;t need the following line.</span></span>
+<span class="line"><span style="color:#6E7781">      console.error(pageContext.errorWhileRendering)</span></span>
 <span class="line"><span style="color:#6E7781">      */</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">/* If you&#x27;re using a error tracker:</span></span>
-<span class="line"><span style="color:#6E7781">      myErrorTracker.intercept(pageContext.errorWhileRendering)</span></span>
-<span class="line"><span style="color:#6E7781">      */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// If you&#x27;re using an error tracker:</span></span>
+<span class="line"><span style="color:#24292F">      myErrorTracker.</span><span style="color:#8250DF">intercept</span><span style="color:#24292F">(pageContext.errorWhileRendering)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// If you&#x27;re using a server middleware that handles errors:</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (</span><span style="color:#CF222E">!</span><span style="color:#24292F">pageContext.httpResponse) {</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// Don&#x27;t throw if there is a pageContext.httpResponse, otherwise</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// the error page won&#x27;t be rendered.</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#CF222E">throw</span><span style="color:#24292F"> pageContext.errorWhileRendering</span></span>
+<span class="line"><span style="color:#24292F">      }</span></span>
+<span class="line"></span>
 <span class="line"><span style="color:#24292F">    }</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// pageContext.httpResponse is missing if:</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">//  - You didn&#x27;t define an error page.</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">//  - There is an error and you didn&#x27;t define an error page.</span></span>
 <span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">//  - Your error page has a bug and, therefore, couldn&#x27;t be rendered.</span></span>
 <span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (</span><span style="color:#CF222E">!</span><span style="color:#24292F">pageContext.httpResponse) </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#0550AE">null</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// The HTTP response of the page. This can be the error page.</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">return</span><span style="color:#24292F"> pageContext.httpResponse</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"><span style="color:#24292F">})</span></span></code></pre></div>
+<blockquote>
+<p>Vike calls <code>console.error(err)</code> for any error it encounters. With the upcoming <a href="https://github.com/vikejs/vike/issues/1438">new hook <code>onLog()</code> (#1439)</a> you&#x27;ll have control over Vike&#x27;s logging.</p>
+</blockquote>
 <p>See also <a href="/error-page">API<!-- --> &gt; <!-- -->Error Page</a>.</p>
 <p>You can use any error tracker, such as <a href="https://sentry.io/">Sentry</a>, <a href="https://www.bugsnag.com/">Bugsnag</a>, <a href="https://rollbar.com/">Rollbar</a>, or your own custom error tracking. For that, make sure to use the error tracker&#x27;s server-side interceptor. For example with Sentry:</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#0550AE">*</span><span style="color:#24292F"> </span><span style="color:#CF222E">as</span><span style="color:#24292F"> Sentry </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&quot;@sentry/node&quot;</span><span style="color:#24292F">;</span></span>
