@@ -120,7 +120,7 @@ a way to implement a nested layout is to use a Route Function:</p>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { Page }</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { usePageContext } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;../../renderer/usePageContext&#x27;</span></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { usePageContext } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike-react&#x27;</span><span style="color:#24292F"> </span><span style="color:#6E7781">// or &#x27;vike-vue&#x27; / &#x27;vike-solid&#x27;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">Page</span><span style="color:#24292F">() {</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageContext</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">usePageContext</span><span style="color:#24292F">()</span></span>
@@ -138,7 +138,7 @@ a way to implement a nested layout is to use a Route Function:</p>
 <span class="line"><span style="color:#24292F">  &lt;/&gt;</span></span>
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
 <blockquote>
-<p><code>usePageContext()</code> allows us to access <code>pageContext</code> in any component, see <a href="/pageContext-anywhere">Access <code>pageContext</code> anywhere</a>.</p>
+<p><code>usePageContext()</code> allows us to access <code>pageContext</code> in any component, see <a href="/usePageContext"><code>usePageContext()</code></a>.</p>
 </blockquote>
 <p>For smooth nested layout navigation, we recommend using <a href="/client-routing">Client Routing</a>. We can then use <code>&lt;a href=&quot;/product/42/reviews&quot; keep-scroll-position /&gt;</code> (or <code>navigate(&#x27;/product/42/reviews&#x27;, { keepScrollPosition: true })</code>) to avoid the browser to scroll to the top.</p>
 <p>Examples (see the <code>/starship</code> page):</p>
