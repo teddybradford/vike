@@ -49,8 +49,11 @@
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">result</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderPage</span><span style="color:#24292F">(pageContextInit)</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">/* ... */</span></span>
 <span class="line"><span style="color:#24292F">})</span></span></code></pre></div>
-<p>On the client-side, when using <a href="/server-routing-vs-client-routing">Server Routing</a>, the <code>pageContext.urlOriginal</code> value is <code>undefined</code> (unless you use <a href="/passToClient"><code>passToClient</code></a>).</p>
-<p>On the client-side, when using <a href="/client-routing">Client Routing</a>, the value of <code>pageContext.urlOriginal</code> is the browser&#x27;s current URL (<code>window.location.href</code>).</p>
+<p>On the client-side:</p>
+<ul>
+<li>When using <a href="/client-routing">Client Routing</a>, the value of <code>pageContext.urlOriginal</code> is the browser&#x27;s current URL (<code>window.location.href</code>).</li>
+<li>When using <a href="/server-routing">Server Routing</a>, the value of <code>pageContext.urlOriginal</code> is <code>undefined</code> (unless you use <a href="/passToClient"><code>passToClient</code></a>).</li>
+</ul>
 </li>
 <li>
 <p><strong><code>pageContext.urlPathname</code></strong>: alias of <code>pageContext.urlParsed.pathname</code>.</p>
