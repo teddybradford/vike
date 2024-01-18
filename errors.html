@@ -36,14 +36,14 @@
 <span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageContext</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderPage</span><span style="color:#24292F">({ urlOriginal: request.url })</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (pageContext.errorWhileRendering) {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">/* Vike already calls console.error() so we don&#x27;t need the following line.</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">/* Vike already calls console.error() so the following line isn&#x27;t needed.</span></span>
 <span class="line"><span style="color:#6E7781">      console.error(pageContext.errorWhileRendering)</span></span>
 <span class="line"><span style="color:#6E7781">      */</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// If you&#x27;re using an error tracker:</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// If you use an error tracker (e.g. Sentry):</span></span>
 <span class="line"><span style="color:#24292F">      myErrorTracker.</span><span style="color:#8250DF">intercept</span><span style="color:#24292F">(pageContext.errorWhileRendering)</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// If you&#x27;re using a server middleware that handles errors:</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// If you use a server middleware that handles errors:</span></span>
 <span class="line"><span style="color:#24292F">      </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (</span><span style="color:#CF222E">!</span><span style="color:#24292F">pageContext.httpResponse) {</span></span>
 <span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// Don&#x27;t throw if there is a pageContext.httpResponse, otherwise</span></span>
 <span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// the error page won&#x27;t be rendered.</span></span>
