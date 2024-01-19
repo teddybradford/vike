@@ -2,7 +2,7 @@
     <html>
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/default.page.client.92e9337b.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/default.page.server.a90a7cab.css">
+        <link rel="stylesheet" type="text/css" href="/assets/static/default.page.server.01fe5295.css">
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.798ef0af.svg" />
         <title>prefetchStaticAssets | Vike</title>
@@ -49,7 +49,7 @@ This means that static assets are often already loaded before even the user clic
 <span class="line"><span style="color:#24292F">  prefetchStaticAssets: </span><span style="color:#0550AE">false</span></span>
 <span class="line"><span style="color:#953800">}</span></span></code></pre></div>
 <blockquote>
-<p>Viewport prefetching is disabled in development. (Because it would make Vite transpile all preloaded pages, <!-- -->which would contradict <a href="/lazy-transpiling">Vite&#x27;s lazy-transpiling approach</a> and would therefore siginficantly slow down the dev&#x27;s DX speed<!-- -->.)</p>
+<p>Viewport prefetching is disabled in development. (Because preloading pages <!-- -->contradicts <a href="/lazy-transpiling">Vite&#x27;s lazy-transpiling approach</a> and, therefore, significantly slows down development speed<!-- -->.)</p>
 </blockquote>
 <blockquote>
 <p>Only static assets are prefetched: the <code>pageContext</code> of pages isn&#x27;t prefetched, see <a href="https://github.com/vikejs/vike/issues/246">#246</a>.</p>
