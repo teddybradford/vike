@@ -101,9 +101,9 @@
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { useData } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/react&#x27;</span><span style="color:#24292F"> </span><span style="color:#6E7781">// or &#x27;vike-vue&#x27; / &#x27;vike-solid&#x27;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6E7781">// Instead of setting title to a string, we set it to function,</span></span>
-<span class="line"><span style="color:#6E7781">// enabling us to use component hooks such as useData()</span></span>
+<span class="line"><span style="color:#6E7781">// enabling us to use usePageContext() and useData()</span></span>
 <span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">title</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">rocket</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">useData</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">rocket</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">useData</span><span style="color:#24292F">()</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> rocket.title</span></span>
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
 <blockquote>
@@ -137,12 +137,12 @@
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { usePageContext } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/react&#x27;</span><span style="color:#24292F"> </span><span style="color:#6E7781">// or &#x27;vike-vue&#x27; / &#x27;vike-solid&#x27;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6E7781">// Setting the title value to a function instead of a string,</span></span>
-<span class="line"><span style="color:#6E7781">// in order to be able to use component hooks such as usePageContext()</span></span>
+<span class="line"><span style="color:#6E7781">// in order to be able to use usePageContext() and useData()</span></span>
 <span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">title</span><span style="color:#24292F">() {</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageContext</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">usePageContext</span><span style="color:#24292F">()</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">title</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.locale </span><span style="color:#CF222E">===</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;de-DE&#x27;</span><span style="color:#24292F"> </span><span style="color:#CF222E">?</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;SpaceX | Das Weltall Unternehmen.&#x27;</span><span style="color:#24292F"> </span><span style="color:#CF222E">:</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;SpaceX | The space company.&#x27;</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;SpaceX | Das Weltall Unternehmen&#x27;</span><span style="color:#24292F"> </span><span style="color:#CF222E">:</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;SpaceX | The space company&#x27;</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> title</span></span>
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
 <p>See also:</p>
