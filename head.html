@@ -93,17 +93,19 @@
 </blockquote>
 <p>Likewise, if your <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site">favicon</a> can change from page to page, then define <code>/pages/rocket/starship/+favicon.png</code> instead of using the <code>Head</code> setting.</p>
 <p>You can set <code>title</code> and <code>favicon</code> based on <a href="/data-fetching">fetched data</a>, for example:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/rocket/starship/+title.jsx</span></span>
+<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/rocket/starship/+title.js</span></span>
 <span class="line"><span style="color:#6E7781">// Environment: server, client</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { title }</span></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">title</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">rocket</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.data</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> rocket.title</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment=""><pre data-language="tsx" data-theme="default"><code data-language="tsx" data-theme="default"><span class="line"><span style="color:#6E7781">// With TypeScript:</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { useData } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/react&#x27;</span><span style="color:#24292F"> </span><span style="color:#6E7781">// or &#x27;vike-vue&#x27; / &#x27;vike-solid&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// Instead of setting title to a string, we set it to function,</span></span>
-<span class="line"><span style="color:#6E7781">// enabling us to use usePageContext() and useData()</span></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">title</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">rocket</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">useData</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> { Data } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./+data&#x27;</span></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> { PageContext } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/types&#x27;</span></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">title</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#953800">PageContext</span><span style="color:#24292F">&lt;</span><span style="color:#953800">Data</span><span style="color:#24292F">&gt;) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">rocket</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.data</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> rocket.title</span></span>
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
 <blockquote>
@@ -129,17 +131,10 @@
 <span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">meta</span><span style="color:#24292F"> </span><span style="color:#0550AE">name</span><span style="color:#CF222E">=</span><span style="color:#0A3069">&quot;description&quot;</span><span style="color:#24292F"> </span><span style="color:#0550AE">content</span><span style="color:#CF222E">=</span><span style="color:#24292F">{description}&gt;</span></span>
 <span class="line"><span style="color:#24292F">  &lt;/&gt;</span></span>
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+title.jsx</span></span>
+<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+title.js</span></span>
 <span class="line"><span style="color:#6E7781">// Environment: server, client</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { title }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { usePageContext } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/react&#x27;</span><span style="color:#24292F"> </span><span style="color:#6E7781">// or &#x27;vike-vue&#x27; / &#x27;vike-solid&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// Setting the title value to a function instead of a string,</span></span>
-<span class="line"><span style="color:#6E7781">// in order to be able to use usePageContext() and useData()</span></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">title</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageContext</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">usePageContext</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">title</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">title</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.locale </span><span style="color:#CF222E">===</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;de-DE&#x27;</span><span style="color:#24292F"> </span><span style="color:#CF222E">?</span></span>
 <span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;SpaceX | Das Weltall Unternehmen&#x27;</span><span style="color:#24292F"> </span><span style="color:#CF222E">:</span></span>
 <span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;SpaceX | The space company&#x27;</span></span>
@@ -276,6 +271,9 @@
 </li>
 <li>
 <a href="/useData">API<!-- --> &gt; <code>useData()</code></a>
+</li>
+<li>
+<a href="/pageContext">API<!-- --> &gt; <code>pageContext</code></a>
 </li>
 </ul><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/head.page.server.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
         
