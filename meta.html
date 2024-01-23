@@ -68,8 +68,11 @@
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
 <span class="line"><span style="color:#953800">  </span><span style="color:#24292F">meta: {</span></span>
 <span class="line"><span style="color:#24292F">    dataEndpointUrl: {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Load the value of /pages/**/+dataEndpointUrl.js only on the server</span></span>
-<span class="line"><span style="color:#24292F">      env: { server: </span><span style="color:#0550AE">true</span><span style="color:#24292F">, client: </span><span style="color:#0550AE">false</span><span style="color:#24292F"> }</span></span>
+<span class="line"><span style="color:#24292F">      env: {</span></span>
+<span class="line"><span style="color:#24292F">        server: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// Load the value of /pages/**/+dataEndpointUrl.js only on the server</span></span>
+<span class="line"><span style="color:#24292F">        client: </span><span style="color:#0550AE">false</span></span>
+<span class="line"><span style="color:#24292F">      }</span></span>
 <span class="line"><span style="color:#24292F">    }</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"><span style="color:#953800">}</span></span></code></pre></div>
@@ -102,8 +105,11 @@
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
 <span class="line"><span style="color:#953800">  </span><span style="color:#24292F">meta: {</span></span>
 <span class="line"><span style="color:#24292F">    sql: {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Load the value of /pages/**/+sql.js only on the server</span></span>
-<span class="line"><span style="color:#24292F">      env: { server: </span><span style="color:#0550AE">true</span><span style="color:#24292F">, client: </span><span style="color:#0550AE">false</span><span style="color:#24292F"> }</span></span>
+<span class="line"><span style="color:#24292F">      env: {</span></span>
+<span class="line"><span style="color:#24292F">        server: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// Load the value of /pages/**/+sql.js only on the server</span></span>
+<span class="line"><span style="color:#24292F">        client: </span><span style="color:#0550AE">false</span></span>
+<span class="line"><span style="color:#24292F">      }</span></span>
 <span class="line"><span style="color:#24292F">    }</span></span>
 <span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"><span style="color:#953800">}</span></span></code></pre></div>
@@ -398,7 +404,18 @@
 <span class="line"><span style="color:#953800">}</span></span></code></pre></div>
 <h2 id="typescript">TypeScript</h2>
 <p>Similar to <a href="/pageContext#typescript"><code>Vike.PageContext</code></a>, you can extend (or refine) Vike&#x27;s <code>Config</code> type by using the global interface <code>Vike.Config</code>.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#CF222E">declare</span><span style="color:#24292F"> global {</span></span>
+<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+config.h.ts</span></span>
+<span class="line"><span style="color:#6E7781">// Environment: config</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
+<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">meta: {</span></span>
+<span class="line"><span style="color:#24292F">    sqlQuery: {</span></span>
+<span class="line"><span style="color:#24292F">      env: { server: </span><span style="color:#0550AE">true</span><span style="color:#24292F"> }</span></span>
+<span class="line"><span style="color:#24292F">    }</span></span>
+<span class="line"><span style="color:#24292F">  }</span></span>
+<span class="line"><span style="color:#953800">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">declare</span><span style="color:#24292F"> global {</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">namespace</span><span style="color:#24292F"> </span><span style="color:#953800">Vike</span><span style="color:#24292F"> {</span></span>
 <span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">interface</span><span style="color:#24292F"> </span><span style="color:#953800">Config</span><span style="color:#24292F"> {</span></span>
 <span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">/** The SQL query that retrieves the page&#x27;s data */</span></span>
@@ -407,7 +424,9 @@
 <span class="line"><span style="color:#24292F">  }</span></span>
 <span class="line"><span style="color:#24292F">}</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#6E7781">// Tell TypeScript this file isn&#x27;t an ambient module</span></span>
+<span class="line"><span style="color:#6E7781">// The following isn&#x27;t needed in this example, but if you define Vike.Config</span></span>
+<span class="line"><span style="color:#6E7781">// in a .d.ts file then make sure there is at least one export/import statment.</span></span>
+<span class="line"><span style="color:#6E7781">// Tell TypeScript this file isn&#x27;t an ambient module:</span></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> {}</span></span></code></pre></div>
 <div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/@id/+config.h.ts</span></span>
 <span class="line"></span>
@@ -417,6 +436,9 @@
 <span class="line"><span style="color:#953800">  </span><span style="color:#6E7781">// ✅ Typed</span></span>
 <span class="line"><span style="color:#953800">  </span><span style="color:#8250DF">sqlQuery</span><span style="color:#24292F">: (</span><span style="color:#953800">id</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> </span><span style="color:#0A3069">`SELECT { name, price } FROM products WHERE id = &quot;${</span><span style="color:#24292F">id</span><span style="color:#0A3069">}&quot;;`</span></span>
 <span class="line"><span style="color:#953800">} </span><span style="color:#24292F">satisfies</span><span style="color:#953800"> </span><span style="color:#24292F">Config</span></span></code></pre></div>
+<blockquote>
+<p><code>sqlQuery</code> is a custom setting, see <a href="#example-sql">Example: <code>sql</code></a>.</p>
+</blockquote>
 <h2 id="see-also">See also</h2>
 <ul>
 <li>
