@@ -53,11 +53,12 @@ for example, if admin panel pages (<code>/admin/product/@id</code> and <code>/ad
 <p>You can also define a layout for a group of pages:</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/admin/+Layout.js</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#6E7781">// This layout applies to:</span></span>
-<span class="line"><span style="color:#6E7781">//  - /admin</span></span>
-<span class="line"><span style="color:#6E7781">//  - /admin/user/@id</span></span>
-<span class="line"><span style="color:#6E7781">//  - /admin/product/@id</span></span>
-<span class="line"><span style="color:#6E7781">//  - ...</span></span>
+<span class="line"><span style="color:#6E7781">/* This layout applies only to admin pages (/pages/admin/**) such as:</span></span>
+<span class="line"><span style="color:#6E7781">   URL                     FILESYSTEM</span></span>
+<span class="line"><span style="color:#6E7781">   /admin                  /pages/admin/+Page.js</span></span>
+<span class="line"><span style="color:#6E7781">   /admin/user/@id         /pages/admin/user/@id/+Page.js</span></span>
+<span class="line"><span style="color:#6E7781">   /admin/product/@id      /pages/admin/product/@id/+Page.js</span></span>
+<span class="line"><span style="color:#6E7781">*/</span></span>
 <span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { Layout }</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6E7781">// ...</span></span></code></pre></div>
