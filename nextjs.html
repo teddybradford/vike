@@ -98,7 +98,7 @@ Furthermore, self-hosting Next.js as a Serverless or Edge application (i.e. repl
 <p>Last but not least, manual integration is fun and insightful. (Whereas fighting a framework is pesky.)</p>
 <h2 id="react-server-components">React Server Components</h2>
 <p>React 18 introduced novel techniques that unlock many capabilities.</p>
-<p>Vike, and in particular <a href="/react#vike-react"><code>vike-react</code></a>, extensively leverages React&#x27;s 18 new techniques. (<a href="/streaming">Streaming</a>, <a href="/streaming#progressive-hydration">Progressive Hydration</a>, independent and collocated data fetching, <a href="/RPC">RPC</a>, etc.)</p>
+<p>Vike, and in particular <a href="/react#vike-react"><code>vike-react</code></a>, extensively leverages React&#x27;s 18 new techniques. (<a href="/streaming">Streaming</a>, <a href="/streaming#progressive-rendering">Progressive Rendering</a>, independent and collocated data fetching, <a href="/RPC">RPC</a>, etc.)</p>
 <p>Vike provides you with extensive control for integrating tools as you see fit, such as control over React&#x27;s SSR <a href="/streaming">stream</a>. At the same time <a href="/extensions">Vike extensions</a> provide built-in integrations for a quick start. We call this dual approach <a href="/why#optional-control">optional control</a>.</p>
 <p>One aspect <code>vike-react</code> doesn&#x27;t support yet are components that are loaded only on the server-side. While we are researching a DX for such components, we believe this new paradigm is too early for being used in production. See <a href="/react#react-server-components">Integration<!-- --> &gt; <!-- -->React<!-- --> &gt; <!-- -->React Server Components</a>.</p>
 <h2 id="build-your-own-framework">Build your own framework</h2>
@@ -113,7 +113,7 @@ Furthermore, self-hosting Next.js as a Serverless or Edge application (i.e. repl
 <ol>
 <li>Blazing fast development speed powered by Vite (on-demand transpiling, native ESM).</li>
 <li>Next.js has to have many examples and a whole plethora of libraries are existing just to integrate some library with Next.js because it&#x27;s not trivial (for example <a href="https://github.com/isaachinman/next-i18next">next-i18next</a>). With Vike, you just read the documentation of the library you want to integrate and you&#x27;re good to go.</li>
-<li>When new React features arrive you can start to use it right away and don&#x27;t have to wait for the Next.js team to integrate it. (Streaming API, server components, suspense on server, progressive hydration, etc.)</li>
+<li>When new React features arrive you can start to use it right away and don&#x27;t have to wait for the Next.js team to integrate it. (Streaming API, server components, suspense on server, progressive rendering, etc.)</li>
 <li>Next.js can&#x27;t read files in <code>/public</code> directory after it was built, i.e. user uploaded images.</li>
 <li>With <code>getServerSideProps()</code>, Next.js blocks client-side rendering.</li>
 <li>You cannot bypass data fetching on client-side navigation (<a href="https://github.com/vercel/next.js/discussions/23921">Next.js - 	#23921</a>) while with Vike you&#x27;re flexible and can choose what you want.</li>
