@@ -81,11 +81,11 @@
 </ol>
 <p>See <a href="https://github.com/vikejs/vike/tree/main/examples/auth/">example</a>.</p>
 </blockquote>
-<p>We can also define a <code>guard()</code> hook that applies to multiple pages:</p>
+<p>You can also define a <code>guard()</code> hook that applies to multiple pages:</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+guard.js</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#6E7781">// We define a guard() that applies to all pages: the file lives at /pages/ and</span></span>
-<span class="line"><span style="color:#6E7781">// therefore applies to all /pages/**/+Page.js</span></span>
+<span class="line"><span style="color:#6E7781">// This guard() hook applies to all pages: the file is located at /pages/+guard.js</span></span>
+<span class="line"><span style="color:#6E7781">// and therefore applies to all /pages/**/+Page.js</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { render } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/abort&#x27;</span></span>
 <span class="line"></span>
