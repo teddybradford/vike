@@ -140,9 +140,31 @@ But some static hosts prefer the other way.</p>
 </blockquote>
 <h3 id="disableautorun"><code>disableAutoRun</code></h3>
 <p><code>boolean</code> (default: <code>false</code>)</p>
-<p>Disable the automatic initiation of the pre-rendering process when running <code>$ vite build</code>.</p>
-<p>Use this if you want to programmatically initiate the pre-rendering process instead.</p>
-<p>See <a href="/prerender-programmatic">API<!-- --> &gt; <code>prerender()</code></a>.</p><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/prerender-config.page.server.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
+<p>When running <code>$ vite build</code>, Vike automatically triggers <a href="/pre-rendering">pre-rendering</a>. (If you <a href="/pre-rendering#how-to-pre-render">enabled pre-rendering</a>.)</p>
+<p>You can disable the automatic triggering of the pre-rendering step:</p>
+<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// vite.config.js</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> vike </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/plugin&#x27;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
+<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">plugins: [</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#8250DF">vike</span><span style="color:#24292F">({</span></span>
+<span class="line"><span style="color:#24292F">      prerender: {</span></span>
+<span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// Stop `$ vite build` from initiating pre-rendering</span></span>
+<span class="line"><span style="color:#24292F">        disableAutoRun: </span><span style="color:#0550AE">true</span></span>
+<span class="line"><span style="color:#24292F">      }</span></span>
+<span class="line"><span style="color:#24292F">    })</span></span>
+<span class="line"><span style="color:#24292F">  ]</span></span>
+<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<p>You can then manually trigger the pre-rendering process using:</p>
+<ul>
+<li>
+<a href="/command-prerender">Command <code>prerender</code></a>
+</li>
+<li>
+<a href="/prerender-programmatic">API<!-- --> &gt; <code>prerender()</code></a>
+</li>
+</ul><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/prerender-config.page.server.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
         
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
     <script type="text/javascript">
