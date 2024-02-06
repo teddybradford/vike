@@ -140,8 +140,8 @@ But some static hosts prefer the other way.</p>
 </blockquote>
 <h3 id="disableautorun"><code>disableAutoRun</code></h3>
 <p><code>boolean</code> (default: <code>false</code>)</p>
-<p>When running <code>$ vite build</code>, Vike automatically triggers <a href="/pre-rendering">pre-rendering</a>. (If you <a href="/pre-rendering#how-to-pre-render">enabled pre-rendering</a>.)</p>
-<p>You can disable the automatic triggering of the pre-rendering step:</p>
+<p>When running <code>$ vite build</code>, Vike automatically triggers <a href="/pre-rendering">pre-rendering</a>. (If you <a href="/pre-rendering#how-to-pre-render">enabled it</a>.)</p>
+<p>You can disable the automatic triggering:</p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// vite.config.js</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> vike </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/plugin&#x27;</span></span>
@@ -156,7 +156,7 @@ But some static hosts prefer the other way.</p>
 <span class="line"><span style="color:#24292F">    })</span></span>
 <span class="line"><span style="color:#24292F">  ]</span></span>
 <span class="line"><span style="color:#953800">}</span></span></code></pre></div>
-<p>You can then manually trigger the pre-rendering process using:</p>
+<p>You can then manually trigger pre-rendering using:</p>
 <ul>
 <li>
 <a href="/command-prerender">Command <code>prerender</code></a>
