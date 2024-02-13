@@ -74,9 +74,9 @@ at
 What&#x27;s worse is that <a href="https://vercel.com/pricing">Vercel&#x27;s pricing</a> is
 misleading (the pay-per-developer make it seem cheap but you usually pay for very expensive fees for exceeding limits),
 <a href="https://www.reddit.com/r/nextjs/search?q=vercel+pricing&amp;restrict_sr=on&amp;include_over_18=on">opaque</a> (e.g. you must have an enterprise plan if you have &gt;10 team members which is <a href="https://vercel.com/docs/limits/overview#:~:text=Team%20Members%20per,Custom">hidden in the fine print</a>),
-hard to understand,
-and hard to predict.
-Such complex pricing is usually a no-go for large enterprises.</p>
+locks you in with <a href="https://gist.github.com/brillout/190bc676879a2a615d0bae031969f0a5">extremely expensive egress fees</a>,
+hard to understand and nearly impossible to predict.
+Such pricing is a no-go for large enterprises.</p>
 <p>You can self-host Next.js as a Node.js server, for example placed in a Docker container. But it won&#x27;t work precisely the same way as on Vercel.
 Furthermore, self-hosting Next.js as a Serverless or Edge application (i.e. replacing Vercel) is worse.</p>
 <p>An illustration of the problem: with Next.js server actions you no longer handwrite API endpoints - which means <a href="https://twitter.com/thdxr/status/1718308244383228124">you don&#x27;t have the ability to explicitly control versioning</a>. So requests from old clients can fail. Vercel solved this with their deployment infrastructure, instead of in Next.js itself. So if you use Next.js but not Vercel then you&#x27;ll have to deal with this major problem yourself.</p>
