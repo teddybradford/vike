@@ -54,7 +54,7 @@ that you can deploy to so-called &quot;static hosts&quot; such as <a href="/gith
 <p>Your pages&#x27; HTML will be rendered when you run <code>$ vite build</code> and the generated HTML files are available at <code>dist/client/</code>.</p>
 <p>For a page with a parameterized route (e.g. <code>/movie/@movieId</code>), you have to use the <a href="/onBeforePrerenderStart"><code>onBeforePrerenderStart()</code> hook</a> in order to provide the list of URLs that are to be pre-rendered. The <code>onBeforePrerenderStart()</code> hook can also be used to accelerate the pre-rendering process.</p>
 <blockquote>
-<p>Instead of providing a list of URLs, if you want the route to be resolved dynamically on the client-side, then see the workaround described at <a href="https://github.com/vikejs/vike/issues/1476">#1476 - Pre-rendered dynamic routes (static host deployment)</a>.</p>
+<p>Instead of providing a list of URLs, if you want a parameterized route to be resolved dynamically on the client-side, then see the workaround at <a href="https://github.com/vikejs/vike/issues/1476">#1476 - Pre-rendered dynamic routes (static host deployment)</a>.</p>
 </blockquote>
 <p>By default, all pages are pre-rendered. To pre-render only some pages, use the <a href="/prerender#partial"><code>partial</code> option</a> with <a href="/prerender#toggle"><code>prerender: false</code></a>.</p>
 <p>If you pre-render all your pages, then you can use Vite&#x27;s CLI instead of a server (<code>$ vite dev</code> and <code>$ vite preview</code>). See linked examples below.</p>
