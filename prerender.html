@@ -112,13 +112,15 @@ If you want to call <code>onBeforePrerenderStart()</code> hooks conditionally as
 <h2 id="settings">Settings</h2>
 <h3 id="partial"><code>partial</code></h3>
 <p><code>boolean</code> (default: <code>false</code>)</p>
-<p>Allow only some of our pages to be pre-rendered.</p>
-<p>This setting doesn&#x27;t affect the pre-rendering process: it merely suppresses the warnings when some of our pages cannot be pre-rendered.</p>
+<p>Allow only some of your pages to be pre-rendered.</p>
+<p>This setting doesn&#x27;t affect the pre-rendering process: it merely suppresses the warning that some pages aren&#x27;t pre-rendered.</p>
 <blockquote>
-<p>As explained in <a href="/pre-rendering">Guides<!-- --> &gt; <!-- -->Pre-rendering (SSG)</a>, if we don&#x27;t pre-render all pages, then we need a production server. By using <a href="/vercel#vite-plugin-vercel"><code>vite-plugin-vercel</code></a>, we can still statically deploy our pre-rendered pages while using a production server for our non-pre-rendered pages.</p>
+<p>As explained in <a href="/pre-rendering">Guides<!-- --> &gt; <!-- -->Pre-rendering (SSG)</a>, if you don&#x27;t pre-render <em>all</em> your pages then you need a production server.</p>
+<p>That said, if you cannot or don&#x27;t want to pre-render all your pages while still deploying to a <a href="/static-hosts">static host</a>, then see the workaround at <a href="https://github.com/vikejs/vike/issues/1476">#1476 - Pre-rendered dynamic routes (static host deployment)</a>.</p>
+<p>Also, by using <a href="/vercel#vite-plugin-vercel"><code>vite-plugin-vercel</code></a>, you can statically deploy your pre-rendered pages while using a production server for your non-pre-rendered pages.</p>
 </blockquote>
 <blockquote>
-<p>Vike shows a warning that a page cannot be pre-rendered, when the page has a parameterized route (e.g. a  <a href="/route-string">Route String</a> <code>/movie/@movieId</code>, or a <a href="/route-function">Route Function</a>), and there isn&#x27;t any <a href="/onBeforePrerenderStart"><code>onBeforePrerenderStart()</code> hook</a> that provides at least one URL matching the page&#x27;s route (e.g. <code>/movie/42</code>).</p>
+<p>Vike shows a warning that a page cannot be pre-rendered when the page has a parameterized route (e.g. a  <a href="/route-string">Route String</a> <code>/movie/@movieId</code>, or a <a href="/route-function">Route Function</a>) while there isn&#x27;t any <a href="/onBeforePrerenderStart"><code>onBeforePrerenderStart()</code> hook</a> that provides at least one URL matching the page&#x27;s route (e.g. <code>/movie/42</code>).</p>
 </blockquote>
 <h3 id="noextradir"><code>noExtraDir</code></h3>
 <p><code>boolean</code> (default: <code>false</code>)</p>
