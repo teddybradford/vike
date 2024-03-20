@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Routing | Vike</title>
@@ -34,42 +34,42 @@
 <p>The guide <a href="/server-routing-vs-client-routing">Server Routing VS Client Routing</a> helps you choose which one to use.</p>
 <h2 id="route-strings-route-functions">Route Strings &amp; Route Functions</h2>
 <p>By default, Vike does Filesystem Routing:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="bash" data-theme="default"><code data-language="bash" data-theme="default"><span class="line"><span style="color:#24292F">FILESYSTEM                      URL</span></span>
-<span class="line"><span style="color:#24292F">========================        =================================</span></span>
-<span class="line"><span style="color:#24292F">pages/about/+Page.js            /about</span></span>
-<span class="line"><span style="color:#24292F">pages/faq/+Page.js              /faq</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781"># index/ is mapped to the empty string</span></span>
-<span class="line"><span style="color:#24292F">pages/index/+Page.js            /</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781"># Parameterized route</span></span>
-<span class="line"><span style="color:#24292F">pages/movie/@id/+Page.js        /movie/1, /movie/2, /movie/3, ...</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="bash" data-theme="github-light"><code data-language="bash" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6F42C1">FILESYSTEM</span><span style="color:#032F62">                      URL</span></span>
+<span data-line=""><span style="color:#24292E">========================        </span><span style="color:#032F62">=================================</span></span>
+<span data-line=""><span style="color:#6F42C1">pages/about/+Page.js</span><span style="color:#032F62">            /about</span></span>
+<span data-line=""><span style="color:#6F42C1">pages/faq/+Page.js</span><span style="color:#032F62">              /faq</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D"># index/ is mapped to the empty string</span></span>
+<span data-line=""><span style="color:#6F42C1">pages/index/+Page.js</span><span style="color:#032F62">            /</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D"># Parameterized route</span></span>
+<span data-line=""><span style="color:#6F42C1">pages/movie/@id/+Page.js</span><span style="color:#032F62">        /movie/1,</span><span style="color:#032F62"> /movie/2,</span><span style="color:#032F62"> /movie/3,</span><span style="color:#032F62"> ...</span></span></code></pre></figure>
 <p>We can also define so-called &quot;Route Strings&quot; and &quot;Route Functions&quot;.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/+route.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// This file defines the route of `/pages/product/+Page.js`</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// Route String</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> </span><span style="color:#0A3069">&#x27;/product/@productId&#x27;</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/+route.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// This file defines the route of `/pages/product/+Page.js`</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// Route String</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#032F62"> &#x27;/product/@productId&#x27;</span></span></code></pre></figure>
 <blockquote>
 <p>The parameter <code>productId</code> is available at <code>pageContext.routeParams.productId</code>.</p>
 </blockquote>
 <p>Route Functions give us full programmatic flexibility to implement advanced routing logic, for example route guards:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/edit/+route.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// This file defines the route of `/pages/product/edit/+Page.js`</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { resolveRoute } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/routing&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> </span><span style="color:#CF222E">async</span><span style="color:#953800"> (pageContext) </span><span style="color:#CF222E">=&gt;</span><span style="color:#953800"> </span><span style="color:#24292F">{</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Ensure that `/product/@id/edit` can be accessed only by admins</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (</span><span style="color:#CF222E">!</span><span style="color:#24292F">pageContext.user.isAdmin) {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#0550AE">false</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// We can use Vike&#x27;s Route String resolver</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#8250DF">resolveRoute</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;/product/@id/edit&#x27;</span><span style="color:#24292F">, pageContext.urlPathname)</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/edit/+route.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// This file defines the route of `/pages/product/edit/+Page.js`</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { resolveRoute } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/routing&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#D73A49"> async</span><span style="color:#24292E"> (</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">  // Ensure that `/product/@id/edit` can be accessed only by admins</span></span>
+<span data-line=""><span style="color:#D73A49">  if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">!</span><span style="color:#24292E">pageContext.user.isAdmin) {</span></span>
+<span data-line=""><span style="color:#D73A49">    return</span><span style="color:#005CC5"> false</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">  // We can use Vike&#x27;s Route String resolver</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#6F42C1"> resolveRoute</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;/product/@id/edit&#x27;</span><span style="color:#24292E">, pageContext.urlPathname)</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>See also:</p>
 <ul>
 <li>
@@ -113,6 +113,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

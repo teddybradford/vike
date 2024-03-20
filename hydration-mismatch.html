@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Hydration Mismatch | Vike</title>
@@ -55,19 +55,19 @@
 </code></pre>
 <h2 id="example">Example</h2>
 <p>This component causes a hydration mismatch because the milliseconds rendered to HTML (e.g. <code>&lt;span&gt;123&lt;/span&gt;</code>) won&#x27;t match the milliseconds rendered in the browser (e.g. <code>&lt;span&gt;167&lt;/span&gt;</code>).</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="jsx" data-theme="default"><code data-language="jsx" data-theme="default"><span class="line"><span style="color:#24292F">&lt;</span><span style="color:#116329">span</span><span style="color:#24292F">&gt;{ </span><span style="color:#CF222E">new</span><span style="color:#24292F"> </span><span style="color:#0550AE">Date</span><span style="color:#24292F">().</span><span style="color:#8250DF">getMilliseconds</span><span style="color:#24292F">() }&lt;/</span><span style="color:#116329">span</span><span style="color:#24292F">&gt;</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="jsx" data-theme="github-light"><code data-language="jsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">&lt;</span><span style="color:#22863A">span</span><span style="color:#24292E">&gt;{ </span><span style="color:#D73A49">new</span><span style="color:#6F42C1"> Date</span><span style="color:#24292E">().</span><span style="color:#6F42C1">getMilliseconds</span><span style="color:#24292E">() }&lt;/</span><span style="color:#22863A">span</span><span style="color:#24292E">&gt;</span></span></code></pre></figure>
 <p>Instead, to prevent the hydration mismatch:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onBeforeRender }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onBeforeRender</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">milliseconds</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">new</span><span style="color:#24292F"> </span><span style="color:#0550AE">Date</span><span style="color:#24292F">().</span><span style="color:#8250DF">getMilliseconds</span><span style="color:#24292F">()</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    pageContext: {</span></span>
-<span class="line"><span style="color:#24292F">      milliseconds</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="jsx" data-theme="default"><code data-language="jsx" data-theme="default"><span class="line"><span style="color:#24292F">&lt;</span><span style="color:#116329">span</span><span style="color:#24292F">&gt;{ pageContext.milliseconds }&lt;/</span><span style="color:#116329">span</span><span style="color:#24292F">&gt;</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onBeforeRender }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onBeforeRender</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> milliseconds</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> new</span><span style="color:#6F42C1"> Date</span><span style="color:#24292E">().</span><span style="color:#6F42C1">getMilliseconds</span><span style="color:#24292E">()</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">    pageContext: {</span></span>
+<span data-line=""><span style="color:#24292E">      milliseconds</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="jsx" data-theme="github-light"><code data-language="jsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">&lt;</span><span style="color:#22863A">span</span><span style="color:#24292E">&gt;{ pageContext.milliseconds }&lt;/</span><span style="color:#22863A">span</span><span style="color:#24292E">&gt;</span></span></code></pre></figure>
 <p>The <code>pageContext.milliseconds</code> value is set exactly once, which means that the milliseconds value is the same when rendered to HTML on the server-side and when hydrated in the browser.</p>
 <h2 id="common-causes-solutions">Common causes &amp; solutions</h2>
 <p>Common causes:</p>
@@ -119,6 +119,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

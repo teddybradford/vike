@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>data() hook | Vike</title>
@@ -77,14 +77,14 @@
 </ul>
 <h2 id="pagecontext"><code>pageContext</code></h2>
 <p><a href="/pageContext"><code>pageContext</code></a> provides contextual information.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/+data.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">data</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// pageContext properties commonly used in data()</span></span>
-<span class="line"><span style="color:#24292F">  pageContext.routeParams.id</span></span>
-<span class="line"><span style="color:#24292F">  pageContext.user.id</span></span>
-<span class="line"><span style="color:#24292F">  pageContext.urlParsed.search.query</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/+data.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> data</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#6A737D">  // pageContext properties commonly used in data()</span></span>
+<span data-line=""><span style="color:#24292E">  pageContext.routeParams.id</span></span>
+<span data-line=""><span style="color:#24292E">  pageContext.user.id</span></span>
+<span data-line=""><span style="color:#24292E">  pageContext.urlParsed.search.query</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p><code>pageContext.user</code> is a custom <code>pageContext</code> property, see:</p>
 <ul>
@@ -101,59 +101,59 @@
 <h2 id="error-handling">Error handling</h2>
 <p>If an error is thrown by <code>data()</code>, then Vike renders your <a href="/error-page">error page</a> and there is usually nothing for you to do (beyond defining an error page <code>/pages/_error/+Page.js</code>).</p>
 <p>But if you want a more precise error handling (such as showing an insightful error message to the user instead of some generic &quot;Something went wrong&quot;), then use <a href="/render"><code>throw render()</code></a> and/or <a href="/redirect"><code>throw redirect()</code></a>.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/movies/+data.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { data }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> fetch </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;node-fetch&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { render, redirect } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/abort&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">data</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">id</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.routeParams</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">response</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">fetch</span><span style="color:#24292F">(</span><span style="color:#0A3069">`https://star-wars.brillout.com/api/films/${</span><span style="color:#24292F">id</span><span style="color:#0A3069">}.json`</span><span style="color:#24292F">)</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (response.status </span><span style="color:#CF222E">===</span><span style="color:#24292F"> </span><span style="color:#0550AE">404</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Tell the user what went wrong</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">throw</span><span style="color:#24292F"> </span><span style="color:#8250DF">render</span><span style="color:#24292F">(</span><span style="color:#0550AE">404</span><span style="color:#24292F">, </span><span style="color:#0A3069">`Movie with ID ${</span><span style="color:#24292F">id</span><span style="color:#0A3069">} doesn&#x27;t exist.`</span><span style="color:#24292F">)</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">/* Or redirect the user:</span></span>
-<span class="line"><span style="color:#6E7781">    throw redirect(&#x27;/movie/add&#x27;) */</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">/* Or render the movie submission form while preserving the URL:</span></span>
-<span class="line"><span style="color:#6E7781">    throw render(&#x27;/movie/add&#x27;) */</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ...</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/movies/+data.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { data }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> fetch </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;node-fetch&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { render, redirect } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/abort&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> data</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">id</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext.routeParams</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> response</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> fetch</span><span style="color:#24292E">(</span><span style="color:#032F62">`https://star-wars.brillout.com/api/films/${</span><span style="color:#24292E">id</span><span style="color:#032F62">}.json`</span><span style="color:#24292E">)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">  if</span><span style="color:#24292E"> (response.status </span><span style="color:#D73A49">===</span><span style="color:#005CC5"> 404</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#6A737D">    // Tell the user what went wrong</span></span>
+<span data-line=""><span style="color:#D73A49">    throw</span><span style="color:#6F42C1"> render</span><span style="color:#24292E">(</span><span style="color:#005CC5">404</span><span style="color:#24292E">, </span><span style="color:#032F62">`Movie with ID ${</span><span style="color:#24292E">id</span><span style="color:#032F62">} doesn&#x27;t exist.`</span><span style="color:#24292E">)</span></span>
+<span data-line=""><span style="color:#6A737D">    /* Or redirect the user:</span></span>
+<span data-line=""><span style="color:#6A737D">    throw redirect(&#x27;/movie/add&#x27;) */</span></span>
+<span data-line=""><span style="color:#6A737D">    /* Or render the movie submission form while preserving the URL:</span></span>
+<span data-line=""><span style="color:#6A737D">    throw render(&#x27;/movie/add&#x27;) */</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">  // ...</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p><code>throw render(&#x27;/movie/add&#x27;)</code> is a technique explained at <a href="/auth#login-flow">Guides<!-- --> &gt; <!-- -->Authentication<!-- --> &gt; <!-- -->Login flow</a>.</p>
 </blockquote>
 <p>Alternatively, you can use <code>throw render()</code> and <code>throw redirect()</code> inside of a <a href="/guard"><code>guard()</code> hook</a>, see <a href="/auth">Guides<!-- --> &gt; <!-- -->Authentication</a>.</p>
 <h2 id="server-side">Server-side</h2>
 <p>By default, the <code>data()</code> hook always runs the server-side. Thus you can directly use ORM/SQL database queries:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/movies/+data.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { data }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// Note how we use `node-fetch`; this file is only run on the server-side, thus we don&#x27;t need</span></span>
-<span class="line"><span style="color:#6E7781">// to use an isomorphic (aka universal) implementation such as `cross-fetch`.</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> fetch </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;node-fetch&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">data</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">response</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">fetch</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;https://star-wars.brillout.com/api/films.json&#x27;</span><span style="color:#24292F">)</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">let</span><span style="color:#24292F"> { movies } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> response.</span><span style="color:#8250DF">json</span><span style="color:#24292F">()</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">/* Or with an ORM:</span></span>
-<span class="line"><span style="color:#6E7781">  let movies = await Movie.findAll() */</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">/* Or with SQL:</span></span>
-<span class="line"><span style="color:#6E7781">  let movies = await sql.run(&#x27;SELECT * FROM movies;&#x27;) */</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// `movies` is serialized and passed to the client. Therefore, we pick only the</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// data the client needs in order to minimize what is sent over the network.</span></span>
-<span class="line"><span style="color:#24292F">  movies </span><span style="color:#CF222E">=</span><span style="color:#24292F"> movies.</span><span style="color:#8250DF">map</span><span style="color:#24292F">(({ </span><span style="color:#953800">title</span><span style="color:#24292F">, </span><span style="color:#953800">release_date</span><span style="color:#24292F"> }) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> ({ title, release_date }))</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    movies</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/movies/+data.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { data }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// Note how we use `node-fetch`; this file is only run on the server-side, thus we don&#x27;t need</span></span>
+<span data-line=""><span style="color:#6A737D">// to use an isomorphic (aka universal) implementation such as `cross-fetch`.</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> fetch </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;node-fetch&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> data</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> response</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> fetch</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;https://star-wars.brillout.com/api/films.json&#x27;</span><span style="color:#24292E">)</span></span>
+<span data-line=""><span style="color:#D73A49">  let</span><span style="color:#24292E"> { movies } </span><span style="color:#D73A49">=</span><span style="color:#D73A49"> await</span><span style="color:#24292E"> response.</span><span style="color:#6F42C1">json</span><span style="color:#24292E">()</span></span>
+<span data-line=""><span style="color:#6A737D">  /* Or with an ORM:</span></span>
+<span data-line=""><span style="color:#6A737D">  let movies = await Movie.findAll() */</span></span>
+<span data-line=""><span style="color:#6A737D">  /* Or with SQL:</span></span>
+<span data-line=""><span style="color:#6A737D">  let movies = await sql.run(&#x27;SELECT * FROM movies;&#x27;) */</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">  // `movies` is serialized and passed to the client. Therefore, we pick only the</span></span>
+<span data-line=""><span style="color:#6A737D">  // data the client needs in order to minimize what is sent over the network.</span></span>
+<span data-line=""><span style="color:#24292E">  movies </span><span style="color:#D73A49">=</span><span style="color:#24292E"> movies.</span><span style="color:#6F42C1">map</span><span style="color:#24292E">(({ </span><span style="color:#E36209">title</span><span style="color:#24292E">, </span><span style="color:#E36209">release_date</span><span style="color:#24292E"> }) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> ({ title, release_date }))</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">    movies</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="client-side">Client-side</h2>
 <p>By default, <code>data()</code> always runs on the server-side.</p>
 <p>But,
@@ -175,60 +175,60 @@ Keep in mind that you&#x27;ll have to make sure that your <code>data()</code> ho
 <p>In case you don&#x27;t use <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>, you can implement <code>useData()</code> yourself as shown at <a href="/useData#without-vike-extension">API<!-- --> &gt; <code>useData()</code> &gt; <!-- -->Without Vike extension</a></p>
 </blockquote>
 <p>That said, you can also use <code>data()</code> without <code>useData()</code>:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+onRenderHtml.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderHtml }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/server&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { renderToHtml, createElement } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-ui-framework&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderHtml</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// The data is available at pageContext.data</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">Page</span><span style="color:#24292F">, </span><span style="color:#0550AE">data</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageHtml</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderToHtml</span><span style="color:#24292F">(</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Pass pageContext.data to the &lt;Page&gt; component</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#8250DF">createElement</span><span style="color:#24292F">(Page, data)</span></span>
-<span class="line"><span style="color:#24292F">  )</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">/* JSX:</span></span>
-<span class="line"><span style="color:#6E7781">  const pageHtml = await renderToHtml(&lt;Page {...data} /&gt;)</span></span>
-<span class="line"><span style="color:#6E7781">  */</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#8250DF">escapeInject</span><span style="color:#0A3069">`&lt;html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;div id=&#x27;view-root&#x27;&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      ${</span><span style="color:#8250DF">dangerouslySkipEscape</span><span style="color:#0A3069">(</span><span style="color:#24292F">pageHtml</span><span style="color:#0A3069">)</span><span style="color:#0A3069">}</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;/div&gt;</span></span>
-<span class="line"><span style="color:#0A3069">  &lt;/html&gt;`</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+onRenderClient.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: browser</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderClient }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { hydrateDom, createElement } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-ui-framework&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderClient</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">Page</span><span style="color:#24292F">, </span><span style="color:#0550AE">data</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">hydrateDom</span><span style="color:#24292F">(</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Pass pageContext.data to the &lt;Page&gt; component</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#8250DF">createElement</span><span style="color:#24292F">(Page, data),</span></span>
-<span class="line"><span style="color:#24292F">    document.</span><span style="color:#8250DF">getElementById</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;view-root&#x27;</span><span style="color:#24292F">)</span></span>
-<span class="line"><span style="color:#24292F">  )</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">/* JSX:</span></span>
-<span class="line"><span style="color:#6E7781">  await hydrateDom(&lt;Page {...data} /&gt;, document.getElementById(&#x27;view-root&#x27;))</span></span>
-<span class="line"><span style="color:#6E7781">  */</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/movies/+Page.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: browser and server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { Page }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// In the onRenderHtml() and onRenderClient() hooks above,</span></span>
-<span class="line"><span style="color:#6E7781">// pageContext.data is passed to the &lt;Page&gt; component.</span></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">Page</span><span style="color:#24292F">(</span><span style="color:#953800">data</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">movies</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> data</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ...</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+onRenderHtml.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderHtml }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/server&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { renderToHtml, createElement } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-ui-framework&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderHtml</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#6A737D">  // The data is available at pageContext.data</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">Page</span><span style="color:#24292E">, </span><span style="color:#005CC5">data</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> pageHtml</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> renderToHtml</span><span style="color:#24292E">(</span></span>
+<span data-line=""><span style="color:#6A737D">    // Pass pageContext.data to the &lt;Page&gt; component</span></span>
+<span data-line=""><span style="color:#6F42C1">    createElement</span><span style="color:#24292E">(Page, data)</span></span>
+<span data-line=""><span style="color:#24292E">  )</span></span>
+<span data-line=""><span style="color:#6A737D">  /* JSX:</span></span>
+<span data-line=""><span style="color:#6A737D">  const pageHtml = await renderToHtml(&lt;Page {...data} /&gt;)</span></span>
+<span data-line=""><span style="color:#6A737D">  */</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#6F42C1"> escapeInject</span><span style="color:#032F62">`&lt;html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;div id=&#x27;view-root&#x27;&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      ${</span><span style="color:#6F42C1">dangerouslySkipEscape</span><span style="color:#032F62">(</span><span style="color:#24292E">pageHtml</span><span style="color:#032F62">)</span><span style="color:#032F62">}</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;/div&gt;</span></span>
+<span data-line=""><span style="color:#032F62">  &lt;/html&gt;`</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+onRenderClient.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: browser</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderClient }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { hydrateDom, createElement } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-ui-framework&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderClient</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">Page</span><span style="color:#24292E">, </span><span style="color:#005CC5">data</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext</span></span>
+<span data-line=""><span style="color:#D73A49">  await</span><span style="color:#6F42C1"> hydrateDom</span><span style="color:#24292E">(</span></span>
+<span data-line=""><span style="color:#6A737D">    // Pass pageContext.data to the &lt;Page&gt; component</span></span>
+<span data-line=""><span style="color:#6F42C1">    createElement</span><span style="color:#24292E">(Page, data),</span></span>
+<span data-line=""><span style="color:#24292E">    document.</span><span style="color:#6F42C1">getElementById</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;view-root&#x27;</span><span style="color:#24292E">)</span></span>
+<span data-line=""><span style="color:#24292E">  )</span></span>
+<span data-line=""><span style="color:#6A737D">  /* JSX:</span></span>
+<span data-line=""><span style="color:#6A737D">  await hydrateDom(&lt;Page {...data} /&gt;, document.getElementById(&#x27;view-root&#x27;))</span></span>
+<span data-line=""><span style="color:#6A737D">  */</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/movies/+Page.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: browser and server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { Page }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// In the onRenderHtml() and onRenderClient() hooks above,</span></span>
+<span data-line=""><span style="color:#6A737D">// pageContext.data is passed to the &lt;Page&gt; component.</span></span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Page</span><span style="color:#24292E">(</span><span style="color:#E36209">data</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">movies</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> data</span></span>
+<span data-line=""><span style="color:#6A737D">  // ...</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="see-also">See also</h2>
 <ul>
 <li>
@@ -262,6 +262,6 @@ Keep in mind that you&#x27;ll have to make sure that your <code>data()</code> ho
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

@@ -2,8 +2,8 @@
     <html>
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Routing Precedence | Vike</title>
@@ -46,21 +46,21 @@
 <li>Route Function, returned high negative <code>precedence</code> number (e.g. <code>-99</code>)</li>
 </ol>
 <p><strong>Example (4) + (6) + (7)</strong>:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// product/list/+route.js</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> </span><span style="color:#0A3069">&#x27;/product&#x27;</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// product/item/+route.js</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> </span><span style="color:#0A3069">&#x27;/product/@productId&#x27;</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// product/catch-all/+route.js</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> pageContext </span><span style="color:#CF222E">=&gt;</span><span style="color:#953800"> </span><span style="color:#24292F">{</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (</span><span style="color:#CF222E">!</span><span style="color:#24292F">pageContext.urlPathname.</span><span style="color:#8250DF">startsWith</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;/product/&#x27;</span><span style="color:#24292F">)) </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#0550AE">false</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    precedence: </span><span style="color:#CF222E">-</span><span style="color:#0550AE">1</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">    pageContext: {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// E.g. redirect `/product/wrong/url` to `/product`</span></span>
-<span class="line"><span style="color:#24292F">      redirectTo: </span><span style="color:#0A3069">&#x27;/product&#x27;</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// product/list/+route.js</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#032F62"> &#x27;/product&#x27;</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// product/item/+route.js</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#032F62"> &#x27;/product/@productId&#x27;</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// product/catch-all/+route.js</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#E36209"> pageContext</span><span style="color:#D73A49"> =&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#D73A49">  if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">!</span><span style="color:#24292E">pageContext.urlPathname.</span><span style="color:#6F42C1">startsWith</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;/product/&#x27;</span><span style="color:#24292E">)) </span><span style="color:#D73A49">return</span><span style="color:#005CC5"> false</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">    precedence: </span><span style="color:#D73A49">-</span><span style="color:#005CC5">1</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#24292E">    pageContext: {</span></span>
+<span data-line=""><span style="color:#6A737D">      // E.g. redirect `/product/wrong/url` to `/product`</span></span>
+<span data-line=""><span style="color:#24292E">      redirectTo: </span><span style="color:#032F62">&#x27;/product&#x27;</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <pre><code>URL                           MATCHES                                WINNER
 ==================            ===============================        ======
 /product/42                   product/item/+route.js      (6)        ⬅️
@@ -79,18 +79,18 @@
 <!-- -->6: Route String, parameterized (with <code>@param</code> segments, e.g. <code>/product/@productId</code> or <code>/product/*</code>)<br/>
 <!-- -->7: Route Function, returned low negative <code>precedence</code> number (e.g. <code>-1</code>)</p>
 <p><strong>Example (1) + (4)</strong>:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// admin/+route.js</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> </span><span style="color:#0A3069">&#x27;/admin&#x27;</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// login/+route.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> pageContext </span><span style="color:#CF222E">=&gt;</span><span style="color:#953800"> </span><span style="color:#24292F">{</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F">( pageContext.user </span><span style="color:#CF222E">===</span><span style="color:#24292F"> </span><span style="color:#0550AE">null</span><span style="color:#24292F"> ) {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">      precedence: </span><span style="color:#0550AE">99</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#0550AE">false</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// admin/+route.js</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#032F62"> &#x27;/admin&#x27;</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// login/+route.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#E36209"> pageContext</span><span style="color:#D73A49"> =&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#D73A49">  if</span><span style="color:#24292E">( pageContext.user </span><span style="color:#D73A49">===</span><span style="color:#005CC5"> null</span><span style="color:#24292E"> ) {</span></span>
+<span data-line=""><span style="color:#D73A49">    return</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">      precedence: </span><span style="color:#005CC5">99</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#005CC5"> false</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <pre><code>URL                   pageContext.user       MATCHES                   WINNER
 ======                ================       ===================       ======
 /admin                null                   login/+route.js (1)       ⬅️
@@ -126,6 +126,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

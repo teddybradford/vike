@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>onRenderHtml() hook | Vike</title>
@@ -29,49 +29,49 @@
 <blockquote>
 <p>If you use a <!-- -->UI framework <a href="/extensions">Vike extension</a> (<code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>)<!-- -->, then you don&#x27;t need to define <code>onRenderHtml()</code> as it&#x27;s already defined by <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>.</p>
 </blockquote>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// +onRenderHtml.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/server&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { renderToHtml, createElement } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-ui-framework&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderHtml }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderHtml</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">){</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">Page</span><span style="color:#24292F">, </span><span style="color:#0550AE">data</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageHtml</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderToHtml</span><span style="color:#24292F">(</span><span style="color:#8250DF">createElement</span><span style="color:#24292F">(Page, data))</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">documentHtml</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">escapeInject</span><span style="color:#0A3069">`&lt;!DOCTYPE html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;head&gt;</span></span>
-<span class="line"><span style="color:#0A3069">        &lt;title&gt;My SSR App&lt;/title&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;/head&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">        &lt;div id=&quot;page-root&quot;&gt;${</span><span style="color:#8250DF">dangerouslySkipEscape</span><span style="color:#0A3069">(</span><span style="color:#24292F">pageHtml</span><span style="color:#0A3069">)</span><span style="color:#0A3069">}&lt;/div&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;/body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;/html&gt;`</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    documentHtml,</span></span>
-<span class="line"><span style="color:#24292F">    pageContext: {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// We can define pageContext values here</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// +onRenderHtml.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/server&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { renderToHtml, createElement } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-ui-framework&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderHtml }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderHtml</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">){</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">Page</span><span style="color:#24292E">, </span><span style="color:#005CC5">data</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> pageHtml</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> renderToHtml</span><span style="color:#24292E">(</span><span style="color:#6F42C1">createElement</span><span style="color:#24292E">(Page, data))</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> documentHtml</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> escapeInject</span><span style="color:#032F62">`&lt;!DOCTYPE html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;head&gt;</span></span>
+<span data-line=""><span style="color:#032F62">        &lt;title&gt;My SSR App&lt;/title&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;/head&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">        &lt;div id=&quot;page-root&quot;&gt;${</span><span style="color:#6F42C1">dangerouslySkipEscape</span><span style="color:#032F62">(</span><span style="color:#24292E">pageHtml</span><span style="color:#032F62">)</span><span style="color:#032F62">}&lt;/div&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;/body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;/html&gt;`</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">    documentHtml,</span></span>
+<span data-line=""><span style="color:#24292E">    pageContext: {</span></span>
+<span data-line=""><span style="color:#6A737D">      // We can define pageContext values here</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>Where <code>pageContext.Page</code> is the <code>Page</code> value of the page that is being rendered, see <a href="/Page">API<!-- --> &gt; <code>&lt;Page&gt;</code></a>.</p>
 <h2 id="typescript">TypeScript</h2>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// /**/+onRenderHtml.ts (usually /renderer/+onRenderHtml.ts)</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderHtml }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> { OnRenderHtmlAsync } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/types&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/server&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { renderToHtml, createElement } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-ui-framework&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderHtml</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#953800">OnRenderHtmlAsync</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> (</span><span style="color:#953800">pageContext</span><span style="color:#24292F">)</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#953800">ReturnType</span><span style="color:#24292F">&lt;</span><span style="color:#953800">OnRenderHtmlAsync</span><span style="color:#24292F">&gt; </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ...</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /**/+onRenderHtml.ts (usually /renderer/+onRenderHtml.ts)</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderHtml }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#D73A49"> type</span><span style="color:#24292E"> { OnRenderHtmlAsync } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/types&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/server&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { renderToHtml, createElement } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-ui-framework&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">const</span><span style="color:#6F42C1"> onRenderHtml</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> OnRenderHtmlAsync</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> async</span><span style="color:#24292E"> (</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> ReturnType</span><span style="color:#24292E">&lt;</span><span style="color:#6F42C1">OnRenderHtmlAsync</span><span style="color:#24292E">&gt; </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">  // ...</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote><p>Don&#x27;t omit <code>ReturnType&lt;<!-- -->OnRenderHtmlAsync<!-- -->&gt;</code> (don&#x27;t write<!-- --> <code>const onRenderHtml: OnRenderHtmlAsync = async (pageContext) =&gt; {</code>), otherwise TypeScript won&#x27;t strictly check the return type for unknown extra properties: see this TypeScript<!-- --> <a href="https://www.typescriptlang.org/play?#code/C4TwDgpgBAYgdlAvFAFGAhgJ3QWwFxQDOwmAlnAOYCUSAfFAN5ToFwCuOARhJlAL4AoAQHphUQDLkUAOqYA9pShtC6ChAEBjecSgAzOAEYC8JKgzYcNRPRQMBUZgX0AaO1FESoAFXAQAyurIwYCgAE1kIQjgAcmDNHDAAG3RyV04CACYBPiohd0BQcigAYVlMTAh1YKUVNU04bT10owRkNCxcKgIAJQhgNkw4b0gAHnh6K1RbexYoZ1d8rx9-QNjZeKTyQlSMrKogA">playground</a> <!-- -->and <a href="https://github.com/microsoft/TypeScript/issues/54661">issue</a>.</p></blockquote><blockquote><p>See <a href="/pageContext#typescript">API<!-- --> &gt; <code>pageContext</code> &gt; <!-- -->Typescript</a> for more information on how to extend <code>pageContext</code> <!-- -->with your own extra properties.</p></blockquote>
 <h2 id="see-also">See also</h2>
 <ul>
@@ -106,6 +106,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Markdown | Vike</title>
@@ -91,77 +91,77 @@
 </blockquote>
 <h3 id="with-a-metadata-js-file">With a <code>metadata.js</code> file</h3>
 <p>A simple way to define metadata is to define a <code>metadata.js</code> file that contains <a href="#metadata:~:text=global%20or%20local.-,Global%20metadata,-.">global metadata</a>.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/metadata.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// This metadata is always available for every page</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">metadata</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> [</span></span>
-<span class="line"><span style="color:#24292F">  {</span></span>
-<span class="line"><span style="color:#24292F">    url: </span><span style="color:#0A3069">&#x27;/blog/introducing-vike&#x27;</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">    title: </span><span style="color:#0A3069">&#x27;Introducing Vike&#x27;</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">    date: </span><span style="color:#CF222E">new</span><span style="color:#24292F"> </span><span style="color:#0550AE">Date</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;2024-01-01&#x27;</span><span style="color:#24292F">)</span></span>
-<span class="line"><span style="color:#24292F">  },</span></span>
-<span class="line"><span style="color:#24292F">  {</span></span>
-<span class="line"><span style="color:#24292F">    url: </span><span style="color:#0A3069">&#x27;/blog/v1&#x27;</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">    title: </span><span style="color:#0A3069">&#x27;v1.0.0 release&#x27;</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">    date: </span><span style="color:#CF222E">new</span><span style="color:#24292F"> </span><span style="color:#0550AE">Date</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;2024-06-01&#x27;</span><span style="color:#24292F">)</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">]</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="jsx" data-theme="default"><code data-language="jsx" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+Layout.jsx</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { metadata } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./metadata&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">Layout</span><span style="color:#24292F">({ </span><span style="color:#953800">children</span><span style="color:#24292F"> }) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Current URL</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">urlPathname</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">usePageContext</span><span style="color:#24292F">()</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// The page&#x27;s metadata</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">title</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> metadata.</span><span style="color:#8250DF">find</span><span style="color:#24292F">(({ </span><span style="color:#953800">url</span><span style="color:#24292F"> }) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> url </span><span style="color:#CF222E">===</span><span style="color:#24292F"> pageContext.urlPathname)</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> &lt;&gt;</span></span>
-<span class="line"><span style="color:#24292F">    {</span><span style="color:#6E7781">/* Show the list of blog posts */</span><span style="color:#24292F">}</span></span>
-<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">LeftSidebar</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">      &lt;</span><span style="color:#116329">p</span><span style="color:#24292F">&gt;Blog posts:&lt;/</span><span style="color:#116329">p</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">      &lt;</span><span style="color:#116329">ul</span><span style="color:#24292F">&gt;{</span></span>
-<span class="line"><span style="color:#24292F">        metadata.</span><span style="color:#8250DF">map</span><span style="color:#24292F">(({ </span><span style="color:#953800">title</span><span style="color:#24292F">, </span><span style="color:#953800">url</span><span style="color:#24292F">, </span><span style="color:#953800">date</span><span style="color:#24292F"> }) </span><span style="color:#CF222E">=&gt;</span></span>
-<span class="line"><span style="color:#24292F">          &lt;</span><span style="color:#116329">li</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">            &lt;</span><span style="color:#116329">a</span><span style="color:#24292F"> </span><span style="color:#0550AE">href</span><span style="color:#CF222E">=</span><span style="color:#24292F">{url}&gt;{data </span><span style="color:#CF222E">+</span><span style="color:#24292F"> title}&lt;/</span><span style="color:#116329">a</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">          &lt;/</span><span style="color:#116329">li</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">        )</span></span>
-<span class="line"><span style="color:#24292F">      }&lt;/</span><span style="color:#116329">ul</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">    &lt;/</span><span style="color:#116329">LeftSidebar</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">    {</span><span style="color:#6E7781">/* The page&#x27;s content */</span><span style="color:#24292F">}</span></span>
-<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">Content</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">      &lt;</span><span style="color:#116329">h1</span><span style="color:#24292F">&gt;{ title }&lt;/</span><span style="color:#116329">h1</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">      /* children is usually pageContext.Page which is the component defined by +Page.md */</span></span>
-<span class="line"><span style="color:#24292F">      { children }</span></span>
-<span class="line"><span style="color:#24292F">    &lt;/</span><span style="color:#116329">Content</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">  &lt;/&gt;</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="md" data-theme="default"><code data-language="md" data-theme="default"><span class="line"><span style="color:#24292F">// /pages/blog/introducing-vike/+Page.md</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">We&#x27;re thrilled to officially introduce Vike.</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/metadata.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// This metadata is always available for every page</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> const</span><span style="color:#005CC5"> metadata</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> [</span></span>
+<span data-line=""><span style="color:#24292E">  {</span></span>
+<span data-line=""><span style="color:#24292E">    url: </span><span style="color:#032F62">&#x27;/blog/introducing-vike&#x27;</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#24292E">    title: </span><span style="color:#032F62">&#x27;Introducing Vike&#x27;</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#24292E">    date: </span><span style="color:#D73A49">new</span><span style="color:#6F42C1"> Date</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;2024-01-01&#x27;</span><span style="color:#24292E">)</span></span>
+<span data-line=""><span style="color:#24292E">  },</span></span>
+<span data-line=""><span style="color:#24292E">  {</span></span>
+<span data-line=""><span style="color:#24292E">    url: </span><span style="color:#032F62">&#x27;/blog/v1&#x27;</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#24292E">    title: </span><span style="color:#032F62">&#x27;v1.0.0 release&#x27;</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#24292E">    date: </span><span style="color:#D73A49">new</span><span style="color:#6F42C1"> Date</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;2024-06-01&#x27;</span><span style="color:#24292E">)</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">]</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="jsx" data-theme="github-light"><code data-language="jsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+Layout.jsx</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { metadata } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./metadata&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> Layout</span><span style="color:#24292E">({ </span><span style="color:#E36209">children</span><span style="color:#24292E"> }) {</span></span>
+<span data-line=""><span style="color:#6A737D">  // Current URL</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">urlPathname</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> usePageContext</span><span style="color:#24292E">()</span></span>
+<span data-line=""><span style="color:#6A737D">  // The page&#x27;s metadata</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">title</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> metadata.</span><span style="color:#6F42C1">find</span><span style="color:#24292E">(({ </span><span style="color:#E36209">url</span><span style="color:#24292E"> }) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> url </span><span style="color:#D73A49">===</span><span style="color:#24292E"> pageContext.urlPathname)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> &lt;&gt;</span></span>
+<span data-line=""><span style="color:#24292E">    {</span><span style="color:#6A737D">/* Show the list of blog posts */</span><span style="color:#24292E">}</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;</span><span style="color:#005CC5">LeftSidebar</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">      &lt;</span><span style="color:#22863A">p</span><span style="color:#24292E">&gt;Blog posts:&lt;/</span><span style="color:#22863A">p</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">      &lt;</span><span style="color:#22863A">ul</span><span style="color:#24292E">&gt;{</span></span>
+<span data-line=""><span style="color:#24292E">        metadata.</span><span style="color:#6F42C1">map</span><span style="color:#24292E">(({ </span><span style="color:#E36209">title</span><span style="color:#24292E">, </span><span style="color:#E36209">url</span><span style="color:#24292E">, </span><span style="color:#E36209">date</span><span style="color:#24292E"> }) </span><span style="color:#D73A49">=&gt;</span></span>
+<span data-line=""><span style="color:#24292E">          &lt;</span><span style="color:#22863A">li</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">            &lt;</span><span style="color:#22863A">a</span><span style="color:#6F42C1"> href</span><span style="color:#D73A49">=</span><span style="color:#24292E">{url}&gt;{data </span><span style="color:#D73A49">+</span><span style="color:#24292E"> title}&lt;/</span><span style="color:#22863A">a</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">          &lt;/</span><span style="color:#22863A">li</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">        )</span></span>
+<span data-line=""><span style="color:#24292E">      }&lt;/</span><span style="color:#22863A">ul</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;/</span><span style="color:#005CC5">LeftSidebar</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">    {</span><span style="color:#6A737D">/* The page&#x27;s content */</span><span style="color:#24292E">}</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;</span><span style="color:#005CC5">Content</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">      &lt;</span><span style="color:#22863A">h1</span><span style="color:#24292E">&gt;{ title }&lt;/</span><span style="color:#22863A">h1</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">      /* children is usually pageContext.Page which is the component defined by +Page.md */</span></span>
+<span data-line=""><span style="color:#24292E">      { children }</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;/</span><span style="color:#005CC5">Content</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">  &lt;/&gt;</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="md" data-theme="github-light"><code data-language="md" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">// /pages/blog/introducing-vike/+Page.md</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">We&#x27;re thrilled to officially introduce Vike.</span></span></code></pre></figure>
 <blockquote>
 <p>The <code>&lt;h1&gt;</code> of each pages is already defined by <code>/pages/+Layout.jsx</code>: you don&#x27;t have to define it again in <code>+Page.md</code>.</p>
 </blockquote>
-<div data-rehype-pretty-code-fragment=""><pre data-language="md" data-theme="default"><code data-language="md" data-theme="default"><span class="line"><span style="color:#24292F">// /pages/blog/v1/+Page.md</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">The </span><span style="color:#24292F">`v1.0.0`</span><span style="color:#24292F"> release signals that Vike is ready for prime time: it now includes</span></span>
-<span class="line"><span style="color:#24292F">all essentials you&#x27;d expect from a frontend framework with a robust design.</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="md" data-theme="github-light"><code data-language="md" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">// /pages/blog/v1/+Page.md</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">The </span><span style="color:#005CC5">`v1.0.0`</span><span style="color:#24292E"> release signals that Vike is ready for prime time: it now includes</span></span>
+<span data-line=""><span style="color:#24292E">all essentials you&#x27;d expect from a frontend framework with a robust design.</span></span></code></pre></figure>
 <h3 id="with-custom-settings">With custom settings</h3>
 <p>You can use <a href="/meta"><code>meta</code></a> to create custom settings for defining <a href="#metadata:~:text=for%20every%20page.-,Local%20metadata,-.">local metadata</a>.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="mdx" data-theme="default"><code data-language="mdx" data-theme="default"><span class="line"><span style="color:#24292F">// /pages/2024-new-year/+Page.mdx</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">metadata</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">  author: {</span></span>
-<span class="line"><span style="color:#24292F">    firstName: </span><span style="color:#0A3069">&#x27;John&#x27;</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">    lastName: </span><span style="color:#0A3069">&#x27;Doe&#x27;</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">    country: </span><span style="color:#0A3069">&#x27;England&#x27;</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">## Some Markdown</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">This page uses [markdown](https:</span><span style="color:#6E7781">//en.wikipedia.org/wiki/Markdown).</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="mdx" data-theme="github-light"><code data-language="mdx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">// /pages/2024-new-year/+Page.mdx</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> const</span><span style="color:#005CC5"> metadata</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  author: {</span></span>
+<span data-line=""><span style="color:#24292E">    firstName: </span><span style="color:#032F62">&#x27;John&#x27;</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#24292E">    lastName: </span><span style="color:#032F62">&#x27;Doe&#x27;</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#24292E">    country: </span><span style="color:#032F62">&#x27;England&#x27;</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#005CC5;font-weight:bold">## Some Markdown</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">This page uses </span><span style="color:#032F62">[</span><span style="color:#24292E">markdown</span><span style="color:#032F62">](</span><span style="color:#032F62;text-decoration:underline">https://en.wikipedia.org/wiki/Markdown</span><span style="color:#032F62">)</span><span style="color:#24292E">.</span></span></code></pre></figure>
 <blockquote>
 <p><a href="https://mdxjs.com/">MDX</a> allows you to export JavaScript values in <code>.mdx</code> files.</p>
 </blockquote>
@@ -169,16 +169,16 @@
 <p>Usually, Vike forbids <code>+Page.js</code> files to have &quot;side exports&quot;: the <code>+Page.js</code> should only export the value of the <code>Page</code> setting.
 But, for improved DX, Vike allows markdown files such as <code>+Page.mdx</code> to export the value of other settings.</p>
 </blockquote>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// Define the custom settings `metadata`</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">meta: {</span></span>
-<span class="line"><span style="color:#24292F">    metadata: {</span></span>
-<span class="line"><span style="color:#24292F">      env: { server: </span><span style="color:#0550AE">true</span><span style="color:#24292F">, client: </span><span style="color:#0550AE">true</span><span style="color:#24292F"> }</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// Define the custom settings `metadata`</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  meta: {</span></span>
+<span data-line=""><span style="color:#24292E">    metadata: {</span></span>
+<span data-line=""><span style="color:#24292E">      env: { server: </span><span style="color:#005CC5">true</span><span style="color:#24292E">, client: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>See <a href="/meta">API<!-- --> &gt; <code>meta</code></a>.</p>
 <blockquote>
 <p>It&#x27;s a common practice to use a <a href="#with-a-metadata-js-file"><code>metadata.js</code> file</a> for defining global metadata, as well as creating custom settings for defining local metadata.</p>
@@ -223,6 +223,6 @@ which you can access by making the export <code>nameOfTheFrontmatterExport</code
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

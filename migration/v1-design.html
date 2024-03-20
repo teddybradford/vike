@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>V1 Design Migration | Vike</title>
@@ -43,27 +43,27 @@
 <p>Most of the migration boils down to the following two steps.</p>
 <p><strong>1. Migrate <code>/renderer/*.page.*</code></strong></p>
 <p>Move your <code>renderer/</code> hooks to <code>+</code> files:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- // /renderer/_default.page.client.js</span></span>
-<span class="line"><span style="color:#116329">+ // /renderer/+onRenderClient.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#82071E">- export { render }</span></span>
-<span class="line"><span style="color:#116329">+ export { render as onRenderClient }</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- // /renderer/_default.page.server.js</span></span>
-<span class="line"><span style="color:#116329">+ // /renderer/+onRenderHtml.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#82071E">- export { render }</span></span>
-<span class="line"><span style="color:#116329">+ export { render as onRenderHtml }</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- // /renderer/_default.page.client.js</span></span>
+<span data-line=""><span style="color:#22863A">+ // /renderer/+onRenderClient.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#B31D28">- export { render }</span></span>
+<span data-line=""><span style="color:#22863A">+ export { render as onRenderClient }</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- // /renderer/_default.page.server.js</span></span>
+<span data-line=""><span style="color:#22863A">+ // /renderer/+onRenderHtml.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#B31D28">- export { render }</span></span>
+<span data-line=""><span style="color:#22863A">+ export { render as onRenderHtml }</span></span></code></pre></figure>
 <p>If you&#x27;ve defined a global <code>onBeforeRender()</code> hook and/or <code>passToClient</code>:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- // /renderer/_default.page.server.js</span></span>
-<span class="line"><span style="color:#116329">+ // /renderer/+onBeforeRender.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  export { onBeforeRender }</span></span>
-<span class="line"><span style="color:#82071E">- export const passToClient = [&#x27;pageProps&#x27;]</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#116329">+ // /renderer/+config.js</span></span>
-<span class="line"><span style="color:#116329">+ </span></span>
-<span class="line"><span style="color:#116329">+ export default {</span></span>
-<span class="line"><span style="color:#116329">+   passToClient: [&#x27;pageProps&#x27;]</span></span>
-<span class="line"><span style="color:#116329">+ }</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- // /renderer/_default.page.server.js</span></span>
+<span data-line=""><span style="color:#22863A">+ // /renderer/+onBeforeRender.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">  export { onBeforeRender }</span></span>
+<span data-line=""><span style="color:#B31D28">- export const passToClient = [&#x27;pageProps&#x27;]</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#22863A">+ // /renderer/+config.js</span></span>
+<span data-line=""><span style="color:#22863A">+ </span></span>
+<span data-line=""><span style="color:#22863A">+ export default {</span></span>
+<span data-line=""><span style="color:#22863A">+   passToClient: [&#x27;pageProps&#x27;]</span></span>
+<span data-line=""><span style="color:#22863A">+ }</span></span></code></pre></figure>
 <blockquote>
 <p>See <a href="/config">API<!-- --> &gt; <!-- -->Config files</a> for more information about what <code>+</code> and <code>.h.js</code> means.</p>
 </blockquote>
@@ -71,46 +71,46 @@
 <p>The suffixes such as <code>.page.server.js</code> and <code>.page.client.js</code> don&#x27;t exist anymore. After the feature request <a href="https://github.com/vikejs/vike/issues/744">#744</a> is implemented, you&#x27;ll be able to use <code>.server.js</code> and <code>.client.js</code> suffixes again but note that they&#x27;ll serve another purpose.</p>
 </blockquote>
 <p>Move <code>/renderer/</code> configurations to <code>/renderer/+config.ts</code>:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- // /renderer/_default.page.client.ts</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#82071E">- export { clientRouting }</span></span>
-<span class="line"><span style="color:#82071E">- export { hydrationCanBeAborted }</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+config.ts</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> { Config } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/types&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">clientRouting: </span><span style="color:#0550AE">true</span><span style="color:#953800">,</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">hydrationCanBeAborted: </span><span style="color:#0550AE">true</span></span>
-<span class="line"><span style="color:#953800">} </span><span style="color:#24292F">satisfies</span><span style="color:#953800"> </span><span style="color:#24292F">Config</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- // /renderer/_default.page.client.ts</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#B31D28">- export { clientRouting }</span></span>
+<span data-line=""><span style="color:#B31D28">- export { hydrationCanBeAborted }</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+config.ts</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#D73A49"> type</span><span style="color:#24292E"> { Config } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/types&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  clientRouting: </span><span style="color:#005CC5">true</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#24292E">  hydrationCanBeAborted: </span><span style="color:#005CC5">true</span></span>
+<span data-line=""><span style="color:#24292E">} </span><span style="color:#D73A49">satisfies</span><span style="color:#6F42C1"> Config</span></span></code></pre></figure>
 <p>Move your error page (if you defined one):</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- // /renderer/_error.page.js</span></span>
-<span class="line"><span style="color:#116329">+ // /pages/_error/+Page.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  export { Page }</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- // /renderer/_error.page.js</span></span>
+<span data-line=""><span style="color:#22863A">+ // /pages/_error/+Page.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">  export { Page }</span></span></code></pre></figure>
 <p><strong>2. Migrate <code>/pages/**/*.page.*</code></strong></p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- // /pages/some-page/index.page.ts</span></span>
-<span class="line"><span style="color:#116329">+ // /pages/some-page/+Page.ts</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  export { Page }</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- // /pages/some-page/index.page.server.ts</span></span>
-<span class="line"><span style="color:#116329">+ // /pages/some-page/+onBeforeRender.ts</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  export { onBeforeRender }</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- // /pages/some-page/index.page.route.ts</span></span>
-<span class="line"><span style="color:#116329">+ // /pages/some-page/+route.ts</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  export default route</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- // /pages/some-page/index.page.ts</span></span>
+<span data-line=""><span style="color:#22863A">+ // /pages/some-page/+Page.ts</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">  export { Page }</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- // /pages/some-page/index.page.server.ts</span></span>
+<span data-line=""><span style="color:#22863A">+ // /pages/some-page/+onBeforeRender.ts</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">  export { onBeforeRender }</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- // /pages/some-page/index.page.route.ts</span></span>
+<span data-line=""><span style="color:#22863A">+ // /pages/some-page/+route.ts</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">  export default route</span></span></code></pre></figure>
 <blockquote>
 <p>Each page now lives in its own directory.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="bash" data-theme="default"><code data-language="bash" data-theme="default"><span class="line"><span style="color:#6E7781"># ✅ V1 design</span></span>
-<span class="line"><span style="color:#24292F">$ ls pages/</span><span style="color:#CF222E">**</span><span style="color:#24292F">/</span><span style="color:#CF222E">*</span></span>
-<span class="line"><span style="color:#24292F">/pages/some-page/+Page.js</span></span>
-<span class="line"><span style="color:#24292F">/pages/some-other-page/+Page.js</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="bash" data-theme="default"><code data-language="bash" data-theme="default"><span class="line"><span style="color:#6E7781"># ❌ This isn&#x27;t possible anymore: each page now needs to create a new directory</span></span>
-<span class="line"><span style="color:#24292F">$ ls pages/</span><span style="color:#CF222E">**</span><span style="color:#24292F">/</span><span style="color:#CF222E">*</span></span>
-<span class="line"><span style="color:#24292F">/pages/some.page.js</span></span>
-<span class="line"><span style="color:#24292F">/pages/some-other.page.js</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="bash" data-theme="github-light"><code data-language="bash" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D"># ✅ V1 design</span></span>
+<span data-line=""><span style="color:#6F42C1">$</span><span style="color:#032F62"> ls</span><span style="color:#032F62"> pages/</span><span style="color:#005CC5">**</span><span style="color:#032F62">/</span><span style="color:#005CC5">*</span></span>
+<span data-line=""><span style="color:#6F42C1">/pages/some-page/+Page.js</span></span>
+<span data-line=""><span style="color:#6F42C1">/pages/some-other-page/+Page.js</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="bash" data-theme="github-light"><code data-language="bash" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D"># ❌ This isn&#x27;t possible anymore: each page now needs to create a new directory</span></span>
+<span data-line=""><span style="color:#6F42C1">$</span><span style="color:#032F62"> ls</span><span style="color:#032F62"> pages/</span><span style="color:#005CC5">**</span><span style="color:#032F62">/</span><span style="color:#005CC5">*</span></span>
+<span data-line=""><span style="color:#6F42C1">/pages/some.page.js</span></span>
+<span data-line=""><span style="color:#6F42C1">/pages/some-other.page.js</span></span></code></pre></figure>
 </blockquote>
 <p>Apply following additional steps if you&#x27;ve defined:</p>
 <ul>
@@ -207,49 +207,49 @@
 <p>The hooks are equivalent: they just have a new name.</p>
 <p>Also note that <code>doNotPrerender</code> has been renamed:</p>
 <table><thead><tr><th>Old name</th><th>New name</th></tr></thead><tbody><tr><td><code>doNotPrerender: true</code></td><td><code>prerender: false</code></td></tr></tbody></table>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#24292F">// /pages/news.page.server.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#82071E">- export const doNotPrerender = true</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#24292F">// /pages/news/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  export default {</span></span>
-<span class="line"><span style="color:#116329">+   prerender: false</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">// /pages/news.page.server.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#B31D28">- export const doNotPrerender = true</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">// /pages/news/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">  export default {</span></span>
+<span data-line=""><span style="color:#22863A">+   prerender: false</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span></code></pre></figure>
 <h2 id="custom-hooks-exports">Custom hooks/exports</h2>
 <p>If you use <a href="https://vite-plugin-ssr.com/exports">custom hooks/exports</a>, then replace them with custom hooks/settings.</p>
 <p>You can create your own hooks and settings by using <code>meta</code>:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+config.ts</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> { Config } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/types&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">meta: {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// We create a new setting called `title`</span></span>
-<span class="line"><span style="color:#24292F">    title: {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// The value of `title` should be loaded only on the server</span></span>
-<span class="line"><span style="color:#24292F">      env: { server: </span><span style="color:#0550AE">true</span><span style="color:#24292F"> }</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#953800">} </span><span style="color:#24292F">satisfies</span><span style="color:#953800"> </span><span style="color:#24292F">Config</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+onRenderHtml.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderHtml }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderHtml</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Config values are available at pageContext.config</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">title</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.config</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#8250DF">escapeInject</span><span style="color:#0A3069">`&lt;html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;head&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;title&gt;${</span><span style="color:#24292F">title</span><span style="color:#0A3069">}&lt;/title&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;/head&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;!-- ... --&gt;</span></span>
-<span class="line"><span style="color:#0A3069">  &lt;/html&gt;`</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/about/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">title: </span><span style="color:#0A3069">&#x27;Demo showcasing the V1 design&#x27;</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+config.ts</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#D73A49"> type</span><span style="color:#24292E"> { Config } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/types&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  meta: {</span></span>
+<span data-line=""><span style="color:#6A737D">    // We create a new setting called `title`</span></span>
+<span data-line=""><span style="color:#24292E">    title: {</span></span>
+<span data-line=""><span style="color:#6A737D">      // The value of `title` should be loaded only on the server</span></span>
+<span data-line=""><span style="color:#24292E">      env: { server: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">} </span><span style="color:#D73A49">satisfies</span><span style="color:#6F42C1"> Config</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+onRenderHtml.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderHtml }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderHtml</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#6A737D">  // Config values are available at pageContext.config</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">title</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext.config</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#6F42C1"> escapeInject</span><span style="color:#032F62">`&lt;html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;head&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;title&gt;${</span><span style="color:#24292E">title</span><span style="color:#032F62">}&lt;/title&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;/head&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;!-- ... --&gt;</span></span>
+<span data-line=""><span style="color:#032F62">  &lt;/html&gt;`</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/about/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  title: </span><span style="color:#032F62">&#x27;Demo showcasing the V1 design&#x27;</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>See:</p>
 <ul>
 <li>
@@ -259,19 +259,19 @@
 </ul>
 <h2 id="onbeforerender-in-page-js"><code>onBeforeRender</code> in <code>.page.js</code></h2>
 <p>If you&#x27;ve defined <code>onBeforeRender()</code> hooks in <code>.page.js</code> (instead of <code>.page.server.js</code>):</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+config.ts</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> { Config } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/types&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">meta: {</span></span>
-<span class="line"><span style="color:#24292F">    onBeforeRender: {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// We tell Vike to load and execute onBeforeRender()</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// not only on the server-side but also on the client-side.</span></span>
-<span class="line"><span style="color:#24292F">      env: { server: </span><span style="color:#0550AE">true</span><span style="color:#24292F">, client: </span><span style="color:#0550AE">true</span><span style="color:#24292F"> }</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#953800">} </span><span style="color:#24292F">satisfies</span><span style="color:#953800"> </span><span style="color:#24292F">Config</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+config.ts</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#D73A49"> type</span><span style="color:#24292E"> { Config } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/types&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  meta: {</span></span>
+<span data-line=""><span style="color:#24292E">    onBeforeRender: {</span></span>
+<span data-line=""><span style="color:#6A737D">      // We tell Vike to load and execute onBeforeRender()</span></span>
+<span data-line=""><span style="color:#6A737D">      // not only on the server-side but also on the client-side.</span></span>
+<span data-line=""><span style="color:#24292E">      env: { server: </span><span style="color:#005CC5">true</span><span style="color:#24292E">, client: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">} </span><span style="color:#D73A49">satisfies</span><span style="color:#6F42C1"> Config</span></span></code></pre></figure>
 <p>For convenience, you can use <a href="/meta"><code>meta</code></a> in order to
 <a href="https://github.com/vikejs/vike/blob/43503a4829e4bb0171785bc8fa501c7ca096a150/examples/react-full/renderer/+config.ts#L14-L33">create a new config <code>dataIsomorph: boolean</code></a> for a
 <a href="https://github.com/vikejs/vike/blob/43503a4829e4bb0171785bc8fa501c7ca096a150/examples/react-full/pages/star-wars/@id/+dataIsomorph.ts">page-per-page toggle</a>.</p>
@@ -280,12 +280,12 @@
 <blockquote>
 <p>You can also keep using <a href="/onHydrationEnd"><code>onHydrationEnd()</code></a>.</p>
 </blockquote>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// +config.js</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">client: </span><span style="color:#0A3069">&#x27;./some-client-code.js&#x27;</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// some-client-code.js</span></span>
-<span class="line"><span style="color:#24292F">console.</span><span style="color:#8250DF">log</span><span style="color:#24292F">(</span><span style="color:#0A3069">&quot;I&#x27;m run when the client-side JavaScript is loaded.&quot;</span><span style="color:#24292F">)</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// +config.js</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  client: </span><span style="color:#032F62">&#x27;./some-client-code.js&#x27;</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// some-client-code.js</span></span>
+<span data-line=""><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">&quot;I&#x27;m run when the client-side JavaScript is loaded.&quot;</span><span style="color:#24292E">)</span></span></code></pre></figure>
 <h2 id="see-also">See also</h2>
 <ul>
 <li>
@@ -326,6 +326,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

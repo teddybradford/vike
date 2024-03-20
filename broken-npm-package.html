@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Broken npm package | Vike</title>
@@ -32,14 +32,14 @@
 </blockquote>
 <h2 id="workaround">Workaround</h2>
 <p>You can usually workaround problematic npm packages by using <a href="https://vitejs.dev/config/ssr-options.html#ssr-noexternal"><code>vite.config.js &gt; ssr.noExternal</code></a>.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// vite.config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">ssr: {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Add problematic npm packages here</span></span>
-<span class="line"><span style="color:#24292F">    noExternal: [</span><span style="color:#0A3069">&#x27;some-npm-package&#x27;</span><span style="color:#24292F">]</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// vite.config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  ssr: {</span></span>
+<span data-line=""><span style="color:#6A737D">    // Add problematic npm packages here</span></span>
+<span data-line=""><span style="color:#24292E">    noExternal: [</span><span style="color:#032F62">&#x27;some-npm-package&#x27;</span><span style="color:#24292E">]</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p>You may need to add several/nested npm packages to <code>ssr.noExternal</code>, because CJS/ESM issues sometime cascade down along the &quot;<code>noExternal</code> boundary&quot; as you add npm packages to <code>ssr.noExternal</code>.</p>
 </blockquote>
@@ -47,20 +47,20 @@
 <p>The section <a href="#why">Why</a> explains why <code>ssr.noExternal</code> is a workaround.</p>
 </blockquote>
 <p>If the npm package is CJS code then, instead of <code>ssr.noExternal</code>, consider using <a href="https://github.com/cyco130/vite-plugin-cjs-interop">vite-plugin-cjs-interop</a>.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// vite.config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { cjsInterop } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&quot;vite-plugin-cjs-interop&quot;</span><span style="color:#24292F">;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">plugins: [</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#8250DF">cjsInterop</span><span style="color:#24292F">({</span></span>
-<span class="line"><span style="color:#24292F">      dependencies: [</span></span>
-<span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// Add problematic npm package here</span></span>
-<span class="line"><span style="color:#24292F">        </span><span style="color:#0A3069">&quot;some-package&quot;</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">      ]</span></span>
-<span class="line"><span style="color:#24292F">    })</span></span>
-<span class="line"><span style="color:#24292F">  ]</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// vite.config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { cjsInterop } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &quot;vite-plugin-cjs-interop&quot;</span><span style="color:#24292E">;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  plugins: [</span></span>
+<span data-line=""><span style="color:#6F42C1">    cjsInterop</span><span style="color:#24292E">({</span></span>
+<span data-line=""><span style="color:#24292E">      dependencies: [</span></span>
+<span data-line=""><span style="color:#6A737D">        // Add problematic npm package here</span></span>
+<span data-line=""><span style="color:#032F62">        &quot;some-package&quot;</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#24292E">      ]</span></span>
+<span data-line=""><span style="color:#24292E">    })</span></span>
+<span data-line=""><span style="color:#24292E">  ]</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p>Feel free to <a href="/faq#can-i-reach-out-for-help">reach out for help</a> if the workarounds don&#x27;t work.</p>
 </blockquote>
@@ -112,9 +112,9 @@ const { SomeImport } = pkg;
 Node.js v18.0.0
 </code></pre></div>
 <p>The workaround proposed by Node.js often doesn&#x27;t work for default exports. If it doesn&#x27;t, try this instead:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- import theDefaultExport from &#x27;some-library&#x27;</span></span>
-<span class="line"><span style="color:#116329">+ import lib from &#x27;some-library&#x27;;</span></span>
-<span class="line"><span style="color:#116329">+ const theDefaultExport = lib.default ?? lib</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- import theDefaultExport from &#x27;some-library&#x27;</span></span>
+<span data-line=""><span style="color:#22863A">+ import lib from &#x27;some-library&#x27;;</span></span>
+<span data-line=""><span style="color:#22863A">+ const theDefaultExport = lib.default ?? lib</span></span></code></pre></figure>
 <p>Alternatives:</p>
 <ul>
 <li><a href="https://github.com/cyco130/vite-plugin-cjs-interop">vite-plugin-cjs-interop</a></li>
@@ -166,17 +166,17 @@ Did you mean to import ./some-dir/index.js?
 </code></pre></div>
 <blockquote>
 <p>The underlying issue being:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// node_modules/some-good-lib/dist/index.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// Because of CJS/ESM issues, someImport is undefined</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { someImport } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-broken-lib&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// ...</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">someFunction</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// TypeError: Cannot read properties of undefined (reading &#x27;someProp&#x27;)</span></span>
-<span class="line"><span style="color:#24292F">  someImport.someProp</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// node_modules/some-good-lib/dist/index.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// Because of CJS/ESM issues, someImport is undefined</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { someImport } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-broken-lib&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// ...</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> someFunction</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#6A737D">  // TypeError: Cannot read properties of undefined (reading &#x27;someProp&#x27;)</span></span>
+<span data-line=""><span style="color:#24292E">  someImport.someProp</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 </blockquote>
 <p><a href="#workaround">Adding <code>some-broken-lib</code> to <code>vite.config.js &gt; ssr.noExternal</code></a> often solves the issue.</p>
 <blockquote>
@@ -208,11 +208,11 @@ exception is being raised, making it harder to understand which library is broke
 </blockquote>
 <p>Use the component trace to find out which component is <code>undefined</code> / an <code>object</code>. You&#x27;ll likely discover that the React component is imported, while the import value is <code>undefined</code> / an <code>object</code> (instead of a React component) because of CJS/ESM interoperability quirks.</p>
 <p>A local workaround is usually this:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- import SomeComponent from &quot;some-npm-package&quot;</span></span>
-<span class="line"><span style="color:#116329">+ import pkg from &quot;some-npm-package&quot;</span></span>
-<span class="line"><span style="color:#116329">+ const { SomeComponent } = pkg</span></span>
-<span class="line"><span style="color:#116329">+ // Or</span></span>
-<span class="line"><span style="color:#116329">+ const SomeComponent = pkg.default</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- import SomeComponent from &quot;some-npm-package&quot;</span></span>
+<span data-line=""><span style="color:#22863A">+ import pkg from &quot;some-npm-package&quot;</span></span>
+<span data-line=""><span style="color:#22863A">+ const { SomeComponent } = pkg</span></span>
+<span data-line=""><span style="color:#22863A">+ // Or</span></span>
+<span data-line=""><span style="color:#22863A">+ const SomeComponent = pkg.default</span></span></code></pre></figure>
 <p>For a workaround that is global (and TypeScript friendly), see <a href="#workaround">Workaround</a>.</p><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/broken-npm-package/+Page.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
         
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
@@ -235,6 +235,6 @@ exception is being raised, making it harder to understand which library is broke
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>lang | Vike</title>
@@ -28,34 +28,34 @@
 <!-- -->Environment: server.<br/>
 <!-- -->Implemented by: <!-- -->UI framework <a href="/extensions">Vike extension</a> (<code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>)<!-- -->.</p>
 <p>You can set the value of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang#language_tag_syntax"><code>&lt;html lang&gt;</code> attribute</a> by using Vike&#x27;s <code>lang</code> setting.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">lang: </span><span style="color:#0A3069">&#x27;fr&#x27;</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  lang: </span><span style="color:#032F62">&#x27;fr&#x27;</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>You can also dynamically set the value of <code>lang</code>. For example, if you want to internationalize your app:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+lang.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> (pageContext) </span><span style="color:#CF222E">=&gt;</span><span style="color:#953800"> </span><span style="color:#24292F">{</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> pageContext.locale</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+lang.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> (</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> pageContext.locale</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p>The <code>pageContext.locale</code> value is usually set by your <code>onBeforeRoute()</code> hook, see <a href="/i18n">Guides<!-- --> &gt; <!-- -->Internationalization (i18n)</a>.</p>
 </blockquote>
 <h2 id="without-vike-extension">Without Vike extension</h2>
 <p>The <code>lang</code> setting is implemented by the <!-- -->UI framework <a href="/extensions">Vike extension</a> (<code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>)<!-- -->. If you don&#x27;t use such extension, then you usually don&#x27;t need to implement a setting like <code>lang</code> as you can directly set the value of the <code>&lt;html lang&gt;</code> attribute at your <a href="/onRenderHtml"><code>onRenderHtml()</code> hook</a>.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+onRenderHtml.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { escapeInject } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/server&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderHtml</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">lang</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0A3069">&quot;fr&quot;</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#8250DF">escapeInject</span><span style="color:#0A3069">`&lt;!DOCTYPE html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;html lang=${</span><span style="color:#24292F">lang</span><span style="color:#0A3069">}&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      ...</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;/html&gt;`</span></span>
-<span class="line"><span style="color:#24292F">}</span></span>
-<span class="line"></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+onRenderHtml.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { escapeInject } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/server&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderHtml</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> lang</span><span style="color:#D73A49"> =</span><span style="color:#032F62"> &quot;fr&quot;</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#6F42C1"> escapeInject</span><span style="color:#032F62">`&lt;!DOCTYPE html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;html lang=${</span><span style="color:#24292E">lang</span><span style="color:#032F62">}&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      ...</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;/html&gt;`</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span>
+<span data-line=""> </span></code></pre></figure>
 <p>That said, you can also implement and replicate the <code>lang</code> setting described in this page, see the source code of <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>.</p>
 <h2 id="see-also">See also</h2>
 <ul>
@@ -91,6 +91,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

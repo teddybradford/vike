@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Migration 0.4.23 | Vike</title>
@@ -39,63 +39,63 @@
 <p>The <code>onBeforeRoute()</code> and <code>onBeforePrerender()</code> hooks are usually only used for i18n, see <a href="/i18n">Guides<!-- --> &gt; <!-- -->Internationalization (i18n)</a>.</p>
 </blockquote>
 <h2 id="renderpage"><code>renderPage()</code></h2>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#24292F">  // server.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  // Vike server middleware (e.g. Express.js)</span></span>
-<span class="line"><span style="color:#24292F">  app.get(&#x27;*&#x27;, async (req, res) =&gt; {</span></span>
-<span class="line"><span style="color:#24292F">    const pageContextInit = {</span></span>
-<span class="line"><span style="color:#82071E">-     url: req.url</span></span>
-<span class="line"><span style="color:#116329">+     urlOriginal: req.url</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">    const result = await renderPage(pageContextInit)</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">    /* ... */</span></span>
-<span class="line"><span style="color:#24292F">  })</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">  // server.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">  // Vike server middleware (e.g. Express.js)</span></span>
+<span data-line=""><span style="color:#24292E">  app.get(&#x27;*&#x27;, async (req, res) =&gt; {</span></span>
+<span data-line=""><span style="color:#24292E">    const pageContextInit = {</span></span>
+<span data-line=""><span style="color:#B31D28">-     url: req.url</span></span>
+<span data-line=""><span style="color:#22863A">+     urlOriginal: req.url</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">    const result = await renderPage(pageContextInit)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">    /* ... */</span></span>
+<span data-line=""><span style="color:#24292E">  })</span></span></code></pre></figure>
 <h2 id="route-functions">Route Functions</h2>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#24292F">  // /pages/**/*.page.route.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  export default pageContext =&gt; {</span></span>
-<span class="line"><span style="color:#82071E">-   const url = pageContext.url</span></span>
-<span class="line"><span style="color:#116329">+   const url = pageContext.urlPathname</span></span>
-<span class="line"><span style="color:#24292F">    /* ... */</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">  // /pages/**/*.page.route.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">  export default pageContext =&gt; {</span></span>
+<span data-line=""><span style="color:#B31D28">-   const url = pageContext.url</span></span>
+<span data-line=""><span style="color:#22863A">+   const url = pageContext.urlPathname</span></span>
+<span data-line=""><span style="color:#24292E">    /* ... */</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span></code></pre></figure>
 <h2 id="onbeforeroute"><code>onBeforeRoute()</code></h2>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#24292F">  // /renderer/_default.page.route.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  export function onBeforeRoute(pageContext) {</span></span>
-<span class="line"><span style="color:#82071E">-   let urlMod = pageContext.url</span></span>
-<span class="line"><span style="color:#116329">+   let urlMod = pageContext.urlOriginal</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">    urlMod = changeUrl(urlMod)</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">    return {</span></span>
-<span class="line"><span style="color:#24292F">      pageContext: {</span></span>
-<span class="line"><span style="color:#82071E">-       url: urlMod,</span></span>
-<span class="line"><span style="color:#116329">+       urlOriginal: urlMod,</span></span>
-<span class="line"><span style="color:#24292F">      }</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">  // /renderer/_default.page.route.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">  export function onBeforeRoute(pageContext) {</span></span>
+<span data-line=""><span style="color:#B31D28">-   let urlMod = pageContext.url</span></span>
+<span data-line=""><span style="color:#22863A">+   let urlMod = pageContext.urlOriginal</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">    urlMod = changeUrl(urlMod)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">    return {</span></span>
+<span data-line=""><span style="color:#24292E">      pageContext: {</span></span>
+<span data-line=""><span style="color:#B31D28">-       url: urlMod,</span></span>
+<span data-line=""><span style="color:#22863A">+       urlOriginal: urlMod,</span></span>
+<span data-line=""><span style="color:#24292E">      }</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span></code></pre></figure>
 <h2 id="onbeforeprerender"><code>onBeforePrerender()</code></h2>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#24292F">  // /renderer/_default.page.server.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  export function onBeforePrerender(globalContext) {</span></span>
-<span class="line"><span style="color:#24292F">    const prerenderPageContexts = []</span></span>
-<span class="line"><span style="color:#24292F">    globalContext.prerenderPageContexts.forEach((pageContext) =&gt; {</span></span>
-<span class="line"><span style="color:#24292F">      [&#x27;en-US&#x27;, &#x27;fr-FR&#x27;, &#x27;de-DE&#x27;].forEach((locale) =&gt; {</span></span>
-<span class="line"><span style="color:#24292F">        prerenderPageContexts.push({</span></span>
-<span class="line"><span style="color:#24292F">          ...pageContext,</span></span>
-<span class="line"><span style="color:#82071E">-         url: `/${locale}${pageContext.url}`,</span></span>
-<span class="line"><span style="color:#116329">+         urlOriginal: `/${locale}${pageContext.urlOriginal}`,</span></span>
-<span class="line"><span style="color:#24292F">          locale</span></span>
-<span class="line"><span style="color:#24292F">        })</span></span>
-<span class="line"><span style="color:#24292F">      })</span></span>
-<span class="line"><span style="color:#24292F">    })</span></span>
-<span class="line"><span style="color:#24292F">    return {</span></span>
-<span class="line"><span style="color:#24292F">      globalContext: {</span></span>
-<span class="line"><span style="color:#24292F">        prerenderPageContexts,</span></span>
-<span class="line"><span style="color:#24292F">      }</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span></code></pre></div><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/migration/0.4.23/+Page.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">  // /renderer/_default.page.server.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">  export function onBeforePrerender(globalContext) {</span></span>
+<span data-line=""><span style="color:#24292E">    const prerenderPageContexts = []</span></span>
+<span data-line=""><span style="color:#24292E">    globalContext.prerenderPageContexts.forEach((pageContext) =&gt; {</span></span>
+<span data-line=""><span style="color:#24292E">      [&#x27;en-US&#x27;, &#x27;fr-FR&#x27;, &#x27;de-DE&#x27;].forEach((locale) =&gt; {</span></span>
+<span data-line=""><span style="color:#24292E">        prerenderPageContexts.push({</span></span>
+<span data-line=""><span style="color:#24292E">          ...pageContext,</span></span>
+<span data-line=""><span style="color:#B31D28">-         url: `/${locale}${pageContext.url}`,</span></span>
+<span data-line=""><span style="color:#22863A">+         urlOriginal: `/${locale}${pageContext.urlOriginal}`,</span></span>
+<span data-line=""><span style="color:#24292E">          locale</span></span>
+<span data-line=""><span style="color:#24292E">        })</span></span>
+<span data-line=""><span style="color:#24292E">      })</span></span>
+<span data-line=""><span style="color:#24292E">    })</span></span>
+<span data-line=""><span style="color:#24292E">    return {</span></span>
+<span data-line=""><span style="color:#24292E">      globalContext: {</span></span>
+<span data-line=""><span style="color:#24292E">        prerenderPageContexts,</span></span>
+<span data-line=""><span style="color:#24292E">      }</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span></code></pre></figure><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/migration/0.4.23/+Page.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
         
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
     <script type="text/javascript">
@@ -117,6 +117,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

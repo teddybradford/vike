@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Pre-rendering (SSG) | Vike</title>
@@ -41,15 +41,15 @@ that you can deploy to so-called &quot;static hosts&quot; such as <a href="/gith
 <p>Pre-rendering can be used for websites with content that changes only occasionally. For example, the content of <code>https://vike.dev</code> changes only when a maintainer updates the documentation: all pages of <code>https://vike.dev</code> can then be pre-rendered again. Thanks to pre-rendering, <code>https://vike.dev</code> is deployed to the static host <a href="/github-pages">GitHub Pages</a>, which is a lot easier (and more performant) than using a production server.</p>
 <h2 id="how-to-pre-render">How to pre-render</h2>
 <p>To opt into pre-rendering:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// vite.config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> vike </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/plugin&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">plugins: [</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#8250DF">vike</span><span style="color:#24292F">({ prerender: </span><span style="color:#0550AE">true</span><span style="color:#24292F"> })</span></span>
-<span class="line"><span style="color:#24292F">  ]</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// vite.config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> vike </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/plugin&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  plugins: [</span></span>
+<span data-line=""><span style="color:#6F42C1">    vike</span><span style="color:#24292E">({ prerender: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> })</span></span>
+<span data-line=""><span style="color:#24292E">  ]</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>List of options: <a href="/prerender">API<!-- --> &gt; <code>prerender</code></a>.</p>
 <p>Your pages&#x27; HTML will be rendered when you run <code>$ vite build</code> and the generated HTML files are available at <code>dist/client/</code>.</p>
 <p>For a page with a parameterized route (e.g. <code>/movie/@movieId</code>), you have to use the <a href="/onBeforePrerenderStart"><code>onBeforePrerenderStart()</code> hook</a> in order to provide the list of URLs that are to be pre-rendered. The <code>onBeforePrerenderStart()</code> hook can also be used to accelerate the pre-rendering process.</p>
@@ -139,6 +139,6 @@ that you can deploy to so-called &quot;static hosts&quot; such as <a href="/gith
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

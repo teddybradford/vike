@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>styled-jsx | Vike</title>
@@ -39,62 +39,62 @@ Next.js manages server side hydration of styles as well as transpilation, so to 
 <ol>
 <li>Install:</li>
 </ol>
-<div data-rehype-pretty-code-fragment=""><pre data-language="shell" data-theme="default"><code data-language="shell" data-theme="default"><span class="line"><span style="color:#24292F">npm install styled-jsx</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="shell" data-theme="github-light"><code data-language="shell" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6F42C1">npm</span><span style="color:#032F62"> install</span><span style="color:#032F62"> styled-jsx</span></span></code></pre></figure>
 <ol start="2">
 <li>Add <code>styled-jsx</code> to <code>vite.config.js</code>:</li>
 </ol>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// vite.config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> react </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;@vitejs/plugin-react&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> vike </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/plugin&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">plugins: [</span><span style="color:#8250DF">react</span><span style="color:#24292F">({ babel: { plugins: [</span><span style="color:#0A3069">&#x27;styled-jsx/babel&#x27;</span><span style="color:#24292F">] } }), </span><span style="color:#8250DF">vike</span><span style="color:#24292F">()]</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// vite.config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> react </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;@vitejs/plugin-react&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> vike </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/plugin&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  plugins: [</span><span style="color:#6F42C1">react</span><span style="color:#24292E">({ babel: { plugins: [</span><span style="color:#032F62">&#x27;styled-jsx/babel&#x27;</span><span style="color:#24292E">] } }), </span><span style="color:#6F42C1">vike</span><span style="color:#24292E">()]</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <ol start="3">
 <li>Collect the styles during server-side rendering and attach to the DOM as <code>&lt;head&gt;</code> tags.</li>
 </ol>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+onRenderHtml.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderHtml }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> React </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;react&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { renderToString, renderToStaticMarkup } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;react-dom/server&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/server&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { PageLayout } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./PageLayout&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { createStyleRegistry, StyleRegistry } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;styled-jsx&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">registry</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">createStyleRegistry</span><span style="color:#24292F">()</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderHtml</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// flush styles to support the possibility of concurrent rendering</span></span>
-<span class="line"><span style="color:#24292F">  registry.</span><span style="color:#8250DF">flush</span><span style="color:#24292F">()</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">Page</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// include the styleregistry in the app render to inject the styles</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">viewHtml</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">dangerouslySkipEscape</span><span style="color:#24292F">(</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#8250DF">renderToString</span><span style="color:#24292F">(</span></span>
-<span class="line"><span style="color:#24292F">      &lt;</span><span style="color:#116329">StyleRegistry</span><span style="color:#24292F"> </span><span style="color:#0550AE">registry</span><span style="color:#CF222E">=</span><span style="color:#24292F">{registry}&gt;</span></span>
-<span class="line"><span style="color:#24292F">        &lt;</span><span style="color:#116329">PageLayout</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">          &lt;</span><span style="color:#116329">Page</span><span style="color:#24292F"> /&gt;</span></span>
-<span class="line"><span style="color:#24292F">        &lt;/</span><span style="color:#116329">PageLayout</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">      &lt;/</span><span style="color:#116329">StyleRegistry</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">    )</span></span>
-<span class="line"><span style="color:#24292F">  )</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// extract the styles to add as head tags to the server markup</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">headTags</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderToStaticMarkup</span><span style="color:#24292F">(&lt;&gt;{registry.</span><span style="color:#8250DF">styles</span><span style="color:#24292F">()}&lt;/&gt;)</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#8250DF">escapeInject</span><span style="color:#0A3069">`&lt;!DOCTYPE html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;head&gt;</span></span>
-<span class="line"><span style="color:#0A3069">        ${</span><span style="color:#8250DF">dangerouslySkipEscape</span><span style="color:#0A3069">(</span><span style="color:#24292F">headTags</span><span style="color:#0A3069">)</span><span style="color:#0A3069">}</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;/head&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">        &lt;div id=&quot;page-view&quot;&gt;${</span><span style="color:#24292F">viewHtml</span><span style="color:#0A3069">}&lt;/div&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;/body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;/html&gt;`</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/styled-jsx/+Page.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+onRenderHtml.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderHtml }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> React </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;react&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { renderToString, renderToStaticMarkup } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;react-dom/server&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/server&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { PageLayout } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./PageLayout&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { createStyleRegistry, StyleRegistry } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;styled-jsx&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> registry</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> createStyleRegistry</span><span style="color:#24292E">()</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderHtml</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#6A737D">  // flush styles to support the possibility of concurrent rendering</span></span>
+<span data-line=""><span style="color:#24292E">  registry.</span><span style="color:#6F42C1">flush</span><span style="color:#24292E">()</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">Page</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext</span></span>
+<span data-line=""><span style="color:#6A737D">  // include the styleregistry in the app render to inject the styles</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> viewHtml</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> dangerouslySkipEscape</span><span style="color:#24292E">(</span></span>
+<span data-line=""><span style="color:#6F42C1">    renderToString</span><span style="color:#24292E">(</span></span>
+<span data-line=""><span style="color:#24292E">      &lt;</span><span style="color:#005CC5">StyleRegistry</span><span style="color:#6F42C1"> registry</span><span style="color:#D73A49">=</span><span style="color:#24292E">{registry}&gt;</span></span>
+<span data-line=""><span style="color:#24292E">        &lt;</span><span style="color:#005CC5">PageLayout</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">          &lt;</span><span style="color:#005CC5">Page</span><span style="color:#24292E"> /&gt;</span></span>
+<span data-line=""><span style="color:#24292E">        &lt;/</span><span style="color:#005CC5">PageLayout</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">      &lt;/</span><span style="color:#005CC5">StyleRegistry</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">    )</span></span>
+<span data-line=""><span style="color:#24292E">  )</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">  // extract the styles to add as head tags to the server markup</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> headTags</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> renderToStaticMarkup</span><span style="color:#24292E">(&lt;&gt;{registry.</span><span style="color:#6F42C1">styles</span><span style="color:#24292E">()}&lt;/&gt;)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#6F42C1"> escapeInject</span><span style="color:#032F62">`&lt;!DOCTYPE html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;head&gt;</span></span>
+<span data-line=""><span style="color:#032F62">        ${</span><span style="color:#6F42C1">dangerouslySkipEscape</span><span style="color:#032F62">(</span><span style="color:#24292E">headTags</span><span style="color:#032F62">)</span><span style="color:#032F62">}</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;/head&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">        &lt;div id=&quot;page-view&quot;&gt;${</span><span style="color:#24292E">viewHtml</span><span style="color:#032F62">}&lt;/div&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;/body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;/html&gt;`</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/styled-jsx/+Page.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
         
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
     <script type="text/javascript">
@@ -116,6 +116,6 @@ Next.js manages server side hydration of styles as well as transpilation, so to 
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

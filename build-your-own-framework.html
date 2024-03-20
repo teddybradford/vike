@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Build Your Own Framework | Vike</title>
@@ -30,13 +30,13 @@
 <p>Your framework can include more functionality beyond Vike, such as a custom server, custom deployment integration, custom data fetching integration, etc.</p>
 <h2 id="basic-framework">Basic framework</h2>
 <p>A basic Vike framework provides a renderer so that the user of your framework doesn&#x27;t have to implement it:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="bash" data-theme="default"><code data-language="bash" data-theme="default"><span class="line"><span style="color:#6E7781"># Renderer implemented by the framework</span></span>
-<span class="line"><span style="color:#24292F">node_modules/framework/renderer/+onRenderHtml.js</span></span>
-<span class="line"><span style="color:#24292F">node_modules/framework/renderer/+onRenderClient.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781"># User page files</span></span>
-<span class="line"><span style="color:#24292F">pages/index/+Page.js</span></span>
-<span class="line"><span style="color:#24292F">pages/about/+Page.js</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="bash" data-theme="github-light"><code data-language="bash" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D"># Renderer implemented by the framework</span></span>
+<span data-line=""><span style="color:#6F42C1">node_modules/framework/renderer/+onRenderHtml.js</span></span>
+<span data-line=""><span style="color:#6F42C1">node_modules/framework/renderer/+onRenderClient.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D"># User page files</span></span>
+<span data-line=""><span style="color:#6F42C1">pages/index/+Page.js</span></span>
+<span data-line=""><span style="color:#6F42C1">pages/about/+Page.js</span></span></code></pre></figure>
 <p>In other words, the framework takes care of the UI framework integration (React, Vue, ...) so that all the framework&#x27;s users have left to do is to define UI components and pages using <code>/pages/**/+*.js</code> files.</p>
 <blockquote>
 <p><strong>Progressively build your framework</strong>. We recommend to build your framework progressively by first implementing a normal Vike app without building any framework. Once you&#x27;re satisfied with the architecture of your Vike app, you can start creating your own framework by moving <code>renderer/</code> from <code>my-app/renderer/</code> to <code>my-app/node_modules/my-own-framework/renderer/</code>.</p>
@@ -67,6 +67,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

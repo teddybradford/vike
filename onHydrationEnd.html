@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>onHydrationEnd() hook | Vike</title>
@@ -28,30 +28,30 @@
 <blockquote>
 <p>The <code>onHydrationEnd()</code> hook requires <a href="/client-routing">Client Routing</a>.</p>
 </blockquote>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+onHydrationEnd.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: browser</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onHydrationEnd }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// The onHydrationEnd() hook is called after the onRenderClient() hook finishes rendering the</span></span>
-<span class="line"><span style="color:#6E7781">// first page the user navigates to. (The onHydrationEnd() hook isn&#x27;t called upon subsequent</span></span>
-<span class="line"><span style="color:#6E7781">// page navigation.)</span></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onHydrationEnd</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  console.</span><span style="color:#8250DF">log</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;The page is now interactive&#x27;</span><span style="color:#24292F">)</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+onHydrationEnd.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: browser</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onHydrationEnd }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// The onHydrationEnd() hook is called after the onRenderClient() hook finishes rendering the</span></span>
+<span data-line=""><span style="color:#6A737D">// first page the user navigates to. (The onHydrationEnd() hook isn&#x27;t called upon subsequent</span></span>
+<span data-line=""><span style="color:#6A737D">// page navigation.)</span></span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onHydrationEnd</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#24292E">  console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;The page is now interactive&#x27;</span><span style="color:#24292E">)</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="typescript">TypeScript</h2>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+onHydrationEnd.ts</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: browser</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onHydrationEnd }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> { OnHydrationEndAsync } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/types&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#8250DF">onHydrationEnd</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#953800">OnHydrationEndAsync</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> (</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">pageContext</span></span>
-<span class="line"><span style="color:#24292F">)</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#953800">ReturnType</span><span style="color:#24292F">&lt;</span><span style="color:#953800">OnHydrationEndAsync</span><span style="color:#24292F">&gt; </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ...</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+onHydrationEnd.ts</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: browser</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onHydrationEnd }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#D73A49"> type</span><span style="color:#24292E"> { OnHydrationEndAsync } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/types&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">const</span><span style="color:#6F42C1"> onHydrationEnd</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> OnHydrationEndAsync</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> async</span><span style="color:#24292E"> (</span></span>
+<span data-line=""><span style="color:#E36209">  pageContext</span></span>
+<span data-line=""><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> ReturnType</span><span style="color:#24292E">&lt;</span><span style="color:#6F42C1">OnHydrationEndAsync</span><span style="color:#24292E">&gt; </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">  // ...</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote><p>Don&#x27;t omit <code>ReturnType&lt;<!-- -->OnHydrationEndAsync<!-- -->&gt;</code> (don&#x27;t write<!-- --> <code>const onHydrationEnd: OnHydrationEndAsync = async (pageContext) =&gt; {</code>), otherwise TypeScript won&#x27;t strictly check the return type for unknown extra properties: see this TypeScript<!-- --> <a href="https://www.typescriptlang.org/play?#code/C4TwDgpgBAYgdlAvFAFGAhgJ3QWwFxQDOwmAlnAOYCUSAfFAN5ToFwCuOARhJlAL4AoAQHphUQDLkUAOqYA9pShtC6ChAEBjecSgAzOAEYC8JKgzYcNRPRQMBUZgX0AaO1FESoAFXAQAyurIwYCgAE1kIQjgAcmDNHDAAG3RyV04CACYBPiohd0BQcigAYVlMTAh1YKUVNU04bT10owRkNCxcKgIAJQhgNkw4b0gAHnh6K1RbexYoZ1d8rx9-QNjZeKTyQlSMrKogA">playground</a> <!-- -->and <a href="https://github.com/microsoft/TypeScript/issues/54661">issue</a>.</p></blockquote><blockquote><p>See <a href="/pageContext#typescript">API<!-- --> &gt; <code>pageContext</code> &gt; <!-- -->Typescript</a> for more information on how to extend <code>pageContext</code> <!-- -->with your own extra properties.</p></blockquote>
 <h2 id="see-also">See also</h2>
 <ul>
@@ -86,6 +86,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

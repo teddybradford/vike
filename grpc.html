@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>gRPC | Vike</title>
@@ -34,23 +34,23 @@ since <code>onBeforeRender()</code> hooks are called in Node.js.</p>
 <p>For mutating data:</p>
 <ol>
 <li>We create a new HTTP endpoint. For example, if we use <a href="https://github.com/expressjs/express">Express.js</a>:<!-- -->
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// Environment: server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> express </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;express&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">app</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">express</span><span style="color:#24292F">()</span></span>
-<span class="line"><span style="color:#24292F">app.</span><span style="color:#8250DF">use</span><span style="color:#24292F">(express.</span><span style="color:#8250DF">json</span><span style="color:#24292F">()) </span><span style="color:#6E7781">// Parse the HTTP request body as JSON</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">app.</span><span style="color:#8250DF">post</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;/mutations/updateText&#x27;</span><span style="color:#24292F">, (</span><span style="color:#953800">req</span><span style="color:#24292F">, </span><span style="color:#953800">res</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">text</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> req.body</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// We can call gRPC endpoints here</span></span>
-<span class="line"><span style="color:#24292F">})</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> express </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;express&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> app</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> express</span><span style="color:#24292E">()</span></span>
+<span data-line=""><span style="color:#24292E">app.</span><span style="color:#6F42C1">use</span><span style="color:#24292E">(express.</span><span style="color:#6F42C1">json</span><span style="color:#24292E">()) </span><span style="color:#6A737D">// Parse the HTTP request body as JSON</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">app.</span><span style="color:#6F42C1">post</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;/mutations/updateText&#x27;</span><span style="color:#24292E">, (</span><span style="color:#E36209">req</span><span style="color:#24292E">, </span><span style="color:#E36209">res</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">text</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> req.body</span></span>
+<span data-line=""><span style="color:#6A737D">  // We can call gRPC endpoints here</span></span>
+<span data-line=""><span style="color:#24292E">})</span></span></code></pre></figure>
 </li>
 <li>We then call our HTTP endpoint from the browser.<!-- -->
-<div data-rehype-pretty-code-fragment=""><pre data-language="jsx" data-theme="default"><code data-language="jsx" data-theme="default"><span class="line"><span style="color:#6E7781">// Environment: browser</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">body</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0550AE">JSON</span><span style="color:#24292F">.</span><span style="color:#0550AE">stringify</span><span style="color:#24292F">({ text: </span><span style="color:#0A3069">&#x27;Some new text&#x27;</span><span style="color:#24292F"> })</span></span>
-<span class="line"><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">fetch</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;/mutations/updateText&#x27;</span><span style="color:#24292F">, { body })</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="jsx" data-theme="github-light"><code data-language="jsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// Environment: browser</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> body</span><span style="color:#D73A49"> =</span><span style="color:#005CC5"> JSON</span><span style="color:#24292E">.</span><span style="color:#6F42C1">stringify</span><span style="color:#24292E">({ text: </span><span style="color:#032F62">&#x27;Some new text&#x27;</span><span style="color:#24292E"> })</span></span>
+<span data-line=""><span style="color:#D73A49">await</span><span style="color:#6F42C1"> fetch</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;/mutations/updateText&#x27;</span><span style="color:#24292E">, { body })</span></span></code></pre></figure>
 </li>
 </ol><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/grpc/+Page.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
         
@@ -74,6 +74,6 @@ since <code>onBeforeRender()</code> hooks are called in Node.js.</p>
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

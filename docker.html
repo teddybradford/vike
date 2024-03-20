@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Docker | Vike</title>
@@ -28,14 +28,14 @@
 <h2 id="build">Build</h2>
 <p>If we build our app in Docker, we may stumble upon out-of-memory errors.</p>
 <p>If we do, we check whether our Docker container has enough memory, and we may also need to set <a href="https://nodejs.org/api/cli.html#--max-old-space-sizesize-in-megabytes">Node.js&#x27; <code>--max-old-space-size</code></a>.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="json" data-theme="default"><code data-language="json" data-theme="default"><span class="line"><span style="color:#6E7781">// package.json</span></span>
-<span class="line"><span style="color:#24292F">{</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#0550AE">&quot;scripts&quot;</span><span style="color:#24292F">: {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#0550AE">&quot;// We use Node.js&#x27; environment variable `NODE_OPTIONS` to increase memory size to 3GB&quot;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&quot;&quot;</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#0550AE">&quot;build&quot;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&quot;NODE_OPTIONS=--max-old-space-size=3072 npm run build:run&quot;</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#0550AE">&quot;build:run&quot;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&quot;vite build&quot;</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="json" data-theme="github-light"><code data-language="json" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// package.json</span></span>
+<span data-line=""><span style="color:#24292E">{</span></span>
+<span data-line=""><span style="color:#005CC5">  &quot;scripts&quot;</span><span style="color:#24292E">: {</span></span>
+<span data-line=""><span style="color:#005CC5">    &quot;// We use Node.js&#x27; environment variable `NODE_OPTIONS` to increase memory size to 3GB&quot;</span><span style="color:#24292E">: </span><span style="color:#032F62">&quot;&quot;</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#005CC5">    &quot;build&quot;</span><span style="color:#24292E">: </span><span style="color:#032F62">&quot;NODE_OPTIONS=--max-old-space-size=3072 npm run build:run&quot;</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#005CC5">    &quot;build:run&quot;</span><span style="color:#24292E">: </span><span style="color:#032F62">&quot;vite build&quot;</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>See also:</p>
 <ul>
 <li>
@@ -45,12 +45,12 @@
 <h2 id="dev">Dev</h2>
 <p>If we want to use Docker for development as well, we need to properly configure Docker for Vite&#x27;s HMR port.</p>
 <p>If we use Windows with <a href="https://docs.microsoft.com/en-us/windows/wsl/">WSL</a>, we need to configure <a href="https://github.com/paulmillr/chokidar"><code>chokidar</code></a> to use polling. (Vite uses <code>chokidar</code>.)</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="json" data-theme="default"><code data-language="json" data-theme="default"><span class="line"><span style="color:#6E7781">// package.json</span></span>
-<span class="line"><span style="color:#24292F">{</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#0550AE">&quot;scripts&quot;</span><span style="color:#24292F">: {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#0550AE">&quot;dev&quot;</span><span style="color:#24292F">: </span><span style="color:#0A3069">&quot;CHOKIDAR_USEPOLLING=true npm run server&quot;</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="json" data-theme="github-light"><code data-language="json" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// package.json</span></span>
+<span data-line=""><span style="color:#24292E">{</span></span>
+<span data-line=""><span style="color:#005CC5">  &quot;scripts&quot;</span><span style="color:#24292E">: {</span></span>
+<span data-line=""><span style="color:#005CC5">    &quot;dev&quot;</span><span style="color:#24292E">: </span><span style="color:#032F62">&quot;CHOKIDAR_USEPOLLING=true npm run server&quot;</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>Note that <a href="https://discord.com/channels/815937377888632913/815937377888632916/910110118375489567">it has been reported</a> that <a href="https://vitejs.dev/config/#server-watch">vite.config.js#server.watch.usePolling</a> doesn&#x27;t work.</p>
 <p>See also:</p>
 <ul>
@@ -77,6 +77,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

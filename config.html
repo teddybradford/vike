@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Config files | Vike</title>
@@ -37,44 +37,44 @@
 <h2 id="inheritance">Inheritance</h2>
 <p>You can apply configurations to all your pages, a subset of pages, or one page.</p>
 <p>For example:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> Layout </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;../layouts/LayoutDefault&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// This config file applies to all pages (/pages/**)</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#6E7781">// Set a default &lt;Layout&gt;</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">Layout</span><span style="color:#953800">,</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#6E7781">/* To disable SSR for all pages (by default):</span></span>
-<span class="line"><span style="color:#6E7781">  ssr: false */</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/admin-panel/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// This config file applies to all pages living at /pages/admin-panel/**</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> Layout </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;../../layouts/LayoutPanel.jsx&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#6E7781">// Disable SSR for the admin panel pages</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">ssr: </span><span style="color:#0550AE">false</span><span style="color:#953800">,</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#6E7781">// The &lt;Layout&gt; for the admin panel pages (overriding the default &lt;Layout&gt;)</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">Layout</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/@id/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// In principle, this config file applies to all pages /pages/product/@id/**</span></span>
-<span class="line"><span style="color:#6E7781">// but assuming there is only one page at /pages/product/@id/+Page.js</span></span>
-<span class="line"><span style="color:#6E7781">// this config file applies only to that one page.</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> Layout </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./Layout&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#6E7781">// Set the &lt;Layout&gt; of the product page (overriding the default &lt;Layout&gt;)</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">Layout</span><span style="color:#953800">,</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#6E7781">/* We don&#x27;t need this because `ssr` is `true` by default</span></span>
-<span class="line"><span style="color:#6E7781">  ssr: true */</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> Layout </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;../layouts/LayoutDefault&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// This config file applies to all pages (/pages/**)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">  // Set a default &lt;Layout&gt;</span></span>
+<span data-line=""><span style="color:#24292E">  Layout,</span></span>
+<span data-line=""><span style="color:#6A737D">  /* To disable SSR for all pages (by default):</span></span>
+<span data-line=""><span style="color:#6A737D">  ssr: false */</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/admin-panel/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// This config file applies to all pages living at /pages/admin-panel/**</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> Layout </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;../../layouts/LayoutPanel.jsx&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">  // Disable SSR for the admin panel pages</span></span>
+<span data-line=""><span style="color:#24292E">  ssr: </span><span style="color:#005CC5">false</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#6A737D">  // The &lt;Layout&gt; for the admin panel pages (overriding the default &lt;Layout&gt;)</span></span>
+<span data-line=""><span style="color:#24292E">  Layout</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/@id/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// In principle, this config file applies to all pages /pages/product/@id/**</span></span>
+<span data-line=""><span style="color:#6A737D">// but assuming there is only one page at /pages/product/@id/+Page.js</span></span>
+<span data-line=""><span style="color:#6A737D">// this config file applies only to that one page.</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> Layout </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./Layout&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">  // Set the &lt;Layout&gt; of the product page (overriding the default &lt;Layout&gt;)</span></span>
+<span data-line=""><span style="color:#24292E">  Layout,</span></span>
+<span data-line=""><span style="color:#6A737D">  /* We don&#x27;t need this because `ssr` is `true` by default</span></span>
+<span data-line=""><span style="color:#6A737D">  ssr: true */</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p>See also:</p>
 <ul>
@@ -88,39 +88,39 @@
 </blockquote>
 <p>For an improved file and config organization, consider using a <a href="/file-structure#domain-driven">domain-driven file structure</a>.</p>
 <p>You can even use two completely different rendering strategy: some pages can use Vue without SSR while other pages can use React with SSR.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/admin-panel/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> vikeVue </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike-vue/config&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">ssr: </span><span style="color:#0550AE">false</span><span style="color:#953800">,</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">extends: [vikeVue]</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/@id/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> vikeReact </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike-react/config&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">ssr: </span><span style="color:#0550AE">true</span><span style="color:#953800">,</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">extends: [vikeReact]</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/admin-panel/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> vikeVue </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-vue/config&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  ssr: </span><span style="color:#005CC5">false</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#24292E">  extends: [vikeVue]</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/@id/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> vikeReact </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-react/config&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  ssr: </span><span style="color:#005CC5">true</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#24292E">  extends: [vikeReact]</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="other-files">Other <code>+</code> files</h2>
 <p>For convenience, you can mark a file to be a config value. For example you can replace this:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/@id/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> Layout </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./Layout&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> { </span><span style="color:#24292F">Layout </span><span style="color:#953800">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/@id/Layout.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> </span><span style="color:#24292F">Layout</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">Layout</span><span style="color:#24292F">() { </span><span style="color:#6E7781">/* ... */</span><span style="color:#24292F"> }</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/@id/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> Layout </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./Layout&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> { Layout }</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/@id/Layout.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> Layout</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Layout</span><span style="color:#24292E">() { </span><span style="color:#6A737D">/* ... */</span><span style="color:#24292E"> }</span></span></code></pre></figure>
 <p>With the following (<code>Layout.js</code> renamed to <code>+Layout.js</code>):</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/@id/+Layout.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> </span><span style="color:#24292F">Layout</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">Layout</span><span style="color:#24292F">() { </span><span style="color:#6E7781">/* ... */</span><span style="color:#24292F"> }</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/@id/+Layout.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> Layout</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Layout</span><span style="color:#24292E">() { </span><span style="color:#6A737D">/* ... */</span><span style="color:#24292E"> }</span></span></code></pre></figure>
 <p>It&#x27;s just convenience and it&#x27;s equivalent whehter you define the page&#x27;s <a href="/Layout"><code>&lt;Layout&gt;</code></a>:</p>
 <ul>
 <li>By creating a <code>+config.js</code> file with <code>export default { Layout }</code>, or</li>
@@ -128,83 +128,83 @@
 </ul>
 <h2 id="pointer-imports">Pointer imports</h2>
 <p>Internally, Vike transforms this:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+config.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: config</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> Layout </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;../layouts/LayoutDefault.jsx&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">Layout</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: config</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> Layout </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;../layouts/LayoutDefault.jsx&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  Layout</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>Into that:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#24292F">  // /pages/+config.js</span></span>
-<span class="line"><span style="color:#24292F">  // Environment: config</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#82071E">- import Layout from &#x27;../layouts/LayoutDefault.jsx&#x27;</span></span>
-<span class="line"><span style="color:#116329">+ const Layout = &#x27;import:../layouts/LayoutDefault.jsx:default&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  export default {</span></span>
-<span class="line"><span style="color:#24292F">    Layout</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">  // /pages/+config.js</span></span>
+<span data-line=""><span style="color:#24292E">  // Environment: config</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#B31D28">- import Layout from &#x27;../layouts/LayoutDefault.jsx&#x27;</span></span>
+<span data-line=""><span style="color:#22863A">+ const Layout = &#x27;import:../layouts/LayoutDefault.jsx:default&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">  export default {</span></span>
+<span data-line=""><span style="color:#24292E">    Layout</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span></code></pre></figure>
 <p>To understand why, consider a <code>LayoutDefault.jsx</code> implementation:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /layouts/LayoutDefault.jsx</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: client/server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> </span><span style="color:#24292F">LayoutDefault</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">LayoutDefault</span><span style="color:#24292F">({ </span><span style="color:#953800">children</span><span style="color:#24292F"> }) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> &lt;&gt;</span></span>
-<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">div</span><span style="color:#24292F"> </span><span style="color:#0550AE">id</span><span style="color:#CF222E">=</span><span style="color:#0A3069">&quot;sidebar&quot;</span><span style="color:#24292F">&gt;{</span><span style="color:#6E7781">/* ... */</span><span style="color:#24292F">}&lt;/</span><span style="color:#116329">div</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">div</span><span style="color:#24292F"> </span><span style="color:#0550AE">id</span><span style="color:#CF222E">=</span><span style="color:#0A3069">&quot;content&quot;</span><span style="color:#24292F">&gt;{children}&lt;/</span><span style="color:#116329">div</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">  &lt;/&gt;</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /layouts/LayoutDefault.jsx</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: client/server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> LayoutDefault</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> LayoutDefault</span><span style="color:#24292E">({ </span><span style="color:#E36209">children</span><span style="color:#24292E"> }) {</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> &lt;&gt;</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;</span><span style="color:#22863A">div</span><span style="color:#6F42C1"> id</span><span style="color:#D73A49">=</span><span style="color:#032F62">&quot;sidebar&quot;</span><span style="color:#24292E">&gt;{</span><span style="color:#6A737D">/* ... */</span><span style="color:#24292E">}&lt;/</span><span style="color:#22863A">div</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;</span><span style="color:#22863A">div</span><span style="color:#6F42C1"> id</span><span style="color:#D73A49">=</span><span style="color:#032F62">&quot;content&quot;</span><span style="color:#24292E">&gt;{children}&lt;/</span><span style="color:#22863A">div</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">  &lt;/&gt;</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>Because <code>LayoutDefault.jsx</code> is client-side (and/or server-side) code, it doesn&#x27;t make sense to load <code>LayoutDefault.jsx</code> when Vike loads <code>+config.js</code>.</p>
 <p>It&#x27;s similar to when you import images:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> logo </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;../images/logo.svg&#x27;</span></span>
-<span class="line"><span style="color:#6E7781">// When you import an image, you don&#x27;t really import it:</span></span>
-<span class="line"><span style="color:#24292F">console.</span><span style="color:#8250DF">log</span><span style="color:#24292F">(logo) </span><span style="color:#6E7781">// Prints &#x27;http://localhost:3000/assets/logo.svg&#x27;</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> logo </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;../images/logo.svg&#x27;</span></span>
+<span data-line=""><span style="color:#6A737D">// When you import an image, you don&#x27;t really import it:</span></span>
+<span data-line=""><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(logo) </span><span style="color:#6A737D">// Prints &#x27;http://localhost:3000/assets/logo.svg&#x27;</span></span></code></pre></figure>
 <p>Vike transforms imports inside <code>+config.js</code> file to be pointer imports only if their import path resolves to a <code>.jsx</code>, <code>.vue</code>, <code>.svg</code>, or any file that doesn&#x27;t end with <code>.js</code> and <code>.ts</code> (and their variants <code>.mjs</code>/<code>.cjs</code>/<code>.mts</code>/<code>.cts</code>).</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+config.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: config</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// Resolves to the file LayoutDefault.jsx (a .jsx file) =&gt; pointer import</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> Layout </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;../layouts/LayoutDefault&#x27;</span></span>
-<span class="line"><span style="color:#6E7781">// Resolves to the file ssr.js (a .js file) =&gt; normal/real import</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> ssr </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./ssr&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">console.</span><span style="color:#8250DF">log</span><span style="color:#24292F">(Layout) </span><span style="color:#6E7781">// Prints &#x27;import:../layouts/LayoutDefault:default&#x27;</span></span>
-<span class="line"><span style="color:#24292F">console.</span><span style="color:#8250DF">log</span><span style="color:#24292F">(ssr) </span><span style="color:#6E7781">// Prints `false`</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">Layout</span><span style="color:#953800">,</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">ssr</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/ssr.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: config</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> </span><span style="color:#0550AE">false</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: config</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// Resolves to the file LayoutDefault.jsx (a .jsx file) =&gt; pointer import</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> Layout </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;../layouts/LayoutDefault&#x27;</span></span>
+<span data-line=""><span style="color:#6A737D">// Resolves to the file ssr.js (a .js file) =&gt; normal/real import</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> ssr </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./ssr&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(Layout) </span><span style="color:#6A737D">// Prints &#x27;import:../layouts/LayoutDefault:default&#x27;</span></span>
+<span data-line=""><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(ssr) </span><span style="color:#6A737D">// Prints `false`</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  Layout,</span></span>
+<span data-line=""><span style="color:#24292E">  ssr</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/ssr.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: config</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#005CC5"> false</span></span></code></pre></figure>
 <p>A <code>.jsx</code> or <code>.vue</code> file is always code meant for the client- and/or server-side (it&#x27;s never config code), thus it makes sense that <code>.jsx</code> and <code>.vue</code> imports are always pointer imports.</p>
 <blockquote>
 <p>This applies only to <code>+config.js</code> files. Imports in other files are real imports.</p>
 </blockquote>
 <p>You can also mark an import to be a pointer import:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+config.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: config</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> ssr </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./ssr&#x27;</span><span style="color:#24292F"> with { type: &#x27;pointer&#x27; }</span></span>
-<span class="line"><span style="color:#24292F">console.</span><span style="color:#8250DF">log</span><span style="color:#24292F">(ssr) </span><span style="color:#6E7781">// Prints &#x27;import:./ssr:default&#x27;</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: config</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> ssr </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./ssr&#x27;</span><span style="color:#D73A49"> with</span><span style="color:#24292E"> { type: </span><span style="color:#032F62">&#x27;pointer&#x27;</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(ssr) </span><span style="color:#6A737D">// Prints &#x27;import:./ssr:default&#x27;</span></span></code></pre></figure>
 <blockquote class="custom-icon type-construction note-color-yellow"><div style="margin-bottom:20px"></div><img style="height: 1.275em; width: 1.275em; vertical-align: -20%" draggable="false" alt="🚧" src="https://twemoji.maxcdn.com/v/13.1.1/svg/1f6a7.svg"/><!-- --> <div class="blockquote-content">The <code>with { type: &#x27;pointer&#x27; }</code> import attribute isn&#x27;t implement yet, see workaround at <a href="https://github.com/vikejs/vike/issues/1500">#1500</a>.</div><div style="margin-top:20px"></div></blockquote>
 <p>Note that config code in itself is never included in runtimes:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/some-page/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// Such CSS import doesn&#x27;t have any effect. CSS files should be imported in</span></span>
-<span class="line"><span style="color:#6E7781">// runtime files such as +Page.js instead.</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./some.css&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// This log is printed only when Vike loads this +config.js file (at development and when</span></span>
-<span class="line"><span style="color:#6E7781">// building your app). This logs isn&#x27;t included in the client runtime nor server runtime.</span></span>
-<span class="line"><span style="color:#6E7781">// Consequently, you won&#x27;t see this log in production.</span></span>
-<span class="line"><span style="color:#24292F">console.</span><span style="color:#8250DF">log</span><span style="color:#24292F">(</span><span style="color:#0A3069">&quot;I will never be logged in production&quot;</span><span style="color:#24292F">)</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/some-page/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// Such CSS import doesn&#x27;t have any effect. CSS files should be imported in</span></span>
+<span data-line=""><span style="color:#6A737D">// runtime files such as +Page.js instead.</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#032F62"> &#x27;./some.css&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// This log is printed only when Vike loads this +config.js file (at development and when</span></span>
+<span data-line=""><span style="color:#6A737D">// building your app). This logs isn&#x27;t included in the client runtime nor server runtime.</span></span>
+<span data-line=""><span style="color:#6A737D">// Consequently, you won&#x27;t see this log in production.</span></span>
+<span data-line=""><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">&quot;I will never be logged in production&quot;</span><span style="color:#24292E">)</span></span></code></pre></figure>
 <h2 id="see-also">See also</h2>
 <ul>
 <li>
@@ -238,6 +238,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

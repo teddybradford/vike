@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Auth.js | Vike</title>
@@ -53,21 +53,21 @@ or
 <p>A polyfill isn&#x27;t needed if we use <code>getSession()</code> only on the client-side, or if we use Node.js 18 which <a href="https://nodejs.org/en/blog/announcements/v18-release-announce/#fetch-experimental">natively supports <code>fetch()</code></a>.</p>
 </blockquote>
 <p>We can use <a href="https://github.com/node-fetch/node-fetch#providing-global-access"><code>node-fetch</code> to patch the global object</a>:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// server.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// Only install the polyfill on the server (e.g. Express.js). Browsers already implement</span></span>
-<span class="line"><span style="color:#6E7781">// `fetch()` natively and it would be wasteful to load the polyfill on the browser-side.</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// Use node-fetch@2 instead of node-fetch@3 if your `package.json#type` isn&#x27;t `&quot;module&quot;`.</span></span>
-<span class="line"><span style="color:#6E7781">// Or some other `fetch()` polyfill, e.g. `cross-fetch`.</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> fetch, { Headers, Request, Response } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;node-fetch&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">if</span><span style="color:#24292F"> (</span><span style="color:#CF222E">!</span><span style="color:#24292F">globalThis.fetch) {</span></span>
-<span class="line"><span style="color:#24292F">  globalThis.fetch </span><span style="color:#CF222E">=</span><span style="color:#24292F"> fetch</span></span>
-<span class="line"><span style="color:#24292F">  globalThis.Headers </span><span style="color:#CF222E">=</span><span style="color:#24292F"> Headers</span></span>
-<span class="line"><span style="color:#24292F">  globalThis.Request </span><span style="color:#CF222E">=</span><span style="color:#24292F"> Request</span></span>
-<span class="line"><span style="color:#24292F">  globalThis.Response </span><span style="color:#CF222E">=</span><span style="color:#24292F"> Response</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// server.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// Only install the polyfill on the server (e.g. Express.js). Browsers already implement</span></span>
+<span data-line=""><span style="color:#6A737D">// `fetch()` natively and it would be wasteful to load the polyfill on the browser-side.</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// Use node-fetch@2 instead of node-fetch@3 if your `package.json#type` isn&#x27;t `&quot;module&quot;`.</span></span>
+<span data-line=""><span style="color:#6A737D">// Or some other `fetch()` polyfill, e.g. `cross-fetch`.</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> fetch, { Headers, Request, Response } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;node-fetch&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">!</span><span style="color:#24292E">globalThis.fetch) {</span></span>
+<span data-line=""><span style="color:#24292E">  globalThis.fetch </span><span style="color:#D73A49">=</span><span style="color:#24292E"> fetch</span></span>
+<span data-line=""><span style="color:#24292E">  globalThis.Headers </span><span style="color:#D73A49">=</span><span style="color:#24292E"> Headers</span></span>
+<span data-line=""><span style="color:#24292E">  globalThis.Request </span><span style="color:#D73A49">=</span><span style="color:#24292E"> Request</span></span>
+<span data-line=""><span style="color:#24292E">  globalThis.Response </span><span style="color:#D73A49">=</span><span style="color:#24292E"> Response</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="see-also">See also</h2>
 <ul>
 <li>
@@ -95,6 +95,6 @@ or
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

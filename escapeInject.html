@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>escapeInject | Vike</title>
@@ -30,27 +30,27 @@
 <p>If you use a <!-- -->UI framework <a href="/extensions">Vike extension</a> (<code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>)<!-- -->, then you don&#x27;t need to use <code>escapeInject</code> yourself as <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code> already sanitizes its HTML.</p>
 </blockquote>
 <p>It&#x27;s usually used by the <code>onRenderHtml()</code> hook.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// +onRenderHtml.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderHtml }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/server&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderHtml</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">title</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;Hello&lt;script src=&quot;https://devil.org/evil-code&quot;&gt;&lt;/script&gt;&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// This HTML is safe thanks to `escapeInject` which sanitizes `title`</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#8250DF">escapeInject</span><span style="color:#0A3069">`&lt;!DOCTYPE html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;head&gt;</span></span>
-<span class="line"><span style="color:#0A3069">        &lt;title&gt;${</span><span style="color:#24292F">title</span><span style="color:#0A3069">}&lt;/title&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;/head&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">        &lt;!-- ... -&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;/body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;/html&gt;`</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// +onRenderHtml.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderHtml }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/server&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderHtml</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> title</span><span style="color:#D73A49"> =</span><span style="color:#032F62"> &#x27;Hello&lt;script src=&quot;https://devil.org/evil-code&quot;&gt;&lt;/script&gt;&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">  // This HTML is safe thanks to `escapeInject` which sanitizes `title`</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#6F42C1"> escapeInject</span><span style="color:#032F62">`&lt;!DOCTYPE html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;head&gt;</span></span>
+<span data-line=""><span style="color:#032F62">        &lt;title&gt;${</span><span style="color:#24292E">title</span><span style="color:#032F62">}&lt;/title&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;/head&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">        &lt;!-- ... -&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;/body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;/html&gt;`</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>All strings, e.g. <code>title</code> above, are automatically sanitized (technically speaking: HTML-escaped)
 so that we can safely include untrusted strings
 such as user-generated text.</p>
@@ -62,33 +62,33 @@ If we find ourselves using <code>dangerouslySkipEscape()</code> in other situati
 <h2 id="html-fragments">HTML Fragments</h2>
 <p>We can assemble the overall HTML document from several HTML fragments.
 For example, if we want some HTML parts to be included only for certain pages:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// +onRenderHtml.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/server&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { renderToHtml } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-ui-framework&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderHtml }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderHtml</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">description</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.config.description</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">descriptionTag</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">!</span><span style="color:#24292F">description </span><span style="color:#CF222E">?</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&#x27;&#x27;</span><span style="color:#24292F"> </span><span style="color:#CF222E">:</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// We use `escapeInject` for an HTML fragment</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#8250DF">escapeInject</span><span style="color:#0A3069">`&lt;meta name=&quot;description&quot; content=&quot;${</span><span style="color:#24292F">description</span><span style="color:#0A3069">}&quot;&gt;`</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// We use `escapeInject` again for the overall HTML</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#8250DF">escapeInject</span><span style="color:#0A3069">`&lt;html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;head&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      ${</span><span style="color:#24292F">descriptionTag</span><span style="color:#0A3069">}</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;/head&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;div id=&quot;root&quot;&gt;</span></span>
-<span class="line"><span style="color:#0A3069">        ${</span><span style="color:#8250DF">dangerouslySkipEscape</span><span style="color:#0A3069">(</span><span style="color:#CF222E">await</span><span style="color:#0A3069"> </span><span style="color:#8250DF">renderToHtml</span><span style="color:#0A3069">(</span><span style="color:#24292F">pageContext</span><span style="color:#0A3069">.</span><span style="color:#24292F">Page</span><span style="color:#0A3069">))</span><span style="color:#0A3069">}</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;/div&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;/body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">  &lt;/html&gt;`</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// +onRenderHtml.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/server&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { renderToHtml } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-ui-framework&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderHtml }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderHtml</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> description</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> pageContext.config.description</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> descriptionTag</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> !</span><span style="color:#24292E">description </span><span style="color:#D73A49">?</span></span>
+<span data-line=""><span style="color:#032F62">    &#x27;&#x27;</span><span style="color:#D73A49"> :</span></span>
+<span data-line=""><span style="color:#6A737D">    // We use `escapeInject` for an HTML fragment</span></span>
+<span data-line=""><span style="color:#6F42C1">    escapeInject</span><span style="color:#032F62">`&lt;meta name=&quot;description&quot; content=&quot;${</span><span style="color:#24292E">description</span><span style="color:#032F62">}&quot;&gt;`</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">  // We use `escapeInject` again for the overall HTML</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#6F42C1"> escapeInject</span><span style="color:#032F62">`&lt;html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;head&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      ${</span><span style="color:#24292E">descriptionTag</span><span style="color:#032F62">}</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;/head&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;div id=&quot;root&quot;&gt;</span></span>
+<span data-line=""><span style="color:#032F62">        ${</span><span style="color:#6F42C1">dangerouslySkipEscape</span><span style="color:#032F62">(</span><span style="color:#D73A49">await</span><span style="color:#6F42C1"> renderToHtml</span><span style="color:#032F62">(</span><span style="color:#24292E">pageContext</span><span style="color:#032F62">.</span><span style="color:#24292E">Page</span><span style="color:#032F62">))</span><span style="color:#032F62">}</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;/div&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;/body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">  &lt;/html&gt;`</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p><code>pageContext.config.description</code> is a custom setting, see <a href="/meta#example-title-and-description">API<!-- --> &gt; <code>meta</code> &gt; <!-- -->Example: <code>title</code> and <code>description</code></a>.</p>
 </blockquote>
@@ -119,6 +119,6 @@ For example, if we want some HTML parts to be included only for certain pages:</
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

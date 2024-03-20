@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>prefetch() | Vike</title>
@@ -29,25 +29,25 @@
 <blockquote class="custom-icon type-warning note-color-yellow"><div style="margin-bottom:20px"></div><img style="height: 1.275em; width: 1.275em; vertical-align: -20%" draggable="false" alt="⚠" src="https://twemoji.maxcdn.com/v/13.1.1/svg/26a0.svg"/><!-- --> <div class="blockquote-content"><code>prefetch()</code> works only with <a href="/client-routing">Client Routing</a>. Prefetching isn&#x27;t possible with <a href="/server-routing">Server Routing</a>.</div><div style="margin-top:20px"></div></blockquote>
 <p>We usually use <code>prefetch()</code> to speed up page navigation when we can predict what the next page will (most likely) be.</p>
 <p>For example:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="jsx" data-theme="default"><code data-language="jsx" data-theme="default"><span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { prefetch } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/client/router&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">Form</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">   </span><span style="color:#CF222E">return</span><span style="color:#24292F"> (</span></span>
-<span class="line"><span style="color:#24292F">     &lt;</span><span style="color:#116329">form</span><span style="color:#24292F"> </span><span style="color:#0550AE">onSubmit</span><span style="color:#CF222E">=</span><span style="color:#24292F">{onSubmit}&gt;</span></span>
-<span class="line"><span style="color:#24292F">       {</span><span style="color:#6E7781">/* ... */</span><span style="color:#24292F">}</span></span>
-<span class="line"><span style="color:#24292F">     &lt;/</span><span style="color:#116329">form</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">   )</span></span>
-<span class="line"><span style="color:#24292F">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onSubmit</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// We fetch the next page</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#8250DF">prefetch</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;/form/success&#x27;</span><span style="color:#24292F">)</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// In parallel we make a request to our server</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">someRequestToServer</span><span style="color:#24292F">()</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// The assets of the next page may already be fetched at</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// this point, before even calling navigate()</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">navigate</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;/form/success&#x27;</span><span style="color:#24292F">)</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/prefetch/+Page.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="jsx" data-theme="github-light"><code data-language="jsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { prefetch } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/client/router&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Form</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#D73A49">   return</span><span style="color:#24292E"> (</span></span>
+<span data-line=""><span style="color:#24292E">     &lt;</span><span style="color:#22863A">form</span><span style="color:#6F42C1"> onSubmit</span><span style="color:#D73A49">=</span><span style="color:#24292E">{onSubmit}&gt;</span></span>
+<span data-line=""><span style="color:#24292E">       {</span><span style="color:#6A737D">/* ... */</span><span style="color:#24292E">}</span></span>
+<span data-line=""><span style="color:#24292E">     &lt;/</span><span style="color:#22863A">form</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">   )</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onSubmit</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#6A737D">  // We fetch the next page</span></span>
+<span data-line=""><span style="color:#6F42C1">  prefetch</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;/form/success&#x27;</span><span style="color:#24292E">)</span></span>
+<span data-line=""><span style="color:#6A737D">  // In parallel we make a request to our server</span></span>
+<span data-line=""><span style="color:#D73A49">  await</span><span style="color:#6F42C1"> someRequestToServer</span><span style="color:#24292E">()</span></span>
+<span data-line=""><span style="color:#6A737D">  // The assets of the next page may already be fetched at</span></span>
+<span data-line=""><span style="color:#6A737D">  // this point, before even calling navigate()</span></span>
+<span data-line=""><span style="color:#D73A49">  await</span><span style="color:#6F42C1"> navigate</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;/form/success&#x27;</span><span style="color:#24292E">)</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/prefetch/+Page.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
         
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
     <script type="text/javascript">
@@ -69,6 +69,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

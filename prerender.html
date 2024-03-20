@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>prerender | Vike</title>
@@ -28,25 +28,25 @@
 <p><a href="/pre-rendering">Guides<!-- --> &gt; <!-- -->Pre-rendering (SSG)</a> explains what pre-rendering is and how to use it.</p>
 </blockquote>
 <p>By default, pre-rendering is disabled. To enable it:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// vite.config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> vike </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/plugin&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">plugins: [</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#8250DF">vike</span><span style="color:#24292F">({</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Use default settings:</span></span>
-<span class="line"><span style="color:#24292F">      prerender: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Or set settings:</span></span>
-<span class="line"><span style="color:#24292F">      prerender: {</span></span>
-<span class="line"><span style="color:#24292F">        partial: </span><span style="color:#0550AE">false</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">        noExtraDir: </span><span style="color:#0550AE">false</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">        parallel: </span><span style="color:#0550AE">4</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">        disableAutoRun: </span><span style="color:#0550AE">false</span></span>
-<span class="line"><span style="color:#24292F">      }</span></span>
-<span class="line"><span style="color:#24292F">    })</span></span>
-<span class="line"><span style="color:#24292F">  ]</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// vite.config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> vike </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/plugin&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  plugins: [</span></span>
+<span data-line=""><span style="color:#6F42C1">    vike</span><span style="color:#24292E">({</span></span>
+<span data-line=""><span style="color:#6A737D">      // Use default settings:</span></span>
+<span data-line=""><span style="color:#24292E">      prerender: </span><span style="color:#005CC5">true</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#6A737D">      // Or set settings:</span></span>
+<span data-line=""><span style="color:#24292E">      prerender: {</span></span>
+<span data-line=""><span style="color:#24292E">        partial: </span><span style="color:#005CC5">false</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#24292E">        noExtraDir: </span><span style="color:#005CC5">false</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#24292E">        parallel: </span><span style="color:#005CC5">4</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#24292E">        disableAutoRun: </span><span style="color:#005CC5">false</span></span>
+<span data-line=""><span style="color:#24292E">      }</span></span>
+<span data-line=""><span style="color:#24292E">    })</span></span>
+<span data-line=""><span style="color:#24292E">  ]</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="toggle">Toggle</h2>
 <p>In some situations, a page shouldn&#x27;t be pre-rendered.
 For example a news page that displays the latest news fetched from a database should be rendered at request-time and certainly not at build-time.</p>
@@ -54,61 +54,61 @@ For example a news page that displays the latest news fetched from a database sh
 <p><a href="/pre-rendering">Guides<!-- --> &gt; <!-- -->Pre-rendering (SSG)</a> explains in depth whether a page should be pre-rendered or not.</p>
 </blockquote>
 <p>You can use <code>prerender: false</code> to tell Vike to skip a page from pre-rendering.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/news/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">prerender: </span><span style="color:#0550AE">false</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/news/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  prerender: </span><span style="color:#005CC5">false</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h3 id="different-defaults">Different defaults</h3>
 <p>You can define <code>prerender</code> in <a href="/config#inheritance">higher levels so it applies to more/all pages</a>.</p>
 <p>This is especially handy with <a href="/file-structure#domain-driven">Domain-Driven File Structure</a>:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/marketing/+prerender.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// Using Domain-Driven File Structure, +prerender.js applies to</span></span>
-<span class="line"><span style="color:#6E7781">// all marketing pages.</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// Enable pre-rendering for all marketing pages</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">prerender</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0550AE">true</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/marketing/+prerender.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// Using Domain-Driven File Structure, +prerender.js applies to</span></span>
+<span data-line=""><span style="color:#6A737D">// all marketing pages.</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// Enable pre-rendering for all marketing pages</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> const</span><span style="color:#005CC5"> prerender</span><span style="color:#D73A49"> =</span><span style="color:#005CC5"> true</span></span></code></pre></figure>
 <p>You can also make pre-rendering opt-in instead of opt-out:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#6E7781">// By default, pages are not pre-rendered</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">prerender: </span><span style="color:#0550AE">false</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/about-us/+prerender.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// Opt-in pre-rendering</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">prerender</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0550AE">true</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">  // By default, pages are not pre-rendered</span></span>
+<span data-line=""><span style="color:#24292E">  prerender: </span><span style="color:#005CC5">false</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/about-us/+prerender.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// Opt-in pre-rendering</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> const</span><span style="color:#005CC5"> prerender</span><span style="color:#D73A49"> =</span><span style="color:#005CC5"> true</span></span></code></pre></figure>
 <h3 id="conditional-pre-rendering">Conditional pre-rendering</h3>
 <p>You can pre-render pages conditionally:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+prerender.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">prerender</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">isCmsPreview</span><span style="color:#24292F">() </span><span style="color:#CF222E">?</span><span style="color:#24292F"> </span><span style="color:#0550AE">false</span><span style="color:#24292F"> </span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#0550AE">true</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+prerender.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> const</span><span style="color:#005CC5"> prerender</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> isCmsPreview</span><span style="color:#24292E">() </span><span style="color:#D73A49">?</span><span style="color:#005CC5"> false</span><span style="color:#D73A49"> :</span><span style="color:#005CC5"> true</span></span></code></pre></figure>
 <blockquote>
 <p>This is useful for previewing CMS pages (you don&#x27;t want to pre-renderer a CMS deploy preview).</p>
 </blockquote>
 <p>Note that <a href="/onBeforePrerenderStart"><code>onBeforePrerenderStart()</code> hooks</a> are always called, even if <code>prerender</code> is <code>false</code>.
 If you want to call <code>onBeforePrerenderStart()</code> hooks conditionally as well:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/movie/+prerender.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { prerender }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { someCondition } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./someCondition&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">prerender</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">someCondition</span><span style="color:#24292F">()</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/movie/+onBeforePrerenderStart.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onBeforePrerenderStart }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { someCondition } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./someCondition&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">onBeforePrerenderStart</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">someCondition</span><span style="color:#24292F">()</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">?</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> () </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// ...</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#CF222E">return</span><span style="color:#24292F"> listOfUrls</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#0550AE">null</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/movie/+prerender.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { prerender }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { someCondition } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./someCondition&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> prerender</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> someCondition</span><span style="color:#24292E">()</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/movie/+onBeforePrerenderStart.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onBeforePrerenderStart }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { someCondition } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./someCondition&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> onBeforePrerenderStart</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> someCondition</span><span style="color:#24292E">()</span></span>
+<span data-line=""><span style="color:#D73A49">  ?</span><span style="color:#D73A49"> async</span><span style="color:#24292E"> () </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">      // ...</span></span>
+<span data-line=""><span style="color:#D73A49">      return</span><span style="color:#24292E"> listOfUrls</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#D73A49">  :</span><span style="color:#005CC5"> null</span></span></code></pre></figure>
 <h2 id="settings">Settings</h2>
 <h3 id="partial"><code>partial</code></h3>
 <p><code>boolean</code> (default: <code>false</code>)</p>
@@ -146,20 +146,20 @@ But some static hosts prefer the other way.</p>
 <p><code>boolean</code> (default: <code>false</code>)</p>
 <p>When running <code>$ vite build</code>, Vike automatically triggers <a href="/pre-rendering">pre-rendering</a>. (If you <a href="/pre-rendering#how-to-pre-render">enabled it</a>.)</p>
 <p>You can disable the automatic triggering:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// vite.config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> vike </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/plugin&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">plugins: [</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#8250DF">vike</span><span style="color:#24292F">({</span></span>
-<span class="line"><span style="color:#24292F">      prerender: {</span></span>
-<span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// Stop `$ vite build` from initiating pre-rendering</span></span>
-<span class="line"><span style="color:#24292F">        disableAutoRun: </span><span style="color:#0550AE">true</span></span>
-<span class="line"><span style="color:#24292F">      }</span></span>
-<span class="line"><span style="color:#24292F">    })</span></span>
-<span class="line"><span style="color:#24292F">  ]</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// vite.config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> vike </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/plugin&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  plugins: [</span></span>
+<span data-line=""><span style="color:#6F42C1">    vike</span><span style="color:#24292E">({</span></span>
+<span data-line=""><span style="color:#24292E">      prerender: {</span></span>
+<span data-line=""><span style="color:#6A737D">        // Stop `$ vite build` from initiating pre-rendering</span></span>
+<span data-line=""><span style="color:#24292E">        disableAutoRun: </span><span style="color:#005CC5">true</span></span>
+<span data-line=""><span style="color:#24292E">      }</span></span>
+<span data-line=""><span style="color:#24292E">    })</span></span>
+<span data-line=""><span style="color:#24292E">  ]</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>You can then manually trigger pre-rendering using:</p>
 <ul>
 <li>
@@ -205,6 +205,6 @@ But some static hosts prefer the other way.</p>
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

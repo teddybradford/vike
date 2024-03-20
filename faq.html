@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>FAQ | Vike</title>
@@ -97,31 +97,31 @@
 <h2 id="why-is-css-leaked-to-other-pages">Why is CSS leaked to other pages?</h2>
 <p>With <a href="/client-routing">Client Routing</a>, when navigating from one page to another, the CSS of the previous page isn&#x27;t removed. This means that any CSS loaded by the previous page will also apply to the next page. In other words: CSS cumulates upon page navigation.</p>
 <p>For example:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="jsx" data-theme="default"><code data-language="jsx" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/terms/+Page.jsx</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./style.css&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#8250DF">Page</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> () </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> (</span></span>
-<span class="line"><span style="color:#24292F">  &lt;</span><span style="color:#116329">div</span><span style="color:#24292F"> </span><span style="color:#0550AE">id</span><span style="color:#CF222E">=</span><span style="color:#0A3069">&quot;#terms&quot;</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">h1</span><span style="color:#24292F">&gt;Terms of Service&lt;/</span><span style="color:#116329">h1</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">section</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">      {</span><span style="color:#6E7781">/* ... */</span><span style="color:#24292F">}</span></span>
-<span class="line"><span style="color:#24292F">    &lt;/</span><span style="color:#116329">section</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">  &lt;/</span><span style="color:#116329">div</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">)</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="css" data-theme="default"><code data-language="css" data-theme="default"><span class="line"><span style="color:#6E7781">/* /pages/terms/style.css */</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">/* ❌ Bad: the CSS selector `section` can apply to any page */</span></span>
-<span class="line"><span style="color:#116329">section</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#0550AE">font-size</span><span style="color:#24292F">: </span><span style="color:#0550AE">0.8</span><span style="color:#CF222E">em</span><span style="color:#24292F">;</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="jsx" data-theme="github-light"><code data-language="jsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/terms/+Page.jsx</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#032F62"> &#x27;./style.css&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> const</span><span style="color:#6F42C1"> Page</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> () </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> (</span></span>
+<span data-line=""><span style="color:#24292E">  &lt;</span><span style="color:#22863A">div</span><span style="color:#6F42C1"> id</span><span style="color:#D73A49">=</span><span style="color:#032F62">&quot;#terms&quot;</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;</span><span style="color:#22863A">h1</span><span style="color:#24292E">&gt;Terms of Service&lt;/</span><span style="color:#22863A">h1</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;</span><span style="color:#22863A">section</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">      {</span><span style="color:#6A737D">/* ... */</span><span style="color:#24292E">}</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;/</span><span style="color:#22863A">section</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">  &lt;/</span><span style="color:#22863A">div</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">)</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="css" data-theme="github-light"><code data-language="css" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">/* /pages/terms/style.css */</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">/* ❌ Bad: the CSS selector `section` can apply to any page */</span></span>
+<span data-line=""><span style="color:#22863A">section</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#005CC5">  font-size</span><span style="color:#24292E">: </span><span style="color:#005CC5">0.8</span><span style="color:#D73A49">em</span><span style="color:#24292E">;</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>Narrow down the CSS selector instead:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="css" data-theme="default"><code data-language="css" data-theme="default"><span class="line"><span style="color:#6E7781">/* /pages/terms/style.css */</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">/* ✅ Good: the CSS selector `#terms section` only applies to our terms page */</span></span>
-<span class="line"><span style="color:#0550AE">#terms</span><span style="color:#24292F"> </span><span style="color:#116329">section</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#0550AE">font-size</span><span style="color:#24292F">: </span><span style="color:#0550AE">0.8</span><span style="color:#CF222E">em</span><span style="color:#24292F">;</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="css" data-theme="github-light"><code data-language="css" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">/* /pages/terms/style.css */</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">/* ✅ Good: the CSS selector `#terms section` only applies to our terms page */</span></span>
+<span data-line=""><span style="color:#6F42C1">#terms</span><span style="color:#22863A"> section</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#005CC5">  font-size</span><span style="color:#24292E">: </span><span style="color:#005CC5">0.8</span><span style="color:#D73A49">em</span><span style="color:#24292E">;</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p>If you use <strong>Vue</strong> with <code>.vue</code> files, then Vue already scopes the CSS for you: the CSS you define in a <code>.vue</code> file is guaranteed to apply only to the component defined in that <code>.vue</code> file.</p>
 </blockquote>
@@ -156,6 +156,6 @@ That&#x27;s because <a href="/lazy-transpiling">Vite does lazy transpiling</a>.<
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

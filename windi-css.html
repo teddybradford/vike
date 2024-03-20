@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Windi CSS | Vike</title>
@@ -28,28 +28,28 @@
 <ol>
 <li>
 <p>Install:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="shell" data-theme="default"><code data-language="shell" data-theme="default"><span class="line"><span style="color:#24292F">npm install vite-plugin-windicss windicss</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="shell" data-theme="github-light"><code data-language="shell" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6F42C1">npm</span><span style="color:#032F62"> install</span><span style="color:#032F62"> vite-plugin-windicss</span><span style="color:#032F62"> windicss</span></span></code></pre></figure>
 </li>
 <li>
 <p>Add <code>vite-plugin-windicss</code> to <code>vite.config.js</code>:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// vite.config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> vike </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/plugin&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> WindiCSS </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vite-plugin-windicss&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">plugins: [</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#8250DF">vike</span><span style="color:#24292F">(),</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#8250DF">WindiCSS</span><span style="color:#24292F">({</span></span>
-<span class="line"><span style="color:#24292F">      scan: {</span></span>
-<span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// By default, only `src/` is scanned</span></span>
-<span class="line"><span style="color:#24292F">        dirs: [</span><span style="color:#0A3069">&quot;pages&quot;</span><span style="color:#24292F">],</span></span>
-<span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// We only have to specify the file extensions we actually use.</span></span>
-<span class="line"><span style="color:#24292F">        fileExtensions: [</span><span style="color:#0A3069">&quot;vue&quot;</span><span style="color:#24292F">, </span><span style="color:#0A3069">&quot;js&quot;</span><span style="color:#24292F">, </span><span style="color:#0A3069">&quot;ts&quot;</span><span style="color:#24292F">, </span><span style="color:#0A3069">&quot;jsx&quot;</span><span style="color:#24292F">, </span><span style="color:#0A3069">&quot;tsx&quot;</span><span style="color:#24292F">]</span></span>
-<span class="line"><span style="color:#24292F">      }</span></span>
-<span class="line"><span style="color:#24292F">    })</span></span>
-<span class="line"><span style="color:#24292F">  ]</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// vite.config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> vike </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/plugin&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> WindiCSS </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vite-plugin-windicss&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  plugins: [</span></span>
+<span data-line=""><span style="color:#6F42C1">    vike</span><span style="color:#24292E">(),</span></span>
+<span data-line=""><span style="color:#6F42C1">    WindiCSS</span><span style="color:#24292E">({</span></span>
+<span data-line=""><span style="color:#24292E">      scan: {</span></span>
+<span data-line=""><span style="color:#6A737D">        // By default, only `src/` is scanned</span></span>
+<span data-line=""><span style="color:#24292E">        dirs: [</span><span style="color:#032F62">&quot;pages&quot;</span><span style="color:#24292E">],</span></span>
+<span data-line=""><span style="color:#6A737D">        // We only have to specify the file extensions we actually use.</span></span>
+<span data-line=""><span style="color:#24292E">        fileExtensions: [</span><span style="color:#032F62">&quot;vue&quot;</span><span style="color:#24292E">, </span><span style="color:#032F62">&quot;js&quot;</span><span style="color:#24292E">, </span><span style="color:#032F62">&quot;ts&quot;</span><span style="color:#24292E">, </span><span style="color:#032F62">&quot;jsx&quot;</span><span style="color:#24292E">, </span><span style="color:#032F62">&quot;tsx&quot;</span><span style="color:#24292E">]</span></span>
+<span data-line=""><span style="color:#24292E">      }</span></span>
+<span data-line=""><span style="color:#24292E">    })</span></span>
+<span data-line=""><span style="color:#24292E">  ]</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote class="custom-icon type-warning note-color-yellow"><div style="margin-bottom:20px"></div><img style="height: 1.275em; width: 1.275em; vertical-align: -20%" draggable="false" alt="⚠" src="https://twemoji.maxcdn.com/v/13.1.1/svg/26a0.svg"/><!-- --> <div class="blockquote-content">Make sure that all your files are included in <code>scan.dirs</code>.</div><div style="margin-top:20px"></div></blockquote>
 <blockquote>
 <p>These options can also be defined in <code>windi.config.js</code>.</p>
@@ -57,11 +57,11 @@
 </li>
 <li>
 <p>Import <code>virtual:windi.css</code> in <code>+onRenderClient.js</code>.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// renderer/+onRenderClient.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;virtual:windi.css&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// ...</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// renderer/+onRenderClient.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#032F62"> &#x27;virtual:windi.css&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// ...</span></span></code></pre></figure>
 </li>
 </ol>
 <h2 id="see-also">See also</h2>
@@ -99,6 +99,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

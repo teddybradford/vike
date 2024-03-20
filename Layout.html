@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>&lt;Layout&gt; | Vike</title>
@@ -31,39 +31,39 @@ Pages can have different layouts:
 for example, if admin panel pages (<code>/admin/product/@id</code> and <code>/admin/user/@id</code>) have a sidebar while marketing pages (<code>/</code> and <code>/about-us</code>) have a sticky header instead. The admin pages can share the same <code>&lt;Layout&gt;</code> component that includes the sidebar, while the marketing pages can share the <code>&lt;Layout&gt;</code> component that includes the sticky header.</p>
 </blockquote>
 <p>The <code>Layout</code> setting wraps your <a href="/Page">Page component</a> with another component (the <em>layout component</em>).</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="jsx" data-theme="default"><code data-language="jsx" data-theme="default"><span class="line"><span style="color:#24292F">&lt;</span><span style="color:#116329">Layout</span><span style="color:#24292F">&gt;    &lt;- component defined by the setting &quot;Layout&quot;</span></span>
-<span class="line"><span style="color:#24292F">  &lt;</span><span style="color:#116329">Page</span><span style="color:#24292F"> /&gt;  &lt;- component defined by the setting &quot;Page&quot;</span></span>
-<span class="line"><span style="color:#24292F">&lt;/</span><span style="color:#116329">Layout</span><span style="color:#24292F">&gt;</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="jsx" data-theme="github-light"><code data-language="jsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">&lt;</span><span style="color:#005CC5">Layout</span><span style="color:#24292E">&gt;    &lt;- component defined by the setting &quot;Layout&quot;</span></span>
+<span data-line=""><span style="color:#24292E">  &lt;</span><span style="color:#005CC5">Page</span><span style="color:#24292E"> /&gt;  &lt;- component defined by the setting &quot;Page&quot;</span></span>
+<span data-line=""><span style="color:#24292E">&lt;/</span><span style="color:#005CC5">Layout</span><span style="color:#24292E">&gt;</span></span></code></pre></figure>
 <p>You can apply a layout as default to all pages:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+Layout.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// This layout component is the default layout</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { Layout }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// ...</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+Layout.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// This layout component is the default layout</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { Layout }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// ...</span></span></code></pre></figure>
 <blockquote>
 <p>See also: <a href="#examples">Examples</a>.</p>
 </blockquote>
 <p>You can then override the default layout on a page-by-page basis:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// pages/product/@id/+Layout.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// This layout component overrides the default layout and</span></span>
-<span class="line"><span style="color:#6E7781">// applies to the product page /product/@id</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { Layout }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// ...</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// pages/product/@id/+Layout.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// This layout component overrides the default layout and</span></span>
+<span data-line=""><span style="color:#6A737D">// applies to the product page /product/@id</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { Layout }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// ...</span></span></code></pre></figure>
 <p>You can also define a layout for a group of pages:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/admin/+Layout.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">/* This layout applies only to admin pages (/pages/admin/**) such as:</span></span>
-<span class="line"><span style="color:#6E7781">   URL                     FILESYSTEM</span></span>
-<span class="line"><span style="color:#6E7781">   /admin                  /pages/admin/+Page.js</span></span>
-<span class="line"><span style="color:#6E7781">   /admin/user/@id         /pages/admin/user/@id/+Page.js</span></span>
-<span class="line"><span style="color:#6E7781">   /admin/product/@id      /pages/admin/product/@id/+Page.js</span></span>
-<span class="line"><span style="color:#6E7781">*/</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { Layout }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// ...</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/admin/+Layout.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">/* This layout applies only to admin pages (/pages/admin/**) such as:</span></span>
+<span data-line=""><span style="color:#6A737D">   URL                     FILESYSTEM</span></span>
+<span data-line=""><span style="color:#6A737D">   /admin                  /pages/admin/+Page.js</span></span>
+<span data-line=""><span style="color:#6A737D">   /admin/user/@id         /pages/admin/user/@id/+Page.js</span></span>
+<span data-line=""><span style="color:#6A737D">   /admin/product/@id      /pages/admin/product/@id/+Page.js</span></span>
+<span data-line=""><span style="color:#6A737D">*/</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { Layout }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// ...</span></span></code></pre></figure>
 <blockquote>
 <p>See also <a href="/Wrapper"><code>&lt;Wrapper&gt;</code></a> which also wraps <code>&lt;Page&gt;</code>, but for different use cases.</p>
 </blockquote>
@@ -92,44 +92,44 @@ for example, if admin panel pages (<code>/admin/product/@id</code> and <code>/ad
 <p>If your nested layout isn&#x27;t associated with a URL (in other words the pricing page and the reviews page share the same URL <code>/product/42</code>), then you can simply use a stateful component instead of the following.</p>
 </blockquote>
 <p>You can implement a nested layout by using a route with multiple parameters:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/+route.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> </span><span style="color:#0A3069">&#x27;/product/@id/@view&#x27;</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/+route.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#032F62"> &#x27;/product/@id/@view&#x27;</span></span></code></pre></figure>
 <blockquote>
 <p>You can also use a <a href="/route-function">Route Function</a> for full programmatic flexibility, see <a href="https://gist.github.com/brillout/a75fd8430dbc562dd10e69007121fea0">this example</a>.</p>
 </blockquote>
 <p>To ensure <code>@view</code> matches a list of pre-defined values, you can use a <a href="/guard"><code>guard()</code></a> hook with <a href="/render"><code>throw render(404)</code></a>:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/+guard.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { render } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/abort&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">guard</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">view</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.routeParams</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (</span><span style="color:#CF222E">!</span><span style="color:#24292F">[</span><span style="color:#0A3069">&#x27;reviews&#x27;</span><span style="color:#24292F">, </span><span style="color:#0A3069">&#x27;pricing&#x27;</span><span style="color:#24292F">].</span><span style="color:#8250DF">includes</span><span style="color:#24292F">(view)) {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">throw</span><span style="color:#24292F"> </span><span style="color:#8250DF">render</span><span style="color:#24292F">(</span><span style="color:#0550AE">404</span><span style="color:#24292F">)</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/+guard.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { render } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/abort&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> guard</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">view</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext.routeParams</span></span>
+<span data-line=""><span style="color:#D73A49">  if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">!</span><span style="color:#24292E">[</span><span style="color:#032F62">&#x27;reviews&#x27;</span><span style="color:#24292E">, </span><span style="color:#032F62">&#x27;pricing&#x27;</span><span style="color:#24292E">].</span><span style="color:#6F42C1">includes</span><span style="color:#24292E">(view)) {</span></span>
+<span data-line=""><span style="color:#D73A49">    throw</span><span style="color:#6F42C1"> render</span><span style="color:#24292E">(</span><span style="color:#005CC5">404</span><span style="color:#24292E">)</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>You can then use <code>pageContext.routeParams.view</code> to implement the nested layout:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="jsx" data-theme="default"><code data-language="jsx" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/+Page.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { Page }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { usePageContext } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike-react/usePageContext&#x27;</span><span style="color:#24292F"> </span><span style="color:#6E7781">// or &#x27;vike-vue&#x27; / &#x27;vike-solid&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">Page</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageContext</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">usePageContext</span><span style="color:#24292F">()</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">nestedLayout</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> (() </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">view</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.routeParams</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (view </span><span style="color:#CF222E">===</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;reviews&#x27;</span><span style="color:#24292F">) </span><span style="color:#CF222E">return</span><span style="color:#24292F"> &lt;</span><span style="color:#116329">Reviews</span><span style="color:#24292F"> /&gt;</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (view </span><span style="color:#CF222E">===</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;pricing&#x27;</span><span style="color:#24292F">) </span><span style="color:#CF222E">return</span><span style="color:#24292F"> &lt;</span><span style="color:#116329">Pricing</span><span style="color:#24292F"> /&gt;</span></span>
-<span class="line"><span style="color:#24292F">  })()</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> &lt;&gt;</span></span>
-<span class="line"><span style="color:#24292F">     {</span><span style="color:#6E7781">/* ... */</span><span style="color:#24292F">}</span></span>
-<span class="line"><span style="color:#24292F">       {</span><span style="color:#6E7781">/* Somewhere deep */</span><span style="color:#24292F"> }</span></span>
-<span class="line"><span style="color:#24292F">       { nestedLayout }</span></span>
-<span class="line"><span style="color:#24292F">     {</span><span style="color:#6E7781">/* ... */</span><span style="color:#24292F">}</span></span>
-<span class="line"><span style="color:#24292F">  &lt;/&gt;</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="jsx" data-theme="github-light"><code data-language="jsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/+Page.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { Page }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { usePageContext } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-react/usePageContext&#x27;</span><span style="color:#6A737D"> // or &#x27;vike-vue&#x27; / &#x27;vike-solid&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Page</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> pageContext</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> usePageContext</span><span style="color:#24292E">()</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> nestedLayout</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> (() </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#D73A49">    const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">view</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext.routeParams</span></span>
+<span data-line=""><span style="color:#D73A49">    if</span><span style="color:#24292E"> (view </span><span style="color:#D73A49">===</span><span style="color:#032F62"> &#x27;reviews&#x27;</span><span style="color:#24292E">) </span><span style="color:#D73A49">return</span><span style="color:#24292E"> &lt;</span><span style="color:#005CC5">Reviews</span><span style="color:#24292E"> /&gt;</span></span>
+<span data-line=""><span style="color:#D73A49">    if</span><span style="color:#24292E"> (view </span><span style="color:#D73A49">===</span><span style="color:#032F62"> &#x27;pricing&#x27;</span><span style="color:#24292E">) </span><span style="color:#D73A49">return</span><span style="color:#24292E"> &lt;</span><span style="color:#005CC5">Pricing</span><span style="color:#24292E"> /&gt;</span></span>
+<span data-line=""><span style="color:#24292E">  })()</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> &lt;&gt;</span></span>
+<span data-line=""><span style="color:#24292E">     {</span><span style="color:#6A737D">/* ... */</span><span style="color:#24292E">}</span></span>
+<span data-line=""><span style="color:#24292E">       {</span><span style="color:#6A737D">/* Somewhere deep */</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">       { nestedLayout }</span></span>
+<span data-line=""><span style="color:#24292E">     {</span><span style="color:#6A737D">/* ... */</span><span style="color:#24292E">}</span></span>
+<span data-line=""><span style="color:#24292E">  &lt;/&gt;</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>Finally, make sure to use <a href="/clientRouting#settings"><code>&lt;a href=&quot;/product/42/reviews&quot; keep-scroll-position /&gt;</code></a> (and <a href="/navigate#options"><code>navigate(&#x27;/product/42/reviews&#x27;, { keepScrollPosition: true })</code></a>) to avoid the browser to scroll to the top.</p>
 <blockquote>
 <p>Once <a href="https://github.com/vikejs/vike/issues/1459">#1459 - Nested Routes</a> is implemented, Vike will automatically preserve the scroll position.</p>
@@ -153,32 +153,32 @@ for example, if admin panel pages (<code>/admin/product/@id</code> and <code>/ad
 <p>The following is for users that don&#x27;t use a <!-- -->UI framework <a href="/extensions">Vike extension</a> (<code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>)<!-- -->.</p>
 <h3 id="the-simple-way">The simple way</h3>
 <p>A simple way to implement layouts is to manually wrap your <code>&lt;Page&gt;</code> components:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="jsx" data-theme="default"><code data-language="jsx" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/index/+Page.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { Page }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { LayoutDefault } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;../layouts/LayoutDefault&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">Page</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> &lt;&gt;</span></span>
-<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">LayoutDefault</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">      {</span><span style="color:#6E7781">/* ... */</span><span style="color:#24292F">}</span></span>
-<span class="line"><span style="color:#24292F">    &lt;/</span><span style="color:#116329">LayoutDefault</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">  &lt;/&gt;</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="jsx" data-theme="default"><code data-language="jsx" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/admin/+Page.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { Page }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { LayoutDashboard } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;../layouts/LayoutDashboard&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">Page</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> &lt;&gt;</span></span>
-<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">LayoutDashboard</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">      {</span><span style="color:#6E7781">/* ... */</span><span style="color:#24292F">}</span></span>
-<span class="line"><span style="color:#24292F">    &lt;/</span><span style="color:#116329">LayoutDashboard</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">  &lt;/&gt;</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="jsx" data-theme="github-light"><code data-language="jsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/index/+Page.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { Page }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { LayoutDefault } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;../layouts/LayoutDefault&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Page</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> &lt;&gt;</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;</span><span style="color:#005CC5">LayoutDefault</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">      {</span><span style="color:#6A737D">/* ... */</span><span style="color:#24292E">}</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;/</span><span style="color:#005CC5">LayoutDefault</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">  &lt;/&gt;</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="jsx" data-theme="github-light"><code data-language="jsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/admin/+Page.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { Page }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { LayoutDashboard } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;../layouts/LayoutDashboard&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Page</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> &lt;&gt;</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;</span><span style="color:#005CC5">LayoutDashboard</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">      {</span><span style="color:#6A737D">/* ... */</span><span style="color:#24292E">}</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;/</span><span style="color:#005CC5">LayoutDashboard</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">  &lt;/&gt;</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h3 id="with-a-custom-setting">With a custom setting</h3>
 <p>In case you don&#x27;t use a <!-- -->UI framework <a href="/extensions">Vike extension</a> (<code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>)<!-- -->, you can implement the <code>Layout</code> setting yourself by using <a href="/meta">meta</a>.</p>
 <p>Examples:</p>
@@ -227,6 +227,6 @@ for example, if admin panel pages (<code>/admin/product/@id</code> and <code>/ad
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

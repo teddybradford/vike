@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>meta | Vike</title>
@@ -60,76 +60,76 @@
 </ul>
 <h2 id="example-dataendpointurl">Example: <code>dataEndpointUrl</code></h2>
 <p>This example showcases a simple data fetching logic that uses URL data endpoints (e.g. a RESTful API).</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/countries/+dataEndpointUrl.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> </span><span style="color:#0A3069">&#x27;https://restcountries.com/v3.1/all&#x27;</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+config.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: config</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">meta: {</span></span>
-<span class="line"><span style="color:#24292F">    dataEndpointUrl: {</span></span>
-<span class="line"><span style="color:#24292F">      env: {</span></span>
-<span class="line"><span style="color:#24292F">        server: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// Load the value of /pages/**/+dataEndpointUrl.js only on the server</span></span>
-<span class="line"><span style="color:#24292F">        client: </span><span style="color:#0550AE">false</span></span>
-<span class="line"><span style="color:#24292F">      }</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+data.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { data }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> fetch </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;node-fetch&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">data</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// The value exported by /pages/countries/+dataEndpointUrl.js is</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// available at pageContext.config.dataEndpointUrl</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">response</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">fetch</span><span style="color:#24292F">(pageContext.config.dataEndpointUrl)</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ...</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/countries/+dataEndpointUrl.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#032F62"> &#x27;https://restcountries.com/v3.1/all&#x27;</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: config</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  meta: {</span></span>
+<span data-line=""><span style="color:#24292E">    dataEndpointUrl: {</span></span>
+<span data-line=""><span style="color:#24292E">      env: {</span></span>
+<span data-line=""><span style="color:#24292E">        server: </span><span style="color:#005CC5">true</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#6A737D">        // Load the value of /pages/**/+dataEndpointUrl.js only on the server</span></span>
+<span data-line=""><span style="color:#24292E">        client: </span><span style="color:#005CC5">false</span></span>
+<span data-line=""><span style="color:#24292E">      }</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+data.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { data }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> fetch </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;node-fetch&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> data</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#6A737D">  // The value exported by /pages/countries/+dataEndpointUrl.js is</span></span>
+<span data-line=""><span style="color:#6A737D">  // available at pageContext.config.dataEndpointUrl</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> response</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> fetch</span><span style="color:#24292E">(pageContext.config.dataEndpointUrl)</span></span>
+<span data-line=""><span style="color:#6A737D">  // ...</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="example-sql">Example: <code>sql</code></h2>
 <p>Similarly to the previous example, another common use case is to enable pages to define their data requirements as SQL queries.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/@id/+sql.js</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#8250DF">sql</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> (</span><span style="color:#953800">id</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> </span><span style="color:#0A3069">`SELECT { name, price } FROM products WHERE id = &quot;${</span><span style="color:#24292F">id</span><span style="color:#0A3069">}&quot;;`</span></span>
-<span class="line"><span style="color:#6E7781">/* Or with an ORM:</span></span>
-<span class="line"><span style="color:#6E7781">export const sql = { modelName: &#x27;Product&#x27;, select: [&#x27;name&#x27;, &#x27;price&#x27;], where: { id } } */</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/user/@id/+sql.js</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#8250DF">sql</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> (</span><span style="color:#953800">id</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> </span><span style="color:#0A3069">`SELECT { firstName, lastName } FROM users WHERE id = &quot;${</span><span style="color:#24292F">id</span><span style="color:#0A3069">}&quot;;`</span></span>
-<span class="line"><span style="color:#6E7781">/* Or with an ORM:</span></span>
-<span class="line"><span style="color:#6E7781">export const sql = { modelName: &#x27;User&#x27;, select: [&#x27;firstName&#x27;, &#x27;lastName&#x27;], where: { id } } */</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+config.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: config</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">meta: {</span></span>
-<span class="line"><span style="color:#24292F">    sql: {</span></span>
-<span class="line"><span style="color:#24292F">      env: {</span></span>
-<span class="line"><span style="color:#24292F">        server: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// Load the value of /pages/**/+sql.js only on the server</span></span>
-<span class="line"><span style="color:#24292F">        client: </span><span style="color:#0550AE">false</span></span>
-<span class="line"><span style="color:#24292F">      }</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+onBeforeRender.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onBeforeRender }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { runQuery } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-sql-engine&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onBeforeRender</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// The value exported by /pages/**/+sql.js is available at pageContext.config.sql</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">id</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.routeParams</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">sql</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.config</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">query</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">sql</span><span style="color:#24292F">(id)</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">data</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">runQuery</span><span style="color:#24292F">(query)</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ...</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/@id/+sql.js</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> const</span><span style="color:#6F42C1"> sql</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> (</span><span style="color:#E36209">id</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#032F62"> `SELECT { name, price } FROM products WHERE id = &quot;${</span><span style="color:#24292E">id</span><span style="color:#032F62">}&quot;;`</span></span>
+<span data-line=""><span style="color:#6A737D">/* Or with an ORM:</span></span>
+<span data-line=""><span style="color:#6A737D">export const sql = { modelName: &#x27;Product&#x27;, select: [&#x27;name&#x27;, &#x27;price&#x27;], where: { id } } */</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/user/@id/+sql.js</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> const</span><span style="color:#6F42C1"> sql</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> (</span><span style="color:#E36209">id</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#032F62"> `SELECT { firstName, lastName } FROM users WHERE id = &quot;${</span><span style="color:#24292E">id</span><span style="color:#032F62">}&quot;;`</span></span>
+<span data-line=""><span style="color:#6A737D">/* Or with an ORM:</span></span>
+<span data-line=""><span style="color:#6A737D">export const sql = { modelName: &#x27;User&#x27;, select: [&#x27;firstName&#x27;, &#x27;lastName&#x27;], where: { id } } */</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: config</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  meta: {</span></span>
+<span data-line=""><span style="color:#24292E">    sql: {</span></span>
+<span data-line=""><span style="color:#24292E">      env: {</span></span>
+<span data-line=""><span style="color:#24292E">        server: </span><span style="color:#005CC5">true</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#6A737D">        // Load the value of /pages/**/+sql.js only on the server</span></span>
+<span data-line=""><span style="color:#24292E">        client: </span><span style="color:#005CC5">false</span></span>
+<span data-line=""><span style="color:#24292E">      }</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+onBeforeRender.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onBeforeRender }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { runQuery } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-sql-engine&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onBeforeRender</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#6A737D">  // The value exported by /pages/**/+sql.js is available at pageContext.config.sql</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">id</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext.routeParams</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">sql</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext.config</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> query</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> sql</span><span style="color:#24292E">(id)</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> data</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> runQuery</span><span style="color:#24292E">(query)</span></span>
+<span data-line=""><span style="color:#6A737D">  // ...</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="example-title-and-description">Example: <code>title</code> and <code>description</code></h2>
 <p>In order to define the tags <code>&lt;title&gt;</code> and <code>&lt;meta name=&quot;description&quot;&gt;</code> of a page&#x27;s HTML, you can create new settings <code>title</code> and <code>description</code>.</p>
 <blockquote>
@@ -137,102 +137,102 @@
 </blockquote>
 <p>We first show how the settings <code>title</code> and <code>description</code> are used and then their implementation.</p>
 <h4 id="usage">Usage</h4>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/about-us/+title.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> </span><span style="color:#0A3069">&#x27;About Us&#x27;</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/about-us/+description.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> </span><span style="color:#0A3069">&#x27;Who we are, our values, and what we stand for.&#x27;</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/about-us/+title.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#032F62"> &#x27;About Us&#x27;</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/about-us/+description.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#032F62"> &#x27;Who we are, our values, and what we stand for.&#x27;</span></span></code></pre></figure>
 <blockquote>
 <p>You can also use <code>+config.js</code> instead of creating the files <code>+title.js</code> and <code>+description.js</code>:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/about/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">title: </span><span style="color:#0A3069">&#x27;About Us&#x27;</span><span style="color:#953800">,</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">description: </span><span style="color:#0A3069">&#x27;Who we are, our values, and what we stand for.&#x27;</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/about/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  title: </span><span style="color:#032F62">&#x27;About Us&#x27;</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#24292E">  description: </span><span style="color:#032F62">&#x27;Who we are, our values, and what we stand for.&#x27;</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>See <a href="/config">API<!-- --> &gt; <!-- -->Config files</a>.</p>
 </blockquote>
 <p>Your pages can also use data that was dynamically fetched in order to determine <code>&lt;title&gt;</code> and <code>&lt;meta name=&quot;description&quot;&gt;</code>:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/+title.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> pageContext </span><span style="color:#CF222E">=&gt;</span><span style="color:#953800"> </span><span style="color:#24292F">pageContext</span><span style="color:#953800">.</span><span style="color:#24292F">data</span><span style="color:#953800">.</span><span style="color:#24292F">product</span><span style="color:#953800">.</span><span style="color:#24292F">name</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/+description.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> pageContext </span><span style="color:#CF222E">=&gt;</span><span style="color:#953800"> </span><span style="color:#24292F">{</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">product</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.data</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#0A3069">`${</span><span style="color:#24292F">product</span><span style="color:#0A3069">.</span><span style="color:#24292F">name</span><span style="color:#0A3069">} - ${</span><span style="color:#24292F">product</span><span style="color:#0A3069">.</span><span style="color:#24292F">description</span><span style="color:#0A3069">}`</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/+title.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#E36209"> pageContext</span><span style="color:#D73A49"> =&gt;</span><span style="color:#24292E"> pageContext.data.product.name</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/+description.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#E36209"> pageContext</span><span style="color:#D73A49"> =&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">product</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext.data</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#032F62"> `${</span><span style="color:#24292E">product</span><span style="color:#032F62">.</span><span style="color:#24292E">name</span><span style="color:#032F62">} - ${</span><span style="color:#24292E">product</span><span style="color:#032F62">.</span><span style="color:#24292E">description</span><span style="color:#032F62">}`</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h4 id="implementation">Implementation</h4>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+config.ts</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> { Config } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/types&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">meta: {</span></span>
-<span class="line"><span style="color:#24292F">    title: {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Make the value of `title` available on both the server- and client-side</span></span>
-<span class="line"><span style="color:#24292F">      env: { server: </span><span style="color:#0550AE">true</span><span style="color:#24292F">, client: </span><span style="color:#0550AE">true</span><span style="color:#24292F"> }</span></span>
-<span class="line"><span style="color:#24292F">    },</span></span>
-<span class="line"><span style="color:#24292F">    description: {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Make the value of `description` available only on the server-side</span></span>
-<span class="line"><span style="color:#24292F">      env: { server: </span><span style="color:#0550AE">true</span><span style="color:#24292F"> }</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#953800">} </span><span style="color:#24292F">satisfies</span><span style="color:#953800"> </span><span style="color:#24292F">Config</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+onRenderClient.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: client</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderClient }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { getTitle } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./utils&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderClient</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Update the value of &lt;title&gt; upon page navigation</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (</span><span style="color:#CF222E">!</span><span style="color:#24292F">pageContext.isHydration) {</span></span>
-<span class="line"><span style="color:#24292F">    document.title </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">getTitle</span><span style="color:#24292F">(pageContext)</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ...</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/utils.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: server &amp; client</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { getTitle, getDescription }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">getTitle</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// The value exported by /pages/**/+title.js is available at pageContext.config.title</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">val</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.config.title</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (</span><span style="color:#CF222E">!</span><span style="color:#24292F">val) </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;Some default title&#x27;</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (</span><span style="color:#CF222E">typeof</span><span style="color:#24292F"> val </span><span style="color:#CF222E">===</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;string&#x27;</span><span style="color:#24292F">) </span><span style="color:#CF222E">return</span><span style="color:#24292F"> val</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (</span><span style="color:#CF222E">typeof</span><span style="color:#24292F"> val </span><span style="color:#CF222E">===</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;function&#x27;</span><span style="color:#24292F">) </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#8250DF">val</span><span style="color:#24292F">(pageContext)</span></span>
-<span class="line"><span style="color:#24292F">}</span></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">getDescription</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Same as getTitle()</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ...</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+onRenderHtml.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderHtml }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { getTitle, getDescription } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./utils&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/server&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { renderToHtml } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-ui-framework&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderHtml</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">title</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">getTitle</span><span style="color:#24292F">(pageContext)</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">description</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">getDescription</span><span style="color:#24292F">(pageContext)</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#8250DF">escapeInject</span><span style="color:#0A3069">`&lt;!DOCTYPE html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;head&gt;</span></span>
-<span class="line"><span style="color:#0A3069">        &lt;title&gt;${</span><span style="color:#24292F">title</span><span style="color:#0A3069">}&lt;/title&gt;</span></span>
-<span class="line"><span style="color:#0A3069">        &lt;meta name=&quot;description&quot; content=&quot;${</span><span style="color:#24292F">description</span><span style="color:#0A3069">}&quot; /&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;/head&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">        &lt;div id=&quot;root&quot;&gt;${</span><span style="color:#8250DF">dataEndpointUrl</span><span style="color:#0A3069">(</span><span style="color:#8250DF">renderToHtml</span><span style="color:#0A3069">(&lt;</span><span style="color:#116329">Page</span><span style="color:#24292F"> {</span><span style="color:#CF222E">...</span><span style="color:#24292F">pageContext.data} </span><span style="color:#0A3069">/&gt;))</span><span style="color:#0A3069">}&lt;/div&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;/body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;/html&gt;`</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.ts</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#D73A49"> type</span><span style="color:#24292E"> { Config } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/types&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  meta: {</span></span>
+<span data-line=""><span style="color:#24292E">    title: {</span></span>
+<span data-line=""><span style="color:#6A737D">      // Make the value of `title` available on both the server- and client-side</span></span>
+<span data-line=""><span style="color:#24292E">      env: { server: </span><span style="color:#005CC5">true</span><span style="color:#24292E">, client: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">    },</span></span>
+<span data-line=""><span style="color:#24292E">    description: {</span></span>
+<span data-line=""><span style="color:#6A737D">      // Make the value of `description` available only on the server-side</span></span>
+<span data-line=""><span style="color:#24292E">      env: { server: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">} </span><span style="color:#D73A49">satisfies</span><span style="color:#6F42C1"> Config</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+onRenderClient.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: client</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderClient }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { getTitle } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./utils&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> onRenderClient</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#6A737D">  // Update the value of &lt;title&gt; upon page navigation</span></span>
+<span data-line=""><span style="color:#D73A49">  if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">!</span><span style="color:#24292E">pageContext.isHydration) {</span></span>
+<span data-line=""><span style="color:#24292E">    document.title </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> getTitle</span><span style="color:#24292E">(pageContext)</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#6A737D">  // ...</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/utils.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: server &amp; client</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { getTitle, getDescription }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> getTitle</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#6A737D">  // The value exported by /pages/**/+title.js is available at pageContext.config.title</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> val</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> pageContext.config.title</span></span>
+<span data-line=""><span style="color:#D73A49">  if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">!</span><span style="color:#24292E">val) </span><span style="color:#D73A49">return</span><span style="color:#032F62"> &#x27;Some default title&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">  if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">typeof</span><span style="color:#24292E"> val </span><span style="color:#D73A49">===</span><span style="color:#032F62"> &#x27;string&#x27;</span><span style="color:#24292E">) </span><span style="color:#D73A49">return</span><span style="color:#24292E"> val</span></span>
+<span data-line=""><span style="color:#D73A49">  if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">typeof</span><span style="color:#24292E"> val </span><span style="color:#D73A49">===</span><span style="color:#032F62"> &#x27;function&#x27;</span><span style="color:#24292E">) </span><span style="color:#D73A49">return</span><span style="color:#6F42C1"> val</span><span style="color:#24292E">(pageContext)</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> getDescription</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#6A737D">  // Same as getTitle()</span></span>
+<span data-line=""><span style="color:#6A737D">  // ...</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+onRenderHtml.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderHtml }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { getTitle, getDescription } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./utils&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/server&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { renderToHtml } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-ui-framework&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderHtml</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> title</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> getTitle</span><span style="color:#24292E">(pageContext)</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> description</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> getDescription</span><span style="color:#24292E">(pageContext)</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#6F42C1"> escapeInject</span><span style="color:#032F62">`&lt;!DOCTYPE html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;head&gt;</span></span>
+<span data-line=""><span style="color:#032F62">        &lt;title&gt;${</span><span style="color:#24292E">title</span><span style="color:#032F62">}&lt;/title&gt;</span></span>
+<span data-line=""><span style="color:#032F62">        &lt;meta name=&quot;description&quot; content=&quot;${</span><span style="color:#24292E">description</span><span style="color:#032F62">}&quot; /&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;/head&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">        &lt;div id=&quot;root&quot;&gt;${</span><span style="color:#6F42C1">dataEndpointUrl</span><span style="color:#032F62">(</span><span style="color:#6F42C1">renderToHtml</span><span style="color:#032F62">(&lt;</span><span style="color:#005CC5">Page</span><span style="color:#032F62"> {</span><span style="color:#D73A49">...</span><span style="color:#24292E">pageContext</span><span style="color:#032F62">.</span><span style="color:#24292E">data</span><span style="color:#032F62">} /&gt;))</span><span style="color:#032F62">}&lt;/div&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;/body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;/html&gt;`</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p>This implementation can be improved: the file <code>/pages/utils.js</code> is loaded on both the server- and client-side but <code>getDescription()</code> is only used by the server-side. This means <code>getDescription()</code> unnecessarily bloats the size of your client-side bundles. It would be cleaner to split <code>/pages/utils.js</code> in two seperate files: one for the client-side and another one for the server-side. In general, be extra careful in which environment each file is loaded; consider using <a href="/file-env"><code>.server.js</code> and <code>.client.js</code></a> to ensure the environment of files.</p>
 </blockquote>
@@ -241,65 +241,65 @@
 <p>If you use a <!-- -->UI framework <a href="/extensions">Vike extension</a> (<code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>)<!-- -->, then you don&#x27;t need to create the <code>Layout</code> setting as it&#x27;s already created by <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>.</p>
 </blockquote>
 <p>Another common use case is to create a component <code>&lt;Layout&gt;</code> that defines the layout of a page.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/+Layout.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: browser and server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { Layout } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;../layouts/Responsive&#x27;</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/admin/+Layout.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: browser and server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { Layout } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;../layouts/Dashboard&#x27;</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+Layout.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: browser and server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// The default layout in case the page doesn&#x27;t set one</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { Layout } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;../layouts/LayoutDefault&#x27;</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+config.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: config</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">meta: {</span></span>
-<span class="line"><span style="color:#24292F">    Layout: {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Load the value of /pages/**/+Layout.js on both the server and client</span></span>
-<span class="line"><span style="color:#24292F">      env: { server: </span><span style="color:#0550AE">true</span><span style="color:#24292F">, client: </span><span style="color:#0550AE">true</span><span style="color:#24292F"> }</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+onRenderHtml.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderHtml }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { renderToHtml } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-ui-framework&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/server&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderHtml</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">Page</span><span style="color:#24292F">, </span><span style="color:#0550AE">Layout</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.config</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageHtml</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderToHtml</span><span style="color:#24292F">(&lt;</span><span style="color:#116329">Layout</span><span style="color:#24292F">&gt;&lt;</span><span style="color:#116329">Page</span><span style="color:#24292F">/&gt;&lt;/</span><span style="color:#116329">Layout</span><span style="color:#24292F">&gt;)</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#8250DF">escapeInject</span><span style="color:#0A3069">`&lt;!DOCTYPE html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">        &lt;div id=&quot;root&quot;&gt;${</span><span style="color:#8250DF">dangerouslySkipEscape</span><span style="color:#0A3069">(</span><span style="color:#24292F">pageHtml</span><span style="color:#0A3069">)</span><span style="color:#0A3069">}&lt;/div&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;/body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;/html&gt;`</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/+Layout.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: browser and server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { Layout } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;../layouts/Responsive&#x27;</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/admin/+Layout.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: browser and server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { Layout } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;../layouts/Dashboard&#x27;</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+Layout.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: browser and server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// The default layout in case the page doesn&#x27;t set one</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { Layout } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;../layouts/LayoutDefault&#x27;</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: config</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  meta: {</span></span>
+<span data-line=""><span style="color:#24292E">    Layout: {</span></span>
+<span data-line=""><span style="color:#6A737D">      // Load the value of /pages/**/+Layout.js on both the server and client</span></span>
+<span data-line=""><span style="color:#24292E">      env: { server: </span><span style="color:#005CC5">true</span><span style="color:#24292E">, client: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+onRenderHtml.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderHtml }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { renderToHtml } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-ui-framework&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/server&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderHtml</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">Page</span><span style="color:#24292E">, </span><span style="color:#005CC5">Layout</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext.config</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> pageHtml</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> renderToHtml</span><span style="color:#24292E">(&lt;</span><span style="color:#005CC5">Layout</span><span style="color:#24292E">&gt;&lt;</span><span style="color:#005CC5">Page</span><span style="color:#24292E">/&gt;&lt;/</span><span style="color:#005CC5">Layout</span><span style="color:#24292E">&gt;)</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#6F42C1"> escapeInject</span><span style="color:#032F62">`&lt;!DOCTYPE html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">        &lt;div id=&quot;root&quot;&gt;${</span><span style="color:#6F42C1">dangerouslySkipEscape</span><span style="color:#032F62">(</span><span style="color:#24292E">pageHtml</span><span style="color:#032F62">)</span><span style="color:#032F62">}&lt;/div&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;/body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;/html&gt;`</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p>Note how we use <code>pageContext.config.Page</code> instead of <code>pageContext.Page</code>: that&#x27;s because <code>pageContext.Page</code> is just an alias for <code>pageContext.config.Page</code>.</p>
 </blockquote>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+onRenderClient.jsx</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: browser</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderClient }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { renderDom } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-ui-framework&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderClient</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">Page</span><span style="color:#24292F">, </span><span style="color:#0550AE">Layout</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.config</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#8250DF">renderDom</span><span style="color:#24292F">(</span></span>
-<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">Layout</span><span style="color:#24292F">&gt;&lt;</span><span style="color:#116329">Page</span><span style="color:#24292F">/&gt;&lt;/</span><span style="color:#116329">Layout</span><span style="color:#24292F">&gt;,</span></span>
-<span class="line"><span style="color:#24292F">    document.</span><span style="color:#8250DF">getElementById</span><span style="color:#24292F">(</span><span style="color:#0A3069">&quot;root&quot;</span><span style="color:#24292F">)</span></span>
-<span class="line"><span style="color:#24292F">  )</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+onRenderClient.jsx</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: browser</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderClient }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { renderDom } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-ui-framework&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderClient</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">Page</span><span style="color:#24292E">, </span><span style="color:#005CC5">Layout</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext.config</span></span>
+<span data-line=""><span style="color:#6F42C1">  renderDom</span><span style="color:#24292E">(</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;</span><span style="color:#005CC5">Layout</span><span style="color:#24292E">&gt;&lt;</span><span style="color:#005CC5">Page</span><span style="color:#24292E">/&gt;&lt;/</span><span style="color:#005CC5">Layout</span><span style="color:#24292E">&gt;,</span></span>
+<span data-line=""><span style="color:#24292E">    document.</span><span style="color:#6F42C1">getElementById</span><span style="color:#24292E">(</span><span style="color:#032F62">&quot;root&quot;</span><span style="color:#24292E">)</span></span>
+<span data-line=""><span style="color:#24292E">  )</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>Examples:</p>
 <ul>
 <li>
@@ -311,51 +311,51 @@
 </ul>
 <h2 id="example-modify-data-env">Example: modify <code>data()</code> env</h2>
 <p>You can use <code>meta</code> to change the environment in which built-in hooks are loaded. For example you can change the environment of <code>data()</code> from <code>{ server: true, client: false }</code> to <code>{ server: true, client: true }</code>.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/some-page/+config.ts</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> { Config } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/types&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">meta: {</span></span>
-<span class="line"><span style="color:#24292F">    data: {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// By default, the data() hook is loaded and executed only on the</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// server-side. By using meta we can make it isomorphic instead:</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// data() is loaded and executed as well on the client-side.</span></span>
-<span class="line"><span style="color:#24292F">      env: { server: </span><span style="color:#0550AE">true</span><span style="color:#24292F">, client: </span><span style="color:#0550AE">true</span><span style="color:#24292F"> }</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#953800">} </span><span style="color:#24292F">satisfies</span><span style="color:#953800"> </span><span style="color:#24292F">Config</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/some-page/+config.ts</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#D73A49"> type</span><span style="color:#24292E"> { Config } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/types&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  meta: {</span></span>
+<span data-line=""><span style="color:#24292E">    data: {</span></span>
+<span data-line=""><span style="color:#6A737D">      // By default, the data() hook is loaded and executed only on the</span></span>
+<span data-line=""><span style="color:#6A737D">      // server-side. By using meta we can make it isomorphic instead:</span></span>
+<span data-line=""><span style="color:#6A737D">      // data() is loaded and executed as well on the client-side.</span></span>
+<span data-line=""><span style="color:#24292E">      env: { server: </span><span style="color:#005CC5">true</span><span style="color:#24292E">, client: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">} </span><span style="color:#D73A49">satisfies</span><span style="color:#6F42C1"> Config</span></span></code></pre></figure>
 <blockquote>
 <p>Making <code>data()</code> isomorphic allows you to fetch data directly between the user&#x27;s browser and the data source (without involving your server), see <a href="/data#client-side">API<!-- --> &gt; <code>data()</code> hook<!-- --> &gt; <!-- -->Client side</a>.</p>
 </blockquote>
 <p>For more convenience, you can create a <code>dataIsomorph</code> toggle:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+config.ts</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> { Config, Effect } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/types&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#8250DF">effect</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#953800">Effect</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> ({ </span><span style="color:#953800">configDefinedAt</span><span style="color:#24292F">, </span><span style="color:#953800">configValue</span><span style="color:#24292F"> }) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (</span><span style="color:#CF222E">typeof</span><span style="color:#24292F"> configValue </span><span style="color:#CF222E">!==</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;boolean&#x27;</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">throw</span><span style="color:#24292F"> </span><span style="color:#CF222E">new</span><span style="color:#24292F"> </span><span style="color:#0550AE">Error</span><span style="color:#24292F">(</span><span style="color:#0A3069">`${</span><span style="color:#24292F">configDefinedAt</span><span style="color:#0A3069">} should be a boolean`</span><span style="color:#24292F">)</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (configValue </span><span style="color:#CF222E">===</span><span style="color:#24292F"> </span><span style="color:#0550AE">true</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">      meta: {</span></span>
-<span class="line"><span style="color:#24292F">        data: {</span></span>
-<span class="line"><span style="color:#24292F">          env: { server: </span><span style="color:#0550AE">true</span><span style="color:#24292F">, client: </span><span style="color:#0550AE">true</span><span style="color:#24292F"> }</span></span>
-<span class="line"><span style="color:#24292F">        }</span></span>
-<span class="line"><span style="color:#24292F">      }</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">meta: {</span></span>
-<span class="line"><span style="color:#24292F">    dataIsomorph: {</span></span>
-<span class="line"><span style="color:#24292F">      env: { config: </span><span style="color:#0550AE">true</span><span style="color:#24292F"> },</span></span>
-<span class="line"><span style="color:#24292F">      effect</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#953800">} </span><span style="color:#24292F">satisfies</span><span style="color:#953800"> </span><span style="color:#24292F">Config</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.ts</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#D73A49"> type</span><span style="color:#24292E"> { Config, Effect } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/types&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">const</span><span style="color:#6F42C1"> effect</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> Effect</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> ({ </span><span style="color:#E36209">configDefinedAt</span><span style="color:#24292E">, </span><span style="color:#E36209">configValue</span><span style="color:#24292E"> }) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#D73A49">  if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">typeof</span><span style="color:#24292E"> configValue </span><span style="color:#D73A49">!==</span><span style="color:#032F62"> &#x27;boolean&#x27;</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">    throw</span><span style="color:#D73A49"> new</span><span style="color:#6F42C1"> Error</span><span style="color:#24292E">(</span><span style="color:#032F62">`${</span><span style="color:#24292E">configDefinedAt</span><span style="color:#032F62">} should be a boolean`</span><span style="color:#24292E">)</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#D73A49">  if</span><span style="color:#24292E"> (configValue </span><span style="color:#D73A49">===</span><span style="color:#005CC5"> true</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">    return</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">      meta: {</span></span>
+<span data-line=""><span style="color:#24292E">        data: {</span></span>
+<span data-line=""><span style="color:#24292E">          env: { server: </span><span style="color:#005CC5">true</span><span style="color:#24292E">, client: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">        }</span></span>
+<span data-line=""><span style="color:#24292E">      }</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  meta: {</span></span>
+<span data-line=""><span style="color:#24292E">    dataIsomorph: {</span></span>
+<span data-line=""><span style="color:#24292E">      env: { config: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> },</span></span>
+<span data-line=""><span style="color:#24292E">      effect</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">} </span><span style="color:#D73A49">satisfies</span><span style="color:#6F42C1"> Config</span></span></code></pre></figure>
 <p>Example:</p>
 <ul>
 <li><a href="https://github.com/vikejs/vike/blob/43503a4829e4bb0171785bc8fa501c7ca096a150/examples/react-full/">/examples/react-full/</a>
@@ -367,77 +367,77 @@
 </li>
 </ul>
 <h2 id="api">API</h2>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+config.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: config</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">meta: {</span></span>
-<span class="line"><span style="color:#24292F">    someSettingOrHook: {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Required. Defines the environment in which the config value is loaded.</span></span>
-<span class="line"><span style="color:#24292F">      env: {</span></span>
-<span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">//  Load the config value on the server.</span></span>
-<span class="line"><span style="color:#24292F">        server: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">//  Load the config value on the client.</span></span>
-<span class="line"><span style="color:#24292F">        client: </span><span style="color:#0550AE">true</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">        </span><span style="color:#6E7781">// Load the config value at config time. Required for `effect`. Optional.</span></span>
-<span class="line"><span style="color:#24292F">        config: </span><span style="color:#0550AE">false</span><span style="color:#24292F"> </span><span style="color:#6E7781">// default value</span></span>
-<span class="line"><span style="color:#24292F">      },</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Optional. Whether config values should be merged instead of overwritten.</span></span>
-<span class="line"><span style="color:#24292F">      cumulative: </span><span style="color:#0550AE">false</span><span style="color:#24292F">, </span><span style="color:#6E7781">// default value</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Optional. Function called when the config value is defined.</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Requires `env.config` to be `true`.</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#8250DF">effect</span><span style="color:#24292F">({ </span><span style="color:#953800">configDefinedAt</span><span style="color:#24292F">, </span><span style="color:#953800">configValue</span><span style="color:#24292F"> }) {</span></span>
-<span class="line"><span style="color:#24292F">        </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (someCondition) {</span></span>
-<span class="line"><span style="color:#24292F">          </span><span style="color:#6E7781">// This config object is merged with the current one.</span></span>
-<span class="line"><span style="color:#24292F">          </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">            meta: {</span></span>
-<span class="line"><span style="color:#24292F">              </span><span style="color:#6E7781">// This can be the same or another hook/setting.</span></span>
-<span class="line"><span style="color:#24292F">              someOtherSettingOrHook: {</span></span>
-<span class="line"><span style="color:#24292F">                env: { server: </span><span style="color:#0550AE">true</span><span style="color:#24292F">, client: </span><span style="color:#0550AE">false</span><span style="color:#24292F"> }</span></span>
-<span class="line"><span style="color:#24292F">              }</span></span>
-<span class="line"><span style="color:#24292F">            }</span></span>
-<span class="line"><span style="color:#24292F">          }</span></span>
-<span class="line"><span style="color:#24292F">        }</span></span>
-<span class="line"><span style="color:#24292F">      }</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: config</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  meta: {</span></span>
+<span data-line=""><span style="color:#24292E">    someSettingOrHook: {</span></span>
+<span data-line=""><span style="color:#6A737D">      // Required. Defines the environment in which the config value is loaded.</span></span>
+<span data-line=""><span style="color:#24292E">      env: {</span></span>
+<span data-line=""><span style="color:#6A737D">        //  Load the config value on the server.</span></span>
+<span data-line=""><span style="color:#24292E">        server: </span><span style="color:#005CC5">true</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#6A737D">        //  Load the config value on the client.</span></span>
+<span data-line=""><span style="color:#24292E">        client: </span><span style="color:#005CC5">true</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#6A737D">        // Load the config value at config time. Required for `effect`. Optional.</span></span>
+<span data-line=""><span style="color:#24292E">        config: </span><span style="color:#005CC5">false</span><span style="color:#6A737D"> // default value</span></span>
+<span data-line=""><span style="color:#24292E">      },</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">      // Optional. Whether config values should be merged instead of overwritten.</span></span>
+<span data-line=""><span style="color:#24292E">      cumulative: </span><span style="color:#005CC5">false</span><span style="color:#24292E">, </span><span style="color:#6A737D">// default value</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">      // Optional. Function called when the config value is defined.</span></span>
+<span data-line=""><span style="color:#6A737D">      // Requires `env.config` to be `true`.</span></span>
+<span data-line=""><span style="color:#6F42C1">      effect</span><span style="color:#24292E">({ </span><span style="color:#E36209">configDefinedAt</span><span style="color:#24292E">, </span><span style="color:#E36209">configValue</span><span style="color:#24292E"> }) {</span></span>
+<span data-line=""><span style="color:#D73A49">        if</span><span style="color:#24292E"> (someCondition) {</span></span>
+<span data-line=""><span style="color:#6A737D">          // This config object is merged with the current one.</span></span>
+<span data-line=""><span style="color:#D73A49">          return</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">            meta: {</span></span>
+<span data-line=""><span style="color:#6A737D">              // This can be the same or another hook/setting.</span></span>
+<span data-line=""><span style="color:#24292E">              someOtherSettingOrHook: {</span></span>
+<span data-line=""><span style="color:#24292E">                env: { server: </span><span style="color:#005CC5">true</span><span style="color:#24292E">, client: </span><span style="color:#005CC5">false</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">              }</span></span>
+<span data-line=""><span style="color:#24292E">            }</span></span>
+<span data-line=""><span style="color:#24292E">          }</span></span>
+<span data-line=""><span style="color:#24292E">        }</span></span>
+<span data-line=""><span style="color:#24292E">      }</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="typescript">TypeScript</h2>
 <p>Similar to <a href="/pageContext#typescript"><code>Vike.PageContext</code></a>, you can extend (or refine) Vike&#x27;s <code>Config</code> type by using the global interface <code>Vike.Config</code>.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+config.ts</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: config</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">meta: {</span></span>
-<span class="line"><span style="color:#24292F">    sqlQuery: {</span></span>
-<span class="line"><span style="color:#24292F">      env: { server: </span><span style="color:#0550AE">true</span><span style="color:#24292F"> }</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#953800">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">declare</span><span style="color:#24292F"> global {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">namespace</span><span style="color:#24292F"> </span><span style="color:#953800">Vike</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">interface</span><span style="color:#24292F"> </span><span style="color:#953800">Config</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">/** The SQL query that retrieves the page&#x27;s data */</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#8250DF">sqlQuery</span><span style="color:#CF222E">?:</span><span style="color:#24292F"> (</span><span style="color:#953800">id</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#0550AE">number</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> </span><span style="color:#0550AE">string</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// The following isn&#x27;t needed in this example, but if you define Vike.Config</span></span>
-<span class="line"><span style="color:#6E7781">// in a .d.ts file then make sure there is at least one export/import statment.</span></span>
-<span class="line"><span style="color:#6E7781">// Tell TypeScript this file isn&#x27;t an ambient module:</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> {}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/@id/+config.ts</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { Config } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/types&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#6E7781">// ✅ Typed</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#8250DF">sqlQuery</span><span style="color:#24292F">: (</span><span style="color:#953800">id</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> </span><span style="color:#0A3069">`SELECT { name, price } FROM products WHERE id = &quot;${</span><span style="color:#24292F">id</span><span style="color:#0A3069">}&quot;;`</span></span>
-<span class="line"><span style="color:#953800">} </span><span style="color:#24292F">satisfies</span><span style="color:#953800"> </span><span style="color:#24292F">Config</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.ts</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: config</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  meta: {</span></span>
+<span data-line=""><span style="color:#24292E">    sqlQuery: {</span></span>
+<span data-line=""><span style="color:#24292E">      env: { server: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">declare</span><span style="color:#24292E"> global {</span></span>
+<span data-line=""><span style="color:#D73A49">  namespace</span><span style="color:#6F42C1"> Vike</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#D73A49">    interface</span><span style="color:#6F42C1"> Config</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">      /** The SQL query that retrieves the page&#x27;s data */</span></span>
+<span data-line=""><span style="color:#6F42C1">      sqlQuery</span><span style="color:#D73A49">?:</span><span style="color:#24292E"> (</span><span style="color:#E36209">id</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> number</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#005CC5"> string</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// The following isn&#x27;t needed in this example, but if you define Vike.Config</span></span>
+<span data-line=""><span style="color:#6A737D">// in a .d.ts file then make sure there is at least one export/import statment.</span></span>
+<span data-line=""><span style="color:#6A737D">// Tell TypeScript this file isn&#x27;t an ambient module:</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> {}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/@id/+config.ts</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { Config } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/types&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">  // ✅ Typed</span></span>
+<span data-line=""><span style="color:#6F42C1">  sqlQuery</span><span style="color:#24292E">: (</span><span style="color:#E36209">id</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#032F62"> `SELECT { name, price } FROM products WHERE id = &quot;${</span><span style="color:#24292E">id</span><span style="color:#032F62">}&quot;;`</span></span>
+<span data-line=""><span style="color:#24292E">} </span><span style="color:#D73A49">satisfies</span><span style="color:#6F42C1"> Config</span></span></code></pre></figure>
 <blockquote>
 <p><code>sqlQuery</code> is a custom setting, see <a href="#example-sql">Example: <code>sql</code></a>.</p>
 </blockquote>
@@ -468,6 +468,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

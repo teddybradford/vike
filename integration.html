@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Other Integrations | Vike</title>
@@ -37,49 +37,49 @@
 <p>If you struggle integrating a tool, don&#x27;t hesitate to <a href="https://github.com/vikejs/vike/discussions">create a new GitHub Discussion</a>.</p>
 </blockquote>
 <h2 id="ui-tools">UI tools</h2>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+onRenderHtml.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/server&#x27;</span></span>
-<span class="line"><span style="color:#6E7781">// This can be any UI framework (React, Vue, Solid, Svelte, ...)</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> renderToHtml </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-ui-framework&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderHtml }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderHtml</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// `Page` is the `export { Page }` of our +Page.js files;</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Vike doesn&#x27;t do anything with `Page` and just makes it available as</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// `pageContext.Page`; we can export any `Page` value we want and do whatever we want with it.</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">Page</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// We control how we use our UI framework to render our pages to HTML</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageHtml</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderToHtml</span><span style="color:#24292F">(Page)</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// We control the entire HTML</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#8250DF">escapeInject</span><span style="color:#0A3069">`&lt;html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;head&gt;</span></span>
-<span class="line"><span style="color:#0A3069">        &lt;!-- Some libraries recommend loading code from a CDN --&gt;</span></span>
-<span class="line"><span style="color:#0A3069">        &lt;script src=&quot;https://cdn.example.com/some-library/3.3.7/lib.min.js&quot;&gt;&lt;/script&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;/head&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;div id=&quot;root&quot;&gt;</span></span>
-<span class="line"><span style="color:#0A3069">        ${</span><span style="color:#8250DF">dangerouslySkipEscape</span><span style="color:#0A3069">(</span><span style="color:#24292F">pageHtml</span><span style="color:#0A3069">)</span><span style="color:#0A3069">}</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;/div&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;/body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">  &lt;/html&gt;`</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+onRenderClient.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: browser</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderClient }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { hydrateDom } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-ui-framework&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderClient</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">Page</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// We control how our pages are hydrated</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">hydrateDom</span><span style="color:#24292F">(Page)</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+onRenderHtml.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/server&#x27;</span></span>
+<span data-line=""><span style="color:#6A737D">// This can be any UI framework (React, Vue, Solid, Svelte, ...)</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> renderToHtml </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-ui-framework&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderHtml }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderHtml</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#6A737D">  // `Page` is the `export { Page }` of our +Page.js files;</span></span>
+<span data-line=""><span style="color:#6A737D">  // Vike doesn&#x27;t do anything with `Page` and just makes it available as</span></span>
+<span data-line=""><span style="color:#6A737D">  // `pageContext.Page`; we can export any `Page` value we want and do whatever we want with it.</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">Page</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">  // We control how we use our UI framework to render our pages to HTML</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> pageHtml</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> renderToHtml</span><span style="color:#24292E">(Page)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">  // We control the entire HTML</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#6F42C1"> escapeInject</span><span style="color:#032F62">`&lt;html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;head&gt;</span></span>
+<span data-line=""><span style="color:#032F62">        &lt;!-- Some libraries recommend loading code from a CDN --&gt;</span></span>
+<span data-line=""><span style="color:#032F62">        &lt;script src=&quot;https://cdn.example.com/some-library/3.3.7/lib.min.js&quot;&gt;&lt;/script&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;/head&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;div id=&quot;root&quot;&gt;</span></span>
+<span data-line=""><span style="color:#032F62">        ${</span><span style="color:#6F42C1">dangerouslySkipEscape</span><span style="color:#032F62">(</span><span style="color:#24292E">pageHtml</span><span style="color:#032F62">)</span><span style="color:#032F62">}</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;/div&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;/body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">  &lt;/html&gt;`</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+onRenderClient.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: browser</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderClient }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { hydrateDom } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-ui-framework&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderClient</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">Page</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext</span></span>
+<span data-line=""><span style="color:#6A737D">  // We control how our pages are hydrated</span></span>
+<span data-line=""><span style="color:#D73A49">  await</span><span style="color:#6F42C1"> hydrateDom</span><span style="color:#24292E">(Page)</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>Since you control how your pages are rendered, you can use:</p>
 <ul>
 <li>Any UI framework (React 16, React 17, Vue 2, Vue 3, <code>petite-vue</code>, Svelte, Solid, Preact, ...)</li>
@@ -87,31 +87,31 @@
 </ul>
 <p>Integrating a UI tool is usually only a matter of following its official installation guide.</p>
 <h2 id="client-side-tools">Client-side tools</h2>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+onRenderClient.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: browser</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderClient }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { hydrateDom } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-ui-framework&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// This is a good place to initialize error tracking such as Sentry or Bugsnag.</span></span>
-<span class="line"><span style="color:#24292F">Sentry.</span><span style="color:#8250DF">init</span><span style="color:#24292F">()</span></span>
-<span class="line"><span style="color:#6E7781">// And also for initializing a Service Worker.</span></span>
-<span class="line"><span style="color:#24292F">navigator.serviceWorker.</span><span style="color:#8250DF">register</span><span style="color:#24292F">(</span><span style="color:#6E7781">/* ... */</span><span style="color:#24292F">)</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderClient</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Here we can integrate performance measurement tools, e.g. to measure hydration performance</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">Page</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">hydrateDom</span><span style="color:#24292F">(Page)</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#8250DF">init</span><span style="color:#24292F">()</span></span>
-<span class="line"><span style="color:#24292F">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">init</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// After hydration we usually initialize vanilla JS component libraries, for example tooltips</span></span>
-<span class="line"><span style="color:#24292F">  tooltip.</span><span style="color:#8250DF">init</span><span style="color:#24292F">(document.</span><span style="color:#8250DF">querySelectorAll</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;.tooltip&#x27;</span><span style="color:#24292F">))</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Or some vanilla JS modal library</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#8250DF">$</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;.my-modals&#x27;</span><span style="color:#24292F">).</span><span style="color:#8250DF">modal</span><span style="color:#24292F">()</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+onRenderClient.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: browser</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderClient }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { hydrateDom } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-ui-framework&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// This is a good place to initialize error tracking such as Sentry or Bugsnag.</span></span>
+<span data-line=""><span style="color:#24292E">Sentry.</span><span style="color:#6F42C1">init</span><span style="color:#24292E">()</span></span>
+<span data-line=""><span style="color:#6A737D">// And also for initializing a Service Worker.</span></span>
+<span data-line=""><span style="color:#24292E">navigator.serviceWorker.</span><span style="color:#6F42C1">register</span><span style="color:#24292E">(</span><span style="color:#6A737D">/* ... */</span><span style="color:#24292E">)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderClient</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#6A737D">  // Here we can integrate performance measurement tools, e.g. to measure hydration performance</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">Page</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext</span></span>
+<span data-line=""><span style="color:#D73A49">  await</span><span style="color:#6F42C1"> hydrateDom</span><span style="color:#24292E">(Page)</span></span>
+<span data-line=""><span style="color:#6F42C1">  init</span><span style="color:#24292E">()</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> init</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#6A737D">  // After hydration we usually initialize vanilla JS component libraries, for example tooltips</span></span>
+<span data-line=""><span style="color:#24292E">  tooltip.</span><span style="color:#6F42C1">init</span><span style="color:#24292E">(document.</span><span style="color:#6F42C1">querySelectorAll</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;.tooltip&#x27;</span><span style="color:#24292E">))</span></span>
+<span data-line=""><span style="color:#6A737D">  // Or some vanilla JS modal library</span></span>
+<span data-line=""><span style="color:#6F42C1">  $</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;.my-modals&#x27;</span><span style="color:#24292E">).</span><span style="color:#6F42C1">modal</span><span style="color:#24292E">()</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>You can use:</p>
 <ul>
 <li>Any CSS framework (Tailwind CSS, Bulma, Bootstrap, Material Design, ...)</li>
@@ -121,24 +121,24 @@
 <p>Integrating a client-side tool is usually only a matter of following its official installation guide.</p>
 <h2 id="server-side-tools">Server-side tools</h2>
 <p>From the perspective of a server, Vike is just a middleware:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// renderPage() doesn&#x27;t depend on Node.js and can be used within any JavaScript environment:</span></span>
-<span class="line"><span style="color:#6E7781">// Node.js, AWS, Cloudflare, Vercel, Deno, Bun, Lagon, ...</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { renderPage } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/server&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// Any server: Express.js, Cloudflare Worker, AWS Lambda Function, Fastify, Hono, Nitro, ...</span></span>
-<span class="line"><span style="color:#24292F">server.</span><span style="color:#8250DF">addMiddleware</span><span style="color:#24292F">({</span></span>
-<span class="line"><span style="color:#24292F">  method: </span><span style="color:#0A3069">&#x27;GET&#x27;</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">  route: </span><span style="color:#0A3069">&#x27;*&#x27;</span><span style="color:#24292F">, </span><span style="color:#6E7781">// catch-all</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#8250DF">handler</span><span style="color:#24292F">(</span><span style="color:#953800">request</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageContextInit</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> { urlOriginal: request.url }</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageContext</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderPage</span><span style="color:#24292F">(pageContextInit)</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (</span><span style="color:#CF222E">!</span><span style="color:#24292F">pageContext.httpResponse) </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#0550AE">null</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// `body` is the HTML of the page with a route matching pageContextInit.urlOriginal</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">body</span><span style="color:#24292F">, </span><span style="color:#0550AE">statusCode</span><span style="color:#24292F">, </span><span style="color:#0550AE">headers</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.httpResponse</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">response</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> { body, statusCode, headers }</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">return</span><span style="color:#24292F"> response</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">})</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// renderPage() doesn&#x27;t depend on Node.js and can be used within any JavaScript environment:</span></span>
+<span data-line=""><span style="color:#6A737D">// Node.js, AWS, Cloudflare, Vercel, Deno, Bun, Lagon, ...</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { renderPage } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/server&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// Any server: Express.js, Cloudflare Worker, AWS Lambda Function, Fastify, Hono, Nitro, ...</span></span>
+<span data-line=""><span style="color:#24292E">server.</span><span style="color:#6F42C1">addMiddleware</span><span style="color:#24292E">({</span></span>
+<span data-line=""><span style="color:#24292E">  method: </span><span style="color:#032F62">&#x27;GET&#x27;</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#24292E">  route: </span><span style="color:#032F62">&#x27;*&#x27;</span><span style="color:#24292E">, </span><span style="color:#6A737D">// catch-all</span></span>
+<span data-line=""><span style="color:#D73A49">  async</span><span style="color:#6F42C1"> handler</span><span style="color:#24292E">(</span><span style="color:#E36209">request</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">    const</span><span style="color:#005CC5"> pageContextInit</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> { urlOriginal: request.url }</span></span>
+<span data-line=""><span style="color:#D73A49">    const</span><span style="color:#005CC5"> pageContext</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> renderPage</span><span style="color:#24292E">(pageContextInit)</span></span>
+<span data-line=""><span style="color:#D73A49">    if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">!</span><span style="color:#24292E">pageContext.httpResponse) </span><span style="color:#D73A49">return</span><span style="color:#005CC5"> null</span></span>
+<span data-line=""><span style="color:#6A737D">    // `body` is the HTML of the page with a route matching pageContextInit.urlOriginal</span></span>
+<span data-line=""><span style="color:#D73A49">    const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">body</span><span style="color:#24292E">, </span><span style="color:#005CC5">statusCode</span><span style="color:#24292E">, </span><span style="color:#005CC5">headers</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext.httpResponse</span></span>
+<span data-line=""><span style="color:#D73A49">    const</span><span style="color:#005CC5"> response</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> { body, statusCode, headers }</span></span>
+<span data-line=""><span style="color:#D73A49">    return</span><span style="color:#24292E"> response</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">})</span></span></code></pre></figure>
 <p>You can embed <code>renderPage()</code> into any server.</p>
 <p>Alternatively, instead of using <code>renderPage()</code>, you can <a href="/pre-rendering">pre-render</a> your pages and remove the need for a production server (and deploy to a <a href="/static-hosts">static host</a> instead).</p>
 <p>You can use:</p>
@@ -192,6 +192,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

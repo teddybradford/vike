@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Tour | Vike</title>
@@ -31,89 +31,89 @@
 <h2 id="config-js"><code>+config.js</code></h2>
 <p>The <code>+config.js</code> files is the interface between Vike and your code.</p>
 <p>You can use <code>+config.js</code> to define a new page:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/about/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// The file defines a new page with URL /about</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { AboutPage } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./AboutPage&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">Page: AboutPage</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/about/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// The file defines a new page with URL /about</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { AboutPage } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./AboutPage&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  Page: AboutPage</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p>The URL <code>/about</code> is determined by the filesystem location of <code>/pages/about/+config.js</code>, see <a href="/filesystem-routing">Routing<!-- --> &gt; <!-- -->Filesystem Routing</a>.</p>
 </blockquote>
-<div data-rehype-pretty-code-fragment=""><pre data-language="jsx" data-theme="default"><code data-language="jsx" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/about/AboutPage.jsx</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#8250DF">AboutPage</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> () </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> &lt;&gt;Vike Demo&lt;/&gt;</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="jsx" data-theme="github-light"><code data-language="jsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/about/AboutPage.jsx</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> const</span><span style="color:#6F42C1"> AboutPage</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> () </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> &lt;&gt;Vike Demo&lt;/&gt;</span></span></code></pre></figure>
 <p>Another example:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// This file defines a new page with URL &#x27;/product/@id&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { ProductPage } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./ProductPage&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">   </span><span style="color:#24292F">Page: ProductPage</span><span style="color:#953800">,</span></span>
-<span class="line"><span style="color:#953800">   </span><span style="color:#6E7781">// Parameterized route that matches URLs such as /product/1337 and /product/macbook</span></span>
-<span class="line"><span style="color:#953800">   </span><span style="color:#24292F">route: </span><span style="color:#0A3069">&#x27;/product/@id&#x27;</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// This file defines a new page with URL &#x27;/product/@id&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { ProductPage } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./ProductPage&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">   Page: ProductPage,</span></span>
+<span data-line=""><span style="color:#6A737D">   // Parameterized route that matches URLs such as /product/1337 and /product/macbook</span></span>
+<span data-line=""><span style="color:#24292E">   route: </span><span style="color:#032F62">&#x27;/product/@id&#x27;</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p>Setting the <code>route</code> value overrides Filesystem Routing.</p>
 </blockquote>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/ProductPage.jsx</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { ProductPage }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">ProductPage</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> (</span></span>
-<span class="line"><span style="color:#24292F">    &lt;&gt;</span></span>
-<span class="line"><span style="color:#24292F">      &lt;</span><span style="color:#116329">h1</span><span style="color:#24292F">&gt;Product Information&lt;/</span><span style="color:#116329">h1</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">      ...</span></span>
-<span class="line"><span style="color:#24292F">    &lt;/&gt;</span></span>
-<span class="line"><span style="color:#24292F">  )</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/ProductPage.jsx</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { ProductPage }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> ProductPage</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> (</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;&gt;</span></span>
+<span data-line=""><span style="color:#24292E">      &lt;</span><span style="color:#22863A">h1</span><span style="color:#24292E">&gt;Product Information&lt;/</span><span style="color:#22863A">h1</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">      ...</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;/&gt;</span></span>
+<span data-line=""><span style="color:#24292E">  )</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p>You can also create a file <code>/pages/product/+Page.js</code> instead of setting <code>/pages/product/+config.js &gt; export default { Page }</code>, see <a href="#other-files">Other <code>+</code> files</a>.</p>
 </blockquote>
 <h2 id="other-files">Other <code>+</code> files</h2>
 <p>For convenience, instead of defining <a href="#config-js"><code>+config.js</code></a>, you can define <code>+Page.js</code> and <code>+route.js</code>:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/+route.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> </span><span style="color:#0A3069">&#x27;/product/@id&#x27;</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/+Page.jsx</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { ProductPage </span><span style="color:#CF222E">as</span><span style="color:#24292F"> Page }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">ProductPage</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> (</span></span>
-<span class="line"><span style="color:#24292F">    &lt;&gt;</span></span>
-<span class="line"><span style="color:#24292F">      &lt;</span><span style="color:#116329">h1</span><span style="color:#24292F">&gt;Product Information&lt;/</span><span style="color:#116329">h1</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">      ...</span></span>
-<span class="line"><span style="color:#24292F">    &lt;/&gt;</span></span>
-<span class="line"><span style="color:#24292F">  )</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/+route.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#032F62"> &#x27;/product/@id&#x27;</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/+Page.jsx</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { ProductPage </span><span style="color:#D73A49">as</span><span style="color:#24292E"> Page }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> ProductPage</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> (</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;&gt;</span></span>
+<span data-line=""><span style="color:#24292E">      &lt;</span><span style="color:#22863A">h1</span><span style="color:#24292E">&gt;Product Information&lt;/</span><span style="color:#22863A">h1</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">      ...</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;/&gt;</span></span>
+<span data-line=""><span style="color:#24292E">  )</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>Which is equivalent to:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { ProductPage } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./ProductPage&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">   </span><span style="color:#24292F">Page: ProductPage</span><span style="color:#953800">,</span></span>
-<span class="line"><span style="color:#953800">   </span><span style="color:#24292F">route: </span><span style="color:#0A3069">&#x27;/product/@id&#x27;</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/ProductPage.jsx</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { ProductPage }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">ProductPage</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> (</span></span>
-<span class="line"><span style="color:#24292F">    &lt;&gt;</span></span>
-<span class="line"><span style="color:#24292F">      &lt;</span><span style="color:#116329">h1</span><span style="color:#24292F">&gt;Product Information&lt;/</span><span style="color:#116329">h1</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">      ...</span></span>
-<span class="line"><span style="color:#24292F">    &lt;/&gt;</span></span>
-<span class="line"><span style="color:#24292F">  )</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { ProductPage } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./ProductPage&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">   Page: ProductPage,</span></span>
+<span data-line=""><span style="color:#24292E">   route: </span><span style="color:#032F62">&#x27;/product/@id&#x27;</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/ProductPage.jsx</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { ProductPage }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> ProductPage</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> (</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;&gt;</span></span>
+<span data-line=""><span style="color:#24292E">      &lt;</span><span style="color:#22863A">h1</span><span style="color:#24292E">&gt;Product Information&lt;/</span><span style="color:#22863A">h1</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">      ...</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;/&gt;</span></span>
+<span data-line=""><span style="color:#24292E">  )</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>It doesn&#x27;t make a difference whether you define the <code>Page</code> value by creating a plus file <code>+Page.js</code> or by setting <code>+config.js &gt; export default { Page }</code>.</p><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/tour/+Page.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
         
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
@@ -136,6 +136,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

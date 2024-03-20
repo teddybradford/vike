@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>stream | Vike</title>
@@ -29,24 +29,24 @@
 <!-- -->Provided by: <!-- -->UI framework <a href="/extensions">Vike extension</a> (<code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>)<!-- --> (or <a href="#without-vike-extension">yourself</a>).</p>
 <p>Setting to disable/enable <a href="/streaming">HTML Streaming</a>.</p>
 <p>Disable for all your pages:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// This config applies to all pages (/pages/**).</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">stream: </span><span style="color:#0550AE">false</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// This config applies to all pages (/pages/**).</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  stream: </span><span style="color:#005CC5">false</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>Disable only for some pages:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/admin/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">/* This config applies only to admin pages (/pages/admin/**) such as:</span></span>
-<span class="line"><span style="color:#6E7781">   FILESYSTEM                            URL</span></span>
-<span class="line"><span style="color:#6E7781">   /pages/admin/+Page.js                 /admin</span></span>
-<span class="line"><span style="color:#6E7781">   /pages/admin/user/@id/+Page.js        /admin/user/@id</span></span>
-<span class="line"><span style="color:#6E7781">   /pages/admin/product/@id/+Page.js     /admin/product/@id</span></span>
-<span class="line"><span style="color:#6E7781">*/</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">stream: </span><span style="color:#0550AE">false</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/admin/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">/* This config applies only to admin pages (/pages/admin/**) such as:</span></span>
+<span data-line=""><span style="color:#6A737D">   FILESYSTEM                            URL</span></span>
+<span data-line=""><span style="color:#6A737D">   /pages/admin/+Page.js                 /admin</span></span>
+<span data-line=""><span style="color:#6A737D">   /pages/admin/user/@id/+Page.js        /admin/user/@id</span></span>
+<span data-line=""><span style="color:#6A737D">   /pages/admin/product/@id/+Page.js     /admin/product/@id</span></span>
+<span data-line=""><span style="color:#6A737D">*/</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  stream: </span><span style="color:#005CC5">false</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>For an improved file and config organization, you can consider using a <a href="/file-structure#domain-driven">domain-driven file structure</a>.</p>
 <h2 id="without-vike-extension">Without Vike extension</h2>
 <p>In case you don&#x27;t use a <!-- -->UI framework <a href="/extensions">Vike extension</a> (<code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>)<!-- -->, you can implement the <code>stream</code> setting yourself by using <a href="/meta">meta</a>.</p>
@@ -86,6 +86,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

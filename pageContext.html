@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>pageContext | Vike</title>
@@ -43,14 +43,14 @@
 <li>
 <p><strong><code>pageContext.urlOriginal</code></strong>: the current URL.</p>
 <p>On the server-side, <code>pageContext.urlOriginal</code> is the value you passed at the server middleware:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// Server middleware</span></span>
-<span class="line"><span style="color:#24292F">app.</span><span style="color:#8250DF">get</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;*&#x27;</span><span style="color:#24292F">, </span><span style="color:#CF222E">async</span><span style="color:#24292F"> (</span><span style="color:#953800">req</span><span style="color:#24292F">, </span><span style="color:#953800">res</span><span style="color:#24292F">, </span><span style="color:#953800">next</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageContextInit</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> {}</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// `pageContext.urlOriginal` is defined here</span></span>
-<span class="line"><span style="color:#24292F">  pageContextInit.urlOriginal </span><span style="color:#CF222E">=</span><span style="color:#24292F"> req.url</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">result</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderPage</span><span style="color:#24292F">(pageContextInit)</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">/* ... */</span></span>
-<span class="line"><span style="color:#24292F">})</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// Server middleware</span></span>
+<span data-line=""><span style="color:#24292E">app.</span><span style="color:#6F42C1">get</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;*&#x27;</span><span style="color:#24292E">, </span><span style="color:#D73A49">async</span><span style="color:#24292E"> (</span><span style="color:#E36209">req</span><span style="color:#24292E">, </span><span style="color:#E36209">res</span><span style="color:#24292E">, </span><span style="color:#E36209">next</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> pageContextInit</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> {}</span></span>
+<span data-line=""><span style="color:#6A737D">  // `pageContext.urlOriginal` is defined here</span></span>
+<span data-line=""><span style="color:#24292E">  pageContextInit.urlOriginal </span><span style="color:#D73A49">=</span><span style="color:#24292E"> req.url</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> result</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> renderPage</span><span style="color:#24292E">(pageContextInit)</span></span>
+<span data-line=""><span style="color:#6A737D">  /* ... */</span></span>
+<span data-line=""><span style="color:#24292E">})</span></span></code></pre></figure>
 <p>On the client-side:</p>
 <ul>
 <li>When using <a href="/client-routing">Client Routing</a>, the value of <code>pageContext.urlOriginal</code> is the browser&#x27;s current URL (<code>window.location.href</code>).</li>
@@ -62,28 +62,28 @@
 </li>
 <li>
 <p><strong><code>pageContext.urlParsed</code></strong>: URL information:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#24292F">{</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">origin</span><span style="color:#24292F">: </span><span style="color:#0550AE">null</span><span style="color:#24292F"> </span><span style="color:#CF222E">|</span><span style="color:#24292F"> string</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">pathname</span><span style="color:#24292F">: string</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">pathnameOriginal</span><span style="color:#24292F">: string</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">search</span><span style="color:#24292F">: Record</span><span style="color:#CF222E">&lt;</span><span style="color:#24292F">string, string</span><span style="color:#CF222E">&gt;</span><span style="color:#24292F"> </span><span style="color:#6E7781">// (AKA query parameters)</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">searchAll</span><span style="color:#24292F">: Record</span><span style="color:#CF222E">&lt;</span><span style="color:#24292F">string, string[]</span><span style="color:#CF222E">&gt;</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">searchOriginal</span><span style="color:#24292F">: </span><span style="color:#0550AE">null</span><span style="color:#24292F"> </span><span style="color:#CF222E">|</span><span style="color:#24292F"> string</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">hash</span><span style="color:#24292F">: string</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">hashOriginal</span><span style="color:#24292F">: </span><span style="color:#0550AE">null</span><span style="color:#24292F"> </span><span style="color:#CF222E">|</span><span style="color:#24292F"> string</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">{</span></span>
+<span data-line=""><span style="color:#6F42C1">  origin</span><span style="color:#24292E">: </span><span style="color:#005CC5">null</span><span style="color:#D73A49"> |</span><span style="color:#24292E"> string</span></span>
+<span data-line=""><span style="color:#6F42C1">  pathname</span><span style="color:#24292E">: string</span></span>
+<span data-line=""><span style="color:#6F42C1">  pathnameOriginal</span><span style="color:#24292E">: string</span></span>
+<span data-line=""><span style="color:#6F42C1">  search</span><span style="color:#24292E">: Record</span><span style="color:#D73A49">&lt;</span><span style="color:#24292E">string, string</span><span style="color:#D73A49">&gt;</span><span style="color:#6A737D"> // (AKA query parameters)</span></span>
+<span data-line=""><span style="color:#6F42C1">  searchAll</span><span style="color:#24292E">: Record</span><span style="color:#D73A49">&lt;</span><span style="color:#24292E">string, string[]</span><span style="color:#D73A49">&gt;</span></span>
+<span data-line=""><span style="color:#6F42C1">  searchOriginal</span><span style="color:#24292E">: </span><span style="color:#005CC5">null</span><span style="color:#D73A49"> |</span><span style="color:#24292E"> string</span></span>
+<span data-line=""><span style="color:#6F42C1">  hash</span><span style="color:#24292E">: string</span></span>
+<span data-line=""><span style="color:#6F42C1">  hashOriginal</span><span style="color:#24292E">: </span><span style="color:#005CC5">null</span><span style="color:#D73A49"> |</span><span style="color:#24292E"> string</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>For example:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// https://example.com/some-base-url/hello/s%C3%A9bastien?fruit=%C3%A2pple&amp;fruit=orânge#%C3%A2ge</span></span>
-<span class="line"><span style="color:#24292F">{</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">origin</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;https://example.com&#x27;</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">pathname</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;/hello/sébastien&#x27;</span><span style="color:#24292F">, </span><span style="color:#6E7781">// Without Base URL</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">pathnameOriginal</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;/some-base-url/hello/s%C3%A9bastien&#x27;</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">search</span><span style="color:#24292F">: { </span><span style="color:#953800">fruit</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;orânge&#x27;</span><span style="color:#24292F"> }, </span><span style="color:#6E7781">// (AKA query params)</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">searchAll</span><span style="color:#24292F">: { </span><span style="color:#953800">fruit</span><span style="color:#24292F">: [</span><span style="color:#0A3069">&#x27;âpple&#x27;</span><span style="color:#24292F">, </span><span style="color:#0A3069">&#x27;orânge&#x27;</span><span style="color:#24292F">] },</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">searchOriginal</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;?fruit=%C3%A2pple&amp;fruit=orânge&#x27;</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">hash</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;âge&#x27;</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">hashOriginal</span><span style="color:#24292F">: </span><span style="color:#0A3069">&#x27;#%C3%A2ge&#x27;</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// https://example.com/some-base-url/hello/s%C3%A9bastien?fruit=%C3%A2pple&amp;fruit=orânge#%C3%A2ge</span></span>
+<span data-line=""><span style="color:#24292E">{</span></span>
+<span data-line=""><span style="color:#6F42C1">  origin</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;https://example.com&#x27;</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#6F42C1">  pathname</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;/hello/sébastien&#x27;</span><span style="color:#24292E">, </span><span style="color:#6A737D">// Without Base URL</span></span>
+<span data-line=""><span style="color:#6F42C1">  pathnameOriginal</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;/some-base-url/hello/s%C3%A9bastien&#x27;</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#6F42C1">  search</span><span style="color:#24292E">: { </span><span style="color:#6F42C1">fruit</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;orânge&#x27;</span><span style="color:#24292E"> }, </span><span style="color:#6A737D">// (AKA query params)</span></span>
+<span data-line=""><span style="color:#6F42C1">  searchAll</span><span style="color:#24292E">: { </span><span style="color:#6F42C1">fruit</span><span style="color:#24292E">: [</span><span style="color:#032F62">&#x27;âpple&#x27;</span><span style="color:#24292E">, </span><span style="color:#032F62">&#x27;orânge&#x27;</span><span style="color:#24292E">] },</span></span>
+<span data-line=""><span style="color:#6F42C1">  searchOriginal</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;?fruit=%C3%A2pple&amp;fruit=orânge&#x27;</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#6F42C1">  hash</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;âge&#x27;</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#6F42C1">  hashOriginal</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;#%C3%A2ge&#x27;</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 </li>
 <li>
 <p><strong><code>pageContext.config</code></strong>: See <a href="/meta">API<!-- --> &gt; <code>meta</code></a>.</p>
@@ -115,27 +115,27 @@
 <ul>
 <li>
 <p>At your <a href="/renderPage">Vike server middleware <code>renderPage()</code></a>:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#24292F">app.</span><span style="color:#8250DF">get</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;*&#x27;</span><span style="color:#24292F">, </span><span style="color:#CF222E">async</span><span style="color:#24292F"> (</span><span style="color:#953800">req</span><span style="color:#24292F">, </span><span style="color:#953800">res</span><span style="color:#24292F">, </span><span style="color:#953800">next</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageContextInit</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    urlOriginal: req.url,</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// ***************************************</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// **** Custom pageContext properties ****</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// ***************************************</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Common use cases:</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// pageContext.user – information about logged-in user</span></span>
-<span class="line"><span style="color:#24292F">    user: req.user,</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// pageContext.headers – e.g. make cookies available over pageContext.headers.cookies</span></span>
-<span class="line"><span style="color:#24292F">    headers: req.headers,</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Or any other value:</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// pageContext.anyCustomProp</span></span>
-<span class="line"><span style="color:#24292F">    anyCustomProp: </span><span style="color:#0A3069">&#x27;some-value&#x27;</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageContext</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderPage</span><span style="color:#24292F">(pageContextInit)</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ...</span></span>
-<span class="line"><span style="color:#24292F">})</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">app.</span><span style="color:#6F42C1">get</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;*&#x27;</span><span style="color:#24292E">, </span><span style="color:#D73A49">async</span><span style="color:#24292E"> (</span><span style="color:#E36209">req</span><span style="color:#24292E">, </span><span style="color:#E36209">res</span><span style="color:#24292E">, </span><span style="color:#E36209">next</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> pageContextInit</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">    urlOriginal: req.url,</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">    // ***************************************</span></span>
+<span data-line=""><span style="color:#6A737D">    // **** Custom pageContext properties ****</span></span>
+<span data-line=""><span style="color:#6A737D">    // ***************************************</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">    // Common use cases:</span></span>
+<span data-line=""><span style="color:#6A737D">    // pageContext.user – information about logged-in user</span></span>
+<span data-line=""><span style="color:#24292E">    user: req.user,</span></span>
+<span data-line=""><span style="color:#6A737D">    // pageContext.headers – e.g. make cookies available over pageContext.headers.cookies</span></span>
+<span data-line=""><span style="color:#24292E">    headers: req.headers,</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">    // Or any other value:</span></span>
+<span data-line=""><span style="color:#6A737D">    // pageContext.anyCustomProp</span></span>
+<span data-line=""><span style="color:#24292E">    anyCustomProp: </span><span style="color:#032F62">&#x27;some-value&#x27;</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> pageContext</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> renderPage</span><span style="color:#24292E">(pageContextInit)</span></span>
+<span data-line=""><span style="color:#6A737D">  // ...</span></span>
+<span data-line=""><span style="color:#24292E">})</span></span></code></pre></figure>
 <blockquote>
 <p>Setting <code>pageContext.user</code> is a common use case for integrating authentication tools, see <a href="/auth#integration">Guides<!-- --> &gt; <!-- -->Authentication<!-- --> &gt; <!-- -->Integration</a>.</p>
 </blockquote>
@@ -145,82 +145,82 @@
 </li>
 <li>
 <p>Using the <a href="/onBeforeRender"><code>onBeforeRender()</code></a> hook:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onBeforeRender</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    pageContext: {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// ***************************************</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// **** Custom pageContext properties ****</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// ***************************************</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Common use case: make the state management&#x27;s initial state available.</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// pageContext.initialStoreState – initial store state</span></span>
-<span class="line"><span style="color:#24292F">      initialStoreState: pageRendered.store.state,</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// pageContext.anyCustomProp</span></span>
-<span class="line"><span style="color:#24292F">      anyCustomProp: </span><span style="color:#0A3069">&#x27;some-value&#x27;</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onBeforeRender</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">    pageContext: {</span></span>
+<span data-line=""><span style="color:#6A737D">      // ***************************************</span></span>
+<span data-line=""><span style="color:#6A737D">      // **** Custom pageContext properties ****</span></span>
+<span data-line=""><span style="color:#6A737D">      // ***************************************</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">      // Common use case: make the state management&#x27;s initial state available.</span></span>
+<span data-line=""><span style="color:#6A737D">      // pageContext.initialStoreState – initial store state</span></span>
+<span data-line=""><span style="color:#24292E">      initialStoreState: pageRendered.store.state,</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">      // pageContext.anyCustomProp</span></span>
+<span data-line=""><span style="color:#24292E">      anyCustomProp: </span><span style="color:#032F62">&#x27;some-value&#x27;</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p>Setting <code>pageContext.initialStoreState</code> is a common use case for integrating state management tools, see <a href="/store">Integration<!-- --> &gt; <!-- -->Data Store</a>.</p>
 </blockquote>
 </li>
 <li>
 <p>Using the <a href="/onRenderHtml"><code>onRenderHtml()</code></a> hook:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderHtml</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    documentHtml: </span><span style="color:#8250DF">escapeInject</span><span style="color:#0A3069">`&lt;html&gt;&lt;!--...--&gt;&lt;/html&gt;`</span><span style="color:#24292F">,</span></span>
-<span class="line"><span style="color:#24292F">    pageContext: {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// ***************************************</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// **** Custom pageContext properties ****</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// ***************************************</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// pageContext.anyCustomProp</span></span>
-<span class="line"><span style="color:#24292F">      anyCustomProp: </span><span style="color:#0A3069">&#x27;some-value&#x27;</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> onRenderHtml</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">    documentHtml: </span><span style="color:#6F42C1">escapeInject</span><span style="color:#032F62">`&lt;html&gt;&lt;!--...--&gt;&lt;/html&gt;`</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#24292E">    pageContext: {</span></span>
+<span data-line=""><span style="color:#6A737D">      // ***************************************</span></span>
+<span data-line=""><span style="color:#6A737D">      // **** Custom pageContext properties ****</span></span>
+<span data-line=""><span style="color:#6A737D">      // ***************************************</span></span>
+<span data-line=""><span style="color:#6A737D">      // pageContext.anyCustomProp</span></span>
+<span data-line=""><span style="color:#24292E">      anyCustomProp: </span><span style="color:#032F62">&#x27;some-value&#x27;</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 </li>
 </ul>
 <h2 id="access-anywhere">Access anywhere</h2>
 <p>By using <a href="/usePageContext"><code>usePageContext()</code></a> and <a href="/passToClient"><code>passToClient</code></a>, you can access <code>pageContext</code> from anywhere.</p>
 <h2 id="typescript">TypeScript</h2>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// For code loaded in client and server</span></span>
-<span class="line"><span style="color:#24292F">  PageContext,</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// For code loaded in client only</span></span>
-<span class="line"><span style="color:#24292F">  PageContextClient,</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// For code loaded in server only</span></span>
-<span class="line"><span style="color:#24292F">  PageContextServer</span></span>
-<span class="line"><span style="color:#24292F">} </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/types&#x27;</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">import</span><span style="color:#D73A49"> type</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">  // For code loaded in client and server</span></span>
+<span data-line=""><span style="color:#24292E">  PageContext,</span></span>
+<span data-line=""><span style="color:#6A737D">  // For code loaded in client only</span></span>
+<span data-line=""><span style="color:#24292E">  PageContextClient,</span></span>
+<span data-line=""><span style="color:#6A737D">  // For code loaded in server only</span></span>
+<span data-line=""><span style="color:#24292E">  PageContextServer</span></span>
+<span data-line=""><span style="color:#24292E">} </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/types&#x27;</span></span></code></pre></figure>
 <p>To extend and/or refine Vike&#x27;s types <code>PageContext</code>/<code>PageContextServer</code>/<code>PageContextClient</code>, use the global interface <code>Vike.PageContext</code>:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#CF222E">declare</span><span style="color:#24292F"> global {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">namespace</span><span style="color:#24292F"> </span><span style="color:#953800">Vike</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">interface</span><span style="color:#24292F"> </span><span style="color:#953800">PageContext</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Type of pageContext.user</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#953800">user</span><span style="color:#CF222E">?:</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">        </span><span style="color:#953800">name</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#0550AE">string</span></span>
-<span class="line"><span style="color:#24292F">        </span><span style="color:#953800">id</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#0550AE">string</span></span>
-<span class="line"><span style="color:#24292F">        </span><span style="color:#953800">isAdmin</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#0550AE">boolean</span></span>
-<span class="line"><span style="color:#24292F">      }</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Refine type of pageContext.Page (it&#x27;s `unknown` by default)</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#8250DF">Page</span><span style="color:#CF222E">:</span><span style="color:#24292F"> () </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> </span><span style="color:#953800">JSX</span><span style="color:#24292F">.</span><span style="color:#953800">Element</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// If you define Vike.PageContext in a .d.ts file then</span></span>
-<span class="line"><span style="color:#6E7781">// make sure there is at least one export/import statment.</span></span>
-<span class="line"><span style="color:#6E7781">// Tell TypeScript this file isn&#x27;t an ambient module:</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> {}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">declare</span><span style="color:#24292E"> global {</span></span>
+<span data-line=""><span style="color:#D73A49">  namespace</span><span style="color:#6F42C1"> Vike</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#D73A49">    interface</span><span style="color:#6F42C1"> PageContext</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">      // Type of pageContext.user</span></span>
+<span data-line=""><span style="color:#E36209">      user</span><span style="color:#D73A49">?:</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#E36209">        name</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span></span>
+<span data-line=""><span style="color:#E36209">        id</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span></span>
+<span data-line=""><span style="color:#E36209">        isAdmin</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> boolean</span></span>
+<span data-line=""><span style="color:#24292E">      }</span></span>
+<span data-line=""><span style="color:#6A737D">      // Refine type of pageContext.Page (it&#x27;s `unknown` by default)</span></span>
+<span data-line=""><span style="color:#6F42C1">      Page</span><span style="color:#D73A49">:</span><span style="color:#24292E"> () </span><span style="color:#D73A49">=&gt;</span><span style="color:#6F42C1"> JSX</span><span style="color:#24292E">.</span><span style="color:#6F42C1">Element</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// If you define Vike.PageContext in a .d.ts file then</span></span>
+<span data-line=""><span style="color:#6A737D">// make sure there is at least one export/import statment.</span></span>
+<span data-line=""><span style="color:#6A737D">// Tell TypeScript this file isn&#x27;t an ambient module:</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> {}</span></span></code></pre></figure>
 <p>If you use <a href="/server-routing">Server Routing</a>:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// For code loaded in client and server</span></span>
-<span class="line"><span style="color:#24292F">  PageContextWithServerRouting </span><span style="color:#CF222E">as</span><span style="color:#24292F"> PageContext,</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// For code loaded in client only</span></span>
-<span class="line"><span style="color:#24292F">  PageContextClientWithServerRouting </span><span style="color:#CF222E">as</span><span style="color:#24292F"> PageContextClient,</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// For code loaded in server only</span></span>
-<span class="line"><span style="color:#24292F">  PageContextServer</span></span>
-<span class="line"><span style="color:#24292F">} </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/types&#x27;</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">import</span><span style="color:#D73A49"> type</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">  // For code loaded in client and server</span></span>
+<span data-line=""><span style="color:#24292E">  PageContextWithServerRouting </span><span style="color:#D73A49">as</span><span style="color:#24292E"> PageContext,</span></span>
+<span data-line=""><span style="color:#6A737D">  // For code loaded in client only</span></span>
+<span data-line=""><span style="color:#24292E">  PageContextClientWithServerRouting </span><span style="color:#D73A49">as</span><span style="color:#24292E"> PageContextClient,</span></span>
+<span data-line=""><span style="color:#6A737D">  // For code loaded in server only</span></span>
+<span data-line=""><span style="color:#24292E">  PageContextServer</span></span>
+<span data-line=""><span style="color:#24292E">} </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/types&#x27;</span></span></code></pre></figure>
 <h2 id="lifecycle">Lifecycle</h2>
 <p>The main purpose of <code>pageContext</code> is to hold the information that is needed for rendering the page.</p>
 <p>On the server-side, upon a new incoming HTTP request, a new <code>pageContext</code> object is created and used for rendering the HTML that is included in the HTTP response. The <code>pageContext</code> object is discarded after the HTML response is sent.</p>
@@ -252,6 +252,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

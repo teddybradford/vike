@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Migration 0.4.134 | Vike</title>
@@ -30,73 +30,73 @@
 <p>The <code>0.4.134</code> release adds built-in support for <a href="/redirect">URL redirections</a> and that&#x27;s why the new property <code>pageContext.httpResponse.headers</code> is needed.</p>
 </blockquote>
 <h2 id="express-js">Express.js</h2>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#24292F"> // /server/index.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F"> import { renderPage } from &#x27;vike/server&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F"> // Vike middleware</span></span>
-<span class="line"><span style="color:#24292F"> app.get(&#x27;*&#x27;, async (req, res, next) =&gt; {</span></span>
-<span class="line"><span style="color:#24292F">   const pageContextInit = {</span></span>
-<span class="line"><span style="color:#24292F">     urlOriginal: req.originalUrl</span></span>
-<span class="line"><span style="color:#24292F">   }</span></span>
-<span class="line"><span style="color:#24292F">   const pageContext = await renderPage(pageContextInit)</span></span>
-<span class="line"><span style="color:#24292F">   const { httpResponse } = pageContext</span></span>
-<span class="line"><span style="color:#24292F">   if (!httpResponse) return next()</span></span>
-<span class="line"><span style="color:#82071E">-  const { body, statusCode, contentType, earlyHints } = httpResponse</span></span>
-<span class="line"><span style="color:#116329">+  const { body, statusCode, headers, earlyHints } = httpResponse</span></span>
-<span class="line"><span style="color:#24292F">   if (res.writeEarlyHints) res.writeEarlyHints({ link: earlyHints.map((e) =&gt; e.earlyHintLink) })</span></span>
-<span class="line"><span style="color:#24292F">   res.status(statusCode)</span></span>
-<span class="line"><span style="color:#82071E">-  res.type(contentType)</span></span>
-<span class="line"><span style="color:#116329">+  headers.forEach(([name, value]) =&gt; res.setHeader(name, value))</span></span>
-<span class="line"><span style="color:#24292F">   res.send(body)</span></span>
-<span class="line"><span style="color:#24292F"> })</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E"> // /server/index.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E"> import { renderPage } from &#x27;vike/server&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E"> // Vike middleware</span></span>
+<span data-line=""><span style="color:#24292E"> app.get(&#x27;*&#x27;, async (req, res, next) =&gt; {</span></span>
+<span data-line=""><span style="color:#24292E">   const pageContextInit = {</span></span>
+<span data-line=""><span style="color:#24292E">     urlOriginal: req.originalUrl</span></span>
+<span data-line=""><span style="color:#24292E">   }</span></span>
+<span data-line=""><span style="color:#24292E">   const pageContext = await renderPage(pageContextInit)</span></span>
+<span data-line=""><span style="color:#24292E">   const { httpResponse } = pageContext</span></span>
+<span data-line=""><span style="color:#24292E">   if (!httpResponse) return next()</span></span>
+<span data-line=""><span style="color:#B31D28">-  const { body, statusCode, contentType, earlyHints } = httpResponse</span></span>
+<span data-line=""><span style="color:#22863A">+  const { body, statusCode, headers, earlyHints } = httpResponse</span></span>
+<span data-line=""><span style="color:#24292E">   if (res.writeEarlyHints) res.writeEarlyHints({ link: earlyHints.map((e) =&gt; e.earlyHintLink) })</span></span>
+<span data-line=""><span style="color:#24292E">   res.status(statusCode)</span></span>
+<span data-line=""><span style="color:#B31D28">-  res.type(contentType)</span></span>
+<span data-line=""><span style="color:#22863A">+  headers.forEach(([name, value]) =&gt; res.setHeader(name, value))</span></span>
+<span data-line=""><span style="color:#24292E">   res.send(body)</span></span>
+<span data-line=""><span style="color:#24292E"> })</span></span></code></pre></figure>
 <h2 id="cloudflare-workers">Cloudflare Workers</h2>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#24292F"> // /worker/ssr.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F"> import { renderPage } from &#x27;vike/server&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F"> // Vike middleware</span></span>
-<span class="line"><span style="color:#24292F"> async function handleSsr(url) {</span></span>
-<span class="line"><span style="color:#24292F">   const pageContextInit = {</span></span>
-<span class="line"><span style="color:#24292F">     urlOriginal: url</span></span>
-<span class="line"><span style="color:#24292F">   }</span></span>
-<span class="line"><span style="color:#24292F">   const pageContext = await renderPage(pageContextInit)</span></span>
-<span class="line"><span style="color:#24292F">   const { httpResponse } = pageContext</span></span>
-<span class="line"><span style="color:#24292F">   if (!httpResponse) {</span></span>
-<span class="line"><span style="color:#24292F">     return null</span></span>
-<span class="line"><span style="color:#24292F">   } else {</span></span>
-<span class="line"><span style="color:#82071E">-    const { body, statusCode, contentType } = httpResponse</span></span>
-<span class="line"><span style="color:#116329">+    const { body, statusCode, headers } = httpResponse</span></span>
-<span class="line"><span style="color:#24292F">     return new Response(body, {</span></span>
-<span class="line"><span style="color:#82071E">-      headers: { &#x27;content-type&#x27;: contentType },</span></span>
-<span class="line"><span style="color:#116329">+      headers,</span></span>
-<span class="line"><span style="color:#24292F">       status: statusCode</span></span>
-<span class="line"><span style="color:#24292F">     })</span></span>
-<span class="line"><span style="color:#24292F">   }</span></span>
-<span class="line"><span style="color:#24292F"> }</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E"> // /worker/ssr.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E"> import { renderPage } from &#x27;vike/server&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E"> // Vike middleware</span></span>
+<span data-line=""><span style="color:#24292E"> async function handleSsr(url) {</span></span>
+<span data-line=""><span style="color:#24292E">   const pageContextInit = {</span></span>
+<span data-line=""><span style="color:#24292E">     urlOriginal: url</span></span>
+<span data-line=""><span style="color:#24292E">   }</span></span>
+<span data-line=""><span style="color:#24292E">   const pageContext = await renderPage(pageContextInit)</span></span>
+<span data-line=""><span style="color:#24292E">   const { httpResponse } = pageContext</span></span>
+<span data-line=""><span style="color:#24292E">   if (!httpResponse) {</span></span>
+<span data-line=""><span style="color:#24292E">     return null</span></span>
+<span data-line=""><span style="color:#24292E">   } else {</span></span>
+<span data-line=""><span style="color:#B31D28">-    const { body, statusCode, contentType } = httpResponse</span></span>
+<span data-line=""><span style="color:#22863A">+    const { body, statusCode, headers } = httpResponse</span></span>
+<span data-line=""><span style="color:#24292E">     return new Response(body, {</span></span>
+<span data-line=""><span style="color:#B31D28">-      headers: { &#x27;content-type&#x27;: contentType },</span></span>
+<span data-line=""><span style="color:#22863A">+      headers,</span></span>
+<span data-line=""><span style="color:#24292E">       status: statusCode</span></span>
+<span data-line=""><span style="color:#24292E">     })</span></span>
+<span data-line=""><span style="color:#24292E">   }</span></span>
+<span data-line=""><span style="color:#24292E"> }</span></span></code></pre></figure>
 <h2 id="vercel">Vercel</h2>
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#24292F"> // /api/ssr.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F"> import { renderPage } from &#x27;vike/server&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F"> export default async function handler(req, res) {</span></span>
-<span class="line"><span style="color:#24292F">   const pageContextInit = { urlOriginal: req.url }</span></span>
-<span class="line"><span style="color:#24292F">   const pageContext = await renderPage(pageContextInit)</span></span>
-<span class="line"><span style="color:#24292F">   const { httpResponse } = pageContext</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">   if (!httpResponse) {</span></span>
-<span class="line"><span style="color:#24292F">     res.statusCode = 200</span></span>
-<span class="line"><span style="color:#24292F">     res.end()</span></span>
-<span class="line"><span style="color:#24292F">     return</span></span>
-<span class="line"><span style="color:#24292F">   }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#82071E">-  const { body, statusCode, contentType } = httpResponse</span></span>
-<span class="line"><span style="color:#116329">+  const { body, statusCode, headers } = httpResponse</span></span>
-<span class="line"><span style="color:#24292F">   res.statusCode = statusCode</span></span>
-<span class="line"><span style="color:#82071E">-  res.setHeader(&#x27;content-type&#x27;, contentType)</span></span>
-<span class="line"><span style="color:#116329">+  headers.forEach(([name, value]) =&gt; res.setHeader(name, value))</span></span>
-<span class="line"><span style="color:#24292F">   res.end(body)</span></span>
-<span class="line"><span style="color:#24292F"> }</span></span></code></pre></div><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/migration/0.4.134/+Page.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E"> // /api/ssr.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E"> import { renderPage } from &#x27;vike/server&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E"> export default async function handler(req, res) {</span></span>
+<span data-line=""><span style="color:#24292E">   const pageContextInit = { urlOriginal: req.url }</span></span>
+<span data-line=""><span style="color:#24292E">   const pageContext = await renderPage(pageContextInit)</span></span>
+<span data-line=""><span style="color:#24292E">   const { httpResponse } = pageContext</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">   if (!httpResponse) {</span></span>
+<span data-line=""><span style="color:#24292E">     res.statusCode = 200</span></span>
+<span data-line=""><span style="color:#24292E">     res.end()</span></span>
+<span data-line=""><span style="color:#24292E">     return</span></span>
+<span data-line=""><span style="color:#24292E">   }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#B31D28">-  const { body, statusCode, contentType } = httpResponse</span></span>
+<span data-line=""><span style="color:#22863A">+  const { body, statusCode, headers } = httpResponse</span></span>
+<span data-line=""><span style="color:#24292E">   res.statusCode = statusCode</span></span>
+<span data-line=""><span style="color:#B31D28">-  res.setHeader(&#x27;content-type&#x27;, contentType)</span></span>
+<span data-line=""><span style="color:#22863A">+  headers.forEach(([name, value]) =&gt; res.setHeader(name, value))</span></span>
+<span data-line=""><span style="color:#24292E">   res.end(body)</span></span>
+<span data-line=""><span style="color:#24292E"> }</span></span></code></pre></figure><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/migration/0.4.134/+Page.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
         
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
     <script type="text/javascript">
@@ -118,6 +118,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

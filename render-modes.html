@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Render Modes (SPA, SSR, SSG, HTML-only) | Vike</title>
@@ -48,16 +48,16 @@
 </ol>
 <p><strong>1. <code>Page</code> meta config</strong></p>
 <p>By setting <code>Page</code>&#x27;s meta config <code>env</code> to <code>{ client: true, server: false }</code> we tell Vike to load <code>+Page.js</code> only in the browser.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+config.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: config</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">meta: {</span></span>
-<span class="line"><span style="color:#24292F">    Page: {</span></span>
-<span class="line"><span style="color:#24292F">      env: { server: </span><span style="color:#0550AE">false</span><span style="color:#24292F">, client: </span><span style="color:#0550AE">true</span><span style="color:#24292F"> } </span><span style="color:#6E7781">// SPA for all pages</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+config.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: config</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  meta: {</span></span>
+<span data-line=""><span style="color:#24292E">    Page: {</span></span>
+<span data-line=""><span style="color:#24292E">      env: { server: </span><span style="color:#005CC5">false</span><span style="color:#24292E">, client: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> } </span><span style="color:#6A737D">// SPA for all pages</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>React example (SPA + SSR):</p>
 <ul>
 <li>Custom <code>renderMode</code> config: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes/renderer/+config.ts">/examples/render-modes/renderer/+config.ts</a></li>
@@ -73,140 +73,140 @@
 <p><strong>2. Render hooks (SPA only)</strong></p>
 <p>If we only have SPA pages, then we adapt our <code>onRenderHtml()</code> and <code>onRenderClient()</code> hooks like the following.</p>
 <p>Client-side <code>onRenderClient()</code> hook:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+onRenderClient.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: browser</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { renderToDom } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-ui-framework&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderClient }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderClient</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">Page</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// UI frameworks usually have two methods, such as `renderToDom()` and `hydrateDom()`.</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Note how we use `renderToDom()` and not `hydrateDom()`.</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderToDom</span><span style="color:#24292F">(document.</span><span style="color:#8250DF">getElementById</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;root&#x27;</span><span style="color:#24292F">), Page)</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+onRenderClient.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: browser</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { renderToDom } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-ui-framework&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderClient }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderClient</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">Page</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext</span></span>
+<span data-line=""><span style="color:#6A737D">  // UI frameworks usually have two methods, such as `renderToDom()` and `hydrateDom()`.</span></span>
+<span data-line=""><span style="color:#6A737D">  // Note how we use `renderToDom()` and not `hydrateDom()`.</span></span>
+<span data-line=""><span style="color:#D73A49">  await</span><span style="color:#6F42C1"> renderToDom</span><span style="color:#24292E">(document.</span><span style="color:#6F42C1">getElementById</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;root&#x27;</span><span style="color:#24292E">), Page)</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p>See <a href="/hydration">What is Hydration?</a> for understanding the difference between &quot;rendering to the DOM&quot; and &quot;hydrating the DOM&quot;.</p>
 </blockquote>
 <p>We also adapt our server-side <code>onRenderHtml()</code> hook:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+onRenderHtml.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { escapeInject } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/server&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderHtml }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderHtml</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Note that `div#root` is empty</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#8250DF">escapeInject</span><span style="color:#0A3069">`&lt;html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;/body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">  &lt;/html&gt;`</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+onRenderHtml.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { escapeInject } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/server&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderHtml }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderHtml</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#6A737D">  // Note that `div#root` is empty</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#6F42C1"> escapeInject</span><span style="color:#032F62">`&lt;html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;/body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">  &lt;/html&gt;`</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>This is the key difference between SPA and SSR: in SPA <code>div#root</code> is empty, whereas with SSR <code>div#root</code> contains our Page&#x27;s root component <code>pageContext.Page</code> rendered to HTML.</p>
 <p>This means that, with SPA, we use our server-side <code>onRenderHtml()</code> hook to generate HTML that is just an empty shell:
 the HTML doesn&#x27;t contain the page&#x27;s content.</p>
 <p>For production, we usually want to <a href="/pre-rendering">pre-render</a> the HTML of our SPA pages in order to remove the need for a production Node.js server.</p>
 <p>We can also use our server-side <code>onRenderHtml()</code> hook to render <code>&lt;head&gt;</code>:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+onRenderHtml.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { escapeInject } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/server&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderHtml }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderHtml</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">title</span><span style="color:#24292F">, </span><span style="color:#0550AE">description</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.config</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Even though we load and render our page&#x27;s components only in the browser,</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// we define our page&#x27;s `&lt;title&gt;` and `&lt;meta name=&quot;description&quot;&gt;` on the server-side.</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#8250DF">escapeInject</span><span style="color:#0A3069">`&lt;html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;head&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;title&gt;${</span><span style="color:#24292F">title</span><span style="color:#0A3069">}&lt;/title&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;meta name=&quot;description&quot; content=&quot;${</span><span style="color:#24292F">description</span><span style="color:#0A3069">}&quot; /&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;/head&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;/body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">  &lt;/html&gt;`</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+onRenderHtml.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { escapeInject } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/server&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderHtml }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderHtml</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">title</span><span style="color:#24292E">, </span><span style="color:#005CC5">description</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext.config</span></span>
+<span data-line=""><span style="color:#6A737D">  // Even though we load and render our page&#x27;s components only in the browser,</span></span>
+<span data-line=""><span style="color:#6A737D">  // we define our page&#x27;s `&lt;title&gt;` and `&lt;meta name=&quot;description&quot;&gt;` on the server-side.</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#6F42C1"> escapeInject</span><span style="color:#032F62">`&lt;html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;head&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;title&gt;${</span><span style="color:#24292E">title</span><span style="color:#032F62">}&lt;/title&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;meta name=&quot;description&quot; content=&quot;${</span><span style="color:#24292E">description</span><span style="color:#032F62">}&quot; /&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;/head&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;/body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">  &lt;/html&gt;`</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p><code>pageContext.config.title</code> and <code>pageContext.config.description</code> are custom settings, see <a href="/meta#example-title-and-description">API<!-- --> &gt; <code>meta</code> &gt; <!-- -->Example: <code>title</code> and <code>description</code></a>.</p>
 </blockquote>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/about/+title.js</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">title</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;About | My App&#x27;</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/about/+description.js</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">description</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;My App is ...&#x27;</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+config.js</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">meta: {</span></span>
-<span class="line"><span style="color:#24292F">    Page: {</span></span>
-<span class="line"><span style="color:#24292F">      env: { server: </span><span style="color:#0550AE">false</span><span style="color:#24292F">, client: </span><span style="color:#0550AE">true</span><span style="color:#24292F"> } </span><span style="color:#6E7781">// SPA for all pages</span></span>
-<span class="line"><span style="color:#24292F">    },</span></span>
-<span class="line"><span style="color:#24292F">    title: {</span></span>
-<span class="line"><span style="color:#24292F">      env: { server: </span><span style="color:#0550AE">true</span><span style="color:#24292F">, client: </span><span style="color:#0550AE">false</span><span style="color:#24292F"> }</span></span>
-<span class="line"><span style="color:#24292F">    },</span></span>
-<span class="line"><span style="color:#24292F">    description: {</span></span>
-<span class="line"><span style="color:#24292F">      env: { server: </span><span style="color:#0550AE">true</span><span style="color:#24292F">, client: </span><span style="color:#0550AE">false</span><span style="color:#24292F"> }</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/about/+title.js</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> const</span><span style="color:#005CC5"> title</span><span style="color:#D73A49"> =</span><span style="color:#032F62"> &#x27;About | My App&#x27;</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/about/+description.js</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> const</span><span style="color:#005CC5"> description</span><span style="color:#D73A49"> =</span><span style="color:#032F62"> &#x27;My App is ...&#x27;</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+config.js</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  meta: {</span></span>
+<span data-line=""><span style="color:#24292E">    Page: {</span></span>
+<span data-line=""><span style="color:#24292E">      env: { server: </span><span style="color:#005CC5">false</span><span style="color:#24292E">, client: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> } </span><span style="color:#6A737D">// SPA for all pages</span></span>
+<span data-line=""><span style="color:#24292E">    },</span></span>
+<span data-line=""><span style="color:#24292E">    title: {</span></span>
+<span data-line=""><span style="color:#24292E">      env: { server: </span><span style="color:#005CC5">true</span><span style="color:#24292E">, client: </span><span style="color:#005CC5">false</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">    },</span></span>
+<span data-line=""><span style="color:#24292E">    description: {</span></span>
+<span data-line=""><span style="color:#24292E">      env: { server: </span><span style="color:#005CC5">true</span><span style="color:#24292E">, client: </span><span style="color:#005CC5">false</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p><strong>2. Render hooks (SPA + SSR)</strong></p>
 <p>If we have both SPA and SSR pages, then we adapt our <code>onRenderHtml()</code> and <code>onRenderClient()</code> hooks like this:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+onRenderHtml.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/server&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { renderToHtml } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-ui-framework&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderHtml }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderHtml</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">let</span><span style="color:#24292F"> pageHtml</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (pageContext.Page) {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// For SSR pages</span></span>
-<span class="line"><span style="color:#24292F">    pageHtml </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderToHtml</span><span style="color:#24292F">(pageContext.Page)</span></span>
-<span class="line"><span style="color:#24292F">  } </span><span style="color:#CF222E">else</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// For SPA pages</span></span>
-<span class="line"><span style="color:#24292F">    pageHtml </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;&#x27;</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#8250DF">escapeInject</span><span style="color:#0A3069">`&lt;html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;div id=&quot;root&quot;&gt;${</span><span style="color:#8250DF">dangerouslySkipEscape</span><span style="color:#0A3069">(</span><span style="color:#24292F">pageHtml</span><span style="color:#0A3069">)</span><span style="color:#0A3069">}&lt;/div&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;/body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">  &lt;/html&gt;`</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+onRenderHtml.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/server&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { renderToHtml } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-ui-framework&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderHtml }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderHtml</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  let</span><span style="color:#24292E"> pageHtml</span></span>
+<span data-line=""><span style="color:#D73A49">  if</span><span style="color:#24292E"> (pageContext.Page) {</span></span>
+<span data-line=""><span style="color:#6A737D">    // For SSR pages</span></span>
+<span data-line=""><span style="color:#24292E">    pageHtml </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> renderToHtml</span><span style="color:#24292E">(pageContext.Page)</span></span>
+<span data-line=""><span style="color:#24292E">  } </span><span style="color:#D73A49">else</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">    // For SPA pages</span></span>
+<span data-line=""><span style="color:#24292E">    pageHtml </span><span style="color:#D73A49">=</span><span style="color:#032F62"> &#x27;&#x27;</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#6F42C1"> escapeInject</span><span style="color:#032F62">`&lt;html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;div id=&quot;root&quot;&gt;${</span><span style="color:#6F42C1">dangerouslySkipEscape</span><span style="color:#032F62">(</span><span style="color:#24292E">pageHtml</span><span style="color:#032F62">)</span><span style="color:#032F62">}&lt;/div&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;/body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">  &lt;/html&gt;`</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p>If we set the <code>Page</code> meta config <code>env</code> to <code>{ server: false, client: true }</code> instead of
 <code>{ server: true, client: true }</code> in <code>config.js</code>, then <code>pageContext.Page</code> is
 only defined in the browser.</p>
 </blockquote>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+onRenderClient.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: browser</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { renderToDom, hydrateDom } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-ui-framework&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderClient }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderClient</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">Page</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">root</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> document.</span><span style="color:#8250DF">getElementById</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;root&#x27;</span><span style="color:#24292F">)</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// We detect SPAs by using the fact that `innerHTML === &#x27;&#x27;` for the first render of an SPA</span></span>
-<span class="line"><span style="color:#24292F">    root.innerHTML </span><span style="color:#CF222E">===</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;&#x27;</span><span style="color:#24292F"> </span><span style="color:#CF222E">||</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Upon Client Routing page navigation, Vike sets `pageContext.isHydration`</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// to `false`.</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">!</span><span style="color:#24292F">pageContext.isHydration</span></span>
-<span class="line"><span style="color:#24292F">  ) {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// - SPA pages don&#x27;t have any hydration steps: they need to be fully rendered.</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// - Page navigation of SSR pages also need to be fully rendered (if we use Client Routing)</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderToDom</span><span style="color:#24292F">(root, Page)</span></span>
-<span class="line"><span style="color:#24292F">  } </span><span style="color:#CF222E">else</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// The first render of SSR pages is merely a hydration (instead of a full render)</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">hydrateDom</span><span style="color:#24292F">(root, Page)</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+onRenderClient.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: browser</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { renderToDom, hydrateDom } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-ui-framework&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderClient }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderClient</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">Page</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> root</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> document.</span><span style="color:#6F42C1">getElementById</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;root&#x27;</span><span style="color:#24292E">)</span></span>
+<span data-line=""><span style="color:#D73A49">  if</span><span style="color:#24292E"> (</span></span>
+<span data-line=""><span style="color:#6A737D">    // We detect SPAs by using the fact that `innerHTML === &#x27;&#x27;` for the first render of an SPA</span></span>
+<span data-line=""><span style="color:#24292E">    root.innerHTML </span><span style="color:#D73A49">===</span><span style="color:#032F62"> &#x27;&#x27;</span><span style="color:#D73A49"> ||</span></span>
+<span data-line=""><span style="color:#6A737D">    // Upon Client Routing page navigation, Vike sets `pageContext.isHydration`</span></span>
+<span data-line=""><span style="color:#6A737D">    // to `false`.</span></span>
+<span data-line=""><span style="color:#D73A49">    !</span><span style="color:#24292E">pageContext.isHydration</span></span>
+<span data-line=""><span style="color:#24292E">  ) {</span></span>
+<span data-line=""><span style="color:#6A737D">    // - SPA pages don&#x27;t have any hydration steps: they need to be fully rendered.</span></span>
+<span data-line=""><span style="color:#6A737D">    // - Page navigation of SSR pages also need to be fully rendered (if we use Client Routing)</span></span>
+<span data-line=""><span style="color:#D73A49">    await</span><span style="color:#6F42C1"> renderToDom</span><span style="color:#24292E">(root, Page)</span></span>
+<span data-line=""><span style="color:#24292E">  } </span><span style="color:#D73A49">else</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">    // The first render of SSR pages is merely a hydration (instead of a full render)</span></span>
+<span data-line=""><span style="color:#D73A49">    await</span><span style="color:#6F42C1"> hydrateDom</span><span style="color:#24292E">(root, Page)</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>React example: <a href="https://github.com/vikejs/vike/tree/main/examples/render-modes/">/examples/render-modes/</a>.</p>
 <ul>
 <li>Server-side hook: <a href="https://github.com/vikejs/vike/blob/main/examples/render-modes/renderer/+onRenderHtml.jsx">/examples/render-modes/renderer/+onRenderHtml.jsx</a></li>
@@ -240,36 +240,36 @@ only defined in the browser.</p>
 <li>We set <code>Page</code>&#x27;s <a href="/meta">meta config</a> <code>env</code> to <code>{ server: true, client: false }</code> instead of <code>{ server: true, client: true }</code>.</li>
 <li>(Optional) We define <a href="/client"><code>+client.js</code></a> (e.g. to add a minimal amount of JavaScript surgically injecting bits of interactivity).</li>
 </ol>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+config.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: config</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">meta: {</span></span>
-<span class="line"><span style="color:#24292F">    Page: {</span></span>
-<span class="line"><span style="color:#24292F">      env: { server: </span><span style="color:#0550AE">true</span><span style="color:#24292F">, client: </span><span style="color:#0550AE">false</span><span style="color:#24292F"> } </span><span style="color:#6E7781">// HTML-only for all pages</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/about/+Page.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { Page }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">Page</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> &lt;&gt;</span></span>
-<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">h1</span><span style="color:#24292F">&gt;HTML-only page&lt;/</span><span style="color:#116329">h1</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">p</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">      This page is rendered only to HTML. (It&#x27;s not loaded/rendered in the browser-side.)</span></span>
-<span class="line"><span style="color:#24292F">    &lt;/</span><span style="color:#116329">p</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">  &lt;/&gt;</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/about/+client.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: browser</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// This file represents the entire browser-side JavaScript.</span></span>
-<span class="line"><span style="color:#6E7781">// We can omit defining `+client.js` in which case the page has zero browser-side JavaScript.</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">console.</span><span style="color:#8250DF">log</span><span style="color:#24292F">(</span><span style="color:#0A3069">&quot;I&#x27;m the page&#x27;s only browser-side JavaScript line.&quot;</span><span style="color:#24292F">)</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+config.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: config</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  meta: {</span></span>
+<span data-line=""><span style="color:#24292E">    Page: {</span></span>
+<span data-line=""><span style="color:#24292E">      env: { server: </span><span style="color:#005CC5">true</span><span style="color:#24292E">, client: </span><span style="color:#005CC5">false</span><span style="color:#24292E"> } </span><span style="color:#6A737D">// HTML-only for all pages</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/about/+Page.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { Page }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Page</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> &lt;&gt;</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;</span><span style="color:#22863A">h1</span><span style="color:#24292E">&gt;HTML-only page&lt;/</span><span style="color:#22863A">h1</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;</span><span style="color:#22863A">p</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">      This page is rendered only to HTML. (It&#x27;s not loaded/rendered in the browser-side.)</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;/</span><span style="color:#22863A">p</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">  &lt;/&gt;</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/about/+client.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: browser</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// This file represents the entire browser-side JavaScript.</span></span>
+<span data-line=""><span style="color:#6A737D">// We can omit defining `+client.js` in which case the page has zero browser-side JavaScript.</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">&quot;I&#x27;m the page&#x27;s only browser-side JavaScript line.&quot;</span><span style="color:#24292E">)</span></span></code></pre></figure>
 <p>React example:</p>
 <ul>
 <li>Zero JavaScript: <a href="https://github.com/vikejs/vike/tree/main/examples/render-modes/pages/html-only/">/examples/render-modes/pages/html-only/</a></li>
@@ -300,6 +300,6 @@ only defined in the browser.</p>
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

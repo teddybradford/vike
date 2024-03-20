@@ -2,8 +2,8 @@
     <html>
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Migration from 0.4.x to 1.0.0 | Vike</title>
@@ -29,20 +29,20 @@
 <li>Update to the latest <code>0.4</code> version (<code>0.4.x</code>), follow the deprecation warnings which include instructions of how to update outdated code. (TODO/v1-release: replace <code>x</code> with actual version number.)</li>
 <li>Update to <code>v1.0.0</code> and, again, follow the new deprecation instructions (if you encounter any) <code>v1.0.0</code>. (INTERNAL-NOTE: for example the outdated warning for <code>pageContext.urlParsed</code> can only exist in <code>v1.0.0</code>)</li>
 <li>All types have been moved to <code>&#x27;vike/types&#x27;</code>:<!-- -->
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- import type { SomeType } from &#x27;vike/any-path&#x27;</span></span>
-<span class="line"><span style="color:#116329">+ import type { SomeType } from &#x27;vike/types&#x27;</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- import type { SomeType } from &#x27;vike/any-path&#x27;</span></span>
+<span data-line=""><span style="color:#22863A">+ import type { SomeType } from &#x27;vike/types&#x27;</span></span></code></pre></figure>
 <!-- -->And <code>PageContextBuiltInClient</code> has been renamed to <code>PageContextBuiltInClientWithClientRouting</code> and <code>PageContextBuiltInClientWithServerRouting</code>:<!-- -->
-<div data-rehype-pretty-code-fragment=""><pre data-language="diff" data-theme="default"><code data-language="diff" data-theme="default"><span class="line"><span style="color:#82071E">- import type { PageContextBuiltInClient } from &#x27;vite-plugin/client/router&#x27;</span></span>
-<span class="line"><span style="color:#116329">+ import type {</span></span>
-<span class="line"><span style="color:#116329">+   PageContextBuiltInClientWithClientRouting as</span></span>
-<span class="line"><span style="color:#116329">+   PageContextBuiltInClient</span></span>
-<span class="line"><span style="color:#116329">+ } from &#x27;vike/types&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#82071E">- import type { PageContextBuiltInClient } from &#x27;vite-plugin/client&#x27;</span></span>
-<span class="line"><span style="color:#116329">+ import type {</span></span>
-<span class="line"><span style="color:#116329">+   PageContextBuiltInClientWithServerRouting as</span></span>
-<span class="line"><span style="color:#116329">+   PageContextBuiltInClient</span></span>
-<span class="line"><span style="color:#116329">+ } from &#x27;vike/types&#x27;</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- import type { PageContextBuiltInClient } from &#x27;vite-plugin/client/router&#x27;</span></span>
+<span data-line=""><span style="color:#22863A">+ import type {</span></span>
+<span data-line=""><span style="color:#22863A">+   PageContextBuiltInClientWithClientRouting as</span></span>
+<span data-line=""><span style="color:#22863A">+   PageContextBuiltInClient</span></span>
+<span data-line=""><span style="color:#22863A">+ } from &#x27;vike/types&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#B31D28">- import type { PageContextBuiltInClient } from &#x27;vite-plugin/client&#x27;</span></span>
+<span data-line=""><span style="color:#22863A">+ import type {</span></span>
+<span data-line=""><span style="color:#22863A">+   PageContextBuiltInClientWithServerRouting as</span></span>
+<span data-line=""><span style="color:#22863A">+   PageContextBuiltInClient</span></span>
+<span data-line=""><span style="color:#22863A">+ } from &#x27;vike/types&#x27;</span></span></code></pre></figure>
 </li>
 </ol>
 <p>Changes that are relevant only for a (small) subset of users:</p>
@@ -71,6 +71,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

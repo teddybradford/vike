@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Preloading | Vike</title>
@@ -33,28 +33,28 @@
 <blockquote>
 <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/103">Early Hints Header</a> is the official successor of the now deprecated HTTP2/Push.</p>
 </blockquote>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// server.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { renderPage } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/server&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">app.</span><span style="color:#8250DF">get</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;*&#x27;</span><span style="color:#24292F">, </span><span style="color:#CF222E">async</span><span style="color:#24292F"> (</span><span style="color:#953800">req</span><span style="color:#24292F">, </span><span style="color:#953800">res</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageContext</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderPage</span><span style="color:#24292F">({ urlOriginal: req.originalUrl } )</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">earlyHints</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.httpResponse</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// For example with Node.js 18:</span></span>
-<span class="line"><span style="color:#24292F">  res.</span><span style="color:#8250DF">writeEarlyHints</span><span style="color:#24292F">({ link: earlyHints.</span><span style="color:#8250DF">map</span><span style="color:#24292F">((</span><span style="color:#953800">e</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> e.earlyHintLink) })</span></span>
-<span class="line"><span style="color:#24292F">})</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#CF222E">type</span><span style="color:#24292F"> </span><span style="color:#953800">PageContext</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">httpResponse</span><span style="color:#CF222E">:</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#953800">earlyHints</span><span style="color:#CF222E">:</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#953800">earlyHintLink</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#0550AE">string</span><span style="color:#24292F">, </span><span style="color:#6E7781">// Header Line for the Early Hint Header</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#953800">assetType</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#0A3069">&quot;image&quot;</span><span style="color:#24292F"> </span><span style="color:#CF222E">|</span><span style="color:#24292F"> </span><span style="color:#0A3069">&quot;script&quot;</span><span style="color:#24292F"> </span><span style="color:#CF222E">|</span><span style="color:#24292F"> </span><span style="color:#0A3069">&quot;font&quot;</span><span style="color:#24292F"> </span><span style="color:#CF222E">|</span><span style="color:#24292F"> </span><span style="color:#0A3069">&quot;style&quot;</span><span style="color:#24292F"> </span><span style="color:#CF222E">|</span><span style="color:#24292F"> </span><span style="color:#0A3069">&quot;audio&quot;</span><span style="color:#24292F"> </span><span style="color:#CF222E">|</span><span style="color:#24292F"> </span><span style="color:#0A3069">&quot;video&quot;</span><span style="color:#24292F"> </span><span style="color:#CF222E">|</span><span style="color:#24292F"> </span><span style="color:#0A3069">&quot;document&quot;</span><span style="color:#24292F"> </span><span style="color:#CF222E">|</span><span style="color:#24292F"> </span><span style="color:#0A3069">&quot;fetch&quot;</span><span style="color:#24292F"> </span><span style="color:#CF222E">|</span><span style="color:#24292F"> </span><span style="color:#0A3069">&quot;track&quot;</span><span style="color:#24292F"> </span><span style="color:#CF222E">|</span><span style="color:#24292F"> </span><span style="color:#0A3069">&quot;worker&quot;</span><span style="color:#24292F"> </span><span style="color:#CF222E">|</span><span style="color:#24292F"> </span><span style="color:#0A3069">&quot;embed&quot;</span><span style="color:#24292F"> </span><span style="color:#CF222E">|</span><span style="color:#24292F"> </span><span style="color:#0A3069">&quot;object&quot;</span><span style="color:#24292F"> </span><span style="color:#CF222E">|</span><span style="color:#24292F"> </span><span style="color:#0550AE">null</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#953800">mediaType</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#0550AE">string</span><span style="color:#24292F"> </span><span style="color:#6E7781">// MIME type</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#953800">src</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#0550AE">string</span><span style="color:#24292F"> </span><span style="color:#6E7781">// Asset&#x27;s URL</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#953800">isEntry</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#0550AE">boolean</span><span style="color:#24292F"> </span><span style="color:#6E7781">// true  ⇒ asset is an entry</span></span>
-<span class="line"><span style="color:#24292F">                       </span><span style="color:#6E7781">// false ⇒ asset is a dependency of an entry</span></span>
-<span class="line"><span style="color:#24292F">    }[]</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// server.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { renderPage } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/server&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">app.</span><span style="color:#6F42C1">get</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;*&#x27;</span><span style="color:#24292E">, </span><span style="color:#D73A49">async</span><span style="color:#24292E"> (</span><span style="color:#E36209">req</span><span style="color:#24292E">, </span><span style="color:#E36209">res</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> pageContext</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> renderPage</span><span style="color:#24292E">({ urlOriginal: req.originalUrl } )</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">earlyHints</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext.httpResponse</span></span>
+<span data-line=""><span style="color:#6A737D">  // For example with Node.js 18:</span></span>
+<span data-line=""><span style="color:#24292E">  res.</span><span style="color:#6F42C1">writeEarlyHints</span><span style="color:#24292E">({ link: earlyHints.</span><span style="color:#6F42C1">map</span><span style="color:#24292E">((</span><span style="color:#E36209">e</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> e.earlyHintLink) })</span></span>
+<span data-line=""><span style="color:#24292E">})</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">type</span><span style="color:#6F42C1"> PageContext</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#E36209">  httpResponse</span><span style="color:#D73A49">:</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#E36209">    earlyHints</span><span style="color:#D73A49">:</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#E36209">      earlyHintLink</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">, </span><span style="color:#6A737D">// Header Line for the Early Hint Header</span></span>
+<span data-line=""><span style="color:#E36209">      assetType</span><span style="color:#D73A49">:</span><span style="color:#032F62"> &quot;image&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;script&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;font&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;style&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;audio&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;video&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;document&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;fetch&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;track&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;worker&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;embed&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;object&quot;</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> null</span></span>
+<span data-line=""><span style="color:#E36209">      mediaType</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#6A737D"> // MIME type</span></span>
+<span data-line=""><span style="color:#E36209">      src</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#6A737D"> // Asset&#x27;s URL</span></span>
+<span data-line=""><span style="color:#E36209">      isEntry</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> boolean</span><span style="color:#6A737D"> // true  ⇒ asset is an entry</span></span>
+<span data-line=""><span style="color:#6A737D">                       // false ⇒ asset is a dependency of an entry</span></span>
+<span data-line=""><span style="color:#24292E">    }[]</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>Examples: <code>$ npm init vike@latest</code>.</p>
 <p>See also:</p>
 <ul>
@@ -66,31 +66,31 @@
 </ul>
 <h2 id="injectfilter"><code>injectFilter()</code></h2>
 <p>If Vike&#x27;s default preload strategy doesn&#x27;t work for us, we can customize which and where preload/asset tags are injected.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// /renderer/+onRenderHtml.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onRenderHtml }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onRenderHtml</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ...</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">documentHtml</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">escapeInject</span><span style="color:#0A3069">`&lt;!DOCTYPE html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;html&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">        &lt;div id=&quot;page-view&quot;&gt;${</span><span style="color:#24292F">stream</span><span style="color:#0A3069">}&lt;/div&gt;</span></span>
-<span class="line"><span style="color:#0A3069">      &lt;/body&gt;</span></span>
-<span class="line"><span style="color:#0A3069">    &lt;/html&gt;`</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#8250DF">injectFilter</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> (</span><span style="color:#953800">assets</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    assets.</span><span style="color:#8250DF">forEach</span><span style="color:#24292F">(</span><span style="color:#953800">asset</span><span style="color:#24292F"> </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Preload images</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (asset.assetType </span><span style="color:#CF222E">===</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;image&#x27;</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">        asset.inject </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;HTML_BEGIN&#x27;</span></span>
-<span class="line"><span style="color:#24292F">      }</span></span>
-<span class="line"><span style="color:#24292F">    })</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> { documentHtml, injectFilter }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+onRenderHtml.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onRenderHtml }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onRenderHtml</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#6A737D">  // ...</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> documentHtml</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> escapeInject</span><span style="color:#032F62">`&lt;!DOCTYPE html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;html&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">        &lt;div id=&quot;page-view&quot;&gt;${</span><span style="color:#24292E">stream</span><span style="color:#032F62">}&lt;/div&gt;</span></span>
+<span data-line=""><span style="color:#032F62">      &lt;/body&gt;</span></span>
+<span data-line=""><span style="color:#032F62">    &lt;/html&gt;`</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#6F42C1"> injectFilter</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> (</span><span style="color:#E36209">assets</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">    assets.</span><span style="color:#6F42C1">forEach</span><span style="color:#24292E">(</span><span style="color:#E36209">asset</span><span style="color:#D73A49"> =&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">      // Preload images</span></span>
+<span data-line=""><span style="color:#D73A49">      if</span><span style="color:#24292E"> (asset.assetType </span><span style="color:#D73A49">===</span><span style="color:#032F62"> &#x27;image&#x27;</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#24292E">        asset.inject </span><span style="color:#D73A49">=</span><span style="color:#032F62"> &#x27;HTML_BEGIN&#x27;</span></span>
+<span data-line=""><span style="color:#24292E">      }</span></span>
+<span data-line=""><span style="color:#24292E">    })</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> { documentHtml, injectFilter }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>See <a href="/injectFilter">API<!-- --> &gt; <code>injectFilter()</code></a>.</p>
 <h2 id="assets-manifest">Assets Manifest</h2>
 <p>By using <a href="/getGlobalContext"><code>getGlobalContextSync()</code> or <code>getGlobalContextAsync()</code></a>, you can access the so-called &quot;assets manifest&quot;: the dependency graph of your app&#x27;s static assets.</p>
@@ -130,6 +130,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

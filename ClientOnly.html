@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>ClientOnly | Vike</title>
@@ -43,52 +43,52 @@
 </li>
 </ul>
 <h2 id="react">React</h2>
-<div><h3>Usage</h3><div data-rehype-pretty-code-fragment=""><pre data-language="tsx" data-theme="default"><code data-language="tsx" data-theme="default"><span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { ClientOnly } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike-react/ClientOnly&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">MapWrapper</span><span style="color:#24292F">({ </span><span style="color:#953800">someProp</span><span style="color:#24292F"> }) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> (</span></span>
-<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">ClientOnly</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#0550AE">load</span><span style="color:#CF222E">=</span><span style="color:#24292F">{() </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> </span><span style="color:#CF222E">import</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;./MyComponent.jsx&#x27;</span><span style="color:#24292F">)}</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">/* Or:</span></span>
-<span class="line"><span style="color:#6E7781">      load={async () =&gt; (await import(&#x27;some-library&#x27;)).SomeComponent}</span></span>
-<span class="line"><span style="color:#6E7781">      */</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#0550AE">fallback</span><span style="color:#CF222E">=</span><span style="color:#24292F">{&lt;</span><span style="color:#116329">Loading</span><span style="color:#24292F"> /&gt;}</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Re-render if someProp changes</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#0550AE">deps</span><span style="color:#CF222E">=</span><span style="color:#24292F">{[someProp]}</span></span>
-<span class="line"><span style="color:#24292F">    &gt;</span></span>
-<span class="line"><span style="color:#24292F">      {(</span><span style="color:#953800">MyComponent</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> &lt;</span><span style="color:#116329">MyComponent</span><span style="color:#24292F"> </span><span style="color:#0550AE">someProp</span><span style="color:#CF222E">=</span><span style="color:#24292F">{someProp} /&gt;}</span></span>
-<span class="line"><span style="color:#24292F">    &lt;/</span><span style="color:#116329">ClientOnly</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">  )</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div><h3>Props</h3><ul><li><strong>load</strong>: The function that imports the component.</li><li><strong>children</strong>: The function that renders the component.</li><li><strong>fallback</strong>: The element that is displayed while the component is being loaded.</li><li><strong>deps</strong> (optional): An array of dependencies that, when changed, triggers a re-render of the component. The <code>deps</code> prop of <code>&lt;ClientOnly&gt;</code> is passed as-is to the<!-- --> <a href="https://react.dev/reference/react/useEffect#parameters"><code>dependencies</code> parameter</a> <!-- -->of React&#x27;s <a href="https://react.dev/reference/react/useEffect">useEffect() hook</a>.</li></ul></div>
+<div><h3>Usage</h3><figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="tsx" data-theme="github-light"><code data-language="tsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { ClientOnly } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-react/ClientOnly&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> MapWrapper</span><span style="color:#24292E">({ </span><span style="color:#E36209">someProp</span><span style="color:#24292E"> }) {</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> (</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;</span><span style="color:#005CC5">ClientOnly</span></span>
+<span data-line=""><span style="color:#6F42C1">      load</span><span style="color:#D73A49">=</span><span style="color:#24292E">{() </span><span style="color:#D73A49">=&gt;</span><span style="color:#D73A49"> import</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;./MyComponent.jsx&#x27;</span><span style="color:#24292E">)}</span></span>
+<span data-line=""><span style="color:#6A737D">      /* Or:</span></span>
+<span data-line=""><span style="color:#6A737D">      load={async () =&gt; (await import(&#x27;some-library&#x27;)).SomeComponent}</span></span>
+<span data-line=""><span style="color:#6A737D">      */</span></span>
+<span data-line=""><span style="color:#6F42C1">      fallback</span><span style="color:#D73A49">=</span><span style="color:#24292E">{&lt;</span><span style="color:#005CC5">Loading</span><span style="color:#24292E"> /&gt;}</span></span>
+<span data-line=""><span style="color:#6A737D">      // Re-render if someProp changes</span></span>
+<span data-line=""><span style="color:#6F42C1">      deps</span><span style="color:#D73A49">=</span><span style="color:#24292E">{[someProp]}</span></span>
+<span data-line=""><span style="color:#24292E">    &gt;</span></span>
+<span data-line=""><span style="color:#24292E">      {(</span><span style="color:#E36209">MyComponent</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> &lt;</span><span style="color:#005CC5">MyComponent</span><span style="color:#6F42C1"> someProp</span><span style="color:#D73A49">=</span><span style="color:#24292E">{someProp} /&gt;}</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;/</span><span style="color:#005CC5">ClientOnly</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">  )</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure><h3>Props</h3><ul><li><strong>load</strong>: The function that imports the component.</li><li><strong>children</strong>: The function that renders the component.</li><li><strong>fallback</strong>: The element that is displayed while the component is being loaded.</li><li><strong>deps</strong> (optional): An array of dependencies that, when changed, triggers a re-render of the component. The <code>deps</code> prop of <code>&lt;ClientOnly&gt;</code> is passed as-is to the<!-- --> <a href="https://react.dev/reference/react/useEffect#parameters"><code>dependencies</code> parameter</a> <!-- -->of React&#x27;s <a href="https://react.dev/reference/react/useEffect">useEffect() hook</a>.</li></ul></div>
 <h2 id="solid">Solid</h2>
-<div><h3>Usage</h3><div data-rehype-pretty-code-fragment=""><pre data-language="tsx" data-theme="default"><code data-language="tsx" data-theme="default"><span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { ClientOnly } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike-solid/ClientOnly&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">MyComponent</span><span style="color:#24292F">(</span><span style="color:#953800">props</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> (</span></span>
-<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">ClientOnly</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#0550AE">load</span><span style="color:#CF222E">=</span><span style="color:#24292F">{() </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> </span><span style="color:#CF222E">import</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;./MyComponent.jsx&#x27;</span><span style="color:#24292F">)}</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">/* Or:</span></span>
-<span class="line"><span style="color:#6E7781">      load={async () =&gt; (await import(&#x27;some-library&#x27;)).SomeComponent}</span></span>
-<span class="line"><span style="color:#6E7781">      */</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#0550AE">fallback</span><span style="color:#CF222E">=</span><span style="color:#24292F">{&lt;</span><span style="color:#116329">Loading</span><span style="color:#24292F"> /&gt;}</span></span>
-<span class="line"><span style="color:#24292F">    &gt;</span></span>
-<span class="line"><span style="color:#24292F">      {(</span><span style="color:#953800">MyComponent</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> &lt;</span><span style="color:#116329">MyComponent</span><span style="color:#24292F"> {</span><span style="color:#CF222E">...</span><span style="color:#24292F">props} /&gt;}</span></span>
-<span class="line"><span style="color:#24292F">    &lt;/</span><span style="color:#116329">ClientOnly</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">  )</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div><h3>Props</h3><ul><li><strong>load</strong>: The function that imports the component.</li><li><strong>children</strong>: The function that renders the component.</li><li><strong>fallback</strong>: The element that is displayed while the component is being loaded.</li></ul></div>
+<div><h3>Usage</h3><figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="tsx" data-theme="github-light"><code data-language="tsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { ClientOnly } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-solid/ClientOnly&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> MyComponent</span><span style="color:#24292E">(</span><span style="color:#E36209">props</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> (</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;</span><span style="color:#005CC5">ClientOnly</span></span>
+<span data-line=""><span style="color:#6F42C1">      load</span><span style="color:#D73A49">=</span><span style="color:#24292E">{() </span><span style="color:#D73A49">=&gt;</span><span style="color:#D73A49"> import</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;./MyComponent.jsx&#x27;</span><span style="color:#24292E">)}</span></span>
+<span data-line=""><span style="color:#6A737D">      /* Or:</span></span>
+<span data-line=""><span style="color:#6A737D">      load={async () =&gt; (await import(&#x27;some-library&#x27;)).SomeComponent}</span></span>
+<span data-line=""><span style="color:#6A737D">      */</span></span>
+<span data-line=""><span style="color:#6F42C1">      fallback</span><span style="color:#D73A49">=</span><span style="color:#24292E">{&lt;</span><span style="color:#005CC5">Loading</span><span style="color:#24292E"> /&gt;}</span></span>
+<span data-line=""><span style="color:#24292E">    &gt;</span></span>
+<span data-line=""><span style="color:#24292E">      {(</span><span style="color:#E36209">MyComponent</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> &lt;</span><span style="color:#005CC5">MyComponent</span><span style="color:#24292E"> {</span><span style="color:#D73A49">...</span><span style="color:#24292E">props} /&gt;}</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;/</span><span style="color:#005CC5">ClientOnly</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">  )</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure><h3>Props</h3><ul><li><strong>load</strong>: The function that imports the component.</li><li><strong>children</strong>: The function that renders the component.</li><li><strong>fallback</strong>: The element that is displayed while the component is being loaded.</li></ul></div>
 <h2 id="vue">Vue</h2>
-<div><h3>Usage</h3><div data-rehype-pretty-code-fragment=""><pre data-language="vue" data-theme="default"><code data-language="vue" data-theme="default"><span class="line"><span style="color:#24292F">&lt;</span><span style="color:#116329">template</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">  &lt;</span><span style="color:#116329">ClientOnly</span><span style="color:#24292F"> :</span><span style="color:#0550AE">load</span><span style="color:#24292F">=</span><span style="color:#0A3069">&quot;</span><span style="color:#24292F">() </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> </span><span style="color:#CF222E">import</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;./MyComponent.vue&#x27;</span><span style="color:#24292F">)</span><span style="color:#0A3069">&quot;</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">&lt;!-- Or:</span></span>
-<span class="line"><span style="color:#6E7781">  &lt;ClientOnly :load=&quot;() =&gt; (await import(&#x27;some-library&#x27;)).SomeComponent&quot;&gt;</span></span>
-<span class="line"><span style="color:#6E7781">  --&gt;</span></span>
-<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">template</span><span style="color:#24292F"> #</span><span style="color:#0550AE">fallback</span><span style="color:#24292F">&gt;Loading...&lt;/</span><span style="color:#116329">template</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">  &lt;/</span><span style="color:#116329">ClientOnly</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#24292F">&lt;/</span><span style="color:#116329">template</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">&lt;</span><span style="color:#116329">script</span><span style="color:#24292F"> </span><span style="color:#0550AE">setup</span><span style="color:#24292F">&gt;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> ClientOnly </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike-vue/ClientOnly&#x27;</span></span>
-<span class="line"><span style="color:#24292F">&lt;/</span><span style="color:#116329">script</span><span style="color:#24292F">&gt;</span></span></code></pre></div>
+<div><h3>Usage</h3><figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="vue" data-theme="github-light"><code data-language="vue" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">&lt;</span><span style="color:#22863A">template</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">  &lt;</span><span style="color:#22863A">ClientOnly</span><span style="color:#24292E"> :</span><span style="color:#6F42C1">load</span><span style="color:#24292E">=</span><span style="color:#032F62">&quot;</span><span style="color:#24292E">() </span><span style="color:#D73A49">=&gt;</span><span style="color:#D73A49"> import</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;./MyComponent.vue&#x27;</span><span style="color:#24292E">)</span><span style="color:#032F62">&quot;</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#6A737D">  &lt;!-- Or:</span></span>
+<span data-line=""><span style="color:#6A737D">  &lt;ClientOnly :load=&quot;() =&gt; (await import(&#x27;some-library&#x27;)).SomeComponent&quot;&gt;</span></span>
+<span data-line=""><span style="color:#6A737D">  --&gt;</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;</span><span style="color:#22863A">template</span><span style="color:#24292E"> #</span><span style="color:#6F42C1">fallback</span><span style="color:#24292E">&gt;Loading...&lt;/</span><span style="color:#22863A">template</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">  &lt;/</span><span style="color:#22863A">ClientOnly</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">&lt;/</span><span style="color:#22863A">template</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#24292E">&lt;</span><span style="color:#22863A">script</span><span style="color:#6F42C1"> setup</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> ClientOnly </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-vue/ClientOnly&#x27;</span></span>
+<span data-line=""><span style="color:#24292E">&lt;/</span><span style="color:#22863A">script</span><span style="color:#24292E">&gt;</span></span></code></pre></figure>
 <h3>Slots</h3>
 <ul><li><p><strong>fallback</strong>: The component that is displayed while the dynamic component is being loaded.</p></li></ul><h3>Props</h3><blockquote><p>All props are passed to the loaded component (except <code>load</code>). Type inference doesn&#x27;t work as of now, see <a href="https://github.com/vikejs/vike-vue/issues/67">vike-vue#67</a>.</p></blockquote><ul><li><strong>load</strong>: The function that imports the component.</li></ul></div>
 <h2 id="without-vike-extension">Without Vike extension</h2>
@@ -120,6 +120,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

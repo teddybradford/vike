@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Debug | Vike</title>
@@ -39,12 +39,12 @@
 </blockquote>
 <blockquote>
 <p>Instead of:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="bash" data-theme="default"><code data-language="bash" data-theme="default"><span class="line"><span style="color:#24292F">$ git clone git@github.com:vikejs/vike</span></span>
-<span class="line"><span style="color:#24292F">$ </span><span style="color:#0550AE">cd</span><span style="color:#24292F"> vike/vike/</span></span>
-<span class="line"><span style="color:#24292F">$ pnpm install</span></span>
-<span class="line"><span style="color:#24292F">$ pnpm run dev</span></span>
-<span class="line"><span style="color:#24292F">$ </span><span style="color:#0550AE">cd</span><span style="color:#24292F"> ../../../my-app/</span></span>
-<span class="line"><span style="color:#24292F">$ pnpm link ../vike/vike/</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="bash" data-theme="github-light"><code data-language="bash" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6F42C1">$</span><span style="color:#032F62"> git</span><span style="color:#032F62"> clone</span><span style="color:#032F62"> git@github.com:vikejs/vike</span></span>
+<span data-line=""><span style="color:#6F42C1">$</span><span style="color:#032F62"> cd</span><span style="color:#032F62"> vike/vike/</span></span>
+<span data-line=""><span style="color:#6F42C1">$</span><span style="color:#032F62"> pnpm</span><span style="color:#032F62"> install</span></span>
+<span data-line=""><span style="color:#6F42C1">$</span><span style="color:#032F62"> pnpm</span><span style="color:#032F62"> run</span><span style="color:#032F62"> dev</span></span>
+<span data-line=""><span style="color:#6F42C1">$</span><span style="color:#032F62"> cd</span><span style="color:#032F62"> ../../../my-app/</span></span>
+<span data-line=""><span style="color:#6F42C1">$</span><span style="color:#032F62"> pnpm</span><span style="color:#032F62"> link</span><span style="color:#032F62"> ../vike/vike/</span></span></code></pre></figure>
 <p>We recommend to:</p>
 <ul>
 <li>Browse the source code of <code>$ git clone git@github.com:vikejs/vike</code>.</li>
@@ -53,16 +53,16 @@
 </blockquote>
 <h2 id="vike-debug-logs">Vike debug logs</h2>
 <p>You can use Vike&#x27;s debug logs to gather insights.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="shell" data-theme="default"><code data-language="shell" data-theme="default"><span class="line"><span style="color:#6E7781"># Inspect Vike&#x27;s routing</span></span>
-<span class="line"><span style="color:#24292F">DEBUG=vike:routing npm run dev</span></span>
-<span class="line"><span style="color:#6E7781"># Inspect HTTP Streaming</span></span>
-<span class="line"><span style="color:#24292F">DEBUG=vike:stream npm run dev</span></span>
-<span class="line"><span style="color:#6E7781"># Inspect errors</span></span>
-<span class="line"><span style="color:#24292F">DEBUG=vike:error npm run dev</span></span>
-<span class="line"><span style="color:#6E7781"># Inspect logs</span></span>
-<span class="line"><span style="color:#24292F">DEBUG=vike:log npm run dev</span></span>
-<span class="line"><span style="color:#6E7781"># Combination</span></span>
-<span class="line"><span style="color:#24292F">DEBUG=vike:log,vike:error,vike:stream npm run dev</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="shell" data-theme="github-light"><code data-language="shell" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D"># Inspect Vike&#x27;s routing</span></span>
+<span data-line=""><span style="color:#24292E">DEBUG</span><span style="color:#D73A49">=</span><span style="color:#032F62">vike:routing</span><span style="color:#6F42C1"> npm</span><span style="color:#032F62"> run</span><span style="color:#032F62"> dev</span></span>
+<span data-line=""><span style="color:#6A737D"># Inspect HTTP Streaming</span></span>
+<span data-line=""><span style="color:#24292E">DEBUG</span><span style="color:#D73A49">=</span><span style="color:#032F62">vike:stream</span><span style="color:#6F42C1"> npm</span><span style="color:#032F62"> run</span><span style="color:#032F62"> dev</span></span>
+<span data-line=""><span style="color:#6A737D"># Inspect errors</span></span>
+<span data-line=""><span style="color:#24292E">DEBUG</span><span style="color:#D73A49">=</span><span style="color:#032F62">vike:error</span><span style="color:#6F42C1"> npm</span><span style="color:#032F62"> run</span><span style="color:#032F62"> dev</span></span>
+<span data-line=""><span style="color:#6A737D"># Inspect logs</span></span>
+<span data-line=""><span style="color:#24292E">DEBUG</span><span style="color:#D73A49">=</span><span style="color:#032F62">vike:log</span><span style="color:#6F42C1"> npm</span><span style="color:#032F62"> run</span><span style="color:#032F62"> dev</span></span>
+<span data-line=""><span style="color:#6A737D"># Combination</span></span>
+<span data-line=""><span style="color:#24292E">DEBUG</span><span style="color:#D73A49">=</span><span style="color:#032F62">vike:log,vike:error,vike:stream</span><span style="color:#6F42C1"> npm</span><span style="color:#032F62"> run</span><span style="color:#032F62"> dev</span></span></code></pre></figure>
 <blockquote>
 <p>These debug logs allow you to understand how Vike thinks of your app. For example, to figure out why your app returns a <code>404</code>, use <code>vike:routing</code>.</p>
 </blockquote>
@@ -72,7 +72,7 @@
 </blockquote>
 <h2 id="vite-debug-logs">Vite debug logs</h2>
 <p>To enable Vite&#x27;s debug logs, set the environment variable <code>DEBUG</code> to <code>vite:*</code>.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="shell" data-theme="default"><code data-language="shell" data-theme="default"><span class="line"><span style="color:#24292F">$ DEBUG=vite:</span><span style="color:#CF222E">*</span><span style="color:#24292F"> npm run dev</span></span></code></pre></div><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/debug/+Page.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="shell" data-theme="github-light"><code data-language="shell" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6F42C1">$</span><span style="color:#032F62"> DEBUG=vite:</span><span style="color:#005CC5">*</span><span style="color:#032F62"> npm</span><span style="color:#032F62"> run</span><span style="color:#032F62"> dev</span></span></code></pre></figure><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/debug/+Page.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
         
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
     <script type="text/javascript">
@@ -94,6 +94,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>Client runtimes conflict | Vike</title>
@@ -31,28 +31,28 @@ being loaded. Make sure they aren&#x27;t loaded both at the same time for a give
 <p>Then the problem is likely due to one the following.</p>
 <ul>
 <li>You configured <a href="https://vitejs.dev/guide/build.html#chunking-strategy">Rollup&#x27;s code splitting</a> in a way that includes both runtimes inside a same bundle. For example:<!-- -->
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// vite.config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// This will lead to the warning above. We recommend against this practice: not only because</span></span>
-<span class="line"><span style="color:#6E7781">// of the above warning but also because, in general, a given page should only load what is</span></span>
-<span class="line"><span style="color:#6E7781">// strictly needed for that page. (Initial page load speed is usually more critical than</span></span>
-<span class="line"><span style="color:#6E7781">// subsequent page load speed.)</span></span>
-<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">rollupOptions</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">  output: {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#8250DF">manualChunks</span><span style="color:#24292F">(</span><span style="color:#953800">id</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (id.</span><span style="color:#8250DF">includes</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;node_modules&#x27;</span><span style="color:#24292F">)) {</span></span>
-<span class="line"><span style="color:#24292F">        </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vendor&#x27;</span></span>
-<span class="line"><span style="color:#24292F">      }</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> { </span><span style="color:#24292F">build: { rollupOptions } </span><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// vite.config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// This will lead to the warning above. We recommend against this practice: not only because</span></span>
+<span data-line=""><span style="color:#6A737D">// of the above warning but also because, in general, a given page should only load what is</span></span>
+<span data-line=""><span style="color:#6A737D">// strictly needed for that page. (Initial page load speed is usually more critical than</span></span>
+<span data-line=""><span style="color:#6A737D">// subsequent page load speed.)</span></span>
+<span data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> rollupOptions</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  output: {</span></span>
+<span data-line=""><span style="color:#6F42C1">    manualChunks</span><span style="color:#24292E">(</span><span style="color:#E36209">id</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">      if</span><span style="color:#24292E"> (id.</span><span style="color:#6F42C1">includes</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;node_modules&#x27;</span><span style="color:#24292E">)) {</span></span>
+<span data-line=""><span style="color:#D73A49">        return</span><span style="color:#032F62"> &#x27;vendor&#x27;</span></span>
+<span data-line=""><span style="color:#24292E">      }</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> { build: { rollupOptions } }</span></span></code></pre></figure>
 </li>
 <li>You&#x27;re importing a utility that is only available to <a href="/client-routing">Client Routing</a> such as <code>prefetch()</code> or <code>navigate()</code>, for a page that uses <a href="/server-routing">Server Routing</a>.<!-- -->
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// ❌ Don&#x27;t import these for pages that use Server Routing</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { prefetch } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/client/router&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { navigate } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/client/router&#x27;</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// ❌ Don&#x27;t import these for pages that use Server Routing</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { prefetch } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/client/router&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { navigate } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/client/router&#x27;</span></span></code></pre></figure>
 <blockquote>
 <p>You&#x27;ll get a warning:</p>
 <pre><code>You shouldn&#x27;t `import { something } from &#x27;vike/client/router&#x27;` when using
@@ -85,6 +85,6 @@ as they unnecessarily bloat your client-side bundle.
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

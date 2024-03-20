@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>onPrerenderStart() hook | Vike</title>
@@ -28,34 +28,34 @@
 It receives as argument an array of all <a href="/pageContext">page contexts</a> to be pre-rendered, and returns
 a new array of page contexts, giving you a chance to add/remove/modify pages. This is usually used for
 <a href="/i18n">internationalization</a>.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onPrerenderStart }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onPrerenderStart</span><span style="color:#24292F">(</span><span style="color:#953800">prerenderContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// new page contexts</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">pageContexts</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> []</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// for each original page context:</span></span>
-<span class="line"><span style="color:#24292F">  prerenderContext.pageContexts.</span><span style="color:#8250DF">forEach</span><span style="color:#24292F">((</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// for each locale, push a new page context to pageContexts</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// ...</span></span>
-<span class="line"><span style="color:#24292F">  })</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    prerenderContext: {</span></span>
-<span class="line"><span style="color:#24292F">      pageContexts</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onPrerenderStart }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onPrerenderStart</span><span style="color:#24292E">(</span><span style="color:#E36209">prerenderContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#6A737D">  // new page contexts</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> pageContexts</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> []</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">  // for each original page context:</span></span>
+<span data-line=""><span style="color:#24292E">  prerenderContext.pageContexts.</span><span style="color:#6F42C1">forEach</span><span style="color:#24292E">((</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">    // for each locale, push a new page context to pageContexts</span></span>
+<span data-line=""><span style="color:#6A737D">    // ...</span></span>
+<span data-line=""><span style="color:#24292E">  })</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">    prerenderContext: {</span></span>
+<span data-line=""><span style="color:#24292E">      pageContexts</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="typescript">TypeScript</h2>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onPrerenderStart }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> { OnPrerenderStartAsync, PageContextServer } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/types&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#8250DF">onPrerenderStart</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#953800">OnPrerenderStartAsync</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> (</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">prerenderContext</span></span>
-<span class="line"><span style="color:#24292F">)</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#953800">ReturnType</span><span style="color:#24292F">&lt;</span><span style="color:#953800">OnPrerenderStartAsync</span><span style="color:#24292F">&gt; </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ...</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onPrerenderStart }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#D73A49"> type</span><span style="color:#24292E"> { OnPrerenderStartAsync, PageContextServer } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/types&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">const</span><span style="color:#6F42C1"> onPrerenderStart</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> OnPrerenderStartAsync</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> async</span><span style="color:#24292E"> (</span></span>
+<span data-line=""><span style="color:#E36209">  prerenderContext</span></span>
+<span data-line=""><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> ReturnType</span><span style="color:#24292E">&lt;</span><span style="color:#6F42C1">OnPrerenderStartAsync</span><span style="color:#24292E">&gt; </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">  // ...</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote><p>Don&#x27;t omit <code>ReturnType&lt;<!-- -->OnPrerenderStartAsync<!-- -->&gt;</code> (don&#x27;t write<!-- --> <code>const onPrerenderStart: OnPrerenderStartAsync = async (pageContext) =&gt; {</code>), otherwise TypeScript won&#x27;t strictly check the return type for unknown extra properties: see this TypeScript<!-- --> <a href="https://www.typescriptlang.org/play?#code/C4TwDgpgBAYgdlAvFAFGAhgJ3QWwFxQDOwmAlnAOYCUSAfFAN5ToFwCuOARhJlAL4AoAQHphUQDLkUAOqYA9pShtC6ChAEBjecSgAzOAEYC8JKgzYcNRPRQMBUZgX0AaO1FESoAFXAQAyurIwYCgAE1kIQjgAcmDNHDAAG3RyV04CACYBPiohd0BQcigAYVlMTAh1YKUVNU04bT10owRkNCxcKgIAJQhgNkw4b0gAHnh6K1RbexYoZ1d8rx9-QNjZeKTyQlSMrKogA">playground</a> <!-- -->and <a href="https://github.com/microsoft/TypeScript/issues/54661">issue</a>.</p></blockquote><blockquote><p>See <a href="/pageContext#typescript">API<!-- --> &gt; <code>pageContext</code> &gt; <!-- -->Typescript</a> for more information on how to extend <code>pageContext</code> <!-- -->with your own extra properties.</p></blockquote><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/onPrerenderStart/+Page.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
         
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
@@ -78,6 +78,6 @@ a new array of page contexts, giving you a chance to add/remove/modify pages. Th
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>

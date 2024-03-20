@@ -3,8 +3,8 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.Qzy_TBuI.css">
-        <link rel="preload" href="/assets/static/Inter-Var.HbpQTKfA.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.BOnbdNkT.css">
+        <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
         <title>onBeforeRender() hook | Vike</title>
@@ -43,48 +43,48 @@ automatically integrating data fetching tools (RPC with Telefunc/tRPC, REST with
 <p>Another common use case is to use <code>onBeforeRender()</code> as a global initializing hook. (As a temporary workaround until <a href="https://github.com/vikejs/vike/issues/962">#962 - New hook <code>onBoot()</code></a> is implemented.)</p>
 <h2 id="onbeforerender-vs-data"><code>onBeforeRender()</code> VS <code>data()</code></h2>
 <p>The central difference between the two hooks is that the value returned by <code>data()</code> always sets the value of <code>pageContext.data</code>, whereas <code>onBeforeRender()</code> can set multiple <code>pageContext</code> values.</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/some-page/+data.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">data</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">someValue</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#6E7781">/* ... */</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// pageContext.data === someValue</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> someValue</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/some-page/+onBeforeRender.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onBeforeRender</span><span style="color:#24292F">() {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">someValue1</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#6E7781">/* ... */</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">someValue2</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#6E7781">/* ... */</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// pageContext.prop1 === someValue1</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// pageContext.prop2 === someValue2</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    pageContext: {</span></span>
-<span class="line"><span style="color:#24292F">      prop1: someValue1,</span></span>
-<span class="line"><span style="color:#24292F">      prop2: someValue2</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/some-page/+data.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> data</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> someValue</span><span style="color:#D73A49"> =</span><span style="color:#6A737D"> /* ... */</span></span>
+<span data-line=""><span style="color:#6A737D">  // pageContext.data === someValue</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> someValue</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/some-page/+onBeforeRender.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onBeforeRender</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> someValue1</span><span style="color:#D73A49"> =</span><span style="color:#6A737D"> /* ... */</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> someValue2</span><span style="color:#D73A49"> =</span><span style="color:#6A737D"> /* ... */</span></span>
+<span data-line=""><span style="color:#6A737D">  // pageContext.prop1 === someValue1</span></span>
+<span data-line=""><span style="color:#6A737D">  // pageContext.prop2 === someValue2</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">    pageContext: {</span></span>
+<span data-line=""><span style="color:#24292E">      prop1: someValue1,</span></span>
+<span data-line=""><span style="color:#24292E">      prop2: someValue2</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>Another difference is that the entire <code>pageContext.data</code> value is always sent to the client-side, whereas with <code>onBeforeRender()</code> you can (and have to) decide which values are sent to the client-side by using <a href="/passToClient"><code>passToClient</code></a>.</p>
 <p>In a nutshell: while <code>onBeforeRender()</code> requires more manual work, it also gives you more control.</p>
 <h2 id="onbeforerender-meta"><code>onBeforeRender()</code> + <code>meta</code></h2>
 <p>Using <code>onBeforeRender()</code> together with custom hooks and settings (see <a href="/meta"><code>meta</code></a>) is a powerful technique enabling you to implement your own tailored DX.</p>
 <p>For example.</p>
 <p>A custom setting <code>+sql.js</code> (created with <code>meta</code>):</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/user/+sql.js</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> { </span><span style="color:#24292F">modelName: </span><span style="color:#0A3069">&#x27;User&#x27;</span><span style="color:#953800">, </span><span style="color:#24292F">select: [</span><span style="color:#0A3069">&#x27;firstName&#x27;</span><span style="color:#24292F">, </span><span style="color:#0A3069">&#x27;lastName&#x27;</span><span style="color:#24292F">] </span><span style="color:#953800">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/product/+sql.js</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> { </span><span style="color:#24292F">modelName: </span><span style="color:#0A3069">&#x27;Product&#x27;</span><span style="color:#953800">, </span><span style="color:#24292F">select: [</span><span style="color:#0A3069">&#x27;name&#x27;</span><span style="color:#24292F">, </span><span style="color:#0A3069">&#x27;price&#x27;</span><span style="color:#24292F">] </span><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/user/+sql.js</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> { modelName: </span><span style="color:#032F62">&#x27;User&#x27;</span><span style="color:#24292E">, select: [</span><span style="color:#032F62">&#x27;firstName&#x27;</span><span style="color:#24292E">, </span><span style="color:#032F62">&#x27;lastName&#x27;</span><span style="color:#24292E">] }</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/+sql.js</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> { modelName: </span><span style="color:#032F62">&#x27;Product&#x27;</span><span style="color:#24292E">, select: [</span><span style="color:#032F62">&#x27;name&#x27;</span><span style="color:#24292E">, </span><span style="color:#032F62">&#x27;price&#x27;</span><span style="color:#24292E">] }</span></span></code></pre></figure>
 <p>A single global <code>onBeforeRender()</code> hook orchestrating the customm setting:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+onBeforeRender.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { runQuery } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;some-sql-engine&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onBeforeRender</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// The value exported by /pages/**/+sql.js is available at pageContext.config.sql</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">sql</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext.config</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">data</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">runQuery</span><span style="color:#24292F">(sql)</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ...</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+onBeforeRender.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { runQuery } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-sql-engine&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onBeforeRender</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#6A737D">  // The value exported by /pages/**/+sql.js is available at pageContext.config.sql</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">sql</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext.config</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> data</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> runQuery</span><span style="color:#24292E">(sql)</span></span>
+<span data-line=""><span style="color:#6A737D">  // ...</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>See full implementation at <a href="/meta#example-sql">API<!-- --> &gt; <code>meta</code> &gt; <!-- -->Example: <code>sql</code></a>.</p>
 <h2 id="override">Override</h2>
 <p>There can be only one <code>onBeforeRender()</code> hook per page. For example, if you define a global <code>onBeforeRender()</code> hook at <code>/pages/+onBeforeRender.js</code> as well as a page-specific one at <code>/pages/star-wars/+onBeforeRender.js</code> then the page-specific one overrides the global one.</p>
@@ -96,45 +96,45 @@ automatically integrating data fetching tools (RPC with Telefunc/tRPC, REST with
 </ul>
 </blockquote>
 <p>You can also suppress globally defined <code>onBeforeRender()</code> hooks on a per-page basis:</p>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+onBeforeRender.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6E7781">// Some global onBeforeRender() hook</span></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> () </span><span style="color:#CF222E">=&gt;</span><span style="color:#953800"> </span><span style="color:#24292F">{</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ...</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/some-page/+config.js</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#6E7781">// Suppress the global onBeforeRender() hook</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">onBeforeRender: </span><span style="color:#0550AE">null</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+onBeforeRender.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// Some global onBeforeRender() hook</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> () </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">  // ...</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/some-page/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">  // Suppress the global onBeforeRender() hook</span></span>
+<span data-line=""><span style="color:#24292E">  onBeforeRender: </span><span style="color:#005CC5">null</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="advanced-example">Advanced example</h2>
 <p>The following is an advanced example of using <code>onBeforeRender()</code> with <code>meta</code> in order to integrate data fetching tools. In particular, this approach can be used for advanced integration with GraphQL tools.</p>
 <blockquote>
 <p>If you use a custom renderer instead of <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>, then you can modify your <code>onRenderHtml()</code>/<code>onRenderClient()</code> hooks instead of doing the following.</p>
 </blockquote>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+config.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: config</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#953800"> </span><span style="color:#CF222E">default</span><span style="color:#953800"> {</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#6E7781">// Pass the GraphQL cache to the client-side</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">passToClient: [</span><span style="color:#0A3069">&#x27;cache&#x27;</span><span style="color:#24292F">]</span><span style="color:#953800">,</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#6E7781">// Modify/create hooks</span></span>
-<span class="line"><span style="color:#953800">  </span><span style="color:#24292F">meta: {</span></span>
-<span class="line"><span style="color:#24292F">    onBeforeRender: {</span></span>
-<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// Modify the onBeforeRender() hook to run on both the server- and client-side</span></span>
-<span class="line"><span style="color:#24292F">      env: { client: </span><span style="color:#0550AE">true</span><span style="color:#24292F">, server: </span><span style="color:#0550AE">true</span><span style="color:#24292F"> }</span></span>
-<span class="line"><span style="color:#24292F">    },</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Create new hook</span></span>
-<span class="line"><span style="color:#24292F">    onBeforeRenderHtml: {</span></span>
-<span class="line"><span style="color:#24292F">      env: { server: </span><span style="color:#0550AE">true</span><span style="color:#24292F"> }</span></span>
-<span class="line"><span style="color:#24292F">    },</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Create new hook</span></span>
-<span class="line"><span style="color:#24292F">    onBeforeRenderClient: {</span></span>
-<span class="line"><span style="color:#24292F">      env: { client: </span><span style="color:#0550AE">true</span><span style="color:#24292F"> }</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#953800">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: config</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">  // Pass the GraphQL cache to the client-side</span></span>
+<span data-line=""><span style="color:#24292E">  passToClient: [</span><span style="color:#032F62">&#x27;cache&#x27;</span><span style="color:#24292E">],</span></span>
+<span data-line=""><span style="color:#6A737D">  // Modify/create hooks</span></span>
+<span data-line=""><span style="color:#24292E">  meta: {</span></span>
+<span data-line=""><span style="color:#24292E">    onBeforeRender: {</span></span>
+<span data-line=""><span style="color:#6A737D">      // Modify the onBeforeRender() hook to run on both the server- and client-side</span></span>
+<span data-line=""><span style="color:#24292E">      env: { client: </span><span style="color:#005CC5">true</span><span style="color:#24292E">, server: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">    },</span></span>
+<span data-line=""><span style="color:#6A737D">    // Create new hook</span></span>
+<span data-line=""><span style="color:#24292E">    onBeforeRenderHtml: {</span></span>
+<span data-line=""><span style="color:#24292E">      env: { server: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">    },</span></span>
+<span data-line=""><span style="color:#6A737D">    // Create new hook</span></span>
+<span data-line=""><span style="color:#24292E">    onBeforeRenderClient: {</span></span>
+<span data-line=""><span style="color:#24292E">      env: { client: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p>See:</p>
 <ul>
@@ -146,62 +146,62 @@ automatically integrating data fetching tools (RPC with Telefunc/tRPC, REST with
 </li>
 </ul>
 </blockquote>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+onBeforeRender.js</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: server or client</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onBeforeRender</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// When run on the server-side</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (pageContext.config.onBeforeRenderHtml) {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">pageContext</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">onBeforeRenderHtml</span><span style="color:#24292F">(pageContext)</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">return</span><span style="color:#24292F"> { pageContext }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// When run on the client-side</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (pageContext.config.onBeforeRenderClient) {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">onBeforeRenderClient</span><span style="color:#24292F">(pageContext)</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+onBeforeRenderHtml.jsx</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { renderToHtml } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;my-graphql-tool/server&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onBeforeRenderHtml</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">Page</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// `cache` contains the data fetched by GraphQL</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">cache</span><span style="color:#24292F">, </span><span style="color:#0550AE">html</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">renderToHtml</span><span style="color:#24292F">(&lt;</span><span style="color:#116329">Page</span><span style="color:#24292F"> /&gt;)</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    pageContext: {</span></span>
-<span class="line"><span style="color:#24292F">      pageHtml: html,</span></span>
-<span class="line"><span style="color:#24292F">      cache</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<div data-rehype-pretty-code-fragment=""><pre data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// /pages/+onBeforeRenderClient.jsx</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: client</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { hydrate } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;my-ui-framework/client&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { CacheProvider } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;my-graphql-tool/client&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onBeforeRenderClient</span><span style="color:#24292F">(</span><span style="color:#953800">pageContext</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">Page</span><span style="color:#24292F">, </span><span style="color:#0550AE">cache</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> pageContext</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#8250DF">hydrate</span><span style="color:#24292F">(</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// Re-use the `cache` data that was fetched on the server-side</span></span>
-<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">CacheProvider</span><span style="color:#24292F"> </span><span style="color:#0550AE">cache</span><span style="color:#CF222E">=</span><span style="color:#24292F">{cache}&gt;</span></span>
-<span class="line"><span style="color:#24292F">      &lt;</span><span style="color:#116329">Page</span><span style="color:#24292F"> /&gt;</span></span>
-<span class="line"><span style="color:#24292F">    &lt;/</span><span style="color:#116329">CacheProvider</span><span style="color:#24292F">&gt;,</span></span>
-<span class="line"><span style="color:#24292F">    document.</span><span style="color:#8250DF">getElementById</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;root&#x27;</span><span style="color:#24292F">)</span></span>
-<span class="line"><span style="color:#24292F">  )</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+onBeforeRender.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: server or client</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onBeforeRender</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#6A737D">  // When run on the server-side</span></span>
+<span data-line=""><span style="color:#D73A49">  if</span><span style="color:#24292E"> (pageContext.config.onBeforeRenderHtml) {</span></span>
+<span data-line=""><span style="color:#D73A49">    const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">pageContext</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> onBeforeRenderHtml</span><span style="color:#24292E">(pageContext)</span></span>
+<span data-line=""><span style="color:#D73A49">    return</span><span style="color:#24292E"> { pageContext }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#6A737D">  // When run on the client-side</span></span>
+<span data-line=""><span style="color:#D73A49">  if</span><span style="color:#24292E"> (pageContext.config.onBeforeRenderClient) {</span></span>
+<span data-line=""><span style="color:#D73A49">    await</span><span style="color:#6F42C1"> onBeforeRenderClient</span><span style="color:#24292E">(pageContext)</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+onBeforeRenderHtml.jsx</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { renderToHtml } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;my-graphql-tool/server&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onBeforeRenderHtml</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">Page</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext</span></span>
+<span data-line=""><span style="color:#6A737D">  // `cache` contains the data fetched by GraphQL</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">cache</span><span style="color:#24292E">, </span><span style="color:#005CC5">html</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> renderToHtml</span><span style="color:#24292E">(&lt;</span><span style="color:#005CC5">Page</span><span style="color:#24292E"> /&gt;)</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">    pageContext: {</span></span>
+<span data-line=""><span style="color:#24292E">      pageHtml: html,</span></span>
+<span data-line=""><span style="color:#24292E">      cache</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+onBeforeRenderClient.jsx</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: client</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { hydrate } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;my-ui-framework/client&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { CacheProvider } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;my-graphql-tool/client&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onBeforeRenderClient</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">Page</span><span style="color:#24292E">, </span><span style="color:#005CC5">cache</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext</span></span>
+<span data-line=""><span style="color:#6F42C1">  hydrate</span><span style="color:#24292E">(</span></span>
+<span data-line=""><span style="color:#6A737D">    // Re-use the `cache` data that was fetched on the server-side</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;</span><span style="color:#005CC5">CacheProvider</span><span style="color:#6F42C1"> cache</span><span style="color:#D73A49">=</span><span style="color:#24292E">{cache}&gt;</span></span>
+<span data-line=""><span style="color:#24292E">      &lt;</span><span style="color:#005CC5">Page</span><span style="color:#24292E"> /&gt;</span></span>
+<span data-line=""><span style="color:#24292E">    &lt;/</span><span style="color:#005CC5">CacheProvider</span><span style="color:#24292E">&gt;,</span></span>
+<span data-line=""><span style="color:#24292E">    document.</span><span style="color:#6F42C1">getElementById</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;root&#x27;</span><span style="color:#24292E">)</span></span>
+<span data-line=""><span style="color:#24292E">  )</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="typescript">TypeScript</h2>
-<div data-rehype-pretty-code-fragment=""><pre data-language="ts" data-theme="default"><code data-language="ts" data-theme="default"><span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onBeforeRender }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> </span><span style="color:#CF222E">type</span><span style="color:#24292F"> { OnBeforeRenderAsync } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;vike/types&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#8250DF">onBeforeRender</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#953800">OnBeforeRenderAsync</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> (</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#953800">pageContext</span></span>
-<span class="line"><span style="color:#24292F">)</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#953800">ReturnType</span><span style="color:#24292F">&lt;</span><span style="color:#953800">OnBeforeRenderAsync</span><span style="color:#24292F">&gt; </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ...</span></span>
-<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onBeforeRender }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#D73A49"> type</span><span style="color:#24292E"> { OnBeforeRenderAsync } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/types&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">const</span><span style="color:#6F42C1"> onBeforeRender</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> OnBeforeRenderAsync</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> async</span><span style="color:#24292E"> (</span></span>
+<span data-line=""><span style="color:#E36209">  pageContext</span></span>
+<span data-line=""><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> ReturnType</span><span style="color:#24292E">&lt;</span><span style="color:#6F42C1">OnBeforeRenderAsync</span><span style="color:#24292E">&gt; </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">  // ...</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote><p>Don&#x27;t omit <code>ReturnType&lt;<!-- -->OnBeforeRenderAsync<!-- -->&gt;</code> (don&#x27;t write<!-- --> <code>const onBeforeRender: OnBeforeRenderAsync = async (pageContext) =&gt; {</code>), otherwise TypeScript won&#x27;t strictly check the return type for unknown extra properties: see this TypeScript<!-- --> <a href="https://www.typescriptlang.org/play?#code/C4TwDgpgBAYgdlAvFAFGAhgJ3QWwFxQDOwmAlnAOYCUSAfFAN5ToFwCuOARhJlAL4AoAQHphUQDLkUAOqYA9pShtC6ChAEBjecSgAzOAEYC8JKgzYcNRPRQMBUZgX0AaO1FESoAFXAQAyurIwYCgAE1kIQjgAcmDNHDAAG3RyV04CACYBPiohd0BQcigAYVlMTAh1YKUVNU04bT10owRkNCxcKgIAJQhgNkw4b0gAHnh6K1RbexYoZ1d8rx9-QNjZeKTyQlSMrKogA">playground</a> <!-- -->and <a href="https://github.com/microsoft/TypeScript/issues/54661">issue</a>.</p></blockquote><blockquote><p>See <a href="/pageContext#typescript">API<!-- --> &gt; <code>pageContext</code> &gt; <!-- -->Typescript</a> for more information on how to extend <code>pageContext</code> <!-- -->with your own extra properties.</p></blockquote>
 <h2 id="see-also">See also</h2>
 <ul>
@@ -233,6 +233,6 @@ automatically integrating data fetching tools (RPC with Telefunc/tRPC, REST with
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.WSwkFu6W.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CI0izy_V.js" type="module" async></script>
       </body>
     </html>
