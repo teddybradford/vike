@@ -3,7 +3,7 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.dSrmF5Nj.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.C1k60JdE.css">
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.I3aL1keV.css">
         <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
@@ -43,27 +43,27 @@
 <p>Most of the migration boils down to the following two steps.</p>
 <p><strong>1. Migrate <code>/renderer/*.page.*</code></strong></p>
 <p>Move your <code>renderer/</code> hooks to <code>+</code> files:</p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- // /renderer/_default.page.client.js</span></span>
-<span data-line=""><span style="color:#22863A">+ // /renderer/+onRenderClient.js</span></span>
+<figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span class="diff remove" data-line=""><span style="color:#6A737D">// /renderer/_default.page.client.js</span></span>
+<span class="diff add" data-line=""><span style="color:#6A737D">// /renderer/+onRenderClient.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#B31D28">- export { render }</span></span>
-<span data-line=""><span style="color:#22863A">+ export { render as onRenderClient }</span></span></code></pre></figure>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- // /renderer/_default.page.server.js</span></span>
-<span data-line=""><span style="color:#22863A">+ // /renderer/+onRenderHtml.js</span></span>
+<span class="diff remove" data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { render } </span></span>
+<span class="diff add" data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { render </span><span style="color:#D73A49">as</span><span style="color:#24292E"> onRenderClient } </span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span class="diff remove" data-line=""><span style="color:#6A737D">// /renderer/_default.page.server.js</span></span>
+<span class="diff add" data-line=""><span style="color:#6A737D">// /renderer/+onRenderHtml.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#B31D28">- export { render }</span></span>
-<span data-line=""><span style="color:#22863A">+ export { render as onRenderHtml }</span></span></code></pre></figure>
+<span class="diff remove" data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { render } </span></span>
+<span class="diff add" data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { render </span><span style="color:#D73A49">as</span><span style="color:#24292E"> onRenderHtml } </span></span></code></pre></figure>
 <p>If you&#x27;ve defined a global <code>onBeforeRender()</code> hook and/or <code>passToClient</code>:</p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- // /renderer/_default.page.server.js</span></span>
-<span data-line=""><span style="color:#22863A">+ // /renderer/+onBeforeRender.js</span></span>
+<figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span class="diff remove" data-line=""><span style="color:#6A737D">// /renderer/_default.page.server.js</span></span>
+<span class="diff add" data-line=""><span style="color:#6A737D">// /renderer/+onBeforeRender.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#24292E">  export { onBeforeRender }</span></span>
-<span data-line=""><span style="color:#B31D28">- export const passToClient = [&#x27;pageProps&#x27;]</span></span></code></pre></figure>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#22863A">+ // /renderer/+config.js</span></span>
-<span data-line=""><span style="color:#22863A">+ </span></span>
-<span data-line=""><span style="color:#22863A">+ export default {</span></span>
-<span data-line=""><span style="color:#22863A">+   passToClient: [&#x27;pageProps&#x27;]</span></span>
-<span data-line=""><span style="color:#22863A">+ }</span></span></code></pre></figure>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onBeforeRender }</span></span>
+<span class="diff remove" data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> const</span><span style="color:#005CC5"> passToClient</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> [</span><span style="color:#032F62">&#x27;pageProps&#x27;</span><span style="color:#24292E">] </span></span></code></pre></figure>
+<div class="diff-entire-file diff-entire-file-added"> <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  passToClient: [</span><span style="color:#032F62">&#x27;pageProps&#x27;</span><span style="color:#24292E">]</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure> </div>
 <blockquote>
 <p>See <a href="/config">API<!-- --> &gt; <!-- -->Config</a> for more information about what <code>+</code> and <code>.h.js</code> means.</p>
 </blockquote>
@@ -71,36 +71,36 @@
 <p>The suffixes such as <code>.page.server.js</code> and <code>.page.client.js</code> don&#x27;t exist anymore. After the feature request <a href="https://github.com/vikejs/vike/issues/744">#744</a> is implemented, you&#x27;ll be able to use <code>.server.js</code> and <code>.client.js</code> suffixes again but note that they&#x27;ll serve another purpose.</p>
 </blockquote>
 <p>Move <code>/renderer/</code> configurations to <code>/renderer/+config.ts</code>:</p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- // /renderer/_default.page.client.ts</span></span>
+<div class="diff-entire-file diff-entire-file-removed"> <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/_default.page.client.ts</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#B31D28">- export { clientRouting }</span></span>
-<span data-line=""><span style="color:#B31D28">- export { hydrationCanBeAborted }</span></span></code></pre></figure>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+config.ts</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { clientRouting }</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { hydrationCanBeAborted }</span></span></code></pre></figure> </div>
+<div class="diff-entire-file diff-entire-file-added"> <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /renderer/+config.ts</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#D73A49"> type</span><span style="color:#24292E"> { Config } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/types&#x27;</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
 <span data-line=""><span style="color:#24292E">  clientRouting: </span><span style="color:#005CC5">true</span><span style="color:#24292E">,</span></span>
 <span data-line=""><span style="color:#24292E">  hydrationCanBeAborted: </span><span style="color:#005CC5">true</span></span>
-<span data-line=""><span style="color:#24292E">} </span><span style="color:#D73A49">satisfies</span><span style="color:#6F42C1"> Config</span></span></code></pre></figure>
+<span data-line=""><span style="color:#24292E">} </span><span style="color:#D73A49">satisfies</span><span style="color:#6F42C1"> Config</span></span></code></pre></figure> </div>
 <p>Move your error page (if you defined one):</p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- // /renderer/_error.page.js</span></span>
-<span data-line=""><span style="color:#22863A">+ // /pages/_error/+Page.js</span></span>
+<figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span class="diff remove" data-line=""><span style="color:#D73A49">/</span><span style="color:#24292E">renderer</span><span style="color:#D73A49">/</span><span style="color:#24292E">_error.page.js </span></span>
+<span class="diff add" data-line=""><span style="color:#D73A49">/</span><span style="color:#24292E">pages</span><span style="color:#D73A49">/</span><span style="color:#24292E">_error</span><span style="color:#D73A49">/+</span><span style="color:#24292E">Page.js </span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#24292E">  export { Page }</span></span></code></pre></figure>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { Page }</span></span></code></pre></figure>
 <p><strong>2. Migrate <code>/pages/**/*.page.*</code></strong></p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- // /pages/some-page/index.page.ts</span></span>
-<span data-line=""><span style="color:#22863A">+ // /pages/some-page/+Page.ts</span></span>
+<figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span class="diff remove" data-line=""><span style="color:#6A737D">// /pages/some-page/index.page.js</span></span>
+<span class="diff add" data-line=""><span style="color:#6A737D">// /pages/some-page/+Page.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#24292E">  export { Page }</span></span></code></pre></figure>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- // /pages/some-page/index.page.server.ts</span></span>
-<span data-line=""><span style="color:#22863A">+ // /pages/some-page/+onBeforeRender.ts</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { Page }</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span class="diff remove" data-line=""><span style="color:#6A737D">// /pages/some-page/index.page.server.js</span></span>
+<span class="diff add" data-line=""><span style="color:#6A737D">// /pages/some-page/+onBeforeRender.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#24292E">  export { onBeforeRender }</span></span></code></pre></figure>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#B31D28">- // /pages/some-page/index.page.route.ts</span></span>
-<span data-line=""><span style="color:#22863A">+ // /pages/some-page/+route.ts</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onBeforeRender }</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span class="diff remove" data-line=""><span style="color:#6A737D">// /pages/some-page/index.page.route.js</span></span>
+<span class="diff add" data-line=""><span style="color:#6A737D">// /pages/some-page/+route.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#24292E">  export default route</span></span></code></pre></figure>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> route</span></span></code></pre></figure>
 <blockquote>
 <p>Each page now lives in its own directory.</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="bash" data-theme="github-light"><code data-language="bash" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D"># ✅ V1 design</span></span>
@@ -207,14 +207,14 @@
 <p>The hooks are equivalent: they just have a new name.</p>
 <p>Also note that <code>doNotPrerender</code> has been renamed:</p>
 <table><thead><tr><th>Old name</th><th>New name</th></tr></thead><tbody><tr><td><code>doNotPrerender: true</code></td><td><code>prerender: false</code></td></tr></tbody></table>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">// /pages/news.page.server.js</span></span>
+<div class="diff-entire-file diff-entire-file-removed"> <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/news.page.server.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#B31D28">- export const doNotPrerender = true</span></span></code></pre></figure>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">// /pages/news/+config.js</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> const</span><span style="color:#005CC5"> doNotPrerender</span><span style="color:#D73A49"> =</span><span style="color:#005CC5"> true</span></span></code></pre></figure> </div>
+<figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/news/+config.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#24292E">  export default {</span></span>
-<span data-line=""><span style="color:#22863A">+   prerender: false</span></span>
-<span data-line=""><span style="color:#24292E">  }</span></span></code></pre></figure>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span class="diff add" data-line=""><span style="color:#24292E">  prerender: </span><span style="color:#005CC5">false</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="custom-hooks-exports">Custom hooks/exports</h2>
 <p>If you use <a href="https://vite-plugin-ssr.com/exports">custom hooks/exports</a>, then replace them with custom hooks/settings.</p>
 <p>You can create your own hooks and settings by using <code>meta</code>:</p>
@@ -326,6 +326,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.1t55Knfe.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.Bi4jHxHd.js" type="module" async></script>
       </body>
     </html>
