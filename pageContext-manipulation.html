@@ -46,20 +46,20 @@
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="don-t-mutate-pagecontext">Don&#x27;t mutate <code>pageContext</code></h2>
 <p>In general, we should try to avoid mutating <code>pageContext</code>:</p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">  // +onBeforeRender.js</span></span>
+<figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// +onBeforeRender.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#24292E">  export { onBeforeRender }</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onBeforeRender }</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#24292E">  function onBeforeRender(pageContext) {</span></span>
-<span data-line=""><span style="color:#24292E">    const starWarsMovies = await getStarWarsMovies()</span></span>
-<span data-line=""><span style="color:#B31D28">-   pageContext.starWarsMovies = starWarsMovies</span></span>
-<span data-line=""><span style="color:#22863A">+   // We should do this instead</span></span>
-<span data-line=""><span style="color:#22863A">+   return {</span></span>
-<span data-line=""><span style="color:#22863A">+     pageContext: {</span></span>
-<span data-line=""><span style="color:#22863A">+       starWarsMovies</span></span>
-<span data-line=""><span style="color:#22863A">+     }</span></span>
-<span data-line=""><span style="color:#22863A">+   }</span></span>
-<span data-line=""><span style="color:#24292E">  }</span></span></code></pre></figure>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> onBeforeRender</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> starWarsMovies</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> getStarWarsMovies</span><span style="color:#24292E">()</span></span>
+<span class="diff remove" data-line=""><span style="color:#24292E">  pageContext.starWarsMovies </span><span style="color:#D73A49">=</span><span style="color:#24292E"> starWarsMovies </span></span>
+<span class="diff add" data-line=""><span style="color:#6A737D">  // We should do this instead</span></span>
+<span class="diff add" data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> { </span></span>
+<span class="diff add" data-line=""><span style="color:#24292E">    pageContext: { </span></span>
+<span class="diff add" data-line=""><span style="color:#24292E">      starWarsMovies </span></span>
+<span class="diff add" data-line=""><span style="color:#24292E">    } </span></span>
+<span class="diff add" data-line=""><span style="color:#24292E">  } </span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p><strong>Why?</strong> Mutations make reasoning harder; it is easier to think in terms of extending an immutable object.</p>
 </blockquote>
@@ -68,23 +68,23 @@
 </blockquote>
 <h2 id="don-t-return-entire-pagecontext">Don&#x27;t return entire <code>pageContext</code></h2>
 <p>We also shouldn&#x27;t do this:</p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="diff" data-theme="github-light"><code data-language="diff" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">  // +onBeforeRender.js</span></span>
+<figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// +onBeforeRender.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#24292E">  export { onBeforeRender }</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { onBeforeRender }</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#24292E">  function onBeforeRender(pageContext) {</span></span>
-<span data-line=""><span style="color:#24292E">    const starWarsMovies = await getStarWarsMovies()</span></span>
-<span data-line=""><span style="color:#24292E">    return {</span></span>
-<span data-line=""><span style="color:#B31D28">-     pageContext: {</span></span>
-<span data-line=""><span style="color:#B31D28">-       ...pageContext,</span></span>
-<span data-line=""><span style="color:#B31D28">-       starWarsMovies</span></span>
-<span data-line=""><span style="color:#B31D28">-     }</span></span>
-<span data-line=""><span style="color:#22863A">+     // Do this instead</span></span>
-<span data-line=""><span style="color:#22863A">+     pageContext: {</span></span>
-<span data-line=""><span style="color:#22863A">+       starWarsMovies</span></span>
-<span data-line=""><span style="color:#22863A">+     }</span></span>
-<span data-line=""><span style="color:#24292E">    }</span></span>
-<span data-line=""><span style="color:#24292E">  }</span></span></code></pre></figure>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> onBeforeRender</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> starWarsMovies</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> getStarWarsMovies</span><span style="color:#24292E">()</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> {</span></span>
+<span class="diff remove" data-line=""><span style="color:#24292E">    pageContext: { </span></span>
+<span class="diff remove" data-line=""><span style="color:#D73A49">      ...</span><span style="color:#24292E">pageContext, </span></span>
+<span class="diff remove" data-line=""><span style="color:#24292E">      starWarsMovies </span></span>
+<span class="diff remove" data-line=""><span style="color:#24292E">    } </span></span>
+<span class="diff add" data-line=""><span style="color:#6A737D">    // Do this instead</span></span>
+<span class="diff add" data-line=""><span style="color:#24292E">    pageContext: { </span></span>
+<span class="diff add" data-line=""><span style="color:#24292E">      starWarsMovies </span></span>
+<span class="diff add" data-line=""><span style="color:#24292E">    } </span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
 <p><strong>Why?</strong> See argument above about mutations.</p>
 </blockquote><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/pageContext-manipulation/+Page.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="navigation-mask"></div></div></div></div>
