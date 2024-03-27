@@ -48,7 +48,7 @@
 <span data-line=""><span style="color:#24292E">    noExternal: [</span><span style="color:#032F62">&#x27;some-npm-package&#x27;</span><span style="color:#24292E">]</span></span>
 <span data-line=""><span style="color:#24292E">  }</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
-<p>See also: <a href="https://vitejs.dev/config/ssr-options.html#ssr-noexternal">Vite &gt; <code>ssr.noExternal</code></a>.</p>
+<p>See <a href="https://vitejs.dev/config/ssr-options.html#ssr-noexternal">Vite &gt; <code>ssr.noExternal</code></a>.</p>
 <blockquote>
 <p>You may need to add nested npm packages to <code>ssr.noExternal</code>, because CJS/ESM issues somtimes cascade down along the &quot;<code>noExternal</code> boundary&quot; as you add npm packages to <code>ssr.noExternal</code>.</p>
 </blockquote>
@@ -56,7 +56,7 @@
 <p>The section <a href="#why">Why</a> explains why <code>ssr.noExternal</code> is a workaround.</p>
 </blockquote>
 <h3 id="vite-plugin-cjs-interop"><code>vite-plugin-cjs-interop</code></h3>
-<p>Upon certain errors, we recommend trying <a href="https://github.com/cyco130/vite-plugin-cjs-interop">vite-plugin-cjs-interop</a> first before trying <code>ssr.noExternal</code>.</p>
+<p>Upon certain errors, we recommend trying the <code>vite-plugin-cjs-interop</code> plugin before trying <code>ssr.noExternal</code>.</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// vite.config.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { cjsInterop } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &quot;vite-plugin-cjs-interop&quot;</span><span style="color:#24292E">;</span></span>
@@ -71,7 +71,8 @@
 <span data-line=""><span style="color:#24292E">    })</span></span>
 <span data-line=""><span style="color:#24292E">  ]</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
-<p>Errors for which we recommend trying <code>vite-plugin-cjs-interop</code> first before trying <code>ssr.noExternal</code>:</p>
+<p>See <a href="https://vitejs.dev/config/ssr-options.html#ssr-noexternal">GitHub &gt; <code>cyco130/vite-plugin-cjs-interop</code></a>.</p>
+<p>Errors for which we recommend trying <code>vite-plugin-cjs-interop</code> before trying <code>ssr.noExternal</code>:</p>
 <a href="#react-invalid-component"><strong>React invalid component</strong></a>
 <div class="with-line-break_white-space"><pre><code>Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: something-else.
 </code></pre></div>
@@ -134,10 +135,10 @@ const { SomeImport } = pkg;
 
 Node.js v18.0.0
 </code></pre></div>
-<p>The workaround proposed by Node.js often doesn&#x27;t work for default exports. If it doesn&#x27;t, try this instead:</p>
-<figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span class="diff remove" data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> theDefaultExport </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-library&#x27;</span></span>
-<span class="diff add" data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> lib </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-library&#x27;</span><span style="color:#24292E">; </span></span>
-<span class="diff add" data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> theDefaultExport</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> lib.default </span><span style="color:#D73A49">??</span><span style="color:#24292E"> lib </span></span></code></pre></figure>
+<p>For default exports, the workaround proposed by Node.js may not work and you may need to do this instead:</p>
+<figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span class="diff remove" data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> DefaultImport </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &quot;some-library&quot;</span><span style="color:#24292E">; </span></span>
+<span class="diff add" data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> pkg </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;some-library&#x27;</span><span style="color:#24292E">; </span></span>
+<span class="diff add" data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> DefaultImport</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> pkg.default </span><span style="color:#D73A49">??</span><span style="color:#24292E"> pkg; </span></span></code></pre></figure>
 <p>For a workaround that is global (and TypeScript friendly), see <a href="#vite-plugin-cjs-interop"><code>vite-plugin-cjs-interop</code></a>.</p>
 <h3 id="err-module-not-found">ERR_MODULE_NOT_FOUND</h3>
 <div class="with-line-break_white-space"><pre><code>node:internal/process/esm_loader:91
