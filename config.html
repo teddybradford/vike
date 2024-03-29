@@ -166,15 +166,19 @@
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
 <span data-line=""><span style="color:#24292E">  Layout</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
-<p>This enables Vike to load the file <code>/pages/+config.js</code> without having to load the file <code>LayoutDefault.jsx</code>. This means that Vike can quickly load all your <code>+config.js</code> files — without having to load any runtime code.</p>
+<p>This enables Vike to load the file <code>/pages/+config.js</code> without having to load <code>LayoutDefault.jsx</code>. Vike can quickly load all your <code>+config.js</code> files, without having to load any runtime code.</p>
 <blockquote>
 <p>These fake imports, which we call <em>pointer imports</em>, apply only to <code>+config.js</code> files. Imports in other <code>+</code> files are normal imports as usual.</p>
 </blockquote>
 <p>It&#x27;s similar to when you import images:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> logo </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;../images/logo.svg&#x27;</span></span>
 <span data-line=""><span style="color:#6A737D">// When you import an image, you don&#x27;t actually load it: you get a URL instead.</span></span>
-<span data-line=""><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(logo) </span><span style="color:#6A737D">// Prints: http://localhost:3000/assets/logo.svg</span></span></code></pre></figure>
-<p>Vike transforms the import inside a <code>+config.js</code> file to be a pointer import if and only if it resolve to a <code>.jsx</code>, <code>.vue</code> or any other file that doesn&#x27;t end with <code>.js</code> or <code>.ts</code> (and their variants <code>.mjs</code>/<code>.mts</code>/<code>.cjs</code>/<code>.cts</code>). For example:</p>
+<span data-line=""><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(logo) </span><span style="color:#6A737D">// Prints: /assets/logo.svg</span></span></code></pre></figure>
+<p>Vike transforms an import inside <code>+config.js</code> to be a pointer import if and only if it resolve to a <code>.jsx</code> file, a <code>.vue</code> file, or any other file that doesn&#x27;t end with <code>.js</code> or <code>.ts</code> (or <code>.mjs</code>/<code>.mts</code>/<code>.cjs</code>/<code>.cts</code>). For example:</p>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/ssr.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: config</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#005CC5"> false</span></span></code></pre></figure>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.js</span></span>
 <span data-line=""><span style="color:#6A737D">// Environment: config</span></span>
 <span data-line=""> </span>
@@ -190,12 +194,8 @@
 <span data-line=""><span style="color:#24292E">  Layout,</span></span>
 <span data-line=""><span style="color:#24292E">  ssr</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/ssr.js</span></span>
-<span data-line=""><span style="color:#6A737D">// Environment: config</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#005CC5"> false</span></span></code></pre></figure>
 <blockquote>
-<p>A <code>.jsx</code> or <code>.vue</code> file is always meant to be client-/server-side runtime code (it&#x27;s never used for the logic of config code), thus it makes sense that Vike treats <code>.jsx</code> and <code>.vue</code> imports always as pointer imports.</p>
+<p>A <code>.jsx</code> or <code>.vue</code> file is always meant to be client- / server-side runtime code. (I.e. it&#x27;s never used for config logic.) That&#x27;s why it makes sense that Vike always treats <code>.jsx</code> and <code>.vue</code> as pointer imports.</p>
 </blockquote>
 <h4 id="manually-mark-pointer-imports">Manually mark pointer imports</h4>
 <p>You can manually mark an import to be a pointer import:</p>
@@ -206,15 +206,15 @@
 <span data-line=""><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(ssr) </span><span style="color:#6A737D">// Prints: import:./ssr:default</span></span></code></pre></figure>
 <blockquote class="custom-icon type-construction note-color-yellow"><div style="margin-bottom:20px"></div><img style="height: 1.275em; width: 1.275em; vertical-align: -20%" draggable="false" alt="🚧" src="https://twemoji.maxcdn.com/v/13.1.1/svg/1f6a7.svg"/><!-- --> <div class="blockquote-content">The <code>with { type: &#x27;pointer&#x27; }</code> import attribute isn&#x27;t implement yet, see workaround at <a href="https://github.com/vikejs/vike/issues/1500">#1500</a>.</div><div style="margin-top:20px"></div></blockquote>
 <h4 id="config-code-isn-t-runtime-code">Config code isn&#x27;t runtime code</h4>
-<p>Note that the config code in itself is never included in runtimes:</p>
+<p>The config code in itself is never included in runtimes:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/some-page/+config.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">// A CSS import inside a config file doesn&#x27;t have any effect. CSS files</span></span>
-<span data-line=""><span style="color:#6A737D">// should be imported in runtime files such as +Page.js instead.</span></span>
+<span data-line=""><span style="color:#6A737D">// A CSS import in a config file doesn&#x27;t have any effect. CSS should</span></span>
+<span data-line=""><span style="color:#6A737D">// be imported in runtime files such as +Page.js instead.</span></span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#032F62"> &#x27;./some.css&#x27;</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#6A737D">// This log is printed only when Vike loads this +config.js file (at development, and when</span></span>
-<span data-line=""><span style="color:#6A737D">// building your app). This log isn&#x27;t included in the client runtime nor server runtime.</span></span>
+<span data-line=""><span style="color:#6A737D">// building your app). This log isn&#x27;t included in the client nor server runtime.</span></span>
 <span data-line=""><span style="color:#6A737D">// Consequently, you won&#x27;t see this log in production.</span></span>
 <span data-line=""><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">&quot;I will never be logged in production&quot;</span><span style="color:#24292E">)</span></span></code></pre></figure>
 <h2 id="see-also">See also</h2>
