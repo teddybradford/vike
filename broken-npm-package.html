@@ -64,9 +64,18 @@
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
 <span data-line=""><span style="color:#24292E">  plugins: [</span></span>
 <span data-line=""><span style="color:#6F42C1">    cjsInterop</span><span style="color:#24292E">({</span></span>
+<span data-line=""><span style="color:#6A737D">      // Add broken npm package here</span></span>
 <span data-line=""><span style="color:#24292E">      dependencies: [</span></span>
-<span data-line=""><span style="color:#6A737D">        // Add problematic npm package here</span></span>
-<span data-line=""><span style="color:#032F62">        &quot;some-package/**&quot;</span><span style="color:#24292E">, </span><span style="color:#6A737D">// Use /** to apply the interop patch to all imports</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">        // Apply patch to root import:</span></span>
+<span data-line=""><span style="color:#6A737D">        //   import someImport from &#x27;some-package&#x27;</span></span>
+<span data-line=""><span style="color:#032F62">        &quot;some-package&quot;</span><span style="color:#24292E">,</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">        // Apply patch to all sub imports:</span></span>
+<span data-line=""><span style="color:#6A737D">        //   import someImport from &#x27;some-package/path&#x27;</span></span>
+<span data-line=""><span style="color:#6A737D">        //   import someImport from &#x27;some-package/sub/path&#x27;</span></span>
+<span data-line=""><span style="color:#6A737D">        //   ...</span></span>
+<span data-line=""><span style="color:#032F62">        &quot;some-package/**&quot;</span><span style="color:#24292E">,</span></span>
 <span data-line=""><span style="color:#24292E">      ]</span></span>
 <span data-line=""><span style="color:#24292E">    })</span></span>
 <span data-line=""><span style="color:#24292E">  ]</span></span>
