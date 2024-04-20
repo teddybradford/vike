@@ -67,8 +67,7 @@ automatically integrating data fetching tools (RPC with Telefunc/tRPC, REST with
 <p>Another difference is that the entire <code>pageContext.data</code> value is always sent to the client-side, whereas with <code>onBeforeRender()</code> you can (and have to) decide which values are sent to the client-side by using <a href="/passToClient"><code>passToClient</code></a>.</p>
 <p>In a nutshell: while <code>onBeforeRender()</code> requires more manual work, it also gives you more control.</p>
 <h2 id="client-side">Client-side</h2>
-<p>Like <code>data()</code>, the <code>onBeforeRender()</code> hook always runs on the server-side.</p>
-<p>But you can use the <a href="/file-env">file extension <code>.shared.js</code></a> to make Vike run <code>onBeforeRender()</code> on the client-side, see <a href="/data#client-side">API<!-- --> &gt; <code>data()</code> hook<!-- --> &gt; <!-- -->Client side</a>.</p>
+<p>Like <code>data()</code>, the <code>onBeforeRender()</code> hook always runs on the server-side but you can use the <a href="/file-env">file extension <code>.shared.js</code></a> to make Vike run <code>onBeforeRender()</code> on the client-side, see <a href="/data#client-side">API<!-- --> &gt; <code>data()</code> hook<!-- --> &gt; <!-- -->Client-side</a>.</p>
 <h2 id="onbeforerender-meta"><code>onBeforeRender()</code> + <code>meta</code></h2>
 <p>Using <code>onBeforeRender()</code> together with custom hooks and settings (see <a href="/meta"><code>meta</code></a>) is a powerful technique enabling you to implement your own tailored DX.</p>
 <p>For example.</p>
