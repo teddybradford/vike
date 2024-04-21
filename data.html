@@ -169,7 +169,7 @@ you can tell Vike to run <code>data()</code> also on the client-side. This will 
 </blockquote>
 <p>You can also set <code>.client.js</code> instead of <code>.shared.js</code>: Vike will then always call <code>data()</code> on the client-side (never on the server-side).</p>
 <blockquote>
-<p>Alternatively to <code>.shared.js</code> and <code>.client.js</code>, you can change the <a href="/meta#example-modify-data-env"><code>meta.env</code> setting</a> of the <code>data()</code> hook in a global fashion, alleviating the need to add <code>.shared.js</code> / <code>.client.js</code> to each <code>+data.js</code> file.</p>
+<p>Alternatively, instead of using <code>.shared.js</code> and <code>.client.js</code>, you can modify the <a href="/meta#example-modify-data-env"><code>meta.env</code> setting</a> of the <code>data()</code> hook in a global fashion, removing the need to add <code>.shared.js</code> / <code>.client.js</code> to each of your <code>+data.js</code> files.</p>
 </blockquote>
 <h2 id="pagecontext-data"><code>pageContext.data</code></h2>
 <p>The <code>data()</code> hook sets the value of <code>pageContext.data</code>. (While <code>useData()</code> exposes the value of <code>pageContext.data</code>.)</p>

@@ -318,7 +318,7 @@
 </li>
 </ul>
 <h2 id="example-modify-data-env">Example: modify <code>data()</code> env</h2>
-<p>You can use <code>meta</code> to change the environment in which built-in hooks are loaded. For example you can change the environment of <code>data()</code> from <code>{ server: true, client: false }</code> to <code>{ server: true, client: true }</code>.</p>
+<p>You can use <code>meta</code> to change the environment in which built-in hooks are loaded. For example, you can change the environment of the <a href="/data"><code>data()</code> hook</a> from <code>{ server: true, client: false }</code> to <code>{ server: true, client: true }</code>.</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/some-page/+config.ts</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#D73A49"> type</span><span style="color:#24292E"> { Config } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/types&#x27;</span></span>
@@ -336,10 +336,21 @@
 <blockquote>
 <p>Making <code>data()</code> isomorphic allows you to fetch data directly between the user&#x27;s browser and the data source (without involving your server), see <a href="/data#client-side">API<!-- --> &gt; <code>data()</code> hook<!-- --> &gt; <!-- -->Client-side</a>.</p>
 </blockquote>
-<p>For more convenience, you can create a <code>dataIsomorph</code> toggle:</p>
+<p>If you want to change the <code>meta.env</code> on a page-by-page basis, you can use the the <a href="/file-env">file extension <code>.shared.js</code></a> (renaming <code>+data.js</code> to <code>+data.shared.js</code>), or you can create a new <code>dataIsomorph</code> config:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.ts</span></span>
 <span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { config }</span></span>
+<span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#D73A49"> type</span><span style="color:#24292E"> { Config, Effect } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/types&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> config</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  meta: {</span></span>
+<span data-line=""><span style="color:#24292E">    dataIsomorph: {</span></span>
+<span data-line=""><span style="color:#24292E">      env: { config: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> },</span></span>
+<span data-line=""><span style="color:#24292E">      effect</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">} </span><span style="color:#D73A49">satisfies</span><span style="color:#6F42C1"> Config</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">const</span><span style="color:#6F42C1"> effect</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> Effect</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> ({ </span><span style="color:#E36209">configDefinedAt</span><span style="color:#24292E">, </span><span style="color:#E36209">configValue</span><span style="color:#24292E"> }) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
 <span data-line=""><span style="color:#D73A49">  if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">typeof</span><span style="color:#24292E"> configValue </span><span style="color:#D73A49">!==</span><span style="color:#032F62"> &#x27;boolean&#x27;</span><span style="color:#24292E">) {</span></span>
@@ -354,16 +365,7 @@
 <span data-line=""><span style="color:#24292E">      }</span></span>
 <span data-line=""><span style="color:#24292E">    }</span></span>
 <span data-line=""><span style="color:#24292E">  }</span></span>
-<span data-line=""><span style="color:#24292E">}</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
-<span data-line=""><span style="color:#24292E">  meta: {</span></span>
-<span data-line=""><span style="color:#24292E">    dataIsomorph: {</span></span>
-<span data-line=""><span style="color:#24292E">      env: { config: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> },</span></span>
-<span data-line=""><span style="color:#24292E">      effect</span></span>
-<span data-line=""><span style="color:#24292E">    }</span></span>
-<span data-line=""><span style="color:#24292E">  }</span></span>
-<span data-line=""><span style="color:#24292E">} </span><span style="color:#D73A49">satisfies</span><span style="color:#6F42C1"> Config</span></span></code></pre></figure>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>Example:</p>
 <ul>
 <li><a href="https://github.com/vikejs/vike/blob/43503a4829e4bb0171785bc8fa501c7ca096a150/examples/react-full/">/examples/react-full/</a>
