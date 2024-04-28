@@ -451,6 +451,29 @@
 <blockquote>
 <p><code>sqlQuery</code> is a custom setting, see <a href="#example-sql">Example: <code>sql</code></a>.</p>
 </blockquote>
+<p>If you define a <a href="#api"><code>cumulative</code> config</a>, then also make sure to use the global interface <code>Vike.ConfigResolved</code>.</p>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.ts</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: config</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  meta: {</span></span>
+<span data-line=""><span style="color:#24292E">    viewport: {</span></span>
+<span data-line=""><span style="color:#24292E">      env: { server: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">declare</span><span style="color:#24292E"> global {</span></span>
+<span data-line=""><span style="color:#D73A49">  namespace</span><span style="color:#6F42C1"> Vike</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#D73A49">    interface</span><span style="color:#6F42C1"> Config</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#E36209">      viewport</span><span style="color:#D73A49">?:</span><span style="color:#005CC5"> number</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#D73A49">    interface</span><span style="color:#6F42C1"> ConfigResolved</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">      // Set the pageContext.config.viewport type</span></span>
+<span data-line=""><span style="color:#E36209">      viewport</span><span style="color:#D73A49">?:</span><span style="color:#005CC5"> number</span><span style="color:#24292E">[]</span></span>
+<span data-line=""><span style="color:#24292E">    }</span></span>
+<span data-line=""><span style="color:#24292E">  }</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="see-also">See also</h2>
 <ul>
 <li>
