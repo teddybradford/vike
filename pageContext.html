@@ -44,11 +44,11 @@
 <p><strong><code>pageContext.urlOriginal</code></strong>: the current URL.</p>
 <p>On the server-side, <code>pageContext.urlOriginal</code> is the value you passed at the server middleware:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// Server middleware</span></span>
-<span data-line=""><span style="color:#24292E">app.</span><span style="color:#6F42C1">get</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;*&#x27;</span><span style="color:#24292E">, </span><span style="color:#D73A49">async</span><span style="color:#24292E"> (</span><span style="color:#E36209">req</span><span style="color:#24292E">, </span><span style="color:#E36209">res</span><span style="color:#24292E">, </span><span style="color:#E36209">next</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">app.</span><span style="color:#6F42C1">get</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;*&#x27;</span><span style="color:#24292E">, </span><span style="color:#D73A49">async</span><span style="color:#24292E"> (</span><span style="color:#E36209">req</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
 <span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> pageContextInit</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> {}</span></span>
 <span data-line=""><span style="color:#6A737D">  // `pageContext.urlOriginal` is defined here</span></span>
 <span data-line=""><span style="color:#24292E">  pageContextInit.urlOriginal </span><span style="color:#D73A49">=</span><span style="color:#24292E"> req.url</span></span>
-<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> result</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> renderPage</span><span style="color:#24292E">(pageContextInit)</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> pageContext</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> renderPage</span><span style="color:#24292E">(pageContextInit)</span></span>
 <span data-line=""><span style="color:#6A737D">  /* ... */</span></span>
 <span data-line=""><span style="color:#24292E">})</span></span></code></pre></figure>
 <p>On the client-side:</p>
@@ -86,6 +86,12 @@
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 </li>
 <li>
+<p><strong><code>pageContext.headers</code></strong>: The headers of the HTTP Request. As a string object (<code>Record&lt;string, string&gt;</code>) normalized by Vike, see <a href="/headers">HTTP Headers</a>.</p>
+</li>
+<li>
+<p><strong><code>pageContext.headersOriginal</code></strong>: The headers of the HTTP Request. The original object provided by the server, see <a href="/headers">HTTP Headers</a>.</p>
+</li>
+<li>
 <p><strong><code>pageContext.config</code></strong>: See <a href="/meta">API<!-- --> &gt; <code>meta</code></a>.</p>
 </li>
 <li>
@@ -115,19 +121,17 @@
 <ul>
 <li>
 <p>At your <a href="/renderPage">Vike server middleware <code>renderPage()</code></a>:</p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">app.</span><span style="color:#6F42C1">get</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;*&#x27;</span><span style="color:#24292E">, </span><span style="color:#D73A49">async</span><span style="color:#24292E"> (</span><span style="color:#E36209">req</span><span style="color:#24292E">, </span><span style="color:#E36209">res</span><span style="color:#24292E">, </span><span style="color:#E36209">next</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">app.</span><span style="color:#6F42C1">get</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;*&#x27;</span><span style="color:#24292E">, </span><span style="color:#D73A49">async</span><span style="color:#24292E"> (</span><span style="color:#E36209">req</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
 <span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> pageContextInit</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> {</span></span>
 <span data-line=""><span style="color:#24292E">    urlOriginal: req.url,</span></span>
+<span data-line=""><span style="color:#24292E">    headersOriginal: req.headers,</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#6A737D">    // ***************************************</span></span>
 <span data-line=""><span style="color:#6A737D">    // **** Custom pageContext properties ****</span></span>
 <span data-line=""><span style="color:#6A737D">    // ***************************************</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">    // Common use cases:</span></span>
-<span data-line=""><span style="color:#6A737D">    // pageContext.user – information about logged-in user</span></span>
+<span data-line=""><span style="color:#6A737D">    // Common use case: make information about logged-in user available at pageContext.user</span></span>
 <span data-line=""><span style="color:#24292E">    user: req.user,</span></span>
-<span data-line=""><span style="color:#6A737D">    // pageContext.headers – e.g. make cookies available over pageContext.headers.cookies</span></span>
-<span data-line=""><span style="color:#24292E">    headers: req.headers,</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#6A737D">    // Or any other value:</span></span>
 <span data-line=""><span style="color:#6A737D">    // pageContext.anyCustomProp</span></span>
