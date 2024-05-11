@@ -31,7 +31,8 @@
 <span data-line=""> </span>
 <span data-line=""><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">&quot;I&#x27;m the first line of client-side JavaScript.&quot;</span><span style="color:#24292E">)</span></span></code></pre></figure>
 <blockquote>
-<p>If you inspect the HTML of your page, you&#x27;ll see that it&#x27;s the first JavaScript file to be referenced, and thus the first JavaScript file to be executed.</p>
+<p>In production, it&#x27;s the first JavaScript code to be executed.</p>
+<p>In development, it&#x27;s also first but only after Vite&#x27;s HMR code. (In development, Vite&#x27;s HMR preamble code needs to be run first. In production, the HMR preamble code isn&#x27;t injected.)</p>
 </blockquote>
 <blockquote>
 <p>The code of <code>+client.js</code> isn&#x27;t re-executed upon client-side navigation. For executing code upon the lifecycle of page rendering, see following hooks instead:</p>
