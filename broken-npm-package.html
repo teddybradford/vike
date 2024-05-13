@@ -31,10 +31,11 @@
 <p>The situation is going to improve over time as Vite-powered frameworks gain popularity.</p>
 </blockquote>
 <h2 id="workaround">Workaround</h2>
-<p>You can workaround problematic npm packages by using either:</p>
+<p>You can workaround problematic npm packages by using on of the following:</p>
 <ul>
-<li><code>ssr.noExternal</code> or</li>
-<li><code>vite-plugin-cjs-interop</code>.</li>
+<li><code>ssr.noExternal</code></li>
+<li><code>vite-plugin-cjs-interop</code></li>
+<li>SSR opt-out</li>
 </ul>
 <blockquote>
 <p>The workarounds usually work. But if you struggle working around a broken npm package then feel free to <a href="/faq#how-can-i-reach-out-for-help">reach out for help</a>.</p>
@@ -87,6 +88,19 @@
 <a href="#named-export-not-found"><strong>Named export not found</strong></a>
 <div class="with-line-break_white-space"><pre><code>SyntaxError: Named export &#x27;SomeImport&#x27; not found. The requested module &#x27;some-library&#x27; is a CommonJS module, which may not support all module.exports as named exports.
 </code></pre></div>
+<h3 id="ssr-opt-out">SSR opt-out</h3>
+<p>As a last resort, if both <code>ssr.noExternal</code> and <code>vite-plugin-cjs-interop</code> doesn&#x27;t work, you can opt out of SSR:</p>
+<ul>
+<li>
+<a href="/ClientOnly">API<!-- --> &gt; <code>ClientOnly</code></a>
+</li>
+<li>
+<a href="/ssr">API<!-- --> &gt; <code>ssr</code></a>
+</li>
+</ul>
+<blockquote>
+<p>Opting out of SSR almost always works, see explanation at <a href="#why">Why</a>.</p>
+</blockquote>
 <h2 id="why">Why</h2>
 <p>You may ask yourself how it&#x27;s possible that an npm package can publish invalid JavaScript code that doesn&#x27;t get fixed for months.</p>
 <p>The main reason is that some frameworks such as Next.js transpile the server-side code of npm packages, whereas Vite transpiles only the client-side code of npm packages. When server-side code contains invalid JavaScript then Node.js crashes and throws one of <a href="#common-errors">these errors</a>, while transpilers are more tolerant and transform invalid JavaScript (that Node.js isn&#x27;t able to execute) into valid JavaScript (that Node.js is able to execute).</p>
