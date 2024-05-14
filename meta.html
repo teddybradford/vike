@@ -379,20 +379,20 @@
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
 <span data-line=""><span style="color:#24292E">  meta: {</span></span>
 <span data-line=""><span style="color:#24292E">    someSettingOrHook: {</span></span>
-<span data-line=""><span style="color:#6A737D">      // Required. Defines the environment in which the config value is loaded.</span></span>
+<span data-line=""><span style="color:#6A737D">      // [Required] Defines the environment in which the config value is loaded.</span></span>
 <span data-line=""><span style="color:#24292E">      env: {</span></span>
-<span data-line=""><span style="color:#6A737D">        //  Load the config value on the server.</span></span>
+<span data-line=""><span style="color:#6A737D">        // Load the config value on the server. [Required]</span></span>
 <span data-line=""><span style="color:#24292E">        server: </span><span style="color:#005CC5">true</span><span style="color:#24292E">,</span></span>
-<span data-line=""><span style="color:#6A737D">        //  Load the config value on the client.</span></span>
+<span data-line=""><span style="color:#6A737D">        // Load the config value on the client. [Required]</span></span>
 <span data-line=""><span style="color:#24292E">        client: </span><span style="color:#005CC5">true</span><span style="color:#24292E">,</span></span>
-<span data-line=""><span style="color:#6A737D">        // Load the config value at config time. Required for `effect`. Optional.</span></span>
+<span data-line=""><span style="color:#6A737D">        // Load the config value at config-time (when Vike loads +config.js files). [Optional]</span></span>
 <span data-line=""><span style="color:#24292E">        config: </span><span style="color:#005CC5">false</span><span style="color:#6A737D"> // default value</span></span>
 <span data-line=""><span style="color:#24292E">      },</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">      // Optional. Whether config values should be merged instead of overwritten.</span></span>
+<span data-line=""><span style="color:#6A737D">      // [Optional] Whether config values should be merged (instead of overwritten).</span></span>
 <span data-line=""><span style="color:#24292E">      cumulative: </span><span style="color:#005CC5">false</span><span style="color:#24292E">, </span><span style="color:#6A737D">// default value</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">      // Optional. Function called when the config value is defined.</span></span>
+<span data-line=""><span style="color:#6A737D">      // [Optional] Function called when the config value is loaded at config-time.</span></span>
 <span data-line=""><span style="color:#6A737D">      // Requires `env.config` to be `true`.</span></span>
 <span data-line=""><span style="color:#6F42C1">      effect</span><span style="color:#24292E">({ </span><span style="color:#E36209">configDefinedAt</span><span style="color:#24292E">, </span><span style="color:#E36209">configValue</span><span style="color:#24292E"> }) {</span></span>
 <span data-line=""><span style="color:#D73A49">        if</span><span style="color:#24292E"> (someCondition) {</span></span>
