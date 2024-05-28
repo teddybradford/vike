@@ -89,9 +89,9 @@
 <h2 id="verbose">Verbose</h2>
 <p>Vike prettifies transpilation errors, such as errors thrown by <a href="https://esbuild.github.io/">esbuild</a> and <a href="https://babeljs.io/">Babel</a>.</p>
 <p>While Vike is careful about not removing relevant information, it may mistakenly do so. In that case <a href="https://github.com/vikejs/vike/issues/new">create a new GitHub issue</a>. Until a Vike maintainer fixes the issue you can use the debug flag <code>DEBUG=vike:error</code>.</p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="shell" data-theme="github-light"><code data-language="shell" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D"># Show verbose and original errors</span></span>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="shell" data-theme="github-light"><code data-language="shell" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D"># Show verbose original errors, with infinite stack trace (`Error.stackTraceLimit = Infinity`)</span></span>
 <span data-line=""><span style="color:#24292E">DEBUG</span><span style="color:#D73A49">=</span><span style="color:#032F62">vike:error</span><span style="color:#6F42C1"> npm</span><span style="color:#032F62"> run</span><span style="color:#032F62"> dev</span></span></code></pre></figure>
-<p>For even more verbose errors:</p>
+<p>For even more information:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="shell" data-theme="github-light"><code data-language="shell" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D"># Usually only used by Vike maintainers</span></span>
 <span data-line=""><span style="color:#24292E">DEBUG</span><span style="color:#D73A49">=</span><span style="color:#032F62">vike:error,vike:log</span><span style="color:#6F42C1"> npm</span><span style="color:#032F62"> run</span><span style="color:#032F62"> dev</span></span></code></pre></figure>
 <h2 id="see-also">See also</h2>
