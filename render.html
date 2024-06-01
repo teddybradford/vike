@@ -29,9 +29,11 @@
 <span data-line=""><span style="color:#6F42C1">render</span><span style="color:#24292E">(abortStatusCode: </span><span style="color:#005CC5">401</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> 403</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> 404</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> 429</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> 500</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> 503</span><span style="color:#24292E">, abortReason</span><span style="color:#D73A49">?:</span><span style="color:#24292E"> unknown)</span></span>
 <span data-line=""><span style="color:#6A737D">// Render another page (aka URL rewrite)</span></span>
 <span data-line=""><span style="color:#6F42C1">render</span><span style="color:#24292E">(url: </span><span style="color:#032F62">`/${</span><span style="color:#24292E">string</span><span style="color:#032F62">}`</span><span style="color:#24292E">, abortReason</span><span style="color:#D73A49">?:</span><span style="color:#24292E"> unknown)</span></span></code></pre></figure>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { render } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/abort&#x27;</span></span>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/some-page/+someHook.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> onSomeHook</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { render } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/abort&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> someHook</span><span style="color:#24292E">() {</span></span>
 <span data-line=""><span style="color:#D73A49">  if</span><span style="color:#24292E"> (someCondition) {</span></span>
 <span data-line=""><span style="color:#D73A49">    throw</span><span style="color:#6F42C1"> render</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;/login&#x27;</span><span style="color:#24292E">)</span></span>
 <span data-line=""><span style="color:#24292E">  }</span></span>
@@ -68,6 +70,9 @@
 <ul>
 <li>
 <a href="/redirect">API<!-- --> &gt; <code>throw redirect()</code></a>
+</li>
+<li>
+<a href="/guard">API<!-- --> &gt; <code>guard()</code> hook</a>
 </li>
 <li>
 <a href="/abort#throw-redirect-vs-throw-render-vs-navigate">Abort<!-- --> &gt; <code>throw redirect()</code> VS <code>throw render()</code> VS <code>navigate()</code></a>
