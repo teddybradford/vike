@@ -3,7 +3,7 @@
       <head>
         <link rel="stylesheet" type="text/css" href="/assets/static/P.OUAR8nLa.css">
         <link rel="stylesheet" type="text/css" href="/assets/static/onRenderHtml.db-KUDLH.css">
-        <link rel="stylesheet" type="text/css" href="/assets/static/client.I3aL1keV.css">
+        <link rel="stylesheet" type="text/css" href="/assets/static/client.F1ZpwzLw.css">
         <link rel="preload" href="/assets/static/Inter-Var.dulBMp8D.ttf" as="font" type="font/ttf" crossorigin>
         <meta charset="UTF-8" />
         <link rel="icon" href="/assets/static/vike-square-gradient.yySbJPh3.svg" />
@@ -76,7 +76,7 @@
 </blockquote>
 <h2 id="inheritance">Inheritance</h2>
 <p>You can apply configurations to all your pages, a subset of pages, or one page only.</p>
-<p>Example of configuring the <a href="/Layout"><code>Layout</code></a> and <a href="/ssr"><code>ssr</code></a> settings:</p>
+<p>For example with the <a href="/Layout"><code>Layout</code></a> and <a href="/ssr"><code>ssr</code></a> settings:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> Layout </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;../layouts/LayoutDefault&#x27;</span></span>
@@ -87,21 +87,21 @@
 <span data-line=""><span style="color:#6A737D">//   /pages/product/@id/+Page.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
-<span data-line=""><span style="color:#6A737D">  // Set &lt;Layout&gt; for all pages (as overridable default)</span></span>
+<span data-line=""><span style="color:#6A737D">  // The &lt;Layout&gt; for all pages (as overridable default)</span></span>
 <span data-line=""><span style="color:#24292E">  Layout,</span></span>
 <span data-line=""><span style="color:#6A737D">  // Disable SSR for all pages (as overridable default)</span></span>
 <span data-line=""><span style="color:#24292E">  ssr: </span><span style="color:#005CC5">false</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/admin/+config.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">// Applies only to Admin Panel pages:</span></span>
+<span data-line=""><span style="color:#6A737D">// Applies only to admin pages:</span></span>
 <span data-line=""><span style="color:#6A737D">//   /pages/admin/income/+Page.js</span></span>
 <span data-line=""><span style="color:#6A737D">//   /pages/admin/kpi/+Page.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> Layout </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;../../layouts/LayoutDashboard.jsx&#x27;</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
-<span data-line=""><span style="color:#6A737D">  // Set the &lt;Layout&gt; for all Admin Panel pages (overriding the default set by /pages/+config.js)</span></span>
+<span data-line=""><span style="color:#6A737D">  // The &lt;Layout&gt; of all admin pages (overriding the default set by /pages/+config.js)</span></span>
 <span data-line=""><span style="color:#24292E">  Layout</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/@id/+config.js</span></span>
@@ -112,7 +112,7 @@
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> Layout </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./Layout&#x27;</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
-<span data-line=""><span style="color:#6A737D">  // Set the &lt;Layout&gt; of the product page (overriding the default set by /pages/+config.js)</span></span>
+<span data-line=""><span style="color:#6A737D">  // The &lt;Layout&gt; of the product page (overriding the default set by /pages/+config.js)</span></span>
 <span data-line=""><span style="color:#24292E">  Layout,</span></span>
 <span data-line=""><span style="color:#6A737D">  // Enable SSR (overriding the default set by /pages/+config.js)</span></span>
 <span data-line=""><span style="color:#24292E">  ssr: </span><span style="color:#005CC5">true</span></span>
@@ -135,7 +135,7 @@
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> vikeVue </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-vue/config&#x27;</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">// Make all Admin Panel pages use Vue without SSR:</span></span>
+<span data-line=""><span style="color:#6A737D">// Admin pages using Vue without SSR:</span></span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
 <span data-line=""><span style="color:#24292E">  ssr: </span><span style="color:#005CC5">false</span><span style="color:#24292E">,</span></span>
 <span data-line=""><span style="color:#24292E">  extends: [vikeVue]</span></span>
@@ -144,7 +144,7 @@
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> vikeReact </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-react/config&#x27;</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">// Make the product page use React with SSR:</span></span>
+<span data-line=""><span style="color:#6A737D">// Product page using React with SSR:</span></span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
 <span data-line=""><span style="color:#24292E">  ssr: </span><span style="color:#005CC5">true</span><span style="color:#24292E">,</span></span>
 <span data-line=""><span style="color:#24292E">  extends: [vikeReact]</span></span>
@@ -253,6 +253,6 @@
       });
     </script>
   
-        <script src="/assets/entries/-brillout_docpress_renderer_client.D1KvT7eM.js" type="module" async></script>
+        <script src="/assets/entries/-brillout_docpress_renderer_client.CJl4wFwd.js" type="module" async></script>
       </body>
     </html>
