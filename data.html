@@ -175,7 +175,7 @@ you can tell Vike to run <code>data()</code> also on the client-side. This will 
 <p>The <code>data()</code> hook sets the value of <code>pageContext.data</code>. (While <code>useData()</code> exposes the value of <code>pageContext.data</code>.)</p>
 <p>This means that, beyond using <a href="/useData"><code>useData()</code></a>, you can also access the data in other hooks over <code>pageContext.data</code>.</p>
 <h2 id="without-usedata">Without <code>useData()</code></h2>
-<p>The <code>data()</code> hook is usually used together with the component hook <a href="/useData"><code>useData()</code></a> which is provided by the <!-- -->UI framework <a href="/extensions">Vike extension</a> (<a href="/vike-react"><code>vike-react</code></a>/<a href="/vike-vue"><code>vike-vue</code></a>/<a href="/vike-solid"><code>vike-solid</code></a>)<!-- -->.</p>
+<p>The <code>data()</code> hook is usually used together with the component hook <a href="/useData"><code>useData()</code></a> which is provided by the <!-- -->UI framework <a href="/extensions">Vike extension</a> <a href="/vike-react"><code>vike-react</code></a>/<a href="/vike-vue"><code>vike-vue</code></a>/<a href="/vike-solid"><code>vike-solid</code></a>.</p>
 <p>In general, for improved DX, we recommend using <code>data()</code> together with a <code>useData()</code> implementation.</p>
 <blockquote>
 <p>In case you don&#x27;t use <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>, you can implement <code>useData()</code> yourself as shown at <a href="/useData#without-vike-react-vue-solid">API<!-- --> &gt; <code>useData()</code> &gt; <!-- -->Without <code>vike-{react,vue,solid}</code></a></p>
