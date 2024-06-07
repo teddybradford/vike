@@ -29,8 +29,10 @@
 <span data-line=""><span style="color:#24292E">====================           </span><span style="color:#032F62">======</span></span>
 <span data-line=""><span style="color:#6F42C1">pages/about/+Page.js</span><span style="color:#032F62">           /about</span></span>
 <span data-line=""><span style="color:#6F42C1">pages/faq/+Page.js</span><span style="color:#032F62">             /faq</span></span></code></pre></figure>
-<p>For more advanced routing, use <a href="/route-string">Route Strings</a> and <a href="route-function">Route Functions</a> instead.</p>
-<h4 id="paramterized-routes">Paramterized routes</h4>
+<blockquote>
+<p>You can use a <a href="/route-string">Route String</a> or <a href="route-function">Route Function</a> to override the route of a page determined by Filesystem Routing.</p>
+</blockquote>
+<h3 id="paramterized-routes">Paramterized routes</h3>
 <p>You can define parameterized routes:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="bash" data-theme="github-light"><code data-language="bash" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6F42C1">FILESYSTEM</span><span style="color:#032F62">                     URL</span></span>
 <span data-line=""><span style="color:#24292E">========================       </span><span style="color:#032F62">===========================</span></span>
@@ -38,8 +40,8 @@
 <blockquote>
 <p>The parameter <code>id</code> is available at <a href="/pageContext"><code>pageContext.routeParams.id</code></a>.</p>
 </blockquote>
-<h4 id="case-sensitive">Case sensitive</h4>
-<p>It&#x27;s case senstive:</p>
+<h3 id="case-sensitive">Case sensitive</h3>
+<p>Filesystem Routing is case senstive:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="bash" data-theme="github-light"><code data-language="bash" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6F42C1">FILESYSTEM</span><span style="color:#032F62">                     URL</span></span>
 <span data-line=""><span style="color:#24292E">========================       </span><span style="color:#032F62">======</span></span>
 <span data-line=""><span style="color:#6F42C1">pages/HELLO/+Page.js</span><span style="color:#032F62">           /HELLO</span></span></code></pre></figure>
@@ -58,18 +60,30 @@
 <span data-line=""><span style="color:#6F42C1">pages/pages/src/src/index/pages/about/+Page.js</span><span style="color:#032F62">      /about</span></span>
 <span data-line=""><span style="color:#6F42C1">contact/+Page.js</span><span style="color:#032F62">                                    /contact</span></span></code></pre></figure>
 <h3 id="domain-driven-file-structure">Domain-driven file structure</h3>
-<p>You can setup a <a href="/file-structure#domain-driven">domain-driven file structure</a> such as:</p>
+<p>You can setup a file structure that is domain-driven such as:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="bash" data-theme="github-light"><code data-language="bash" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6F42C1">FILESYSTEM</span><span style="color:#032F62">                         URL</span></span>
 <span data-line=""><span style="color:#24292E">==========================         </span><span style="color:#032F62">============</span></span>
 <span data-line=""><span style="color:#6F42C1">user/pages/list/+Page.js</span><span style="color:#032F62">           /user/list</span></span>
 <span data-line=""><span style="color:#6F42C1">user/pages/create/+Page.js</span><span style="color:#032F62">         /user/create</span></span>
 <span data-line=""><span style="color:#6F42C1">todo/pages/list/+Page.js</span><span style="color:#032F62">           /todo/list</span></span>
 <span data-line=""><span style="color:#6F42C1">todo/pages/create/+Page.js</span><span style="color:#032F62">         /todo/create</span></span></code></pre></figure>
-<p>You can change the URL root of Filesystem Routing by using <a href="/filesystemRoutingRoot"><code>filesystemRoutingRoot</code></a>.</p>
+<p>See <a href="/file-structure#domain-driven">Guides<!-- --> &gt; <!-- -->File Structure<!-- --> &gt; <!-- -->Domain driven</a>.</p>
+<h3 id="crawl">Crawl</h3>
+<p>Vike crawls all files inside <a href="https://vitejs.dev/config/shared-options.html#root">Vite&#x27;s <code>root</code> directory</a>.</p>
+<p>In other words: all your <a href="/config#files"><code>+</code> files</a> need to live inside <code>root</code>.</p>
+<blockquote>
+<p>You can use soft symlinks (<code>$ ln -s</code>) to link outside directories into <code>root</code> and thus make them crawlable.</p>
+</blockquote>
+<blockquote>
+<p>You can use the <a href="/filesystemRoutingRoot"><code>filesystemRoutingRoot</code> setting</a> to get lot of flexibility, as shown for example at <a href="/file-structure#domain-driven">Guides<!-- --> &gt; <!-- -->File Structure<!-- --> &gt; <!-- -->Domain driven</a>.</p>
+</blockquote>
 <h2 id="see-also">See also</h2>
 <ul>
 <li>
 <a href="/routing">Guides<!-- --> &gt; <!-- -->Routing</a>
+</li>
+<li>
+<a href="/filesystemRoutingRoot">API<!-- --> &gt; <code>filesystemRoutingRoot</code></a>
 </li>
 </ul><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/filesystem-routing/+Page.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="mobile-navigation-mask"></div></div></div></div>
         
