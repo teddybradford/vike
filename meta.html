@@ -241,10 +241,7 @@
 <p>This implementation can be improved: the file <code>/pages/utils.js</code> is loaded on both the server- and client-side but <code>getDescription()</code> is only used by the server-side. This means <code>getDescription()</code> unnecessarily bloats the size of your client-side bundles. It would be cleaner to split <code>/pages/utils.js</code> in two seperate files: one for the client-side and another one for the server-side. In general, be extra careful in which environment each file is loaded; consider using <a href="/file-env"><code>.server.js</code> and <code>.client.js</code></a> to ensure the environment of files.</p>
 </blockquote>
 <h2 id="example-layout">Example: <code>Layout</code></h2>
-<blockquote>
-<p>If you use a <!-- -->UI framework <a href="/extensions">Vike extension</a> <a href="/vike-react"><code>vike-react</code></a>/<a href="/vike-vue"><code>vike-vue</code></a>/<a href="/vike-solid"><code>vike-solid</code></a>, then you don&#x27;t need to create the <code>Layout</code> setting as it&#x27;s already created by <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>.</p>
-</blockquote>
-<p>Another common use case is to create a component <code>&lt;Layout&gt;</code> that defines the layout of a page.</p>
+<p>Another common use case for <code>meta</code> is to create a component <code>&lt;Layout&gt;</code> that defines the layout of the page.</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/+Layout.js</span></span>
 <span data-line=""><span style="color:#6A737D">// Environment: browser and server</span></span>
 <span data-line=""> </span>
@@ -306,15 +303,6 @@
 <span data-line=""><span style="color:#24292E">    document.</span><span style="color:#6F42C1">getElementById</span><span style="color:#24292E">(</span><span style="color:#032F62">&quot;root&quot;</span><span style="color:#24292E">)</span></span>
 <span data-line=""><span style="color:#24292E">  )</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
-<p>Examples:</p>
-<ul>
-<li>
-<a href="https://github.com/vikejs/vike/tree/main/examples/layouts-react/">/examples/layouts-react/</a>
-</li>
-<li>
-<a href="https://github.com/vikejs/vike/tree/main/examples/layouts-vue/">/examples/layouts-vue/</a>
-</li>
-</ul>
 <h2 id="example-modify-data-env">Example: modify <code>data()</code> env</h2>
 <p>You can use <code>meta</code> to change the environment in which built-in hooks are loaded. For example, you can change the environment of the <a href="/data"><code>data()</code> hook</a> from <code>{ server: true, client: false }</code> to <code>{ server: true, client: true }</code>.</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/some-page/+config.ts</span></span>
