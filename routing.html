@@ -35,6 +35,7 @@
 <blockquote>
 <p>The directories <code>pages/</code>, <code>index/</code> and <code>src/</code> are ignored.</p>
 </blockquote>
+<h3 id="parameterized-routes">Parameterized routes</h3>
 <p>You can define parameterized routes:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="bash" data-theme="github-light"><code data-language="bash" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6F42C1">FILESYSTEM</span><span style="color:#032F62">                     URL</span></span>
 <span data-line=""><span style="color:#24292E">========================       </span><span style="color:#032F62">=======================</span></span>
@@ -42,21 +43,48 @@
 <blockquote>
 <p>The parameter <code>id</code> is available at <a href="/pageContext"><code>pageContext.routeParams.id</code></a>.</p>
 </blockquote>
-<p>You can set up a domain-driven file structure:</p>
-<pre><code>FILESYSTEM                             URL
-================================       ============
-(marketing)/pages/index/+Page.js       /
-(marketing)/pages/about/+Page.js       /about
-admin-panel/pages/index/+Page.js       /admin-panel
-</code></pre>
+<h3 id="groups">Groups</h3>
+<p>You can organize your pages into groups:</p>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="yaml" data-theme="github-light"><code data-language="yaml" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#032F62">FILESYSTEM                             URL</span></span>
+<span data-line=""><span style="color:#032F62">================================       ==================</span></span>
+<span data-line=""><span style="color:#032F62">pages/(marketing)/index/+Page.js       /</span></span>
+<span data-line=""><span style="color:#032F62">pages/(marketing)/about/+Page.js       /about</span></span>
+<span data-line=""><span style="color:#032F62">pages/admin-panel/index/+Page.js       /admin-panel</span></span>
+<span data-line=""><span style="color:#032F62">pages/admin-panel/users/+Page.js       /admin-panel/users</span></span></code></pre></figure>
 <blockquote>
-<p>The directory <code>(marketing)/</code> is ignored because it&#x27;s wrapped by parentheses.</p>
+<p>The directory <code>(marketing)</code> is ignored because it&#x27;s wrapped by parentheses.</p>
 </blockquote>
-<p>More information at:</p>
+<p>Beyond improved organization, it allows you to apply different configurations to different pages:</p>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="yaml" data-theme="github-light"><code data-language="yaml" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D"># Define a layout for all marketing pages</span></span>
+<span data-line=""><span style="color:#032F62">pages/(marketing)/+Layout.js</span></span>
+<span data-line=""><span style="color:#032F62">pages/(marketing)/index/+Page.js</span></span>
+<span data-line=""><span style="color:#032F62">pages/(marketing)/about/+Page.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D"># Define a layout for all admin pages</span></span>
+<span data-line=""><span style="color:#032F62">pages/admin-panel/+Layout.js</span></span>
+<span data-line=""><span style="color:#032F62">pages/admin-panel/index/+Page.js</span></span>
+<span data-line=""><span style="color:#032F62">pages/admin-panel/users/+Page.js</span></span></code></pre></figure>
+<blockquote>
+<p>See <a href="/config#inheritance">API<!-- --> &gt; <!-- -->Config<!-- --> &gt; <!-- -->Inheritance</a>.</p>
+</blockquote>
+<p>You can also have a <em>domain-driven file structure</em>:</p>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="yaml" data-theme="github-light"><code data-language="yaml" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D"># Domain: marketing</span></span>
+<span data-line=""><span style="color:#032F62">(marketing)/pages/+Layout.js</span></span>
+<span data-line=""><span style="color:#032F62">(marketing)/pages/index/+Page.js</span></span>
+<span data-line=""><span style="color:#032F62">(marketing)/pages/about/+Page.js</span></span>
+<span data-line=""><span style="color:#032F62">(marketing)/components/ContactUs.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D"># Domain: admin panel</span></span>
+<span data-line=""><span style="color:#032F62">admin-panel/pages/+Layout.js</span></span>
+<span data-line=""><span style="color:#032F62">admin-panel/pages/index/+Page.js</span></span>
+<span data-line=""><span style="color:#032F62">admin-panel/pages/users/+Page.js</span></span>
+<span data-line=""><span style="color:#032F62">admin-panel/components/Charts.js</span></span>
+<span data-line=""><span style="color:#032F62">admin-panel/database/fetchUsers.js</span></span></code></pre></figure>
+<blockquote>
+<p>See <a href="/file-structure#domain-driven">Guides<!-- --> &gt; <!-- -->File Structure<!-- --> &gt; <!-- -->Domain driven</a>.</p>
+</blockquote>
+<h3 id="more-information">More information</h3>
 <ul>
-<li>
-<a href="/file-structure#domain-driven">Guides<!-- --> &gt; <!-- -->File Structure<!-- --> &gt; <!-- -->Domain driven</a>
-</li>
 <li>
 <a href="/filesystem-routing">API<!-- --> &gt; <!-- -->Filesystem Routing</a>
 </li>

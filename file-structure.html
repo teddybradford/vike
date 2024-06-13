@@ -47,78 +47,60 @@
 <span data-line=""><span style="color:#6A737D"># Server code (Express.js/Fastify/...)</span></span>
 <span data-line=""><span style="color:#032F62">/server/</span></span></code></pre></figure>
 <h2 id="domain-driven">Domain-driven</h2>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="yaml" data-theme="github-light"><code data-language="yaml" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D"># Marketing pages</span></span>
-<span data-line=""><span style="color:#032F62">/(marketing)/pages/index/+Page.js</span><span style="color:#6A737D"> # URL: /</span></span>
-<span data-line=""><span style="color:#032F62">/(marketing)/pages/about/+Page.js</span><span style="color:#6A737D"> # URL: /about</span></span>
-<span data-line=""><span style="color:#032F62">/(marketing)/pages/jobs/+Page.js</span><span style="color:#6A737D"> # URL: /jobs</span></span>
-<span data-line=""><span style="color:#032F62">/(marketing)/+config.js</span><span style="color:#6A737D"> # Configures the URL of the pages aboves, see below</span></span>
+<p>You can have what we call a <em>domain-driven file structure</em>.</p>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="yaml" data-theme="github-light"><code data-language="yaml" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D"># ===========================</span></span>
+<span data-line=""><span style="color:#6A737D"># ======= Marketing =========</span></span>
+<span data-line=""><span style="color:#6A737D"># ===========================</span></span>
+<span data-line=""><span style="color:#6A737D"># Pages</span></span>
+<span data-line=""><span style="color:#032F62">(marketing)/pages/index/+Page.js</span><span style="color:#6A737D">      # URL: /</span></span>
+<span data-line=""><span style="color:#032F62">(marketing)/pages/about/+Page.js</span><span style="color:#6A737D">      # URL: /about</span></span>
+<span data-line=""><span style="color:#6A737D"># Configs</span></span>
+<span data-line=""><span style="color:#032F62">(marketing)/pages/+Layout.js</span></span>
+<span data-line=""><span style="color:#032F62">(marketing)/pages/+prerender.js</span></span>
+<span data-line=""><span style="color:#6A737D"># Components</span></span>
+<span data-line=""><span style="color:#032F62">(marketing)/components/ContactUs.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D"># Auth related code &amp; pages</span></span>
-<span data-line=""><span style="color:#032F62">/auth/pages/signup/+Page.js</span></span>
-<span data-line=""><span style="color:#032F62">/auth/pages/login/+Page.js</span></span>
-<span data-line=""><span style="color:#032F62">/auth/components/UserInfo.js</span></span>
-<span data-line=""><span style="color:#032F62">/auth/db/fetchUser.js</span></span>
+<span data-line=""><span style="color:#6A737D"># ===========================</span></span>
+<span data-line=""><span style="color:#6A737D"># ===== Authentication ======</span></span>
+<span data-line=""><span style="color:#6A737D"># ===========================</span></span>
+<span data-line=""><span style="color:#6A737D"># Pages</span></span>
+<span data-line=""><span style="color:#032F62">auth/pages/signup/+Page.js</span><span style="color:#6A737D">            # URL: /auth/signup</span></span>
+<span data-line=""><span style="color:#032F62">auth/pages/login/+Page.js</span><span style="color:#6A737D">             # URL: /auth/login</span></span>
+<span data-line=""><span style="color:#6A737D"># Configs</span></span>
+<span data-line=""><span style="color:#032F62">auth/pages/+Layout.js</span></span>
+<span data-line=""><span style="color:#6A737D"># Components</span></span>
+<span data-line=""><span style="color:#032F62">auth/components/UserInfo.js</span></span>
+<span data-line=""><span style="color:#6A737D"># Database</span></span>
+<span data-line=""><span style="color:#032F62">auth/database/fetchUser.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D"># All code related to products</span></span>
-<span data-line=""><span style="color:#032F62">/products/pages/index/+Page.js</span></span>
-<span data-line=""><span style="color:#032F62">/products/pages/product/+Page.js</span></span>
-<span data-line=""><span style="color:#032F62">/products/pages/product/+route.js</span></span>
-<span data-line=""><span style="color:#032F62">/products/db/fetchProduct.js</span></span>
-<span data-line=""><span style="color:#032F62">/products/db/fetchProductList.js</span></span>
+<span data-line=""><span style="color:#6A737D"># ===========================</span></span>
+<span data-line=""><span style="color:#6A737D"># ===== Product pages =======</span></span>
+<span data-line=""><span style="color:#6A737D"># ===========================</span></span>
+<span data-line=""><span style="color:#6A737D"># Pages</span></span>
+<span data-line=""><span style="color:#032F62">products/pages/index/+Page.js</span><span style="color:#6A737D">         # URL: /products</span></span>
+<span data-line=""><span style="color:#032F62">products/pages/product/+Page.js</span><span style="color:#6A737D">       # URL: /product/@id</span></span>
+<span data-line=""><span style="color:#032F62">products/pages/product/+route.js</span></span>
+<span data-line=""><span style="color:#6A737D"># Configs</span></span>
+<span data-line=""><span style="color:#032F62">products/pages/+Layout.js</span></span>
+<span data-line=""><span style="color:#032F62">products/pages/+ssr.js</span></span>
+<span data-line=""><span style="color:#6A737D"># Database</span></span>
+<span data-line=""><span style="color:#032F62">products/database/fetchProduct.js</span></span>
+<span data-line=""><span style="color:#032F62">products/database/fetchProductList.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D"># Components shared accross domains</span></span>
-<span data-line=""><span style="color:#032F62">/components/</span></span>
-<span data-line=""><span style="color:#6A737D"># Server code (Express.js/Fastify/...)</span></span>
-<span data-line=""><span style="color:#032F62">/server/</span></span></code></pre></figure>
+<span data-line=""><span style="color:#6A737D"># Shared accross all domains</span></span>
+<span data-line=""><span style="color:#032F62">components/</span></span>
+<span data-line=""><span style="color:#032F62">server/</span></span></code></pre></figure>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /products/pages/product/+route.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#032F62"> &#x27;/product/@id&#x27;</span></span></code></pre></figure>
-<p>Route table:</p>
-<pre><code>FILEYSTEM                                   ROUTE
-=================================           ============
-/(marketing)/pages/index/+Page.js           /
-/(marketing)/pages/about/+Page.js           /about
-/(marketing)/pages/jobs/+Page.js            /jobs
-/auth/pages/signup/+Page.js                 /auth/signup
-/auth/pages/login/+Page.js                  /auth/login
-/products/pages/index/+Page.js              /products
-/products/pages/product/+Page.js            /product/@id
-</code></pre>
 <blockquote>
-<p>The directory <code>(marketing)/</code> is ignored because it&#x27;s wrapped by parentheses.</p>
+<p>The directory <code>(marketing)/</code> is used for <a href="/routing#groups">grouping</a> and is ignored by <a href="/filesystem-routing">Filesystem Routing</a>.</p>
+<p>Alternatively, you can have <code>marketing/</code> (without parentheses) and <a href="/filesystemRoutingRoot">set <code>marketing/+filesystemRoutingRoot.js</code></a> to change the Filesystem Routing URL from <code>/marketing</code> to <code>/</code>.</p>
 </blockquote>
-<p>Such domain-driven file structure is also convenient for having different configs:</p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="yaml" data-theme="github-light"><code data-language="yaml" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D"># Configs for marketing pages</span></span>
-<span data-line=""><span style="color:#032F62">/(marketing)/pages/+Layout.js</span></span>
-<span data-line=""><span style="color:#032F62">/(marketing)/pages/+title.js</span></span>
-<span data-line=""><span style="color:#032F62">/(marketing)/pages/+ssr.js</span></span>
-<span data-line=""><span style="color:#032F62">/(marketing)/pages/+prerender.js</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D"># Marketing pages</span></span>
-<span data-line=""><span style="color:#032F62">/(marketing)/pages/index/+Page.js</span></span>
-<span data-line=""><span style="color:#032F62">/(marketing)/pages/about/+Page.js</span></span>
-<span data-line=""><span style="color:#032F62">/(marketing)/pages/jobs/+Page.js</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D"># Configs for admin pages</span></span>
-<span data-line=""><span style="color:#032F62">/admin-panel/pages/+Layout.js</span></span>
-<span data-line=""><span style="color:#032F62">/admin-panel/pages/+title.js</span></span>
-<span data-line=""><span style="color:#032F62">/admin-panel/pages/+config.js</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D"># Admin pages</span></span>
-<span data-line=""><span style="color:#032F62">/admin-panel/pages/index/+Page.js</span></span>
-<span data-line=""><span style="color:#032F62">/admin-panel/pages/edit-product/+Page.js</span></span>
-<span data-line=""><span style="color:#032F62">/admin-panel/pages/database/+Page.js</span></span></code></pre></figure>
-<p>Note how <a href="/config#inheritance">config inheritance</a> applies:</p>
-<ul>
-<li>The <code>/(marketing)/pages/+*.js</code> configs apply to all pages living at <code>/(marketing)/pages/**</code>.</li>
-<li>The <code>/admin-panel/pages/+*.js</code> configs apply to all pages living at <code>/admin-panel/pages/**</code>.</li>
-</ul>
-<p>Example:</p>
-<ul>
-<li>
-<a href="https://github.com/vikejs/vike/tree/main/examples/file-structure-domain-driven/">/examples/file-structure-domain-driven/</a>
-</li>
-</ul>
+<blockquote>
+<p>See <a href="/config#inheritance">API<!-- --> &gt; <!-- -->Config<!-- --> &gt; <!-- -->Inheritance</a>.</p>
+</blockquote>
+<p>Example: <a href="https://github.com/vikejs/vike/tree/main/examples/file-structure-domain-driven/">/examples/file-structure-domain-driven/</a>.</p>
 <h2 id="src-pages"><code>src/pages/</code></h2>
 <p>You can embed <code>pages/</code> in <code>src/</code>:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="yaml" data-theme="github-light"><code data-language="yaml" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#032F62">/src/pages/index/+Page.js</span><span style="color:#6A737D"> # =&gt; URL /</span></span>
@@ -147,6 +129,9 @@
 </li>
 <li>
 <a href="/filesystem-routing">API<!-- --> &gt; <!-- -->Filesystem Routing</a>
+</li>
+<li>
+<a href="/config#inheritance">API<!-- --> &gt; <!-- -->Config<!-- --> &gt; <!-- -->Inheritance</a>
 </li>
 </ul><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/file-structure/+Page.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="mobile-navigation-mask"></div></div></div></div>
         

@@ -35,8 +35,8 @@
 </li>
 </ul>
 <h2 id="files"><code>+</code> files</h2>
-<p>You configure your Vike app by creating files that start with <code>+</code> such as <code>+config.js</code>.</p>
-<p>For example, you can define the <a href="/Page"><code>Page</code></a> and <a href="/Layout"><code>Layout</code></a> component of a page by creating a <code>+config.js</code> file like this:</p>
+<p>You configure your Vike app by creating <code>+</code> files such as <code>+config.js</code>.</p>
+<p>For example, you can set the <a href="/Page"><code>Page</code></a> and <a href="/Layout"><code>Layout</code></a> settings of a page by defining <code>+config.js</code>:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/@id/+config.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> Page </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./Page&#x27;</span></span>
@@ -52,7 +52,7 @@
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/@id/Layout.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#6A737D"> /* ... */</span></span></code></pre></figure>
-<p>For more convenience, you can also do that instead:</p>
+<p>For more convenience, you can do this instead:</p>
 <div class="diff-entire-file diff-entire-file-removed"> <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/@id/+config.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> Page </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./Page&#x27;</span></span>
@@ -70,81 +70,75 @@
 <span class="diff add" data-line=""><span style="color:#6A737D">// /pages/product/@id/+Layout.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#6A737D"> /* ... */</span></span></code></pre></figure>
-<p>Both achieve the same and it&#x27;s just convenience: the latter allows you to skip creating the <code>+config.js</code> file.</p>
+<p>Both achieve the same: it&#x27;s just convenience.</p>
 <blockquote>
-<p>Except of <code>+config.js</code>, the <code>+</code> files corresponds to a <a href="/settings">Vike setting</a> or a <a href="/hooks">Vike hook</a>.</p>
+<p>Except of <code>+config.js</code>, any <code>+</code> file corresponds to a <a href="/settings">Vike setting</a> or a <a href="/hooks">Vike hook</a>.</p>
 </blockquote>
 <h2 id="inheritance">Inheritance</h2>
-<p>You can apply configurations to all your pages, a subset of pages, or one page only.</p>
-<p>For example with the <a href="/Layout"><code>Layout</code></a> and <a href="/ssr"><code>ssr</code></a> settings:</p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.js</span></span>
+<p>You can apply configurations to all your pages, a group of pages, or only one page.</p>
+<p>For example the <a href="/Layout"><code>Layout</code> setting</a>:</p>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="yaml" data-theme="github-light"><code data-language="yaml" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#032F62">pages/(marketing)/index/+Page.js</span><span style="color:#6A737D">    # URL: /</span></span>
+<span data-line=""><span style="color:#032F62">pages/(marketing)/about/+Page.js</span><span style="color:#6A737D">    # URL: /about</span></span>
+<span data-line=""><span style="color:#6A737D"># Layout for marketing pages</span></span>
+<span data-line=""><span style="color:#032F62">pages/(marketing)/+Layout.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> Layout </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;../layouts/LayoutDefault&#x27;</span></span>
+<span data-line=""><span style="color:#032F62">pages/admin-panel/index/+Page.js</span><span style="color:#6A737D">    # URL: /admin-panel</span></span>
+<span data-line=""><span style="color:#032F62">pages/admin-panel/users/+Page.js</span><span style="color:#6A737D">    # URL: /admin-panel/users</span></span>
+<span data-line=""><span style="color:#6A737D"># Layout for admin pages</span></span>
+<span data-line=""><span style="color:#032F62">pages/admin-panel/+Layout.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">// Applies to all pages:</span></span>
-<span data-line=""><span style="color:#6A737D">//   /pages/admin/income/+Page.js</span></span>
-<span data-line=""><span style="color:#6A737D">//   /pages/admin/kpi/+Page.js</span></span>
-<span data-line=""><span style="color:#6A737D">//   /pages/product/@id/+Page.js</span></span>
+<span data-line=""><span style="color:#032F62">pages/product/@id/+Page.js</span></span>
+<span data-line=""><span style="color:#6A737D"># Layout for the product page</span></span>
+<span data-line=""><span style="color:#032F62">pages/product/@id/+Layout.js</span></span></code></pre></figure>
+<blockquote>
+<p>The directory <code>(marketing)</code> is used for <a href="/routing#groups">grouping</a> and is ignored by <a href="/filesystem-routing">Filesystem Routing</a>.</p>
+</blockquote>
+<ul>
+<li><code>pages/(marketing)/+Layout.js</code> applies to all pages living at <code>pages/(marketing)/**</code></li>
+<li><code>pages/admin-panel/+Layout.js</code> applies to all pages living at <code>pages/admin-panel/**</code></li>
+<li><code>pages/product/@id/+Layout.js</code> applies to one page <code>pages/product/@id/+Page.js</code>
+<blockquote>
+<p>Technically <code>pages/product/@id/+Layout.js</code> applies to all pages at <code>/pages/product/@id/**</code> but there is only one page living there.</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="defaults">Defaults</h4>
+<p>You can set defaults and override them.</p>
+<p>For example the <a href="/ssr"><code>ssr</code> setting</a>:</p>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// pages/+config.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
-<span data-line=""><span style="color:#6A737D">  // The &lt;Layout&gt; for all pages (as overridable default)</span></span>
-<span data-line=""><span style="color:#24292E">  Layout,</span></span>
-<span data-line=""><span style="color:#6A737D">  // Disable SSR for all pages (as overridable default)</span></span>
+<span data-line=""><span style="color:#6A737D">  // Disable SSR by default</span></span>
 <span data-line=""><span style="color:#24292E">  ssr: </span><span style="color:#005CC5">false</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/admin/+config.js</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">// Applies only to admin pages:</span></span>
-<span data-line=""><span style="color:#6A737D">//   /pages/admin/income/+Page.js</span></span>
-<span data-line=""><span style="color:#6A737D">//   /pages/admin/kpi/+Page.js</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> Layout </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;../../layouts/LayoutDashboard.jsx&#x27;</span></span>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// pages/(marketing)/+config.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
-<span data-line=""><span style="color:#6A737D">  // The &lt;Layout&gt; of all admin pages (overriding the default set by /pages/+config.js)</span></span>
-<span data-line=""><span style="color:#24292E">  Layout</span></span>
-<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/@id/+config.js</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">// Applies only to the product page:</span></span>
-<span data-line=""><span style="color:#6A737D">//   /pages/product/@id/+Page.js</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> Layout </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./Layout&#x27;</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
-<span data-line=""><span style="color:#6A737D">  // The &lt;Layout&gt; of the product page (overriding the default set by /pages/+config.js)</span></span>
-<span data-line=""><span style="color:#24292E">  Layout,</span></span>
-<span data-line=""><span style="color:#6A737D">  // Enable SSR (overriding the default set by /pages/+config.js)</span></span>
+<span data-line=""><span style="color:#6A737D">  // Enable SSR for marketing pages</span></span>
 <span data-line=""><span style="color:#24292E">  ssr: </span><span style="color:#005CC5">true</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
-<p>Technically:</p>
-<ul>
-<li><code>/pages/+config.js</code> applies to <code>/pages/**</code></li>
-<li><code>/pages/admin/+config.js</code> applies to <code>/pages/admin/**</code></li>
-<li><code>/pages/product/@id/+config.js</code> applies to <code>/pages/product/@id/**</code></li>
-</ul>
-<p>This means that <code>/pages/+config.js</code> doesn&#x27;t necessarily apply to all pages, for example if a page is defined at <code>/somewhere-else/+Page.js</code>. But assuming that all pages are defined under <code>/pages/**</code> then <code>/pages/+config.js</code> does apply to all pages.</p>
-<p>Likewise <code>/pages/product/@id/+config.js</code> may apply to more than one page, but assuming <code>/pages/product/@id/+Page.js</code> is the only page defined under <code>/pages/product/@id/**</code> then it applies only to that one page.</p>
+<p>Cumulative configurations, such as <a href="/Layout"><code>&lt;Layout&gt;</code></a>, don&#x27;t get overriden. See <a href="https://github.com/vikejs/vike/issues/1692">#1692 - [Cumulative configs] New settings <code>override</code> and <code>default</code></a>.</p>
 </blockquote>
 <h4 id="domain-driven-file-structure">Domain-driven File Structure</h4>
-<p>For an improved organization of your pages and their configuration, you can use a <a href="/file-structure#domain-driven">domain-driven file structure</a>.</p>
+<p>You can use a <a href="/file-structure#domain-driven">domain-driven file structure</a> for an improved organization of your pages and their configurations.</p>
 <h4 id="powerful">Powerful</h4>
-<p>The config inheritance mechanism is a powerful way to configure your pages. For example, you can use two completely different rendering strategy: some pages can use Vue without SSR while other pages can use React with SSR.</p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/admin/+config.js</span></span>
+<p>You can use multiple completely different rendering strategies for the same app.</p>
+<p>For example, some pages can use Vue without SSR while other pages can use React with SSR:</p>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// pages/admin/+config.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> vikeVue </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-vue/config&#x27;</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">// Admin pages using Vue without SSR:</span></span>
+<span data-line=""><span style="color:#6A737D">// Admin pages using Vue without SSR</span></span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
 <span data-line=""><span style="color:#24292E">  ssr: </span><span style="color:#005CC5">false</span><span style="color:#24292E">,</span></span>
 <span data-line=""><span style="color:#24292E">  extends: [vikeVue]</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/@id/+config.js</span></span>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// pages/product/@id/+config.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> vikeReact </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-react/config&#x27;</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">// Product page using React with SSR:</span></span>
+<span data-line=""><span style="color:#6A737D">// Product page using React with SSR</span></span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
 <span data-line=""><span style="color:#24292E">  ssr: </span><span style="color:#005CC5">true</span><span style="color:#24292E">,</span></span>
 <span data-line=""><span style="color:#24292E">  extends: [vikeReact]</span></span>

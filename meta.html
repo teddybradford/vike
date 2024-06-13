@@ -265,7 +265,9 @@
 <span data-line=""><span style="color:#24292E">  meta: {</span></span>
 <span data-line=""><span style="color:#24292E">    Layout: {</span></span>
 <span data-line=""><span style="color:#6A737D">      // Load the value of /pages/**/+Layout.js on both the server and client</span></span>
-<span data-line=""><span style="color:#24292E">      env: { server: </span><span style="color:#005CC5">true</span><span style="color:#24292E">, client: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">      env: { server: </span><span style="color:#005CC5">true</span><span style="color:#24292E">, client: </span><span style="color:#005CC5">true</span><span style="color:#24292E"> },</span></span>
+<span data-line=""><span style="color:#6A737D">      // Make it cumulative for nested layouts</span></span>
+<span data-line=""><span style="color:#24292E">      cumulative: </span><span style="color:#005CC5">true</span></span>
 <span data-line=""><span style="color:#24292E">    }</span></span>
 <span data-line=""><span style="color:#24292E">  }</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
