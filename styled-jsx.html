@@ -61,7 +61,7 @@ Next.js manages server side hydration of styles as well as transpilation, so to 
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> React </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;react&#x27;</span></span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { renderToString, renderToStaticMarkup } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;react-dom/server&#x27;</span></span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { escapeInject, dangerouslySkipEscape } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/server&#x27;</span></span>
-<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { PageLayout } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./PageLayout&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { Layout } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./Layout&#x27;</span></span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { createStyleRegistry, StyleRegistry } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;styled-jsx&#x27;</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> registry</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> createStyleRegistry</span><span style="color:#24292E">()</span></span>
@@ -75,9 +75,9 @@ Next.js manages server side hydration of styles as well as transpilation, so to 
 <span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> viewHtml</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> dangerouslySkipEscape</span><span style="color:#24292E">(</span></span>
 <span data-line=""><span style="color:#6F42C1">    renderToString</span><span style="color:#24292E">(</span></span>
 <span data-line=""><span style="color:#24292E">      &lt;</span><span style="color:#005CC5">StyleRegistry</span><span style="color:#6F42C1"> registry</span><span style="color:#D73A49">=</span><span style="color:#24292E">{registry}&gt;</span></span>
-<span data-line=""><span style="color:#24292E">        &lt;</span><span style="color:#005CC5">PageLayout</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">        &lt;</span><span style="color:#005CC5">Layout</span><span style="color:#24292E">&gt;</span></span>
 <span data-line=""><span style="color:#24292E">          &lt;</span><span style="color:#005CC5">Page</span><span style="color:#24292E"> /&gt;</span></span>
-<span data-line=""><span style="color:#24292E">        &lt;/</span><span style="color:#005CC5">PageLayout</span><span style="color:#24292E">&gt;</span></span>
+<span data-line=""><span style="color:#24292E">        &lt;/</span><span style="color:#005CC5">Layout</span><span style="color:#24292E">&gt;</span></span>
 <span data-line=""><span style="color:#24292E">      &lt;/</span><span style="color:#005CC5">StyleRegistry</span><span style="color:#24292E">&gt;</span></span>
 <span data-line=""><span style="color:#24292E">    )</span></span>
 <span data-line=""><span style="color:#24292E">  )</span></span>
