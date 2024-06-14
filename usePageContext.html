@@ -50,7 +50,7 @@
 with
 <a href="https://v3.vuejs.org/api/composition-api.html#provide-inject"><code>inject()</code></a>
 to make <code>pageContext</code> accessible from any Vue component.</p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// app.js</span></span>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// createVueApp.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> app</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> createSSRApp</span><span style="color:#24292E">(</span><span style="color:#6A737D">/*...*/</span><span style="color:#24292E">)</span></span>
 <span data-line=""><span style="color:#24292E">app.</span><span style="color:#6F42C1">provide</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;pageContext&#x27;</span><span style="color:#24292E">, pageContext)</span></span></code></pre></figure>
@@ -95,7 +95,7 @@ to make <code>pageContext</code> accessible from any Vue component.</p>
 </ul>
 <h3 id="vue-3-globalproperties">Vue 3 - <code>globalProperties</code></h3>
 <p>Alternatively, you can make <code>pageContext</code> available to all Vue components by using <a href="https://v3.vuejs.org/api/application-config.html#globalproperties">app.config.globalProperties</a>.</p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// app.js</span></span>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// createVueApp.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> app</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> createSSRApp</span><span style="color:#24292E">(</span><span style="color:#6A737D">/*...*/</span><span style="color:#24292E">)</span></span>
 <span data-line=""><span style="color:#24292E">app.config.globalProperties.$pageContext </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext</span></span></code></pre></figure>
@@ -111,13 +111,7 @@ to make <code>pageContext</code> accessible from any Vue component.</p>
 <span data-line=""><span style="color:#6A737D">// We can access `pageContext` here</span></span>
 <span data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> pageContext</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> getCurrentInstance</span><span style="color:#24292E">().appContext.config.globalProperties.$pageContext</span></span>
 <span data-line=""><span style="color:#24292E">&lt;/</span><span style="color:#22863A">script</span><span style="color:#24292E">&gt;</span></span></code></pre></figure>
-<p>Example:</p>
-<ul>
-<li><a href="https://github.com/vikejs/vike/blob/abff8debc4c7cd6ab11e99e757379e5237a6c18c/boilerplates/boilerplate-vue/renderer/app.js#L26">/boilerplates/boilerplate-vue/renderer/app.js (@abff8de)</a>
-(<code>app.config.globalProperties.$pageContext = pageContext</code>)</li>
-<li><a href="https://github.com/vikejs/vike/blob/abff8debc4c7cd6ab11e99e757379e5237a6c18c/boilerplates/boilerplate-vue/renderer/Link.vue#L2">/boilerplates/boilerplate-vue/renderer/Link.vue (@abff8de)</a>
-(accessing <code>pageContext</code> from any Vue component)</li>
-</ul>
+<p>Example: <a href="https://github.com/vikejs/vike/tree/main/boilerplates/boilerplate-vue">/boilerplates/boilerplate-vue/</a>.</p>
 <h3 id="vue-2">Vue 2</h3>
 <p>For Vue 2 you can use <a href="https://vuejs.org/v2/cookbook/adding-instance-properties.html#Base-Example">Vue.prototype</a>.</p>
 <h2 id="see-also">See also</h2>
