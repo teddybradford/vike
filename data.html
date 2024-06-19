@@ -164,7 +164,7 @@ you can tell Vike to run <code>data()</code> also on the client-side. This will 
 <li>Call <code>data()</code> on the client-side for subsequent page navigations.</li>
 </ul>
 <blockquote>
-<p>In general, we recommend running <code>data()</code> only on the server-side because it&#x27;s usually easier to write code that runs only on the server-side.</p>
+<p>In general, we recommend running <code>data()</code> only on the server-side because it&#x27;s easier to write code that runs only on the server-side.</p>
 <p>That said, if you want to minimize requests made to your server, then it can make sense to run <code>data()</code> on the client-side. See <a href="/pageContext.json#avoid-pagecontext-json-requests">Avoid <code>pageContext.json</code> requests</a>.</p>
 </blockquote>
 <p>You can also set <code>.client.js</code> instead of <code>.shared.js</code>: Vike will then always call <code>data()</code> on the client-side (never on the server-side).</p>
