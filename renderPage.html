@@ -133,7 +133,11 @@
 <p>The <code>pageContext.httpResponse.body</code> value is the HTML string returned by the
 <a href="/onRenderHtml"><code>onRenderHtml()</code> hook</a> with additional <code>&lt;script&gt;</code> and <code>&lt;style&gt;</code> tags
 automatically injected by Vike.</p>
+<blockquote>
+<p>You can control where and what Vike injects using <a href="/injectFilter">API<!-- --> &gt; <code>injectFilter()</code></a>.</p>
+</blockquote>
 <p>For HTML streams use <code>httpResponse.pipe()</code> instead of <code>pageContext.httpResponse.body</code>, see <a href="/streaming">Guides<!-- --> &gt; <!-- -->HTML Streaming</a>.</p>
+<p>Optionally, you can use <code>pageContext.httpResponse.earlyHints</code> for adding early hints (<code>103 Early Hint</code>), see <a href="/preloading#early-hints">Guides<!-- --> &gt; <!-- -->Preloading<!-- --> &gt; <!-- -->Early hints</a>.</p>
 <p>The <code>pageContext.httpResponse</code> value is <code>null</code> if:</p>
 <ul>
 <li>An error occurred while rendering the page and no <a href="/error-page">error page</a> is defined.</li>
@@ -148,18 +152,6 @@ automatically injected by Vike.</p>
 <blockquote>
 <p>When modifying your server, you may need to manually restart your server for your changes to take effect. See <a href="https://github.com/vikejs/vike/issues/562">#562</a>.</p>
 </blockquote>
-<p>See also:</p>
-<ul>
-<li>
-<a href="/NODE_ENV"><code>process.env.NODE_ENV</code></a>
-</li>
-<li>
-<a href="/headers">HTTP Headers</a>
-</li>
-<li>
-<a href="/onRenderHtml"><code>onRenderHtml()</code> hook</a>
-</li>
-</ul>
 <h2 id="optional">Optional</h2>
 <p>If you <a href="/pre-rendering">pre-render</a> all your pages then you don&#x27;t need to use <code>renderPage()</code>, because:</p>
 <ul>
@@ -171,6 +163,18 @@ automatically injected by Vike.</p>
 <ul>
 <li>
 <a href="/headers">HTTP Headers</a>
+</li>
+<li>
+<a href="/injectFilter">API<!-- --> &gt; <code>injectFilter()</code></a>
+</li>
+<li>
+<a href="/preloading#early-hints">Guides<!-- --> &gt; <!-- -->Preloading<!-- --> &gt; <!-- -->Early hints</a>
+</li>
+<li>
+<a href="/onRenderHtml"><code>onRenderHtml()</code> hook</a>
+</li>
+<li>
+<a href="/NODE_ENV"><code>process.env.NODE_ENV</code></a>
 </li>
 <li>
 <a href="/pageContext">API<!-- --> &gt; <code>pageContext</code></a>
