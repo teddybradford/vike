@@ -56,6 +56,9 @@
 <p>The <code>guard()</code> hook is called in the same environment as <a href="/data"><code>data()</code></a>: always on the server-side unless you <a href="/data#client-side">configure <code>data()</code> to run on the client-side</a>.</p>
 <p>If there isn&#x27;t any <code>data()</code> hook, then <code>guard()</code> executes in the environment where the routing is executed, see <a href="/hooks#order">API<!-- --> &gt; <!-- -->Hooks<!-- --> &gt; <!-- -->Order</a>.</p>
 <p>Instead of using the <code>guard()</code> hook, consider using <code>throw render()</code> / <code>throw redirect()</code> inside another hook for more control on where and when your guarding logic is executed, see <a href="#execution-order">Execution order</a>.</p>
+<blockquote>
+<p>See also: <a href="https://github.com/vikejs/vike/issues/1600">#1600 - Client-only <code>guard()</code> hook</a>.</p>
+</blockquote>
 <h2 id="typescript">TypeScript</h2>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { guard }</span></span>
 <span data-line=""> </span>
