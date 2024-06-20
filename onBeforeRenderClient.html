@@ -29,7 +29,7 @@
 <p>Hook called at the beginning of rendering the page on the client-side. It&#x27;s usually used for integrating tools, such as state management tools.</p>
 <p>It&#x27;s called upon rendering the first page (e.g. <a href="/hydration">hydration</a> when using <a href="/ssr">SSR</a>) and upon page navigation.</p>
 <blockquote>
-<p>If you want to perform an action only upon hydration then use <a href="/pageContext#:~:text=pageContext.isHydration"><code>pageContext.isHydration</code></a>:</p>
+<p>If you want to perform an action only upon hydration then use <a href="/pageContext#:~:text=pageContext.isHydration,-%3A"><code>pageContext.isHydration</code></a>:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// +onBeforeRenderClient.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> onBeforeRenderClient</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>

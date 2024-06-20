@@ -149,7 +149,7 @@ manipulate localized URLs and set <code>pageContext.locale</code>.</p>
 <p><code>onPrerenderStart()</code> is a global hook you can define only once, while <code>onBeforePrerenderStart()</code> is a per-page hook you can define multiple times.</p>
 </blockquote>
 <p>Alternatively, if you need to load data that depends on localization, instead of <code>onPrerenderStart()</code> you can use
-<code>onBeforePrerenderStart()</code> to localize <a href="/data#pagecontext-data"><code>pageContext.data</code></a>:</p>
+<code>onBeforePrerenderStart()</code> to localize <a href="/pageContext#:~:text=pageContext.data,-%3A"><code>pageContext.data</code></a>:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/+onBeforePrerenderStart.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#6A737D">// This example doesn&#x27;t use onPrerenderStart() but, instead,</span></span>
