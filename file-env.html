@@ -57,7 +57,7 @@
 <h3 id="shared-js"><code>.shared.js</code></h3>
 <p>The file extension <code>.shared.js</code> has an effect only for <code>+</code> files (see section below): it&#x27;s useless for other files.</p>
 <h2 id="for-files">For <code>+</code> files</h2>
-<p>For <a href="/config#files"><code>+</code> files</a>, the most common use case is to change the environment of the <a href="/data"><code>data()</code> hook</a>: by renaming <code>+data.js</code> to <code>+data.shared.js</code> / <code>+data.server.js</code> / <code>+data.client.js</code> you tell Vike in which environment the <code>data()</code> hook should be loaded and executed, see <a href="/data#client-side">API<!-- --> &gt; <code>data()</code> hook<!-- --> &gt; <!-- -->Client-side</a>.</p>
+<p>For <a href="/config#files"><code>+</code> files</a>, the most common use case is to change the environment of the <a href="/data"><code>data()</code> hook</a>: by renaming <code>+data.js</code> to <code>+data.shared.js</code> / <code>+data.server.js</code> / <code>+data.client.js</code> you tell Vike in which environment the <code>data()</code> hook should be loaded and executed, see <a href="/data#environment">API<!-- --> &gt; <code>data()</code> hook<!-- --> &gt; <!-- -->Environment</a>.</p>
 <blockquote>
 <p>Essentially, it&#x27;s a simpler way to set the <a href="/meta#example-modify-data-env"><code>meta.env</code> setting</a> of a <code>+</code> file.
 Adding <code>.server.js</code> / <code>.client.js</code> / <code>.shared</code> to a <code>+</code> file, for example <code>/pages/product/@id/+data.js</code>, is equivalent to:</p>
