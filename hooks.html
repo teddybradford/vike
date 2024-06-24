@@ -58,11 +58,16 @@
 <li><a href="https://github.com/vikejs/vike/issues/1525">New hook <code>onRenderContent()</code>: generate non-HTML files with arbitrary content</a></li>
 </ul>
 <h2 id="order">Order</h2>
-<p>The order in which the hooks are called.</p>
+<p>The order in which the hooks are called:</p>
+<ul>
+<li><a href="#with-default-environment-hooks">With default-environment hooks</a>, if you didn&#x27;t change the environment of <code>data()</code> and <code>onBeforeRender()</code>.</li>
+<li><a href="#with-client-side-hooks">With client-side hooks</a>, if you <a href="/data#environment">configured <code>data()</code></a> and <a href="/onBeforeRender#environment">also <code>onBeforeRender()</code></a> to run only the client-side.</li>
+</ul>
 <blockquote>
 <p>The following doesn&#x27;t contain the hooks of the Vike extensions <a href="/vike-react"><code>vike-react</code></a>/<a href="/vike-vue"><code>vike-vue</code></a>/<a href="/vike-solid"><code>vike-solid</code></a> such as <a href="/onAfterRenderHtml"><code>onAfterRenderHtml()</code></a> or <a href="/onAfterRenderClient"><code>onAfterRenderClient()</code></a>.</p>
 </blockquote>
-<p><strong>First render:</strong></p>
+<h3 id="with-default-environment-hooks">With default-environment hooks</h3>
+<p><strong>First render</strong></p>
 <ol>
 <li>
 <span style="color:#888;font-size:0.94em;vertical-align:middle;font-weight:600">server</span>
@@ -104,8 +109,7 @@
 <a href="/onHydrationEnd"><code>onHydrationEnd()</code></a>
 </li>
 </ol>
-<br/>
-<p><strong>Page navigation:</strong></p>
+<p><strong>Page navigation</strong></p>
 <ol>
 <li>
 <span style="color:#888;font-size:0.94em;vertical-align:middle;font-weight:600">client</span>
@@ -151,8 +155,50 @@
 <a href="/onPageTransitionEnd"><code>onPageTransitionEnd()</code></a>
 </li>
 </ol>
-<br/>
-<p><strong>Page navigation, <a href="/data#environment">with client-side data fetching</a>:</strong></p>
+<h3 id="with-client-side-hooks">With client-side hooks</h3>
+<p><strong>First render</strong></p>
+<ol>
+<li>
+<span style="color:#888;font-size:0.94em;vertical-align:middle;font-weight:600">server</span>
+<a href="/renderPage"><code>renderPage()</code></a>
+</li>
+<li>
+<span style="color:#888;font-size:0.94em;vertical-align:middle;font-weight:600">server</span>
+<a href="/onBeforeRoute"><code>onBeforeRoute()</code></a>
+</li>
+<li>
+<span style="color:#888;font-size:0.94em;vertical-align:middle;font-weight:600">server</span>
+<a href="/routing">Routing</a>
+<blockquote>
+<p>The routing executes your <a href="/route-function">Route Functions</a> (of all your pages).</p>
+</blockquote>
+</li>
+<li>
+<span style="color:#888;font-size:0.94em;vertical-align:middle;font-weight:600">server</span>
+<a href="/onRenderHtml"><code>onRenderHtml()</code></a>
+</li>
+<li>
+<span style="color:#888;font-size:0.94em;vertical-align:middle;font-weight:600">client</span>
+<a href="/guard"><code>guard()</code></a>
+</li>
+<li>
+<span style="color:#888;font-size:0.94em;vertical-align:middle;font-weight:600">client</span>
+<a href="/data"><code>data()</code></a>
+</li>
+<li>
+<span style="color:#888;font-size:0.94em;vertical-align:middle;font-weight:600">client</span>
+<a href="/onBeforeRender"><code>onBeforeRender()</code></a>
+</li>
+<li>
+<span style="color:#888;font-size:0.94em;vertical-align:middle;font-weight:600">client</span>
+<a href="/onRenderClient"><code>onRenderClient()</code></a>
+</li>
+<li>
+<span style="color:#888;font-size:0.94em;vertical-align:middle;font-weight:600">client</span>
+<a href="/onHydrationEnd"><code>onHydrationEnd()</code></a>
+</li>
+</ol>
+<p><strong>Page navigation</strong></p>
 <ol>
 <li>
 <span style="color:#888;font-size:0.94em;vertical-align:middle;font-weight:600">client</span>

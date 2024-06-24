@@ -100,9 +100,13 @@ you can tell Vike to run <code>data()</code> also on the client-side. This will 
 </ul>
 <blockquote>
 <p>In general, we recommend running <code>data()</code> only on the server-side because it&#x27;s easier to write code that runs only on the server-side.</p>
-<p>That said, for <a href="/pre-rendering">SSG apps</a> or if you want to minimize requests made to your server, then it can make sense to run <code>data()</code> on the client-side. See <a href="/pageContext.json#avoid-pagecontext-json-requests">Avoid <code>pageContext.json</code> requests</a>.</p>
+<p>That said, if you want to minimize requests made to your server, then it can make sense to run <code>data()</code> on the client-side. See <a href="/pageContext.json#avoid-pagecontext-json-requests">Avoid <code>pageContext.json</code> requests</a>.</p>
 </blockquote>
 <p>You can also set <code>.client.js</code> instead of <code>.shared.js</code>: Vike will then always call <code>data()</code> on the client-side (never on the server-side).</p>
+<blockquote>
+<p>For <a href="/pre-rendering">pre-rendered pages (SSG)</a>, the data fetched from the &quot;server-side&quot; is the static JSON file <a href="/pageContext.json"><code>dist/client/some-page/index.pageContext.json</code></a> that was generated at build-time upon pre-rendering the page.</p>
+<p>If, for a pre-rendered page, you want to fetch data that is dynamically provided by a (Java/PHP/Ruby/JavaScript/...) server, then always call <code>data()</code> on the client-side (i.e. <code>+data.client.js</code>).</p>
+</blockquote>
 <blockquote>
 <p>Alternatively, instead of using <code>.shared.js</code> and <code>.client.js</code>, you can modify the <a href="/meta#example-modify-data-env"><code>meta.env</code> setting</a> of the <code>data()</code> hook in a global fashion, removing the need to add <code>.shared.js</code> / <code>.client.js</code> to each of your <code>+data.js</code> files.</p>
 </blockquote>
