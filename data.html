@@ -91,24 +91,33 @@
 <p>Alternatively, you can use <code>throw render()</code> and <code>throw redirect()</code> inside of a <a href="/guard"><code>guard()</code> hook</a>, see <a href="/auth">Guides<!-- --> &gt; <!-- -->Authentication</a>.</p>
 <h2 id="environment">Environment</h2>
 <p>By default, the <code>data()</code> hook always runs on the server-side.</p>
-<p>But,
-by using the <a href="/file-env">file extension <code>.shared.js</code></a> (renaming <code>+data.js</code> to <code>+data.shared.js</code>),
-you can tell Vike to run <code>data()</code> also on the client-side. This will make Vike:</p>
-<ul>
-<li>Call <code>data()</code> on the server-side for the first page the user visits.</li>
-<li>Call <code>data()</code> on the client-side for subsequent page navigations.</li>
-</ul>
-<blockquote>
-<p>In general, we recommend running <code>data()</code> only on the server-side because it&#x27;s easier to write code that runs only on the server-side.</p>
-<p>That said, if you want to minimize requests made to your server, then it can make sense to run <code>data()</code> on the client-side. See <a href="/pageContext.json#avoid-pagecontext-json-requests">Avoid <code>pageContext.json</code> requests</a>.</p>
-</blockquote>
-<p>You can also set <code>.client.js</code> instead of <code>.shared.js</code>: Vike will then always call <code>data()</code> on the client-side (never on the server-side).</p>
-<blockquote>
-<p>For <a href="/pre-rendering">pre-rendered pages (SSG)</a>, the data fetched from the &quot;server-side&quot; is the static JSON file <a href="/pageContext.json"><code>dist/client/some-page/index.pageContext.json</code></a> that was generated at build-time upon pre-rendering the page.</p>
-<p>If, for a pre-rendered page, you want to fetch data that is dynamically provided by a (Java/PHP/Ruby/JavaScript/...) server, then always call <code>data()</code> on the client-side (i.e. <code>+data.client.js</code>).</p>
-</blockquote>
+<p>By using <a href="/file-env#for-files"><code>.client.js</code> (or <code>.shared.js</code>)</a>,
+you can tell Vike to only (or also) load and execute <code>data()</code> on the client-side.</p>
 <blockquote>
 <p>Alternatively, instead of using <code>.shared.js</code> and <code>.client.js</code>, you can modify the <a href="/meta#example-modify-data-env"><code>meta.env</code> setting</a> of the <code>data()</code> hook in a global fashion, removing the need to add <code>.shared.js</code> / <code>.client.js</code> to each of your <code>+data.js</code> files.</p>
+</blockquote>
+<h3 id="client-side-only">Client-side only</h3>
+<p>By using <code>.client.js</code>,
+you can tell Vike to load and execute <code>data()</code> only on the client-side (never on the server-side).</p>
+<blockquote>
+<p>For <a href="/pre-rendering">pre-rendered pages (SSG)</a>, if you want to fetch dynamic data provided by some server (Java/PHP/JavaScript/...), then make sure to always call <code>data()</code> on the client-side (i.e. <code>+data.client.js</code>).</p>
+<p>Note that, for pre-rendered pages, the data that is fetched from the &quot;server-side&quot; is the static JSON file <a href="/pageContext.json"><code>dist/client/some-page/index.pageContext.json</code></a> that was generated at build-time upon pre-rendering the page.</p>
+</blockquote>
+<h3 id="server-and-client-side">Server- and client-side</h3>
+<p>By using <code>.shared.js</code>,
+you can tell Vike to load and execute <code>data()</code> also on the client-side:</p>
+<ul>
+<li><code>data()</code> runs on the server-side for the first page the user visits.</li>
+<li><code>data()</code> runs on the client-side for subsequent page navigations.</li>
+</ul>
+<blockquote>
+<p>In general, we recommend running <code>data()</code> only on the server-side because it&#x27;s easier to write code that runs in only one environment.</p>
+<p>That said, if you want to minimize requests made to your server, then it can make sense to run <code>data()</code> also on the client-side. See:</p>
+<ul>
+<li>
+<a href="/pageContext.json#avoid-pagecontext-json-requests">Avoid <code>pageContext.json</code> requests</a>
+</li>
+</ul>
 </blockquote>
 <h2 id="examples">Examples</h2>
 <p>React + JavaScript:</p>
