@@ -285,12 +285,11 @@ Instead, Vike awaits for your UI framework to start its stream.</p>
 <span data-line=""><span style="color:#24292E">  }</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="progressive-rendering">Progressive Rendering</h2>
-<p>Some UI frameworks, such as React, support <em>progressive rendering</em>: while some parts of the UI are being loaded, other parts are already rendered.</p>
-<p>(as well as <a href="/hydration">hydrated</a>!).</p>
+<p>Some UI frameworks, such as React, support <em>progressive rendering</em>: while some parts of the UI are being loaded, other parts are already rendered and already <a href="/hydration">hydrated</a>.</p>
 <video src="/assets/static/progressive-rendering-demo.Gn731VlB.webm" width="500" controls="" muted="" autoplay="" loop=""></video>
 <blockquote>
 <p>Instead of using HTML streaming, an easy alternative is to use a stateful component. But the issue is that the content that is rendered later isn&#x27;t rendered to HTML. For example, a product page with content fetched from a database won&#x27;t get <a href="/SPA-vs-SSR#ssr">the SEO nor performance advantages of SSR</a>.</p>
-<p>With streaming all content, including the content that is rendered later, is rendered to HTML.</p>
+<p>With HTML streaming, all content (including the content that is rendered later) is rendered to HTML.</p>
 </blockquote>
 <p>Vike has first-class support for HTML streaming and progressive rendering.</p>
 <p>Example: <a href="https://github.com/vikejs/vike-react/tree/main/examples/full#readme"><code>vike-react</code> &gt; <code>examples/full/</code></a>.</p>
