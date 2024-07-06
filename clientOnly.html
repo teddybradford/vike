@@ -43,10 +43,22 @@
 </li>
 </ul>
 <h2 id="react">React</h2>
-<p>The <code>vike-react</code> extension doesn&#x27;t implement the <code>clientOnly()</code> helper (yet). Use the <a href="/ClientOnly#react"><code>&lt;ClientOnly&gt;</code></a> wrapper instead.</p>
-<blockquote>
-<p>Contribution welcome, see <a href="https://github.com/vikejs/vike-react/issues/102">#102 - <code>clientOnly()</code> instead of <code>&lt;ClientOnly&gt;</code></a></p>
-</blockquote>
+<h3 id="usage">Usage</h3>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="tsx" data-theme="github-light"><code data-language="tsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { clientOnly } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-react/clientOnly&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> SomeComponent</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> clientOnly</span><span style="color:#24292E">(() </span><span style="color:#D73A49">=&gt;</span><span style="color:#D73A49"> import</span><span style="color:#24292E">(</span><span style="color:#032F62">&quot;./SomeComponent.jsx&quot;</span><span style="color:#24292E">));</span></span>
+<span data-line=""><span style="color:#6A737D">/* If the component isn&#x27;t the default export:</span></span>
+<span data-line=""><span style="color:#6A737D">const SomeComponent = clientOnly(async () =&gt; (await import(&#x27;some-library&#x27;)).SomeComponent)</span></span>
+<span data-line=""><span style="color:#6A737D">*/</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> MyComponent</span><span style="color:#24292E">(</span><span style="color:#E36209">props</span><span style="color:#24292E">) {</span></span>
+<span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> &lt;</span><span style="color:#005CC5">SomeComponent</span><span style="color:#6F42C1"> fallback</span><span style="color:#D73A49">=</span><span style="color:#24292E">{&lt;</span><span style="color:#005CC5">Loading</span><span style="color:#24292E"> /&gt;} /&gt;</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<h4 id="props">Props</h4>
+<ul>
+<li><strong>fallback</strong>: Content shown while the component is being loaded.</li>
+</ul>
+<p>All other props are passed to the loaded component.</p>
 <h2 id="solid">Solid</h2>
 <h3 id="usage">Usage</h3>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="tsx" data-theme="github-light"><code data-language="tsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { clientOnly } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-solid/clientOnly&#x27;</span></span>
