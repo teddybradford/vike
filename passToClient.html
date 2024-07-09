@@ -50,15 +50,15 @@
 <pre><code>[Vike][Wrong Usage] pageContext.someProp isn&#x27;t defined on the client-side
 </code></pre>
 <blockquote>
-<p>See the stack trace to find which <code>pageContext.someProp</code> occurrence in your code triggers the error.</p>
+<p>You can look at the stack trace to find the <code>pageContext.someProp</code> occurrence in your code that triggers the error.</p>
 </blockquote>
 <p>To avoid the error:</p>
 <ol>
 <li>Add <code>&#x27;someProp&#x27;</code> to <code>passToClient</code> (see above), or</li>
 <li>Replace <code>pageContext.someProp</code> with <code>&#x27;someProp&#x27; in pageContext &amp;&amp; pageContext.someProp</code>.<!-- -->
-<figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span class="diff remove" data-line=""><span style="color:#6A737D">// ❌ Vike throws an error if pageContext.someProp isn&#x27;t defined.</span></span>
+<figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span class="diff remove" data-line=""><span style="color:#6A737D">// ❌ Vike throws an error if pageContext.someProp isn&#x27;t defined</span></span>
 <span class="diff remove" data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> val</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> pageContext.someProp </span></span>
-<span class="diff add" data-line=""><span style="color:#6A737D">// ✅ With doesn&#x27;t throw any error if pageContext.someProp isn&#x27;t defined.</span></span>
+<span class="diff add" data-line=""><span style="color:#6A737D">// ✅ Vike doesn&#x27;t throw an error if pageContext.someProp isn&#x27;t defined</span></span>
 <span class="diff add" data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> val</span><span style="color:#D73A49"> =</span><span style="color:#032F62"> &#x27;someProp&#x27;</span><span style="color:#D73A49"> in</span><span style="color:#24292E"> pageContext </span><span style="color:#D73A49">&amp;&amp;</span><span style="color:#24292E"> pageContext.someProp </span></span>
 <span class="diff add" data-line=""><span style="color:#6A737D">// Or:</span></span>
 <span class="diff add" data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> val</span><span style="color:#D73A49"> =</span><span style="color:#032F62"> &#x27;someProp&#x27;</span><span style="color:#D73A49"> in</span><span style="color:#24292E"> pageContext </span><span style="color:#D73A49">?</span><span style="color:#24292E"> pageContext.someProp </span><span style="color:#D73A49">:</span><span style="color:#24292E"> someDefaultValue </span></span></code></pre></figure>
