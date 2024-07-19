@@ -47,7 +47,6 @@
 <a href="https://github.com/vikejs/vike-react/blob/main/packages/vike-react/CHANGELOG.md"><code>vike-react</code> &gt; <code>CHANGELOG.md</code></a><br/>
 <a href="https://github.com/vikejs/vike-vue/blob/main/packages/vike-vue/CHANGELOG.md"><code>vike-vue</code> &gt; <code>CHANGELOG.md</code></a><br/>
 <a href="https://github.com/vikejs/vike-solid/blob/main/CHANGELOG.md"><code>vike-solid</code> &gt; <code>CHANGELOG.md</code></a></p>
-<a href="/releases">Releases</a>
 <h2 id="vike-react-apollo">vike-react-apollo</h2>
 <p>The <a href="/vike-react"><code>vike-react</code> extension</a> now has first-class support for GraphQL Apollo thanks to the new <a href="https://github.com/vikejs/vike-react/tree/main/packages/vike-react-apollo#readme"><code>vike-react-apollo</code> extension</a>.</p>
 <p>Like other extensions, <code>vike-react-apollo</code> is lightweight (only <code>202</code> lines of code!). This means that, instead of using <code>vike-react-apollo</code>, you can easily integrate GraphQL Apollo (or any other GraphQL client) yourself.</p>
@@ -92,9 +91,16 @@
 </ul>
 <blockquote class="custom-icon type-contribution note-color-green"><div style="margin-bottom:20px"></div><span style="font-family:emoji">💚</span><span style="width:2px;display:inline-block"></span> <div class="blockquote-content"><p>Author: <a href="https://github.com/phonzammi"><code>phonzammi</code></a>, <a href="https://github.com/magne4000"><code>magne4000</code></a></p></div><div style="margin-top:20px"></div></blockquote>
 <h2 id="more-robust-foundation">More robust foundation</h2>
-<p>We are continuously working on internal improvements. These aren&#x27;t visible to the user but they have a foundational impact on Vike and its ecosystem, and we invest a lot in such foundational improvements.</p>
-<p>For example, we refactored the stream chunk orchestration logic of <a href="https://github.com/brillout/react-streaming"><code>react-streaming</code></a> (which powers <code>vike-react</code> and other projects). <a href="https://github.com/brillout/react-streaming/commit/c052e72f33254fd6deb474cd784fa4cee07b6e92#diff-52301d8ceb8d9165f156883711407609a842701365fc32f512083f81c7c02dc4">The code is now crystal clear and robust</a>. (It was somewhat messy &amp; buggy before.)</p>
+<p>We continuously work on internal improvements. These aren&#x27;t visible to the user but they have a foundational impact on Vike and its ecosystem.</p>
+<p>Examples:</p>
+<ul>
+<li>We refactored the stream chunk orchestration logic of <a href="https://github.com/brillout/react-streaming"><code>react-streaming</code></a> (which powers <code>vike-react</code> and other projects). <a href="https://github.com/brillout/react-streaming/commit/c052e72f33254fd6deb474cd784fa4cee07b6e92#diff-52301d8ceb8d9165f156883711407609a842701365fc32f512083f81c7c02dc4">The logic is now crystal clear and robust</a> (it was messy and buggy).<!-- -->
 <blockquote class="custom-icon type-contribution note-color-green"><div style="margin-bottom:20px"></div><span style="font-family:emoji">💚</span><span style="width:2px;display:inline-block"></span> <div class="blockquote-content"><p>Authors: <a href="https://github.com/nitedani"><code>nitedani</code></a>, <a href="https://github.com/brillout"><code>brillout</code></a></p></div><div style="margin-top:20px"></div></blockquote>
+</li>
+<li>We <a href="https://github.com/vikejs/vike/compare/63b1f5caf36ea125d7ecf5271f10d0d9065ac916..09420db329dbaaa9dfe6b900964ff158f8a6f1b3~">refactored Vike&#x27;s URL handling</a>. (The logic is now crystal clear with lot&#x27;s explanation comments.)<!-- -->
+<blockquote class="custom-icon type-contribution note-color-green"><div style="margin-bottom:20px"></div><span style="font-family:emoji">💚</span><span style="width:2px;display:inline-block"></span> <div class="blockquote-content"><p>Authors: <a href="https://github.com/brillout"><code>brillout</code></a></p></div><div style="margin-top:20px"></div></blockquote>
+</li>
+</ul>
 <h2 id="see-also">See also</h2>
 <ul>
 <li><a href="https://github.com/vikejs/vike/blob/main/CHANGELOG.md"><code>vike</code> &gt; <code>CHANGELOG.md</code></a></li>
