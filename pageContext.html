@@ -80,31 +80,43 @@
 </ul>
 </li>
 <li>
-<p><strong><code>pageContext.urlPathname</code></strong>: alias of <code>pageContext.urlParsed.pathname</code>.</p>
+<p><strong><code>pageContext.urlPathname</code></strong>: alias for <code>pageContext.urlParsed.pathname</code>.</p>
 </li>
 <li>
 <p><strong><code>pageContext.urlParsed</code></strong>: URL information:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">{</span></span>
-<span data-line=""><span style="color:#6F42C1">  origin</span><span style="color:#24292E">: </span><span style="color:#005CC5">null</span><span style="color:#D73A49"> |</span><span style="color:#24292E"> string</span></span>
 <span data-line=""><span style="color:#6F42C1">  pathname</span><span style="color:#24292E">: string</span></span>
 <span data-line=""><span style="color:#6F42C1">  pathnameOriginal</span><span style="color:#24292E">: string</span></span>
-<span data-line=""><span style="color:#6F42C1">  search</span><span style="color:#24292E">: Record</span><span style="color:#D73A49">&lt;</span><span style="color:#24292E">string, string</span><span style="color:#D73A49">&gt;</span><span style="color:#6A737D"> // (AKA query parameters)</span></span>
+<span data-line=""><span style="color:#6F42C1">  search</span><span style="color:#24292E">: Record</span><span style="color:#D73A49">&lt;</span><span style="color:#24292E">string, string</span><span style="color:#D73A49">&gt;</span><span style="color:#6A737D"> // AKA query parameters</span></span>
 <span data-line=""><span style="color:#6F42C1">  searchAll</span><span style="color:#24292E">: Record</span><span style="color:#D73A49">&lt;</span><span style="color:#24292E">string, string[]</span><span style="color:#D73A49">&gt;</span></span>
 <span data-line=""><span style="color:#6F42C1">  searchOriginal</span><span style="color:#24292E">: </span><span style="color:#005CC5">null</span><span style="color:#D73A49"> |</span><span style="color:#24292E"> string</span></span>
 <span data-line=""><span style="color:#6F42C1">  hash</span><span style="color:#24292E">: string</span></span>
 <span data-line=""><span style="color:#6F42C1">  hashOriginal</span><span style="color:#24292E">: </span><span style="color:#005CC5">null</span><span style="color:#D73A49"> |</span><span style="color:#24292E"> string</span></span>
+<span data-line=""><span style="color:#6F42C1">  href</span><span style="color:#24292E">: string</span></span>
+<span data-line=""><span style="color:#6F42C1">  origin</span><span style="color:#24292E">: </span><span style="color:#005CC5">null</span><span style="color:#D73A49"> |</span><span style="color:#24292E"> string</span></span>
+<span data-line=""><span style="color:#6F42C1">  protocol</span><span style="color:#24292E">: </span><span style="color:#005CC5">null</span><span style="color:#D73A49"> |</span><span style="color:#24292E"> string</span></span>
+<span data-line=""><span style="color:#6F42C1">  hostname</span><span style="color:#24292E">: </span><span style="color:#005CC5">null</span><span style="color:#D73A49"> |</span><span style="color:#24292E"> string</span></span>
+<span data-line=""><span style="color:#6F42C1">  port</span><span style="color:#24292E">: </span><span style="color:#005CC5">null</span><span style="color:#D73A49"> |</span><span style="color:#24292E"> string</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>For example:</p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// https://example.com/some-base-url/hello/s%C3%A9bastien?fruit=%C3%A2pple&amp;fruit=orânge#%C3%A2ge</span></span>
-<span data-line=""><span style="color:#24292E">{</span></span>
-<span data-line=""><span style="color:#6F42C1">  origin</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;https://example.com&#x27;</span><span style="color:#24292E">,</span></span>
-<span data-line=""><span style="color:#6F42C1">  pathname</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;/hello/sébastien&#x27;</span><span style="color:#24292E">, </span><span style="color:#6A737D">// Without Base URL</span></span>
+<pre><code>https://example.com/some-base-url/hello/s%C3%A9bastien?fruit=%C3%A2pple&amp;fruit=orânge#%C3%A2ge
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">{</span></span>
+<span data-line=""><span style="color:#6A737D">  // Without Base URL, decodes escaped characters</span></span>
+<span data-line=""><span style="color:#6F42C1">  pathname</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;/hello/sébastien&#x27;</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#6A737D">  // With Base URL, doesn&#x27;t decode escaped characters</span></span>
 <span data-line=""><span style="color:#6F42C1">  pathnameOriginal</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;/some-base-url/hello/s%C3%A9bastien&#x27;</span><span style="color:#24292E">,</span></span>
-<span data-line=""><span style="color:#6F42C1">  search</span><span style="color:#24292E">: { </span><span style="color:#6F42C1">fruit</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;orânge&#x27;</span><span style="color:#24292E"> }, </span><span style="color:#6A737D">// (AKA query params)</span></span>
+<span data-line=""><span style="color:#6F42C1">  search</span><span style="color:#24292E">: { </span><span style="color:#6F42C1">fruit</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;orânge&#x27;</span><span style="color:#24292E"> },</span></span>
 <span data-line=""><span style="color:#6F42C1">  searchAll</span><span style="color:#24292E">: { </span><span style="color:#6F42C1">fruit</span><span style="color:#24292E">: [</span><span style="color:#032F62">&#x27;âpple&#x27;</span><span style="color:#24292E">, </span><span style="color:#032F62">&#x27;orânge&#x27;</span><span style="color:#24292E">] },</span></span>
 <span data-line=""><span style="color:#6F42C1">  searchOriginal</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;?fruit=%C3%A2pple&amp;fruit=orânge&#x27;</span><span style="color:#24292E">,</span></span>
 <span data-line=""><span style="color:#6F42C1">  hash</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;âge&#x27;</span><span style="color:#24292E">,</span></span>
 <span data-line=""><span style="color:#6F42C1">  hashOriginal</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;#%C3%A2ge&#x27;</span></span>
+<span data-line=""><span style="color:#6A737D">  // Without Base URL, doesn&#x27;t decode escaped characters</span></span>
+<span data-line=""><span style="color:#6F42C1">  href</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;https://example.com/hello/s%C3%A9bastien?fruit=%C3%A2pple&amp;fruit=orânge#%C3%A2ge&#x27;</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#6F42C1">  origin</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;https://example.com&#x27;</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#6F42C1">  protocol</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;https://&#x27;</span><span style="color:#24292E">,</span></span>
+<span data-line=""><span style="color:#6F42C1">  hostname</span><span style="color:#24292E">: </span><span style="color:#032F62">&#x27;example.com&#x27;</span><span style="color:#24292E">, </span><span style="color:#6A737D">// &#x27;localhost&#x27; for http://localhost:3000</span></span>
+<span data-line=""><span style="color:#6F42C1">  port</span><span style="color:#24292E">: </span><span style="color:#005CC5">null</span><span style="color:#6A737D"> // 3000 for http://localhost:3000</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 </li>
 <li>
