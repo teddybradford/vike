@@ -129,7 +129,7 @@
 <p><strong><code>pageContext.config</code></strong>: See <a href="/meta">API<!-- --> &gt; <code>meta</code></a>.</p>
 </li>
 <li>
-<p><strong><code>pageContext.isHydration</code></strong>: Whether the current page is already rendered to HTML. When using <a href="/client-routing">Client Routing</a>, the value is usually <code>true</code> for the first page the user navigates to, and <code>false</code> for any subsequent navigation. (When using <a href="/server-routing">Server Routing</a>, the value is always <code>true</code>.)</p>
+<p><strong><code>pageContext.isHydration</code></strong>: Whether the page is rendered to HTML. When using <a href="/client-routing">Client Routing</a>, the value is <code>true</code> for the first page the user navigates to, and <code>false</code> for any subsequent navigation. (When using <a href="/server-routing">Server Routing</a>, the value is always <code>true</code>.) (If the page doesn&#x27;t throw an error then it&#x27;s equivalent to <code>!pageContext.isClientSideNavigation</code>, otherwise the error page is rendered and thus <code>pageContext.isHydration</code> is <code>false</code> whereas <code>!pageContext.isClientSideNavigation</code> is <code>true</code>.)</p>
 </li>
 <li>
 <p><strong><code>pageContext.isBackwardNavigation</code></strong>: Whether the user is navigating back in history. The value is <code>true</code> when the user clicks on his browser&#x27;s backward navigation button, or when invoking <code>history.back()</code>. The <code>isBackwardNavigation</code> property only works with Client Routing. (The value is always <code>null</code> when using Server Routing.)</p>
