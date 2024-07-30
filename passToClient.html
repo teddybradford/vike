@@ -62,7 +62,7 @@
 <span class="diff add" data-line=""><span style="color:#6A737D">// ✅ Vike doesn&#x27;t throw an error if pageContext.someProp isn&#x27;t defined</span></span>
 <span class="diff add" data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> val</span><span style="color:#D73A49"> =</span><span style="color:#032F62"> &#x27;someProp&#x27;</span><span style="color:#D73A49"> in</span><span style="color:#24292E"> pageContext </span><span style="color:#D73A49">&amp;&amp;</span><span style="color:#24292E"> pageContext.someProp </span></span>
 <span data-line=""> </span>
-<span class="diff add" data-line=""><span style="color:#6A737D">// ✅ Or:</span></span>
+<span class="diff add" data-line=""><span style="color:#6A737D">// ✅ Alternative</span></span>
 <span class="diff add" data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> val</span><span style="color:#D73A49"> =</span><span style="color:#032F62"> &#x27;someProp&#x27;</span><span style="color:#D73A49"> in</span><span style="color:#24292E"> pageContext </span><span style="color:#D73A49">?</span><span style="color:#24292E"> pageContext.someProp </span><span style="color:#D73A49">:</span><span style="color:#24292E"> someDefaultValue </span></span></code></pre></figure>
 </li>
 </ol>
