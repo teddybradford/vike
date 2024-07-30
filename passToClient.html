@@ -54,13 +54,15 @@
 </blockquote>
 <p>To avoid the error:</p>
 <ol>
-<li>Add <code>&#x27;someProp&#x27;</code> to <code>passToClient</code> (see above), or</li>
-<li>Replace <code>pageContext.someProp</code> with <code>&#x27;someProp&#x27; in pageContext &amp;&amp; pageContext.someProp</code>.<!-- -->
+<li>add <code>&#x27;someProp&#x27;</code> to <code>passToClient</code> (see above), or</li>
+<li>replace <code>pageContext.someProp</code> with <code>&#x27;someProp&#x27; in pageContext &amp;&amp; pageContext.someProp</code>.<!-- -->
 <figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span class="diff remove" data-line=""><span style="color:#6A737D">// ❌ Vike throws an error if pageContext.someProp isn&#x27;t defined</span></span>
 <span class="diff remove" data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> val</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> pageContext.someProp </span></span>
+<span data-line=""> </span>
 <span class="diff add" data-line=""><span style="color:#6A737D">// ✅ Vike doesn&#x27;t throw an error if pageContext.someProp isn&#x27;t defined</span></span>
 <span class="diff add" data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> val</span><span style="color:#D73A49"> =</span><span style="color:#032F62"> &#x27;someProp&#x27;</span><span style="color:#D73A49"> in</span><span style="color:#24292E"> pageContext </span><span style="color:#D73A49">&amp;&amp;</span><span style="color:#24292E"> pageContext.someProp </span></span>
-<span class="diff add" data-line=""><span style="color:#6A737D">// Or:</span></span>
+<span data-line=""> </span>
+<span class="diff add" data-line=""><span style="color:#6A737D">// ✅ Or:</span></span>
 <span class="diff add" data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> val</span><span style="color:#D73A49"> =</span><span style="color:#032F62"> &#x27;someProp&#x27;</span><span style="color:#D73A49"> in</span><span style="color:#24292E"> pageContext </span><span style="color:#D73A49">?</span><span style="color:#24292E"> pageContext.someProp </span><span style="color:#D73A49">:</span><span style="color:#24292E"> someDefaultValue </span></span></code></pre></figure>
 </li>
 </ol>
