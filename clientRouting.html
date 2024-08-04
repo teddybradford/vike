@@ -68,7 +68,7 @@
 <span data-line=""><span style="color:#D73A49">  if</span><span style="color:#24292E"> (pageContext.isHydration) {</span></span>
 <span data-line=""><span style="color:#6A737D">    // We hydrate the first page. (Since we do SSR, the first page is already</span></span>
 <span data-line=""><span style="color:#6A737D">    // rendered to HTML and we merely have to hydrate it.)</span></span>
-<span data-line=""><span style="color:#D73A49">    await</span><span style="color:#6F42C1"> hydrate</span><span style="color:#24292E">(pageContext.Page)</span></span>
+<span data-line=""><span style="color:#D73A49">    await</span><span style="color:#6F42C1"> hydrateDom</span><span style="color:#24292E">(pageContext.Page)</span></span>
 <span data-line=""><span style="color:#24292E">  } </span><span style="color:#D73A49">else</span><span style="color:#24292E"> {</span></span>
 <span data-line=""><span style="color:#6A737D">    // We render a new page. (When the user navigates to a new page.)</span></span>
 <span data-line=""><span style="color:#D73A49">    await</span><span style="color:#6F42C1"> renderToDom</span><span style="color:#24292E">(pageContext.Page)</span></span>
