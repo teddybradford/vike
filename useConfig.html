@@ -50,7 +50,7 @@
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> { data }</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { useConfig } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-react/useConfig&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { useConfig } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-react/useConfig&#x27;</span><span style="color:#6A737D"> // or vike-vue / vike-solid</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> data</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
 <span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> config</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> useConfig</span><span style="color:#24292E">()</span></span>
@@ -95,8 +95,8 @@
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="config-head"><code>&lt;Config&gt;</code> &amp; <code>&lt;Head&gt;</code></h2>
 <p>Inside components, you can also use <code>&lt;Config&gt;</code> and <code>&lt;Head&gt;</code>:</p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="jsx" data-theme="github-light"><code data-language="jsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { Config } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-react/Config&#x27;</span></span>
-<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { Head } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-react/Head&#x27;</span></span>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="jsx" data-theme="github-light"><code data-language="jsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { Config } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-react/Config&#x27;</span><span style="color:#6A737D"> // or vike-solid</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { Head } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-react/Head&#x27;</span><span style="color:#6A737D"> // or vike-solid</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Movies</span><span style="color:#24292E">() {</span></span>
 <span data-line=""><span style="color:#6A737D">  // Fetch data</span></span>
@@ -116,7 +116,7 @@
 <span data-line=""><span style="color:#24292E">  )</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
-<p>It&#x27;s currently only implemented by <code>vike-react</code>. Contribution welcome <a href="https://github.com/vikejs/vike-vue/issues/175">for <code>vike-vue</code></a> and <a href="https://github.com/vikejs/vike-solid/issues/105">for <code>vike-solid</code></a>.</p>
+<p>It&#x27;s currently only implemented by <code>vike-react</code> and <code>vike-solid</code>. Contribution welcome <a href="https://github.com/vikejs/vike-vue/issues/175">for <code>vike-vue</code></a>.</p>
 </blockquote>
 <blockquote>
 <p>Both achieve the same:</p>
@@ -191,7 +191,7 @@ such as <a href="https://github.com/vikejs/vike-react/tree/main/packages/vike-re
 <figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span class="diff remove" data-line=""><span style="color:#6A737D">// pages/some-page/+data.js</span></span>
 <span class="diff add" data-line=""><span style="color:#6A737D">// pages/some-page/+data.shared.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { useConfig } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-react/useConfig&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { useConfig } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-react/useConfig&#x27;</span><span style="color:#6A737D"> // or vike-vue / vike-solid</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> data</span><span style="color:#24292E"> (</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
 <span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> config</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> useConfig</span><span style="color:#24292E">()</span></span>
