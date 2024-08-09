@@ -29,7 +29,7 @@
 <blockquote><p>Instead of manually integrating <!-- -->HTML Streaming<!-- --> yourself, you can use a <!-- -->UI framework <a href="/extensions">Vike extension</a> <a href="/vike-react"><code>vike-react</code></a>/<a href="/vike-vue"><code>vike-vue</code></a>/<a href="/vike-solid"><code>vike-solid</code></a> which already integrates <!-- -->HTML Streaming<!-- -->. And you can use <a href="https://batijs.dev/">Bati</a> to scaffold an app that uses<!-- --> <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>.</p></blockquote>
 <blockquote class="custom-icon type-warning note-color-yellow"><div style="margin-bottom:20px"></div><span style="font-family:emoji">⚠️</span><span style="width:2px;display:inline-block"></span> <div class="blockquote-content">The documentation on this page is meant for users who want to manually integrate HTML Streaming. If you use <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code> then HTML Streaming is already built-in and you can skip reading this page.</div><div style="margin-top:20px"></div></blockquote>
 <blockquote>
-<p><strong>What is HTML Streaming?</strong> If you&#x27;re unfamiliar with HTML streaming then check out <a href="https://github.com/reactwg/react-18/discussions/37">Dan Abramov&#x27;s explanation of SSR, HTML streaming, and Progressive Rendering</a>. (While it explains it in the context of React, we still recommend reading it if you use a UI framework other than React.)</p>
+<p><strong>What is HTML Streaming?</strong> If you&#x27;re unfamiliar with HTML streaming then check out <a href="https://github.com/reactwg/react-18/discussions/37">Dan Abramov&#x27;s explanation of SSR, HTML streaming, and Progressive Rendering</a>. (While it explains it in the context of React, we still recommend it if you use another UI framework.)</p>
 </blockquote>
 <h2 id="examples">Examples</h2>
 <p>Examples of manually integrating HTML streaming (without using a <a href="/extensions">Vike extension</a>).</p>
@@ -285,11 +285,11 @@ Instead, Vike awaits for your UI framework to start its stream.</p>
 <span data-line=""><span style="color:#24292E">  }</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="progressive-rendering">Progressive Rendering</h2>
-<p>Some UI frameworks, such as React, support <em>progressive rendering</em>: while some parts of the UI are being loaded, other parts are already rendered (as well as already <a href="/hydration">hydrated</a>).</p>
+<p>Some UI frameworks, such as React, support <em>progressive rendering</em>: while some parts of the UI are being loaded, other parts are already rendered (and already <a href="/hydration">hydrated</a>).</p>
 <video src="/assets/static/progressive-rendering-demo.Gn731VlB.webm" width="500" controls="" muted="" autoplay="" loop=""></video>
 <blockquote>
-<p>Instead of using HTML streaming, an easy alternative is to use a stateful component. But the issue is that the content that is rendered later isn&#x27;t rendered to HTML. For example, a product page with content fetched from a database won&#x27;t get <a href="/SPA-vs-SSR#ssr">the SEO nor performance advantages of SSR</a>.</p>
-<p>With HTML streaming, all content (including the content that is rendered later) is rendered to HTML.</p>
+<p>Instead of using HTML streaming, an easy alternative is to use a stateful component. But the issue with that approach is that the content isn&#x27;t rendered to HTML. For example, a product page fetching its content from a database won&#x27;t get the <a href="/SPA-vs-SSR#ssr">SEO and performance advantages of SSR</a>.</p>
+<p>With HTML streaming, all content is rendered to HTML.</p>
 </blockquote>
 <p>Vike has first-class support for HTML streaming and progressive rendering.</p>
 <p>Example: <a href="https://github.com/vikejs/vike-react/tree/main/examples/full#readme"><code>vike-react</code> &gt; <code>examples/full/</code></a>.</p>
