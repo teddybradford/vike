@@ -115,6 +115,22 @@ For example, instead of serving your website at <code>https://example.org/*</cod
 <a href="https://github.com/vikejs/vike/tree/main/examples/base-url-cdn/">/examples/base-url-cdn/</a>
 </li>
 </ul>
+<p>By default, the <code>baseAssets</code> setting applies to both development and production. You can apply it only to production by using <code>process.env.NODE_ENV</code>:</p>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// vite.config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> vike </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/plugin&#x27;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> isProduction</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> process.env.</span><span style="color:#005CC5">NODE_ENV</span><span style="color:#D73A49"> ===</span><span style="color:#032F62"> &#x27;production&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">const</span><span style="color:#005CC5"> baseAssets</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> isProduction </span><span style="color:#D73A49">?</span><span style="color:#032F62"> &#x27;https://cdn.example.org/my-website-assets/&#x27;</span><span style="color:#D73A49"> :</span><span style="color:#005CC5"> undefined</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  plugins: [</span></span>
+<span data-line=""><span style="color:#6F42C1">    vike</span><span style="color:#24292E">({ baseAssets })</span></span>
+<span data-line=""><span style="color:#24292E">  ]</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<blockquote>
+<p>There is <a href="https://github.com/vikejs/vike/issues/1794">work-in-progress to apply it only in production by default</a>.</p>
+</blockquote>
 <h2 id="baseserver"><code>baseServer</code></h2>
 <p>You can do both:</p>
 <ul>
