@@ -165,13 +165,14 @@
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>This enables Vike to load the file <code>/pages/+config.js</code> without having to load <code>LayoutDefault.jsx</code>. This means that Vike can quickly load all your <code>+config.js</code> files without having to load any runtime code.</p>
 <blockquote>
-<p>These fake imports, which we call <em>pointer imports</em>, apply only to <code>+config.js</code> files. Imports in other <code>+</code> files are normal imports as usual.</p>
+<p>These fake imports, which we call <em>pointer imports</em>, apply only to <code>+config.js</code> files. Imports in other <code>+</code> files are normal imports.</p>
 </blockquote>
 <p>It&#x27;s similar to when you import images:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> logo </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;../images/logo.svg&#x27;</span></span>
 <span data-line=""><span style="color:#6A737D">// When you import an image, you don&#x27;t actually load it: you get a URL instead.</span></span>
 <span data-line=""><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(logo) </span><span style="color:#6A737D">// Prints: /assets/logo.svg</span></span></code></pre></figure>
-<p>Vike transforms an import inside <code>+config.js</code> to be a pointer import if and only if it resolve to a <code>.jsx</code> file, a <code>.vue</code> file, or any other file that doesn&#x27;t end with <code>.js</code> or <code>.ts</code> (or <code>.mjs</code>/<code>.mts</code>/<code>.cjs</code>/<code>.cts</code>). For example:</p>
+<p>Vike transforms an import inside <code>+config.js</code> to be a pointer import if and only if the import resolves to a file that doesn&#x27;t end with <code>.js</code>/<code>.ts</code>/<code>.mjs</code>/<code>.mts</code>/<code>.cjs</code>/<code>.cts</code>.</p>
+<p>For example, an import that resolves to a <code>.jsx</code> or <code>.vue</code> file is transformed to be a pointer import:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/ssr.js</span></span>
 <span data-line=""><span style="color:#6A737D">// Environment: config</span></span>
 <span data-line=""> </span>
@@ -192,7 +193,7 @@
 <span data-line=""><span style="color:#24292E">  ssr</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
-<p>A <code>.jsx</code> or <code>.vue</code> file is always meant to be client- / server-side runtime code. (I.e. it&#x27;s never used for config logic.) That&#x27;s why it makes sense that Vike always treats <code>.jsx</code> and <code>.vue</code> as pointer imports.</p>
+<p>A <code>.jsx</code> or <code>.vue</code> file is always meant to be client-/server-side runtime code (it&#x27;s never used for defining configuration logic). That&#x27;s why it makes sense that Vike always treats <code>.jsx</code> and <code>.vue</code> files as pointer imports.</p>
 </blockquote>
 <h4 id="manually-mark-pointer-imports">Manually mark pointer imports</h4>
 <p>You can manually mark an import to be a pointer import:</p>
@@ -210,7 +211,7 @@
 <span data-line=""><span style="color:#6A737D">// be imported in runtime files such as +Page.js instead.</span></span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#032F62"> &#x27;./some.css&#x27;</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">// This log is printed only when Vike loads this +config.js file (at development, and when</span></span>
+<span data-line=""><span style="color:#6A737D">// This log is printed only when Vike loads this +config.js file (at development and when</span></span>
 <span data-line=""><span style="color:#6A737D">// building your app). This log isn&#x27;t included in the client nor server runtime.</span></span>
 <span data-line=""><span style="color:#6A737D">// Consequently, you won&#x27;t see this log in production.</span></span>
 <span data-line=""><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">&quot;I will never be logged in production&quot;</span><span style="color:#24292E">)</span></span></code></pre></figure>
