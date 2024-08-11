@@ -134,11 +134,11 @@ such as <a href="https://github.com/vikejs/vike-react/tree/main/packages/vike-re
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Movies</span><span style="color:#24292E">() {</span></span>
 <span data-line=""><span style="color:#6A737D">  // Fetch data</span></span>
-<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> result</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> useSuspenseQuery</span><span style="color:#24292E">({</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> query</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> useSuspenseQuery</span><span style="color:#24292E">({</span></span>
 <span data-line=""><span style="color:#24292E">    queryKey: [</span><span style="color:#032F62">&#x27;movies&#x27;</span><span style="color:#24292E">],</span></span>
 <span data-line=""><span style="color:#6F42C1">    queryFn</span><span style="color:#24292E">: () </span><span style="color:#D73A49">=&gt;</span><span style="color:#6F42C1"> fetch</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;https://star-wars.brillout.com/api/films.json&#x27;</span><span style="color:#24292E">)</span></span>
 <span data-line=""><span style="color:#24292E">  })</span></span>
-<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> movies</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> result.data</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> movies</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> query.data</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#6A737D">  // Set &lt;head&gt; tags</span></span>
 <span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> config</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> useConfig</span><span style="color:#24292E">()</span></span>
@@ -163,11 +163,11 @@ such as <a href="https://github.com/vikejs/vike-react/tree/main/packages/vike-re
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Movies</span><span style="color:#24292E">() {</span></span>
 <span data-line=""><span style="color:#6A737D">  // Fetch data</span></span>
-<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> result</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> useSuspenseQuery</span><span style="color:#24292E">({</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> query</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> useSuspenseQuery</span><span style="color:#24292E">({</span></span>
 <span data-line=""><span style="color:#24292E">    queryKey: [</span><span style="color:#032F62">&#x27;movies&#x27;</span><span style="color:#24292E">],</span></span>
 <span data-line=""><span style="color:#6F42C1">    queryFn</span><span style="color:#24292E">: () </span><span style="color:#D73A49">=&gt;</span><span style="color:#6F42C1"> fetch</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;https://star-wars.brillout.com/api/films.json&#x27;</span><span style="color:#24292E">)</span></span>
 <span data-line=""><span style="color:#24292E">  })</span></span>
-<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> movies</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> result.data</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> movies</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> query.data</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#6A737D">  // Render UI and &lt;head&gt; tags</span></span>
 <span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> (</span></span>
