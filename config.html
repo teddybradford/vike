@@ -204,7 +204,7 @@
 <span data-line=""><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(ssr) </span><span style="color:#6A737D">// Prints: import:./ssr:default</span></span></code></pre></figure>
 <blockquote class="custom-icon type-construction note-color-yellow"><div style="margin-bottom:20px"></div><span style="font-family:emoji">🚧</span><span style="width:2px;display:inline-block"></span> <div class="blockquote-content">The <code>with { type: &#x27;pointer&#x27; }</code> import attribute isn&#x27;t implement yet, see workaround at <a href="https://github.com/vikejs/vike/issues/1500">#1500</a>.</div><div style="margin-top:20px"></div></blockquote>
 <h4 id="config-code-isn-t-runtime-code">Config code isn&#x27;t runtime code</h4>
-<p>The config code in itself is never included in runtimes:</p>
+<p>The config code itself is never included in runtimes:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/some-page/+config.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#6A737D">// A CSS import in a config file doesn&#x27;t have any effect. CSS should</span></span>
