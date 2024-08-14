@@ -195,14 +195,6 @@
 <blockquote>
 <p>A <code>.jsx</code> or <code>.vue</code> file is always meant to be client-/server-side runtime code (it&#x27;s never used for defining configuration logic). That&#x27;s why it makes sense that Vike always treats <code>.jsx</code> and <code>.vue</code> files as pointer imports.</p>
 </blockquote>
-<h4 id="manually-mark-pointer-imports">Manually mark pointer imports</h4>
-<p>You can manually mark an import to be a pointer import:</p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.js</span></span>
-<span data-line=""><span style="color:#6A737D">// Environment: config</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> ssr </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./ssr&#x27;</span><span style="color:#D73A49"> with</span><span style="color:#24292E"> { type: </span><span style="color:#032F62">&#x27;pointer&#x27;</span><span style="color:#24292E"> }</span></span>
-<span data-line=""><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(ssr) </span><span style="color:#6A737D">// Prints: import:./ssr:default</span></span></code></pre></figure>
-<blockquote class="custom-icon type-construction note-color-yellow"><div style="margin-bottom:20px"></div><span style="font-family:emoji">🚧</span><span style="width:2px;display:inline-block"></span> <div class="blockquote-content">The <code>with { type: &#x27;pointer&#x27; }</code> import attribute isn&#x27;t implement yet, see workaround at <a href="https://github.com/vikejs/vike/issues/1500">#1500</a>.</div><div style="margin-top:20px"></div></blockquote>
 <h4 id="config-code-isn-t-runtime-code">Config code isn&#x27;t runtime code</h4>
 <p>The config code itself is never included in runtimes:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/some-page/+config.js</span></span>
@@ -215,6 +207,41 @@
 <span data-line=""><span style="color:#6A737D">// building your app). This log isn&#x27;t included in the client nor server runtime.</span></span>
 <span data-line=""><span style="color:#6A737D">// Consequently, you won&#x27;t see this log in production.</span></span>
 <span data-line=""><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">&quot;I will never be logged in production&quot;</span><span style="color:#24292E">)</span></span></code></pre></figure>
+<h4 id="forbidden-runtime-code">Forbidden runtime code</h4>
+<p>If you get this error:</p>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#24292E">title defined by </span><span style="color:#D73A49">/</span><span style="color:#24292E">pages</span><span style="color:#D73A49">/+</span><span style="color:#24292E">config.ts must be defined over a so</span><span style="color:#D73A49">-</span><span style="color:#24292E">called </span><span style="color:#032F62">&quot;pointer import&quot;</span></span></code></pre></figure>
+<p>Then this means you&#x27;re trying to define runtime code inside a <code>+config.js</code> file which is forbidden.</p>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// pages/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">  // ❌ Forbidden: the function title() is runtime code</span></span>
+<span data-line=""><span style="color:#6F42C1">  title</span><span style="color:#24292E">: (</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> pageContext.data.title</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<blockquote>
+<p>Note that <code>title()</code> is called at runtime (i.e. when the page is rendered) and <em>not</em> at config time (i.e. when Vike loads the <code>+config.js</code> file).</p>
+</blockquote>
+<p>Instead do this:</p>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// pages/+title.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#6A737D">// ✅ Allowed: Vike is able to lazily load this function at runtime</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> (</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> pageContext.data.title</span></span></code></pre></figure>
+<p>Or this:</p>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// pages/+config.js</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> title </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./title&#x27;</span><span style="color:#D73A49"> with</span><span style="color:#24292E"> { type: </span><span style="color:#032F62">&#x27;pointer&#x27;</span><span style="color:#24292E"> }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#6A737D">  // ✅ Allowed: same as defining +title.js</span></span>
+<span data-line=""><span style="color:#24292E">  title</span></span>
+<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
+<h4 id="manually-mark-pointer-imports">Manually mark pointer imports</h4>
+<p>You can manually mark an import to be a pointer import:</p>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.js</span></span>
+<span data-line=""><span style="color:#6A737D">// Environment: config</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> ssr </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./ssr&#x27;</span><span style="color:#D73A49"> with</span><span style="color:#24292E"> { type: </span><span style="color:#032F62">&#x27;pointer&#x27;</span><span style="color:#24292E"> }</span></span>
+<span data-line=""><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(ssr) </span><span style="color:#6A737D">// Prints: import:./ssr:default</span></span></code></pre></figure>
+<blockquote class="custom-icon type-construction note-color-yellow"><div style="margin-bottom:20px"></div><span style="font-family:emoji">🚧</span><span style="width:2px;display:inline-block"></span> <div class="blockquote-content">The <code>with { type: &#x27;pointer&#x27; }</code> import attribute isn&#x27;t implement yet, see workaround at <a href="https://github.com/vikejs/vike/issues/1500">#1500</a>.</div><div style="margin-top:20px"></div></blockquote>
 <h2 id="see-also">See also</h2>
 <ul>
 <li>
