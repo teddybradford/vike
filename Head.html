@@ -82,34 +82,31 @@
 <h3 id="only-renders-for-the-first-page-s-html">Only renders for the first page&#x27;s HTML</h3>
 <p>The <code>&lt;Head&gt;</code> component is only used when rendering the HTML of the first page the user visits: the tags set by <code>&lt;Head&gt;</code> aren&#x27;t updated upon <a href="/client-routing">client-side page navigation</a>.</p>
 <h3 id="limitation">Limitation</h3>
-<p>The most notable limitation is that the <code>Head</code> setting cannot be used to set the <code>&lt;title&gt;</code> value, because the title isn&#x27;t updated upon client-side navigating between two pages that have a different title.</p>
+<p>The most notable limitation is that the <code>Head</code> setting cannot be used to set the <code>&lt;title&gt;</code> value, because the title isn&#x27;t updated upon client-side navigating to a page that has a different title.</p>
 <blockquote>
 <p>See <a href="#example">example below</a> for a more detailed explanation.</p>
 </blockquote>
-<p>For use cases where the <code>Head</code> setting cannot be used, Vike offers settings that update upon client-side navigation, such as the <a href="/title"><code>title</code> setting</a>.</p>
-<blockquote>
-<p>Don&#x27;t hesitate to reach out if you have a use case that you cannot achieve.</p>
-</blockquote>
+<p>For use cases where the <code>Head</code> setting cannot be used, Vike offers settings that update upon client-side navigation such as <a href="/title"><code>title</code></a>.</p>
 <h3 id="a-small-limitation">A small limitation</h3>
-<p>This may seem like a major limitation but it actually isn&#x27;t: you can still use the <code>Head</code> setting for the vast majority of use cases.</p>
-<p>Many <code>&lt;head&gt;</code> tags are only meant for HTML crawling:</p>
+<p>This may seem like a major limitation but it actually isn&#x27;t: you can use the <code>Head</code> setting for the vast majority of use cases.</p>
+<p>You can use the <code>Head</code> setting for <code>&lt;head&gt;</code> tags are read by HTML crawlers:</p>
 <ul>
-<li>Tags for social sites (Twitter, Instagram, ...) such as <code>&lt;meta property=&quot;og:image&quot;&gt;</code> (preview image upon URL sharing).<!-- -->
+<li>Tags for social sites (Twitter, Instagram, ...) such as <code>&lt;meta property=&quot;og:image&quot;&gt;</code> (the preview image upon URL sharing).<!-- -->
 <blockquote>
-<p>Social site bots navigate your website only by using HTML requests: they don&#x27;t execute client-side JavaScript and, consequently, don&#x27;t do client-side navigation.</p>
+<p>Social site bots navigate your website only by using HTML requests: they don&#x27;t execute client-side JavaScript and don&#x27;t do client-side navigation.</p>
 </blockquote>
 </li>
 <li>Tags for SEO such as <code>&lt;meta name=&quot;description&quot;&gt;</code>.<!-- -->
 <blockquote>
-<p>While Google can do client-side navigation, it does discovers <code>&lt;head&gt;</code> tags by using its HTML crawler.</p>
+<p>While Google can do client-side navigation, it still discovers <code>&lt;head&gt;</code> tags by using its HTML crawler.</p>
 </blockquote>
 </li>
 </ul>
-<p>Many <code>&lt;head&gt;</code> tags are global (they have the same value for you all your pages):</p>
+<p>You can use the <code>Head</code> setting for <code>&lt;head&gt;</code> tags are global (they have the same value for you all your pages):</p>
 <ul>
 <li>Favicon.<!-- -->
 <blockquote>
-<p>Assuming all your pages share the same favicon (<code>&lt;link rel=&quot;icon&quot;&gt;</code>), there isn&#x27;t any need to update it upon client-side navigation.</p>
+<p>Assuming all your pages share the same favicon (<code>&lt;link rel=&quot;icon&quot;&gt;</code>), there isn&#x27;t any need to update the favicon upon client-side navigation.</p>
 </blockquote>
 </li>
 <li>PWA settings.<!-- -->
@@ -119,12 +116,12 @@
 </li>
 <li><code>&lt;script&gt;</code>
 <blockquote>
-<p>Assuming the script should apply to all your pages.</p>
+<p>Assuming the script applies to all your pages.</p>
 </blockquote>
 </li>
 </ul>
 <h3 id="example">Example</h3>
-<p>For example, in the following, using the <code>Head</code> setting for <code>&lt;title&gt;</code> doesn&#x27;t work, but it does work for <code>&lt;meta name=&quot;description&quot;&gt;</code>.</p>
+<p>The following example showcases that using the <code>Head</code> setting for <code>&lt;title&gt;</code> doesn&#x27;t work while it does work for <code>&lt;meta name=&quot;description&quot;&gt;</code>.</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/index/+Head.jsx</span></span>
 <span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
 <span data-line=""> </span>
@@ -175,7 +172,7 @@
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> const</span><span style="color:#6F42C1"> Head</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> () </span><span style="color:#D73A49">=&gt;</span></span>
 <span data-line=""><span style="color:#6A737D">  // Both the favicon above and this tag applies to /pages/about-us/+Page.js</span></span>
 <span data-line=""><span style="color:#24292E">  &lt;</span><span style="color:#22863A">meta</span><span style="color:#6F42C1"> property</span><span style="color:#D73A49">=</span><span style="color:#032F62">&quot;og:image&quot;</span><span style="color:#6F42C1"> content</span><span style="color:#D73A49">=</span><span style="color:#24292E">{previewImage}&gt;</span></span></code></pre></figure>
-<p>You can, however, apply different <code>Head</code> settings to different pages:</p>
+<p>To apply different <code>Head</code> settings to different pages:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="jsx" data-theme="github-light"><code data-language="jsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/(marketing)/+Head.js</span></span>
 <span data-line=""><span style="color:#6A737D">// Environment: server</span></span>
 <span data-line=""> </span>
