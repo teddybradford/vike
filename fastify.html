@@ -33,7 +33,7 @@
 </ul>
 <h2 id="html-streaming">HTML Streaming</h2>
 <p>For integrating an <a href="/streaming">HTML stream</a> into your server <a href="/streaming#basics:~:text=We%20recommend%20using,pageContext.httpResponse.pipe()">we recommend using <code>pageContext.httpResponse.pipe()</code></a>.</p>
-<p>But Fastify doesn&#x27;t seem to expose any writable stream (as far as we know). As a workaroud, you can directly use Node.js&#x27;s writable stream as shown <a href="https://github.com/royalswe/vike-fastify-boilerplate/blob/74bf861b98bfc6ab0cdffc5d3483b52c18cf1c14/server/index.ts#L84-L87">here</a>.</p>
+<p>But Fastify doesn&#x27;t seem to expose any writable stream (as far as we know). As a workaround, you can directly use Node.js&#x27;s writable stream as shown <a href="https://github.com/royalswe/vike-fastify-boilerplate/blob/74bf861b98bfc6ab0cdffc5d3483b52c18cf1c14/server/index.ts#L84-L87">here</a>.</p>
 <p>If this workaround doesn&#x27;t work out for you, you can fallback to <a href="/streaming#basics:~:text=pageContext.httpResponse.getReadableWebStream()-,pageContext.httpResponse.getReadableNodeStream(),-For%20example%2C%20Cloudflare"><code>pageContext.httpResponse.getReadableNodeStream()</code></a>.</p><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/fastify/+Page.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="mobile-navigation-mask"></div></div></div></div>
         
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
