@@ -57,37 +57,37 @@
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>You may ask yourself what the purpose of <code>getPageContext()</code> is and, indeed, it&#x27;s useless for Vike users. But, if you are implementing a <a href="/extensions">Vike extension</a> and you want to implement a <a href="#universal-hooks">universal hook</a>, then <code>getPageContext()</code> is useful, see <a href="#example">Example</a>.</p>
 <h2 id="universal-hooks">Universal Hooks</h2>
-<p>A <em>universal hook</em> is a component hook that also works inside Vike hooks, such as the <code>useDocument()</code> hook of <code>vike-react</code>/<code>vike-vue</code>/<code>vike-solid</code>:</p>
+<p>A <em>universal hook</em> is a component hook that also works inside Vike hooks such as <a href="/useConfig">API<!-- --> &gt; <code>useConfig()</code></a>.</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D"> // /components/SomeReactComponent.jsx</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { useDocument } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-react/useDocument&#x27;</span><span style="color:#6A737D"> // or vike-{vue,solid}</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { useConfig } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-react/useConfig&#x27;</span><span style="color:#6A737D"> // or vike-{vue,solid}</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">function</span><span style="color:#6F42C1"> SomeReactComponent</span><span style="color:#24292E">() {</span></span>
-<span data-line=""><span style="color:#6A737D">  // Not only can useDocument() be used inside a React component...</span></span>
-<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> document</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> useDocument</span><span style="color:#24292E">()</span></span>
+<span data-line=""><span style="color:#6A737D">  // Not only can useConfig() be used inside a component...</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> document</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> useConfig</span><span style="color:#24292E">()</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D"> // /pages/some-page/+data.js</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { useDocument } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-react/useDocument&#x27;</span></span>
+<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { useConfig } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-react/useConfig&#x27;</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> data</span><span style="color:#24292E">() {</span></span>
 <span data-line=""><span style="color:#6A737D">  // ... but it can also be used inside a Vike hook.</span></span>
-<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> document</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> useDocument</span><span style="color:#24292E">()</span></span>
+<span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> document</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> useConfig</span><span style="color:#24292E">()</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="example">Example</h2>
-<p>In order to make <code>useDocument()</code> a universal hook (see <a href="#universal-hooks">Universal Hooks</a>), the <code>useDocument()</code> implementation uses <code>getPageContext()</code>:</p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// vike-{react,vue,solid}/src/hooks/useDocument.js</span></span>
+<p>In order to make <code>useConfig()</code> a universal hook (see <a href="#universal-hooks">Universal Hooks</a>), the <code>useConfig()</code> implementation uses <code>getPageContext()</code>:</p>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// node_modules/vike-{react,vue,solid}/dist/hooks/useConfig.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { usePageContext } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;./usePageContext&#x27;</span></span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { getPageContext } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike/getPageContext&#x27;</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> useDocument</span><span style="color:#24292E">() {</span></span>
-<span data-line=""><span style="color:#6A737D">  // useDocument() needs to access the pageContext object</span></span>
+<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> useConfig</span><span style="color:#24292E">() {</span></span>
+<span data-line=""><span style="color:#6A737D">  // useConfig() needs to access the pageContext object</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">  // In case useDocument() is used inside a Vike hook</span></span>
+<span data-line=""><span style="color:#6A737D">  // In case useConfig() is used inside a Vike hook</span></span>
 <span data-line=""><span style="color:#D73A49">  let</span><span style="color:#24292E"> pageContext </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> getPageContext</span><span style="color:#24292E">()</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">  // In case useDocument() is used inside a React component</span></span>
+<span data-line=""><span style="color:#6A737D">  // In case useConfig() is used inside a React component</span></span>
 <span data-line=""><span style="color:#D73A49">  if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">!</span><span style="color:#24292E">pageContext) {</span></span>
 <span data-line=""><span style="color:#24292E">    pageContext </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> usePageContext</span><span style="color:#24292E">()</span></span>
 <span data-line=""><span style="color:#24292E">  }</span></span>
