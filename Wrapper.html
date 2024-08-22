@@ -46,7 +46,9 @@
 <span data-line=""><span style="color:#24292E">&lt;/</span><span style="color:#005CC5">Wrapper1</span><span style="color:#24292E">&gt;</span></span></code></pre></figure>
 <p>The <code>&lt;Wrapper&gt;</code> component is usually used for integrating tools, such as data fetching and state management tools.</p>
 <blockquote>
-<p>Both <code>&lt;Wrapper&gt;</code> and <a href="/Layout"><code>&lt;Layout&gt;</code></a> have the exact same effect of wrapping <code>&lt;Page&gt;</code>. For a clean organization and for ensuring that tool wrappers also wrap <code>&lt;Layout&gt;</code>, we recommend using <code>&lt;Wrapper&gt;</code> for integrating tools while using <code>&lt;Layout&gt;</code> for defining the visual appearance of your pages.</p>
+<p>Both <code>&lt;Wrapper&gt;</code> and <a href="/Layout"><code>&lt;Layout&gt;</code></a> achieve the same, except that <code>&lt;Wrapper&gt;</code> is guaranteed to also wrap all <code>&lt;Layout&gt;</code> components.</p>
+<p>Since the wrapper component of tools usually want to wrap as much as possible, we generally recommend using <code>&lt;Wrapper&gt;</code> for integrating tools and using <code>&lt;Layout&gt;</code> for defining the visual appearance of your pages.</p>
+<p>It&#x27;s also more idiomatic and common to use <code>&lt;Wrapper&gt;</code> for tool integration and <code>&lt;Layout&gt;</code> for visual appearance.</p>
 </blockquote>
 <h2 id="without-vike-react-vue-solid">Without <code>vike-{react,vue,solid}</code></h2>
 <p>In case you don&#x27;t use a <!-- -->UI framework <a href="/extensions">Vike extension</a> <a href="/vike-react"><code>vike-react</code></a>/<a href="/vike-vue"><code>vike-vue</code></a>/<a href="/vike-solid"><code>vike-solid</code></a>, you can implement the <code>Wrapper</code> setting yourself by using <a href="/meta">meta</a>.</p>
