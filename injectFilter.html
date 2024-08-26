@@ -30,6 +30,9 @@
 <blockquote>
 <p>If you merely want to change the position of scripts, you can use the <a href="/injectScriptsAt"><code>injectScriptsAt</code> setting</a> instead.</p>
 </blockquote>
+<blockquote>
+<p>Vite also injects preload tags, see <a href="https://vitejs.dev/config/build-options#build-modulepreload">Vite Docs &gt; Config &gt; <code>build.modulePreload</code></a>.</p>
+</blockquote>
 <h2 id="examples">Examples</h2>
 <ul>
 <li>
@@ -93,7 +96,8 @@
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">type</span><span style="color:#6F42C1"> InjectFilterEntry</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> {</span></span>
 <span data-line=""><span style="color:#E36209">  inject</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> false</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &#x27;HTML_BEGIN&#x27;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &#x27;HTML_END&#x27;</span><span style="color:#6A737D"> // Whether and where to inject</span></span>
 <span data-line=""><span style="color:#E36209">  src</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#6A737D"> // Asset&#x27;s URL</span></span>
-<span data-line=""><span style="color:#E36209">  assetType</span><span style="color:#D73A49">:</span><span style="color:#032F62"> &quot;image&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;script&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;font&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;style&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;audio&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;video&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;document&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;fetch&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;track&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;worker&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;embed&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;object&quot;</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> null</span></span>
+<span data-line=""><span style="color:#E36209">  assetType</span><span style="color:#D73A49">:</span><span style="color:#032F62"> &quot;image&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;script&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;font&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;style&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;audio&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;video&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;document&quot;</span><span style="color:#D73A49"> |</span></span>
+<span data-line=""><span style="color:#032F62">             &quot;fetch&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;track&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;worker&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;embed&quot;</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> &quot;object&quot;</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> null</span></span>
 <span data-line=""><span style="color:#E36209">  mediaType</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#6A737D"> // MIME type</span></span>
 <span data-line=""><span style="color:#E36209">  isEntry</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> boolean</span><span style="color:#6A737D"> // true  ⇒ &lt;script&gt; or &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</span></span>
 <span data-line=""><span style="color:#6A737D">                   // false ⇒ preload tag, e.g. &lt;link rel=&quot;preload&quot; as=&quot;font&quot;&gt;</span></span>
@@ -109,6 +113,7 @@
 <li>
 <a href="/injectScriptsAt"><code>injectScriptsAt</code></a>
 </li>
+<li><a href="https://vitejs.dev/config/build-options#build-modulepreload">Vite Docs &gt; Config &gt; <code>build.modulePreload</code></a></li>
 </ul><div style="margin-top:50px"><a href="https://github.com/vikejs/vike/tree/main/docs/pages/injectFilter/+Page.mdx">✍<!-- --> Edit this page</a></div></div></div><div id="mobile-navigation-mask"></div></div></div></div>
         
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
