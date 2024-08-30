@@ -46,11 +46,11 @@
 <li>It&#x27;s always used together with <a href="/render"><code>throw render()</code></a> or <a href="/redirect"><code>throw redirect()</code></a>. (The <code>guard()</code> hook doesn&#x27;t accept any return value.)</li>
 </ul>
 <h2 id="execution-order">Execution order</h2>
-<p>The <code>guard()</code> hook is the first hook called after the routing is evaluated. It&#x27;s always called before the <a href="/data"><code>data()</code> hook</a>. See <a href="/hooks#order">API<!-- --> &gt; <!-- -->Hooks<!-- --> &gt; <!-- -->Order</a>.</p>
+<p>The <code>guard()</code> hook is the first hook called after the routing is evaluated. Most notably, it&#x27;s always called before the <a href="/data"><code>data()</code> hook</a>. See <a href="/hooks#order">API<!-- --> &gt; <!-- -->Hooks<!-- --> &gt; <!-- -->Order</a>.</p>
 <blockquote>
-<p>We generally recommend using <code>throw render()</code> / <code>throw redirect()</code> before fetching data: unauthorized and unexpected data fetching can be problematic.</p>
+<p>We recommend using <code>throw render()</code> / <code>throw redirect()</code> before fetching data, whenever possible. (Unauthorized/unexpected data fetching can be problematic.)</p>
 </blockquote>
-<p>If you want to guard your pages after or during fetching data, then use <a href="/render"><code>throw render()</code></a> / <a href="/redirect"><code>throw redirect()</code></a> inside your <code>data()</code> hook (or another <a href="/hooks">Vike hook</a>).</p>
+<p>If you want to guard your pages after or during fetching data, then use <a href="/render"><code>throw render()</code></a> / <a href="/redirect"><code>throw redirect()</code></a> inside your <code>data()</code> hook instead (or any another <a href="/hooks">Vike hook</a>).</p>
 <blockquote>
 <p>For being able to use <code>throw render()</code> / <code>throw redirect()</code> inside UI components, see <a href="https://github.com/vikejs/vike/issues/1707">#1707: Use <code>throw render()</code> / <code>throw redirect()</code> inside React/Vue/Solid components</a>.</p>
 </blockquote>
