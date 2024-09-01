@@ -48,10 +48,10 @@
 <span data-line=""><span style="color:#24292E">  Page,</span></span>
 <span data-line=""><span style="color:#24292E">  Layout</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/@id/Page.js</span></span>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="jsx" data-theme="github-light"><code data-language="jsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/@id/Page.jsx</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#6A737D"> /* ... */</span></span></code></pre></figure>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/@id/Layout.js</span></span>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="jsx" data-theme="github-light"><code data-language="jsx" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/@id/Layout.jsx</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#6A737D"> /* ... */</span></span></code></pre></figure>
 <p>For more convenience, you can also do this:</p>
@@ -64,12 +64,12 @@
 <span data-line=""><span style="color:#24292E">  Page,</span></span>
 <span data-line=""><span style="color:#24292E">  Layout</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure> </div>
-<figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span class="diff remove" data-line=""><span style="color:#6A737D">// /pages/product/@id/Page.js</span></span>
-<span class="diff add" data-line=""><span style="color:#6A737D">// /pages/product/@id/+Page.js</span></span>
+<figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span class="diff remove" data-line=""><span style="color:#6A737D">// /pages/product/@id/Page.jsx</span></span>
+<span class="diff add" data-line=""><span style="color:#6A737D">// /pages/product/@id/+Page.jsx</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#6A737D"> /* ... */</span></span></code></pre></figure>
-<figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span class="diff remove" data-line=""><span style="color:#6A737D">// /pages/product/@id/Layout.js</span></span>
-<span class="diff add" data-line=""><span style="color:#6A737D">// /pages/product/@id/+Layout.js</span></span>
+<figure data-rehype-pretty-code-figure=""><pre class="has-diff" style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span class="diff remove" data-line=""><span style="color:#6A737D">// /pages/product/@id/Layout.jsx</span></span>
+<span class="diff add" data-line=""><span style="color:#6A737D">// /pages/product/@id/+Layout.jsx</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#6A737D"> /* ... */</span></span></code></pre></figure>
 <blockquote>
@@ -77,28 +77,28 @@
 </blockquote>
 <h2 id="inheritance">Inheritance</h2>
 <p>You can apply configurations to all pages, a group of pages, or only one page. For example:</p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="yaml" data-theme="github-light"><code data-language="yaml" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#032F62">pages/(marketing)/index/+Page.js</span><span style="color:#6A737D">    # URL: /</span></span>
-<span data-line=""><span style="color:#032F62">pages/(marketing)/about/+Page.js</span><span style="color:#6A737D">    # URL: /about</span></span>
+<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="yaml" data-theme="github-light"><code data-language="yaml" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#032F62">pages/(marketing)/index/+Page.jsx</span><span style="color:#6A737D">    # URL: /</span></span>
+<span data-line=""><span style="color:#032F62">pages/(marketing)/about/+Page.jsx</span><span style="color:#6A737D">    # URL: /about</span></span>
 <span data-line=""><span style="color:#6A737D"># Layout for marketing pages</span></span>
-<span data-line=""><span style="color:#032F62">pages/(marketing)/+Layout.js</span></span>
+<span data-line=""><span style="color:#032F62">pages/(marketing)/+Layout.jsx</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#032F62">pages/admin-panel/index/+Page.js</span><span style="color:#6A737D">    # URL: /admin-panel</span></span>
-<span data-line=""><span style="color:#032F62">pages/admin-panel/users/+Page.js</span><span style="color:#6A737D">    # URL: /admin-panel/users</span></span>
+<span data-line=""><span style="color:#032F62">pages/admin-panel/index/+Page.jsx</span><span style="color:#6A737D">    # URL: /admin-panel</span></span>
+<span data-line=""><span style="color:#032F62">pages/admin-panel/users/+Page.jsx</span><span style="color:#6A737D">    # URL: /admin-panel/users</span></span>
 <span data-line=""><span style="color:#6A737D"># Layout for admin pages</span></span>
-<span data-line=""><span style="color:#032F62">pages/admin-panel/+Layout.js</span></span>
+<span data-line=""><span style="color:#032F62">pages/admin-panel/+Layout.jsx</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#032F62">pages/product/@id/+Page.js</span></span>
+<span data-line=""><span style="color:#032F62">pages/product/@id/+Page.jsx</span></span>
 <span data-line=""><span style="color:#6A737D"># Layout for the product page</span></span>
-<span data-line=""><span style="color:#032F62">pages/product/@id/+Layout.js</span></span></code></pre></figure>
+<span data-line=""><span style="color:#032F62">pages/product/@id/+Layout.jsx</span></span></code></pre></figure>
 <blockquote>
 <p>The directory <code>(marketing)</code> is used for <a href="/routing#groups">grouping</a> and is ignored by <a href="/filesystem-routing">Filesystem Routing</a>.</p>
 </blockquote>
 <ul>
-<li><code>pages/(marketing)/+Layout.js</code> applies to all pages living at <code>pages/(marketing)/**</code></li>
-<li><code>pages/admin-panel/+Layout.js</code> applies to all pages living at <code>pages/admin-panel/**</code></li>
-<li><code>pages/product/@id/+Layout.js</code> applies to one page <code>pages/product/@id/+Page.js</code>
+<li><code>pages/(marketing)/+Layout.jsx</code> applies to all pages living at <code>pages/(marketing)/**</code></li>
+<li><code>pages/admin-panel/+Layout.jsx</code> applies to all pages living at <code>pages/admin-panel/**</code></li>
+<li><code>pages/product/@id/+Layout.jsx</code> applies to one page <code>pages/product/@id/+Page.jsx</code>
 <blockquote>
-<p>Technically <code>pages/product/@id/+Layout.js</code> applies to all pages at <code>/pages/product/@id/**</code> but there is only one page living there.</p>
+<p>Technically <code>pages/product/@id/+Layout.jsx</code> applies to all pages at <code>/pages/product/@id/**</code> but there is only one page living there.</p>
 </blockquote>
 </li>
 </ul>
@@ -199,7 +199,7 @@
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/some-page/+config.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#6A737D">// A CSS import in a config file doesn&#x27;t have any effect. CSS should</span></span>
-<span data-line=""><span style="color:#6A737D">// be imported in runtime files such as +Page.js instead.</span></span>
+<span data-line=""><span style="color:#6A737D">// be imported in runtime files such as +Page.jsx instead.</span></span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#032F62"> &#x27;./some.css&#x27;</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#6A737D">// This log is printed only when Vike loads this +config.js file (at development and when</span></span>
@@ -246,10 +246,7 @@
 <h2 id="see-also">See also</h2>
 <ul>
 <li>
-<a href="/settings">API<!-- --> &gt; <!-- -->Settings</a>
-</li>
-<li>
-<a href="/hooks">API<!-- --> &gt; <!-- -->Hooks</a>
+<a href="/filesystem-routing">API<!-- --> &gt; <!-- -->Filesystem Routing</a>
 </li>
 <li>
 <a href="/file-structure#domain-driven">Guides<!-- --> &gt; <!-- -->File Structure<!-- --> &gt; <!-- -->Domain driven</a>
