@@ -53,12 +53,12 @@
 <p>If <code>throw redirect()</code> or <code>throw render()</code> doesn&#x27;t work:</p>
 <ul>
 <li><strong>Make sure <code>throw redirect()</code> / <code>throw render()</code> isn&#x27;t intercepted.</strong><br/>
-<!-- -->In developement, check your server logs for the following log. If the log is missing then it means that Vike didn&#x27;t catch the <code>throw redirect()</code> / <code>throw render()</code> exception: some other code is intercepting it and thus prevents Vike from catching it.<!-- -->
+<!-- -->In development, check your server logs for the following log. If the log is missing then it means that Vike didn&#x27;t catch the <code>throw redirect()</code> / <code>throw render()</code> exception: some other code is intercepting it and thus prevents Vike from catching it.<!-- -->
 <pre><code>10:00:00 AM [vike][request(42)] throw redirect(&#x27;/some-url&#x27;) intercepted while
 rendering /some-other-url
 </code></pre>
 <blockquote>
-<p>Most notably, using <code>throw redirect()</code> / <code>throw render()</code> inside a UI component usually doesn&#x27;t work because most <a href="/ui-frameworks">UI frameworks</a> will intercept the execption, and thus Vike won&#x27;t be able to catch it. Instead, consider using <code>throw redirect()</code> / <code>throw render()</code> in a Vike hook such as <a href="/guard"><code>guard()</code></a> or <a href="/data"><code>data()</code></a>, or use <a href="/navigate"><code>navigate()</code></a>.</p>
+<p>Most notably, using <code>throw redirect()</code> / <code>throw render()</code> inside a UI component usually doesn&#x27;t work because most <a href="/ui-frameworks">UI frameworks</a> will intercept the exception, and thus Vike won&#x27;t be able to catch it. Instead, consider using <code>throw redirect()</code> / <code>throw render()</code> in a Vike hook such as <a href="/guard"><code>guard()</code></a> or <a href="/data"><code>data()</code></a>, or use <a href="/navigate"><code>navigate()</code></a>.</p>
 </blockquote>
 </li>
 <li><strong>Make sure to use <code>throw redirect()</code> / <code>throw render()</code> within a Vike hook.</strong><br/>
@@ -67,7 +67,7 @@ rendering /some-other-url
 <p>If <code>throw redirect()</code> doesn&#x27;t work:</p>
 <ul>
 <li><strong>Make sure to add <code>pageContext.httpResponse.headers</code> to the HTTP response.</strong><br/>
-<!-- -->If you&#x27;ve embedded Vike into your server using <a href="/renderPage"><code>renderPage()</code></a>, then insepct whether <code>pageContext.httpResponse.headers</code> contains the <code>Location</code> header and double check that you&#x27;re correctly adding all the headers defined by <code>pageContext.httpResponse.headers</code> to the HTTP response.</li>
+<!-- -->If you&#x27;ve embedded Vike into your server using <a href="/renderPage"><code>renderPage()</code></a>, then inspect whether <code>pageContext.httpResponse.headers</code> contains the <code>Location</code> header and double check that you&#x27;re correctly adding all the headers defined by <code>pageContext.httpResponse.headers</code> to the HTTP response.</li>
 </ul>
 <h2 id="see-also">See also</h2>
 <ul>

@@ -240,7 +240,7 @@
 <span data-line=""><span style="color:#032F62">    &lt;/html&gt;`</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
-<p>This implementation can be improved: the file <code>/pages/utils.js</code> is loaded on both the server- and client-side but <code>getDescription()</code> is only used by the server-side. This means <code>getDescription()</code> unnecessarily bloats the size of your client-side bundles. It would be cleaner to split <code>/pages/utils.js</code> in two seperate files: one for the client-side and another one for the server-side. In general, be extra careful in which environment each file is loaded; consider using <a href="/file-env"><code>.server.js</code> and <code>.client.js</code></a> to ensure the environment of files.</p>
+<p>This implementation can be improved: the file <code>/pages/utils.js</code> is loaded on both the server- and client-side but <code>getDescription()</code> is only used by the server-side. This means <code>getDescription()</code> unnecessarily bloats the size of your client-side bundles. It would be cleaner to split <code>/pages/utils.js</code> in two separate files: one for the client-side and another one for the server-side. In general, be extra careful in which environment each file is loaded; consider using <a href="/file-env"><code>.server.js</code> and <code>.client.js</code></a> to ensure the environment of files.</p>
 </blockquote>
 <h2 id="example-layout">Example: <code>Layout</code></h2>
 <p>Another common use case for <code>meta</code> is to create a component <code>&lt;Layout&gt;</code> that defines the layout of the page.</p>
@@ -381,7 +381,7 @@
 <span data-line=""><span style="color:#24292E">        config: </span><span style="color:#005CC5">false</span><span style="color:#6A737D"> // default value</span></span>
 <span data-line=""><span style="color:#24292E">      },</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">      // [Optional] Whether config values should be merged (instead of overriden).</span></span>
+<span data-line=""><span style="color:#6A737D">      // [Optional] Whether config values should be merged (instead of overridden).</span></span>
 <span data-line=""><span style="color:#24292E">      cumulative: </span><span style="color:#005CC5">false</span><span style="color:#24292E">, </span><span style="color:#6A737D">// default value</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#6A737D">      // [Optional] Function called when the config value is loaded at config-time.</span></span>
@@ -425,7 +425,7 @@
 <span data-line=""><span style="color:#24292E">}</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#6A737D">// The following isn&#x27;t needed in this example, but if you define Vike.Config</span></span>
-<span data-line=""><span style="color:#6A737D">// in a .d.ts file then make sure there is at least one export/import statment.</span></span>
+<span data-line=""><span style="color:#6A737D">// in a .d.ts file then make sure there is at least one export/import statement.</span></span>
 <span data-line=""><span style="color:#6A737D">// Tell TypeScript this file isn&#x27;t an ambient module:</span></span>
 <span data-line=""><span style="color:#D73A49">export</span><span style="color:#24292E"> {}</span></span></code></pre></figure>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="ts" data-theme="github-light"><code data-language="ts" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/product/@id/+config.ts</span></span>

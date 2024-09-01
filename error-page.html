@@ -86,7 +86,7 @@ you call <a href="/render"><code>throw render(abortStatusCode)</code></a>.</p>
 <ol>
 <li>The URL didn&#x27;t match the route of any of your pages (<code>404 Page Not Found</code>).</li>
 <li>Your code has a bug (<code>500 Internal Error</code>), technically speaking: one of your hooks threw an error.</li>
-<li>One of your hooks used <a href="/render"><code>throw render(abortStatusCode)</code></a>, for examle: <code>throw render(401, &quot;You don&#x27;t have the permission to access this page.&quot;)</code>.</li>
+<li>One of your hooks used <a href="/render"><code>throw render(abortStatusCode)</code></a>, for example: <code>throw render(401, &quot;You don&#x27;t have the permission to access this page.&quot;)</code>.</li>
 </ol>
 <h2 id="pre-rendering">Pre-rendering</h2>
 <p>If you use <a href="/pre-rendering">pre-rendering</a>, then Vike uses the error page to generate

@@ -74,11 +74,11 @@ to seamlessly use <a href="/vike-react"><code>vike-react</code></a> with GraphQL
 <p>One fundamental feature missing for releasing Vike <code>1.0.0</code> is being able to use Vite to transpile server code such as Express.js or Hono code (<a href="https://github.com/vikejs/vike/issues/562">#562</a>).</p>
 <p>We released a <a href="https://github.com/vikejs/vike-node">new package <code>vike-node</code></a> for that purpose.</p>
 <blockquote>
-<p>It&#x27;s somewhat experimental so expect issues here and there. We may built it directly into Vike (instead of being a seperate package).</p>
+<p>It&#x27;s somewhat experimental so expect issues here and there. We may built it directly into Vike (instead of being a separate package).</p>
 </blockquote>
 <blockquote class="custom-icon type-contribution note-color-green"><div style="margin-bottom:20px"></div><span style="font-family:emoji">💚</span><span style="width:2px;display:inline-block"></span> <div class="blockquote-content"><p>Author: <a href="https://github.com/nitedani"><code>nitedani</code></a></p></div><div style="margin-top:20px"></div></blockquote>
 <h2 id="improved-url-handling">Improved URL handling</h2>
-<p>Vike exports a new <a href="/modifyUrl"><code>modifyUrl()</code> utiltiy</a>, which is convenient for internationalization as shown in the example at <a href="/i18n">Guides<!-- --> &gt; <!-- -->Internationalization (i18n)</a>.</p>
+<p>Vike exports a new <a href="/modifyUrl"><code>modifyUrl()</code> utility</a>, which is convenient for internationalization as shown in the example at <a href="/i18n">Guides<!-- --> &gt; <!-- -->Internationalization (i18n)</a>.</p>
 <p>Also, <code>pageContext.urlParsed</code> has new properties:</p>
 <pre><code>http://localhost:3000/some-base-url/hello/s%C3%A9bastien
 </code></pre>
@@ -101,11 +101,11 @@ to seamlessly use <a href="/vike-react"><code>vike-react</code></a> with GraphQL
 <h2 id="injectscriptsat"><code>injectScriptsAt</code></h2>
 <p>The <a href="/injectScriptsAt">new <code>injectScriptsAt</code> setting</a> allows you to control where Vike injects scripts.</p>
 <blockquote>
-<p>It was already possible with <a href="/injectFilter"><code>injectFilter()</code></a> but only partially: <code>injectScriptsAt</code> allows you to inject scripts at the begining of the <a href="/streaming">HTML stream</a>. It&#x27;s also simpler to use than <code>injectFilter()</code> and it can be used by Vike extensions.</p>
+<p>It was already possible with <a href="/injectFilter"><code>injectFilter()</code></a> but only partially: <code>injectScriptsAt</code> allows you to inject scripts at the beginning of the <a href="/streaming">HTML stream</a>. It&#x27;s also simpler to use than <code>injectFilter()</code> and it can be used by Vike extensions.</p>
 </blockquote>
 <blockquote class="custom-icon type-contribution note-color-green"><div style="margin-bottom:20px"></div><span style="font-family:emoji">💚</span><span style="width:2px;display:inline-block"></span> <div class="blockquote-content"><p>Author: <a href="https://github.com/phonzammi"><code>phonzammi</code></a></p></div><div style="margin-top:20px"></div></blockquote>
 <h2 id="clientonly"><code>clientOnly()</code></h2>
-<p>Not only Vue and Solid users, but now also React users can use the <a href="/clientOnly"><code>clientOnly()</code> helper</a> which has the same functionality as the <code>&lt;ClientOnly&gt;</code> wrapper (now depreacted) but with a much improved DX.</p>
+<p>Not only Vue and Solid users, but now also React users can use the <a href="/clientOnly"><code>clientOnly()</code> helper</a> which has the same functionality as the <code>&lt;ClientOnly&gt;</code> wrapper (now deprecated) but with a much improved DX.</p>
 <blockquote class="custom-icon type-contribution note-color-green"><div style="margin-bottom:20px"></div><span style="font-family:emoji">💚</span><span style="width:2px;display:inline-block"></span> <div class="blockquote-content"><p>Author: <a href="https://github.com/nitedani"><code>nitedani</code></a></p></div><div style="margin-top:20px"></div></blockquote>
 <h2 id="new-bati-integrations">New Bati integrations</h2>
 <p>New <a href="https://batijs.dev">Bati</a> integrations:</p>
