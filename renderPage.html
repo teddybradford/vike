@@ -41,7 +41,6 @@
 <span data-line=""><span style="color:#D73A49">  async</span><span style="color:#6F42C1"> handler</span><span style="color:#24292E">(</span><span style="color:#E36209">request</span><span style="color:#24292E">) {</span></span>
 <span data-line=""><span style="color:#D73A49">    const</span><span style="color:#005CC5"> pageContextInit</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> { urlOriginal: request.url }</span></span>
 <span data-line=""><span style="color:#D73A49">    const</span><span style="color:#005CC5"> pageContext</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> renderPage</span><span style="color:#24292E">(pageContextInit)</span></span>
-<span data-line=""><span style="color:#D73A49">    if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">!</span><span style="color:#24292E">pageContext.httpResponse) </span><span style="color:#D73A49">return</span><span style="color:#005CC5"> null</span></span>
 <span data-line=""><span style="color:#6A737D">    // `body` is the HTML of the page with a route matching pageContextInit.urlOriginal</span></span>
 <span data-line=""><span style="color:#D73A49">    const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">body</span><span style="color:#24292E">, </span><span style="color:#005CC5">statusCode</span><span style="color:#24292E">, </span><span style="color:#005CC5">headers</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext.httpResponse</span></span>
 <span data-line=""><span style="color:#D73A49">    const</span><span style="color:#005CC5"> response</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> { body, statusCode, headers }</span></span>
@@ -105,7 +104,7 @@
 <span data-line=""> </span>
 <span data-line=""><span style="color:#6A737D">  // Vike middleware. It should always be our last middleware (because it&#x27;s a</span></span>
 <span data-line=""><span style="color:#6A737D">  // catch-all middleware superseding any middleware placed after it).</span></span>
-<span data-line=""><span style="color:#24292E">  app.</span><span style="color:#6F42C1">get</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;*&#x27;</span><span style="color:#24292E">, </span><span style="color:#D73A49">async</span><span style="color:#24292E"> (</span><span style="color:#E36209">req</span><span style="color:#24292E">, </span><span style="color:#E36209">res</span><span style="color:#24292E">, </span><span style="color:#E36209">next</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#24292E">  app.</span><span style="color:#6F42C1">get</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;*&#x27;</span><span style="color:#24292E">, </span><span style="color:#D73A49">async</span><span style="color:#24292E"> (</span><span style="color:#E36209">req</span><span style="color:#24292E">, </span><span style="color:#E36209">res</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
 <span data-line=""><span style="color:#D73A49">    const</span><span style="color:#005CC5"> pageContextInit</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> {</span></span>
 <span data-line=""><span style="color:#6A737D">      // Required: the URL of the page</span></span>
 <span data-line=""><span style="color:#24292E">      urlOriginal: req.originalUrl</span></span>
@@ -121,7 +120,6 @@
 <span data-line=""><span style="color:#24292E">    }</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">    const</span><span style="color:#005CC5"> pageContext</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> renderPage</span><span style="color:#24292E">(pageContextInit)</span></span>
-<span data-line=""><span style="color:#D73A49">    if</span><span style="color:#24292E"> (pageContext.httpResponse </span><span style="color:#D73A49">===</span><span style="color:#005CC5"> null</span><span style="color:#24292E">) </span><span style="color:#D73A49">return</span><span style="color:#6F42C1"> next</span><span style="color:#24292E">()</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">    const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">body</span><span style="color:#24292E">, </span><span style="color:#005CC5">statusCode</span><span style="color:#24292E">, </span><span style="color:#005CC5">headers</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#24292E"> pageContext.httpResponse</span></span>
 <span data-line=""><span style="color:#24292E">    headers.</span><span style="color:#6F42C1">forEach</span><span style="color:#24292E">(([</span><span style="color:#E36209">name</span><span style="color:#24292E">, </span><span style="color:#E36209">value</span><span style="color:#24292E">]) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> res.</span><span style="color:#6F42C1">setHeader</span><span style="color:#24292E">(name, value))</span></span>
@@ -140,12 +138,6 @@ automatically injected by Vike.</p>
 </blockquote>
 <p>For HTML streams use <code>httpResponse.pipe()</code> instead of <code>pageContext.httpResponse.body</code>, see <a href="/streaming">Guides<!-- --> &gt; <!-- -->HTML Streaming</a>.</p>
 <p>Optionally, you can use <code>pageContext.httpResponse.earlyHints</code> for adding early hints (<code>103 Early Hint</code>), see <a href="/preloading#early-hints">Guides<!-- --> &gt; <!-- -->Preloading<!-- --> &gt; <!-- -->Early hints</a>.</p>
-<p>The <code>pageContext.httpResponse</code> value is <code>null</code> if:</p>
-<ul>
-<li>An error occurred while rendering the page and no <a href="/error-page">error page</a> is defined.</li>
-<li>An error occurred while rendering the error page.</li>
-<li>Vike skips certain URLs, such as <code>/favicon.ico</code> (because browsers automatically make favicon requests).</li>
-</ul>
 <p>The <code>renderPage()</code> function doesn&#x27;t depend on Node.js and you can use <code>renderPage()</code> (and therefore embed Vike) anywhere:</p>
 <ul>
 <li>Any server environment (Express.js, HatTip, Deno, Fastify, Vite&#x27;s development server, Node.js&#x27;s HTTP server, ...)</li>

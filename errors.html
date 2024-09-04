@@ -46,22 +46,10 @@
 <span data-line=""> </span>
 <span data-line=""><span style="color:#6A737D">      // If you use an error tracker (e.g. Sentry):</span></span>
 <span data-line=""><span style="color:#24292E">      myErrorTracker.</span><span style="color:#6F42C1">intercept</span><span style="color:#24292E">(pageContext.errorWhileRendering)</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">      // If you use a server middleware that handles errors:</span></span>
-<span data-line=""><span style="color:#D73A49">      if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">!</span><span style="color:#24292E">pageContext.httpResponse) {</span></span>
-<span data-line=""><span style="color:#6A737D">        // Don&#x27;t throw if there is a pageContext.httpResponse, otherwise</span></span>
-<span data-line=""><span style="color:#6A737D">        // the error page won&#x27;t be rendered.</span></span>
-<span data-line=""><span style="color:#D73A49">        throw</span><span style="color:#24292E"> pageContext.errorWhileRendering</span></span>
-<span data-line=""><span style="color:#24292E">      }</span></span>
-<span data-line=""> </span>
 <span data-line=""><span style="color:#24292E">    }</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">    // pageContext.httpResponse is missing if:</span></span>
-<span data-line=""><span style="color:#6A737D">    //  - There is an error and you didn&#x27;t define an error page.</span></span>
-<span data-line=""><span style="color:#6A737D">    //  - Your error page has a bug and, therefore, couldn&#x27;t be rendered.</span></span>
-<span data-line=""><span style="color:#D73A49">    if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">!</span><span style="color:#24292E">pageContext.httpResponse) </span><span style="color:#D73A49">return</span><span style="color:#005CC5"> null</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">    // The HTTP response of the page. This can be the error page.</span></span>
+<span data-line=""><span style="color:#6A737D">    // The HTTP response of the page.</span></span>
+<span data-line=""><span style="color:#6A737D">    // If pageContext.errorWhileRendering is defined then this is usually the error page.</span></span>
 <span data-line=""><span style="color:#D73A49">    return</span><span style="color:#24292E"> pageContext.httpResponse</span></span>
 <span data-line=""><span style="color:#24292E">  }</span></span>
 <span data-line=""><span style="color:#24292E">})</span></span></code></pre></figure>

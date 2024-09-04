@@ -81,7 +81,7 @@
 </li>
 <li>The <code>pageContextInit</code> at <a href="/renderPage"><code>renderPage()</code></a> contains a property that is included in <a href="/passToClient"><code>passToClient</code></a>.<!-- -->
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// Vike server middleware</span></span>
-<span data-line=""><span style="color:#D73A49">async</span><span style="color:#24292E"> (</span><span style="color:#E36209">req</span><span style="color:#24292E">, </span><span style="color:#E36209">res</span><span style="color:#24292E">, </span><span style="color:#E36209">next</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
+<span data-line=""><span style="color:#D73A49">async</span><span style="color:#24292E"> (</span><span style="color:#E36209">req</span><span style="color:#24292E">, </span><span style="color:#E36209">res</span><span style="color:#24292E">) </span><span style="color:#D73A49">=&gt;</span><span style="color:#24292E"> {</span></span>
 <span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> pageContextInit</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> {</span></span>
 <span data-line=""><span style="color:#24292E">    urlOriginal: req.originalUrl,</span></span>
 <span data-line=""><span style="color:#6A737D">    // If passToClient contains &#x27;user&#x27; then Vike makes a pageContext.json request</span></span>
