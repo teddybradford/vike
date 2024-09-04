@@ -51,11 +51,11 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"><code>403</code> Forbidden</a> - Access denied, the user is logged in but isn&#x27;t allowed.</li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"><code>404</code> Not Found</a> - Page doesn&#x27;t exist.</li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"><code>429</code> Too Many Requests</a> - Purposefully not serving the request, because of rate limiting or to protect from <a href="https://en.wikipedia.org/wiki/Denial-of-service_attack">DDoS attacks</a>.</li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500"><code>500</code> Internal Server Error</a> - App has a bug.</li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503"><code>503</code> Service Unavailable</a> - Server is overloaded and/or a third-party API isn&#x27;t responding.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500"><code>500</code> Internal Server Error</a> - Your client or server has a bug.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503"><code>503</code> Service Unavailable</a> - Server is overloaded, or a third-party API isn&#x27;t responding.</li>
 </ul>
 </li>
-<li>The <code>abortReason</code> and <code>abortStatusCode</code> arguments are made available at <code>pageContext.abortReason</code> and <code>pageContext.abortStatusCode</code> which is useful for enabling the error page to show a useful error message to the user, see <a href="/error-page">API<!-- --> &gt; <!-- -->Error page</a>.<!-- -->
+<li>The <code>abortReason</code> and <code>abortStatusCode</code> arguments are made available at <code>pageContext.abortReason</code> and <code>pageContext.abortStatusCode</code> which is usually used by the error page to show a useful error message to the user, see <a href="/error-page">API<!-- --> &gt; <!-- -->Error page</a>.<!-- -->
 <blockquote>
 <p>If you use TypeScript, you can define the <code>abortReason</code> type by using the global interface <code>Vike.PageContext</code>, see <a href="/error-page">API<!-- --> &gt; <!-- -->Error page</a>.</p>
 </blockquote>
