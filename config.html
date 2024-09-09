@@ -121,27 +121,6 @@
 </blockquote>
 <h3 id="domain-driven-file-structure">Domain-driven File Structure</h3>
 <p>You can use a <a href="/file-structure#domain-driven">domain-driven file structure</a> for better organization and for improved configuration inheritance.</p>
-<h3 id="powerful">Powerful</h3>
-<p>You can use multiple completely different rendering strategies for the same app.</p>
-<p>For example, some pages can use Vue without SSR while other pages can use React with SSR:</p>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// pages/admin/+config.js</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> vikeVue </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-vue/config&#x27;</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">// Admin pages using Vue without SSR</span></span>
-<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
-<span data-line=""><span style="color:#24292E">  ssr: </span><span style="color:#005CC5">false</span><span style="color:#24292E">,</span></span>
-<span data-line=""><span style="color:#24292E">  extends: [vikeVue]</span></span>
-<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
-<figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// pages/product/@id/+config.js</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> vikeReact </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &#x27;vike-react/config&#x27;</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color:#6A737D">// Product page using React with SSR</span></span>
-<span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
-<span data-line=""><span style="color:#24292E">  ssr: </span><span style="color:#005CC5">true</span><span style="color:#24292E">,</span></span>
-<span data-line=""><span style="color:#24292E">  extends: [vikeReact]</span></span>
-<span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <h2 id="pointer-imports">Pointer imports</h2>
 <p>Internally, Vike transforms this:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// /pages/+config.js</span></span>
