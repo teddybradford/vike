@@ -80,7 +80,7 @@
 <span data-line=""><span style="color:#D73A49">  return</span><span style="color:#24292E"> { movies }</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <blockquote>
-<p>Make sure to call <code>useConfig()</code> before any await statement:</p>
+<p>Make sure to call <code>useConfig()</code> before any <code>await</code>:</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#D73A49">export</span><span style="color:#D73A49"> async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> data</span><span style="color:#24292E">(</span><span style="color:#E36209">pageContext</span><span style="color:#24292E">) {</span></span>
 <span data-line=""><span style="color:#D73A49">  const</span><span style="color:#005CC5"> response</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> fetch</span><span style="color:#24292E">(</span><span style="color:#032F62">&#x27;https://star-wars.brillout.com/api/films.json&#x27;</span><span style="color:#24292E">)</span></span>
 <span data-line=""><span style="color:#6A737D">  // ❌ Doesn&#x27;t work: useConfig() has to be called before `await fetch()`</span></span>
