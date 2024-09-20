@@ -59,7 +59,6 @@
 <p>The section <a href="#why">Why</a> explains why <code>ssr.noExternal</code> is a workaround.</p>
 </blockquote>
 <h3 id="vite-plugin-cjs-interop"><code>vite-plugin-cjs-interop</code></h3>
-<p>Upon certain errors, we recommend trying the <code>vite-plugin-cjs-interop</code> plugin before trying <code>ssr.noExternal</code>.</p>
 <figure data-rehype-pretty-code-figure=""><pre style="background-color:#fff;color:#24292e" tabindex="0" data-language="js" data-theme="github-light"><code data-language="js" data-theme="github-light" style="display:grid"><span data-line=""><span style="color:#6A737D">// vite.config.js</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color:#D73A49">import</span><span style="color:#24292E"> { cjsInterop } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> &quot;vite-plugin-cjs-interop&quot;</span><span style="color:#24292E">;</span></span>
@@ -83,7 +82,7 @@
 <span data-line=""><span style="color:#24292E">  ]</span></span>
 <span data-line=""><span style="color:#24292E">}</span></span></code></pre></figure>
 <p>See <a href="https://github.com/cyco130/vite-plugin-cjs-interop">GitHub &gt; <code>cyco130/vite-plugin-cjs-interop</code></a>.</p>
-<p>Errors for which we recommend trying <code>vite-plugin-cjs-interop</code> before trying <code>ssr.noExternal</code>:</p>
+<p>For the following errors, we recommend trying <code>vite-plugin-cjs-interop</code> before trying <code>ssr.noExternal</code>:</p>
 <a href="#react-invalid-component"><strong>React invalid component</strong></a>
 <div class="with-line-break_white-space"><pre><code>Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: something-else.
 </code></pre></div>
