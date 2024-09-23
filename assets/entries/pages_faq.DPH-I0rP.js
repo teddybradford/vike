@@ -111,10 +111,10 @@ Independence is paramount for keeping Vike a community-driven project with trans
 `,e.jsx("h2",{id:"what-are-these-cryptic-javascript-errors",children:"What are these cryptic JavaScript errors?"}),`
 `,e.jsxs(n.p,{children:["Many cryptic errors come from CJS/ESM issues around npm packages that contain invalid JavaScript code, see workaround at ",e.jsx(s,{href:"/broken-npm-package"}),"."]}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsx(n.p,{children:"We meticulously care about crafting error messages that are helpful, but we don't control the error messages coming from other tools."}),`
+`,e.jsx(n.p,{children:"We meticulously craft Vike's error messages to be clear and helpful, but error messages from other tools aren't under our control. If any Vike error message isn't clear, let us know, and we'll make it clearer."}),`
 `]}),`
 `,e.jsx("h2",{id:"why-is-css-leaked-to-other-pages",children:"Why is CSS leaked to other pages?"}),`
-`,e.jsxs(n.p,{children:["With ",e.jsx(s,{href:"/client-routing",children:"Client Routing"}),", when navigating from one page to another, the CSS of the previous page isn't removed. This means that any CSS loaded by the previous page will also apply to the next page. In other words: CSS cumulates upon page navigation."]}),`
+`,e.jsx(n.p,{children:"When navigating from one page to another, the CSS of the previous page isn't removed. This means that any CSS loaded by the previous page will also apply to the next page. In other words: the CSS of all previous pages cumulate."}),`
 `,e.jsx(n.p,{children:"For example:"}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"jsx","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"jsx","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// /pages/terms/+Page.jsx"})}),`
 `,e.jsx(n.span,{"data-line":"",children:" "}),`
@@ -130,14 +130,14 @@ Independence is paramount for keeping Vike a community-driven project with trans
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:")"})})]})})}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"css","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"css","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"/* /pages/terms/style.css */"})}),`
 `,e.jsx(n.span,{"data-line":"",children:" "}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"/* ❌ Bad: the CSS selector `section` can apply to any page */"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"/* ❌ Bad: the CSS selector `section` applies to all pages. */"})}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#22863A"},children:"section"}),e.jsx(n.span,{style:{color:"#24292E"},children:" {"})]}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#005CC5"},children:"  font-size"}),e.jsx(n.span,{style:{color:"#24292E"},children:": "}),e.jsx(n.span,{style:{color:"#005CC5"},children:"0.8"}),e.jsx(n.span,{style:{color:"#D73A49"},children:"em"}),e.jsx(n.span,{style:{color:"#24292E"},children:";"})]}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"}"})})]})})}),`
 `,e.jsx(n.p,{children:"Narrow down the CSS selector instead:"}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"css","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"css","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"/* /pages/terms/style.css */"})}),`
 `,e.jsx(n.span,{"data-line":"",children:" "}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"/* ✅ Good: the CSS selector `#terms section` only applies to our terms page */"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"/* ✅ Good: the CSS selector `#terms section` only applies to the terms page. */"})}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#6F42C1"},children:"#terms"}),e.jsx(n.span,{style:{color:"#22863A"},children:" section"}),e.jsx(n.span,{style:{color:"#24292E"},children:" {"})]}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#005CC5"},children:"  font-size"}),e.jsx(n.span,{style:{color:"#24292E"},children:": "}),e.jsx(n.span,{style:{color:"#005CC5"},children:"0.8"}),e.jsx(n.span,{style:{color:"#D73A49"},children:"em"}),e.jsx(n.span,{style:{color:"#24292E"},children:";"})]}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"}"})})]})})}),`
@@ -148,7 +148,7 @@ Independence is paramount for keeping Vike a community-driven project with trans
 `,e.jsxs(n.p,{children:["If you use ",e.jsx(n.strong,{children:"React"})," or ",e.jsx(n.strong,{children:"Solid"}),", then we recommend using inline styles and/or a CSS-in-JS library (or Tailwind), while minimizing CSS files. Inline style aren't global and, therefore, aren't leaky."]}),`
 `]}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:[e.jsx(n.strong,{children:"CSS is injected by Vite"})," in the form of ",e.jsx(n.code,{children:"<style>"})," tags. If you're curious why Vite doesn't remove old ",e.jsx(n.code,{children:"<style>"})," tags, consider that removing CSS is problematic during the transient state upon page navigation. (It would lead to ",e.jsx(n.a,{href:"https://en.wikipedia.org/wiki/Flash_of_unstyled_content",children:"FOUC"})," because there is no transaction primitive for DOM manipulation.) In general, regardless of Vite's behavior, it's a good practice to narrow down CSS selectors."]}),`
+`,e.jsxs(n.p,{children:[e.jsx(n.strong,{children:"CSS is injected by Vite"})," in the form of ",e.jsx(n.code,{children:"<style>"})," tags. If you wonder why Vite doesn't remove the ",e.jsx(n.code,{children:"<style>"})," tags of the previous page, consider that removing CSS is problematic during the transient state upon page navigation (as it would lead to ",e.jsx(n.a,{href:"https://en.wikipedia.org/wiki/Flash_of_unstyled_content",children:"FOUC"})," because there isn't any transaction primitive for DOM manipulation)."]}),`
 `]}),`
 `,e.jsx("h2",{id:"why-are-there-a-lot-of-http-requests-in-dev",children:"Why are there a lot of HTTP requests in dev?"}),`
 `,e.jsxs(n.p,{children:[`In development, you may observe a lot of HTTP requests fetching many JavaScript files.
