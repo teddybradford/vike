@@ -1,4 +1,4 @@
-import{j as e,o as l,i as t}from"../chunks/chunk-ByCcX8nu.js";/* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-BV8zjbB-.js";/* empty css                      */const o=[];function r(s){const n={a:"a",blockquote:"blockquote",br:"br",code:"code",figure:"figure",li:"li",ol:"ol",p:"p",pre:"pre",span:"span",strong:"strong",...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.p,{children:"If the route of two pages both match the same URL then we have a routing conflict: Vike has to decide which of the two pages should be rendered for that URL."}),`
+import{j as e,o as l,i as t}from"../chunks/chunk-ByCcX8nu.js";/* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-BV8zjbB-.js";/* empty css                      */const o=[];function r(s){const n={a:"a",blockquote:"blockquote",br:"br",code:"code",figure:"figure",li:"li",ol:"ol",p:"p",pre:"pre",span:"span",strong:"strong",...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.p,{children:"When the route of two pages match the same URL, there is a routing conflict: Vike has to decide which one to render for that URL."}),`
 `,e.jsx(n.p,{children:"Upon Route String conflicts, Vike chooses the first route from most specific to least specific. For example:"}),`
 `,e.jsxs(n.ol,{children:[`
 `,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"/about/team"})," (most specific: it matches only a single URL)"]}),`
@@ -7,16 +7,16 @@ import{j as e,o as l,i as t}from"../chunks/chunk-ByCcX8nu.js";/* empty css      
 `,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"/*"})," (least specific: it matches all URLs)"]}),`
 `]}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["More examples at ",e.jsx(n.a,{href:"https://github.com/vikejs/vike/blob/main/vike/shared/route/resolvePrecedence/resolvePrecedence_route-strings.spec.ts",children:"`resolvePrecedence_route-strings.spec.ts)"}),"."]}),`
+`,e.jsxs(n.p,{children:["You can find more examples at ",e.jsx(n.a,{href:"https://github.com/vikejs/vike/blob/main/vike/shared/route/resolvePrecedence/resolvePrecedence_route-strings.spec.ts",children:e.jsx(n.code,{children:"resolvePrecedence_route-strings.spec.ts"})}),"."]}),`
 `]}),`
 `,e.jsx(n.p,{children:"Upon conflicts between Filesystem Routing, Route Strings and Route Functions, Vike chooses the first route in following order:"}),`
 `,e.jsxs(n.ol,{children:[`
 `,e.jsxs(n.li,{children:["Route Function, returned high positive ",e.jsx(n.code,{children:"precedence"})," number (e.g. ",e.jsx(n.code,{children:"99"}),")"]}),`
 `,e.jsxs(n.li,{children:["Route Function, returned low positive ",e.jsx(n.code,{children:"precedence"})," number (e.g. ",e.jsx(n.code,{children:"1"}),")"]}),`
 `,e.jsx(n.li,{children:"Filesystem Routing"}),`
-`,e.jsxs(n.li,{children:["Route String, static (i.e. without ",e.jsx(n.code,{children:"@param"})," segment, e.g. ",e.jsx(n.code,{children:"/about/company"}),")"]}),`
+`,e.jsxs(n.li,{children:["Route String, static (i.e. without ",e.jsx(n.code,{children:"@"}),"/",e.jsx(n.code,{children:"*"})," parameter segment, e.g. ",e.jsx(n.code,{children:"/about/company"}),")"]}),`
 `,e.jsxs(n.li,{children:["Route Function, returned no ",e.jsx(n.code,{children:"precedence"})," number (or ",e.jsx(n.code,{children:"0"}),")"]}),`
-`,e.jsxs(n.li,{children:["Route String, parameterized (i.e. with ",e.jsx(n.code,{children:"@param"})," segment, e.g. ",e.jsx(n.code,{children:"/product/@productId"})," or ",e.jsx(n.code,{children:"/product/*"}),")"]}),`
+`,e.jsxs(n.li,{children:["Route String, parameterized (i.e. with ",e.jsx(n.code,{children:"@"}),"/",e.jsx(n.code,{children:"*"})," parameter segment, e.g. ",e.jsx(n.code,{children:"/product/@productId"})," or ",e.jsx(n.code,{children:"/product/*"}),")"]}),`
 `,e.jsxs(n.li,{children:["Route Function, returned low negative ",e.jsx(n.code,{children:"precedence"})," number (e.g. ",e.jsx(n.code,{children:"-1"}),")"]}),`
 `,e.jsxs(n.li,{children:["Route Function, returned high negative ",e.jsx(n.code,{children:"precedence"})," number (e.g. ",e.jsx(n.code,{children:"-99"}),")"]}),`
 `]}),`
