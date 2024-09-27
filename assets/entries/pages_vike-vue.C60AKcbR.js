@@ -7,7 +7,7 @@ import{j as e,o as l,i as t}from"../chunks/chunk-ByCcX8nu.js";import{L as s}from
 `,e.jsxs(n.p,{children:["The guides, such as ",e.jsx(s,{href:"/data-fetching"}),", assume you're using Vike with ",e.jsx(d,{name:!0,noLink:!0,comma:!0}),". If you aren't then see the sections ",e.jsx(n.code,{children:"Without vike-{react,vue,solid}"})," such as ",e.jsx(s,{href:"/useData#without-vike-react-vue-solid"}),"."]}),`
 `]}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["You can integrate Vue yourself instead of using ",e.jsx(n.code,{children:"vike-vue"}),", see ",e.jsx(s,{href:"/vue"}),"."]}),`
+`,e.jsxs(n.p,{children:["You can integrate Vue yourself instead of using ",e.jsx(n.code,{children:"vike-vue"}),", see ",e.jsx(s,{href:"/vue#custom-integration"}),"."]}),`
 `]}),`
 `,e.jsxs("h2",{id:"scaffold-new-vike-vue-app",children:["Scaffold new ",e.jsx("code",{children:"vike-vue"})," app"]}),`
 `,e.jsxs(n.p,{children:["Use ",e.jsx(n.a,{href:"https://batijs.dev",children:"Bati"})," for creating new apps."]}),`

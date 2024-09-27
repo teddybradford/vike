@@ -7,7 +7,7 @@ import{j as e,o as t,i as l}from"../chunks/chunk-ByCcX8nu.js";import{L as s}from
 `,e.jsxs(n.p,{children:["The guides, such as ",e.jsx(s,{href:"/data-fetching"}),", assume you're using Vike with ",e.jsx(a,{name:!0,noLink:!0,comma:!0}),". If you aren't then see the sections ",e.jsx(n.code,{children:"Without vike-{react,vue,solid}"})," such as ",e.jsx(s,{href:"/useData#without-vike-react-vue-solid"}),"."]}),`
 `]}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["You can integrate React yourself instead of using ",e.jsx(n.code,{children:"vike-react"}),", see ",e.jsx(s,{href:"/react"}),"."]}),`
+`,e.jsxs(n.p,{children:["You can integrate React yourself instead of using ",e.jsx(n.code,{children:"vike-react"}),", see ",e.jsx(s,{href:"/react#custom-integration"}),"."]}),`
 `]}),`
 `,e.jsxs(n.p,{children:["Notes about ",e.jsx(n.a,{href:"https://react.dev/blog/2023/03/22/react-labs-what-we-have-been-working-on-march-2023#react-server-components",children:"RSC"}),":"]}),`
 `,e.jsxs(n.ul,{children:[`
