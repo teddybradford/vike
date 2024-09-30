@@ -47,7 +47,7 @@ import{j as e,o as i,i as t}from"../chunks/chunk-B1niCXMT.js";import"../chunks/c
 `,e.jsxs(n.ul,{children:[`
 `,e.jsx(n.li,{children:e.jsx(n.code,{children:"STORYBOOK"})}),`
 `]}),`
-`,e.jsx(o,{children:e.jsxs(n.p,{children:["Contribution welcome to ",e.jsx(n.a,{href:"https://github.com/vikejs/vike/blob/main/vike/node/plugin/plugins/envVars.ts",children:"add further environment variables to the whitelist"}),"."]})}),`
+`,e.jsx(o,{children:e.jsxs(n.p,{children:["Contributions welcome to ",e.jsx(n.a,{href:"https://github.com/vikejs/vike/blob/main/vike/node/plugin/plugins/envVars.ts",children:"add further environment variables to the whitelist"}),"."]})}),`
 `,e.jsx("h2",{id:"config-files",children:"Config files"}),`
 `,e.jsxs(n.p,{children:["Note that ",e.jsxs(n.a,{href:"https://github.com/vikejs/vike/issues/1726#issuecomment-2208626928",children:[e.jsx(n.code,{children:"import.meta.env"})," isn't available in config files"]})," (neither ",e.jsx(n.code,{children:"vite.config.js"})," nor ",e.jsx(n.code,{children:"+config.js"}),")."]}),`
 `,e.jsxs(n.blockquote,{children:[`

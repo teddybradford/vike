@@ -1,6 +1,6 @@
 import{j as e,o,i as n}from"../chunks/chunk-B1niCXMT.js";import{L as a}from"../chunks/chunk-CFDfndwJ.js";/* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-B0HWZO65.js";/* empty css                      */const s=[{pageSectionId:"early-hints",pageSectionLevel:2,pageSectionTitle:"Early Hints"}];function i(r){const t={a:"a",blockquote:"blockquote",code:"code",p:"p",...r.components};return e.jsxs(e.Fragment,{children:[e.jsxs(t.p,{children:["Many users are using Vike with ",e.jsx(t.a,{href:"https://nginx.org/",children:"Nginx"}),"."]}),`
 `,e.jsxs(t.blockquote,{children:[`
-`,e.jsx(t.p,{children:"Contribution welcome to create an example."}),`
+`,e.jsx(t.p,{children:"Contributions welcome to create an example."}),`
 `]}),`
 `,e.jsx("h2",{id:"early-hints",children:"Early Hints"}),`
 `,e.jsxs(t.p,{children:["Nginx ",e.jsx(t.a,{href:"https://github.com/vikejs/vike/issues/1452#issuecomment-1925315908",children:"doesn't seem to support 103 Early Hints yet"}),"."]}),`

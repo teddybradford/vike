@@ -1,7 +1,7 @@
 import{j as e,o as l,i as o}from"../chunks/chunk-B1niCXMT.js";import{L as n}from"../chunks/chunk-CFDfndwJ.js";/* empty css                      */import{D as r,c as s}from"../chunks/chunk-DDjtLoua.js";/* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-B0HWZO65.js";/* empty css                      */import"../chunks/chunk-iYPsLLPR.js";const d=[{pageSectionId:"initial-state",pageSectionLevel:2,pageSectionTitle:"Initial state"},{pageSectionId:"see-also",pageSectionLevel:2,pageSectionTitle:"See also"}];function i(a){const t={a:"a",blockquote:"blockquote",li:"li",p:"p",ul:"ul",...a.components};return e.jsxs(e.Fragment,{children:[e.jsxs(t.p,{children:["You can use Vike with ",e.jsx(t.a,{href:"https://github.com/lostpebble/pullstate",children:"PullState"}),"."]}),`
 `,e.jsx(t.p,{children:"This page documents how to manually integrate PullState."}),`
 `,e.jsxs(t.blockquote,{children:[`
-`,e.jsxs(t.p,{children:["There isn't a ",e.jsx(n,{href:"/extensions",children:"Vike extension"})," for PullState yet, but ",e.jsx(t.a,{href:"https://github.com/vikejs/vike/issues/1715",children:"contribution welcome to create one"}),"."]}),`
+`,e.jsxs(t.p,{children:["There isn't a ",e.jsx(n,{href:"/extensions",children:"Vike extension"})," for PullState yet, but ",e.jsx(t.a,{href:"https://github.com/vikejs/vike/issues/1715",children:"contributions welcome to create one"}),"."]}),`
 `]}),`
 `,e.jsx("h2",{id:"initial-state",children:"Initial state"}),`
 `,e.jsx(r,{toolName:"PullState",toolType:"store"}),`

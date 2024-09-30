@@ -43,7 +43,7 @@ import{j as e,b as s,o as i,i as d}from"../chunks/chunk-B1niCXMT.js";import{L as
 `]}),`
 `,e.jsxs(n.p,{children:["Vue example: ",e.jsxs(n.a,{href:"https://github.com/AaronBeaudoin/vite-plugin-ssr-example/blob/main/pages/spa.page.client.vue",children:["GitHub > ",e.jsx(n.code,{children:"AaronBeaudoin/vite-plugin-ssr-example"})," > ",e.jsx(n.code,{children:"/pages/spa.page.client.vue"})]})]}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["vite-plugin-ssr was the ",e.jsx(n.a,{href:"https://vite-plugin-ssr.com/vike",children:"previous name of Vike"}),". Contribution welcome to fork and update the Vue example."]}),`
+`,e.jsxs(n.p,{children:["vite-plugin-ssr was the ",e.jsx(n.a,{href:"https://vite-plugin-ssr.com/vike",children:"previous name of Vike"}),". Contributions welcome to fork and update the Vue example."]}),`
 `]}),`
 `,e.jsx(n.p,{children:e.jsx(n.strong,{children:"2. Render hooks (SPA only)"})}),`
 `,e.jsxs(n.p,{children:["If we only have SPA pages, then we adapt our ",e.jsx(n.code,{children:"onRenderHtml()"})," and ",e.jsx(n.code,{children:"onRenderClient()"})," hooks like the following."]}),`
@@ -200,7 +200,7 @@ only defined in the browser.`]}),`
 `,e.jsxs(n.li,{children:["SSR page: ",e.jsx(n.a,{href:"https://github.com/AaronBeaudoin/vite-plugin-ssr-example/blob/main/pages/ssr.page.vue",children:"/pages/ssr.page.vue"})]}),`
 `]}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["vite-plugin-ssr was the ",e.jsx(n.a,{href:"https://vite-plugin-ssr.com/vike",children:"previous name of Vike"}),". Contribution welcome to fork and update the Vue example."]}),`
+`,e.jsxs(n.p,{children:["vite-plugin-ssr was the ",e.jsx(n.a,{href:"https://vite-plugin-ssr.com/vike",children:"previous name of Vike"}),". Contributions welcome to fork and update the Vue example."]}),`
 `]}),`
 `,e.jsx("h2",{id:"ssr",children:"SSR"}),`
 `,e.jsx(n.p,{children:"The Vike boilerplates and documentation use SSR by default."}),`
@@ -252,7 +252,7 @@ only defined in the browser.`]}),`
 `]}),`
 `,e.jsxs(n.p,{children:["Vue Example: ",e.jsxs(n.a,{href:"https://github.com/AaronBeaudoin/vite-plugin-ssr-example/blob/main/pages/html.page.server.vue",children:["GitHub > ",e.jsx(n.code,{children:"AaronBeaudoin/vite-plugin-ssr-example"})," > ",e.jsx(n.code,{children:"/pages/html.page.server.vue"})]})]}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["vite-plugin-ssr was the ",e.jsx(n.a,{href:"https://vite-plugin-ssr.com/vike",children:"previous name of Vike"}),". Contribution welcome to fork and update the Vue example."]}),`
+`,e.jsxs(n.p,{children:["vite-plugin-ssr was the ",e.jsx(n.a,{href:"https://vite-plugin-ssr.com/vike",children:"previous name of Vike"}),". Contributions welcome to fork and update the Vue example."]}),`
 `]}),`
 `,e.jsx("h2",{id:"see-also",children:"See also"}),`
 `,e.jsxs(n.ul,{children:[`

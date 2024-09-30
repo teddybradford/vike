@@ -104,7 +104,7 @@ import{j as e,o as l,i as o}from"../chunks/chunk-B1niCXMT.js";import{L as s}from
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"https://github.com/vikejs/vike-vue/tree/main/packages/vike-vue-pinia",children:e.jsx(n.code,{children:"vike-vue-pinia"})})}),`
 `]}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:[e.jsx(n.a,{href:"https://github.com/vikejs/vike/issues/1715",children:"Contribution welcome to create extensions"}),"."]}),`
+`,e.jsxs(n.p,{children:[e.jsx(n.a,{href:"https://github.com/vikejs/vike/issues/1715",children:"Contributions welcome to create extensions"}),"."]}),`
 `]}),`
 `,e.jsx("h3",{id:"custom-integration",children:"Custom integration"}),`
 `,e.jsxs(n.p,{children:["For complete control over integration, instead of using an extension, you can manually integrate a store yourself. See ",e.jsx(s,{href:"/stores"}),"."]}),`

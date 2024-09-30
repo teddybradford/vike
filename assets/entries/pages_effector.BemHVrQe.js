@@ -1,6 +1,6 @@
 import{j as e,o as r,i as n}from"../chunks/chunk-B1niCXMT.js";import{L as l}from"../chunks/chunk-CFDfndwJ.js";/* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-B0HWZO65.js";/* empty css                      */const a=[{pageSectionId:"clone-template",pageSectionLevel:2,pageSectionTitle:"Clone template"},{pageSectionId:"see-also",pageSectionLevel:2,pageSectionTitle:"See also"}];function i(o){const t={a:"a",blockquote:"blockquote",code:"code",li:"li",ol:"ol",p:"p",ul:"ul",...o.components};return e.jsxs(e.Fragment,{children:[e.jsxs(t.p,{children:["You can use Vike with ",e.jsx(t.a,{href:"https://effector.dev",children:"Effector"}),"."]}),`
 `,e.jsxs(t.blockquote,{children:[`
-`,e.jsxs(t.p,{children:["There isn't a ",e.jsx(l,{href:"/extensions",children:"Vike extension"})," for Effector yet, but ",e.jsx(t.a,{href:"https://github.com/vikejs/vike/issues/1715",children:"contribution welcome to create one"}),"."]}),`
+`,e.jsxs(t.p,{children:["There isn't a ",e.jsx(l,{href:"/extensions",children:"Vike extension"})," for Effector yet, but ",e.jsx(t.a,{href:"https://github.com/vikejs/vike/issues/1715",children:"contributions welcome to create one"}),"."]}),`
 `]}),`
 `,e.jsx("h2",{id:"clone-template",children:"Clone template"}),`
 `,e.jsxs(t.ol,{children:[`

@@ -1,7 +1,7 @@
 import{j as e,o as n,i as a}from"../chunks/chunk-B1niCXMT.js";import{L as r}from"../chunks/chunk-CFDfndwJ.js";/* empty css                      */import{D as l,c as s}from"../chunks/chunk-DDjtLoua.js";import{E as d}from"../chunks/chunk-D1t0_4f-.js";/* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-B0HWZO65.js";/* empty css                      */import"../chunks/chunk-iYPsLLPR.js";const p=[{pageSectionId:"initial-state",pageSectionLevel:2,pageSectionTitle:"Initial state"},{pageSectionId:"example",pageSectionLevel:2,pageSectionTitle:"Example"},{pageSectionId:"see-also",pageSectionLevel:2,pageSectionTitle:"See also"}];function o(i){const t={a:"a",blockquote:"blockquote",li:"li",p:"p",ul:"ul",...i.components};return e.jsxs(e.Fragment,{children:[e.jsxs(t.p,{children:["You can use Vike with ",e.jsx(t.a,{href:"https://vuex.vuejs.org",children:"Vuex"}),"."]}),`
 `,e.jsx(t.p,{children:"This page documents how to manually integrate Vuex."}),`
 `,e.jsxs(t.blockquote,{children:[`
-`,e.jsxs(t.p,{children:["There isn't a ",e.jsx(r,{href:"/extensions",children:"Vike extension"})," for Vuex yet, but ",e.jsx(t.a,{href:"https://github.com/vikejs/vike/issues/1715",children:"contribution welcome to create one"}),"."]}),`
+`,e.jsxs(t.p,{children:["There isn't a ",e.jsx(r,{href:"/extensions",children:"Vike extension"})," for Vuex yet, but ",e.jsx(t.a,{href:"https://github.com/vikejs/vike/issues/1715",children:"contributions welcome to create one"}),"."]}),`
 `]}),`
 `,e.jsx("h2",{id:"initial-state",children:"Initial state"}),`
 `,e.jsx(l,{toolName:"Vuex",toolType:"store"}),`

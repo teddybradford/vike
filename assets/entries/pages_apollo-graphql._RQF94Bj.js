@@ -6,7 +6,7 @@ import{j as e,o as n,i as r}from"../chunks/chunk-B1niCXMT.js";import{L as o}from
 `,e.jsx(t.li,{children:e.jsx(t.a,{href:"https://github.com/vikejs/vike-react/tree/main/packages/vike-react-apollo",children:e.jsx(t.code,{children:"vike-react-apollo"})})}),`
 `]}),`
 `]}),`
-`,e.jsx(s,{children:e.jsxs(t.p,{children:["There isn't a ",e.jsx(o,{href:"/extensions",children:"Vike extension"})," for ",e.jsx(t.code,{children:"vike-vue"})," yet, but ",e.jsx(t.a,{href:"https://github.com/vikejs/vike/issues/1715",children:"contribution welcome to create one"}),"."]})}),`
+`,e.jsx(s,{children:e.jsxs(t.p,{children:["There isn't a ",e.jsx(o,{href:"/extensions",children:"Vike extension"})," for ",e.jsx(t.code,{children:"vike-vue"})," yet, but ",e.jsx(t.a,{href:"https://github.com/vikejs/vike/issues/1715",children:"contributions welcome to create one"}),"."]})}),`
 `,e.jsx("h2",{id:"initial-data",children:"Initial data"}),`
 `,e.jsx(d,{toolType:"graphql",toolName:"Apollo"}),`
 `,e.jsx(t.p,{children:"Integration example:"}),`
