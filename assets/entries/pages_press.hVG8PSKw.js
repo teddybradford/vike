@@ -14,7 +14,7 @@ import{j as e,L as r,o as a,i as o}from"../chunks/chunk-BURd2QqB.js";import{L as
 `,e.jsx(i.p,{children:"Marketing copy is work-in-progress: more content is on the way. Let us know what you want/need; we can create tailored copy for you."}),`
 `]}),`
 `,e.jsx("h2",{id:"banner",children:"Banner"}),`
-`,e.jsx("img",{src:"/banner.png",width:"500"}),`
+`,e.jsx("img",{src:"/banner.png",height:"250"}),`
 `,e.jsx("br",{}),`
 `,e.jsx(t,{href:"/banner",children:"Source"}),`
 `,e.jsx("h2",{id:"logo",children:"Logo"}),`
