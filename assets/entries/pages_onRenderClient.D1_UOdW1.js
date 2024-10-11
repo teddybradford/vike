@@ -22,7 +22,7 @@ import{j as e,L as o,o as i,i as d}from"../chunks/chunk-BURd2QqB.js";import{L as
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"}"})})]})})}),`
 `,e.jsx(n.p,{children:"Where:"}),`
 `,e.jsxs(n.ul,{children:[`
-`,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"pageContext.Page"})," is the ",e.jsx(n.code,{children:"Page"})," value of the page that is being rendered, see ",e.jsx(s,{href:"/Page"}),"."]}),`
+`,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"pageContext.Page"})," is the ",e.jsxs(s,{href:"/Page",children:[e.jsx(n.code,{children:"+Page"})," value"]})," of the page that is being rendered."]}),`
 `,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"pageContext"})," is a subset of the ",e.jsx(s,{href:"/pageContext",children:e.jsx(n.code,{children:"pageContext"})})," defined on the server-side."]}),`
 `]}),`
 `,e.jsxs(n.p,{children:["You can use ",e.jsx(n.a,{href:"/passToClient",children:e.jsx(n.code,{children:"passToClient"})})," to determine what subset of ",e.jsx(n.code,{children:"pageContext"})," is sent to the browser."]}),`
