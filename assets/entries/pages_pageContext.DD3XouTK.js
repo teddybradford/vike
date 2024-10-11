@@ -1,17 +1,17 @@
-import{j as e,L as a,o as t,i}from"../chunks/chunk-BURd2QqB.js";import{L as s}from"../chunks/chunk-BvJCXD7Y.js";/* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-BKvOB9xx.js";/* empty css                      */const o=[{pageSectionId:"built-in",pageSectionLevel:2,pageSectionTitle:"Built-in"},{pageSectionId:"custom",pageSectionLevel:2,pageSectionTitle:"Custom"},{pageSectionId:"typescript",pageSectionLevel:2,pageSectionTitle:"TypeScript"},{pageSectionId:"lifecycle",pageSectionLevel:2,pageSectionTitle:"Lifecycle"},{pageSectionId:"see-also",pageSectionLevel:2,pageSectionTitle:"See also"}];function r(l){const n={a:"a",blockquote:"blockquote",code:"code",figure:"figure",li:"li",p:"p",pre:"pre",span:"span",strong:"strong",ul:"ul",...l.components};return e.jsxs(e.Fragment,{children:[e.jsxs(n.p,{children:["The ",e.jsx(n.code,{children:"pageContext"})," object provides contextual information about the current page."]}),`
+import{j as e,L as a,o as t,i}from"../chunks/chunk-BURd2QqB.js";import{L as s}from"../chunks/chunk-BvJCXD7Y.js";/* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-BKvOB9xx.js";/* empty css                      */const o=[{pageSectionId:"built-in",pageSectionLevel:2,pageSectionTitle:"Built-in"},{pageSectionId:"custom",pageSectionLevel:2,pageSectionTitle:"Custom"},{pageSectionId:"faq",pageSectionLevel:2,pageSectionTitle:"FAQ"},{pageSectionId:"can-i-mutate-pagecontext",pageSectionLevel:3,pageSectionTitle:"Can I mutate `pageContext`?"},{pageSectionId:"can-i-use-pagecontext-to-store-ui-state",pageSectionLevel:3,pageSectionTitle:"Can I use `pageContext` to store UI state?"},{pageSectionId:"can-i-check-whether-ssr-is-enabled",pageSectionLevel:3,pageSectionTitle:"Can I check whether SSR is enabled?"},{pageSectionId:"typescript",pageSectionLevel:2,pageSectionTitle:"TypeScript"},{pageSectionId:"lifecycle",pageSectionLevel:2,pageSectionTitle:"Lifecycle"},{pageSectionId:"see-also",pageSectionLevel:2,pageSectionTitle:"See also"}];function r(l){const n={a:"a",blockquote:"blockquote",code:"code",figure:"figure",li:"li",p:"p",pre:"pre",span:"span",strong:"strong",ul:"ul",...l.components};return e.jsxs(e.Fragment,{children:[e.jsxs(n.p,{children:["The ",e.jsx(n.code,{children:"pageContext"})," object provides contextual information about the current page."]}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// /pages/product/@id/+data.js"})}),`
 `,e.jsx(n.span,{"data-line":"",children:" "}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"export"}),e.jsx(n.span,{style:{color:"#D73A49"},children:" async"}),e.jsx(n.span,{style:{color:"#D73A49"},children:" function"}),e.jsx(n.span,{style:{color:"#6F42C1"},children:" data"}),e.jsx(n.span,{style:{color:"#24292E"},children:"("}),e.jsx(n.span,{style:{color:"#E36209"},children:"pageContext"}),e.jsx(n.span,{style:{color:"#24292E"},children:") {"})]}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"  // Common built-in properties"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"  // Commonly used built-in properties"})}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"  pageContext.urlParsed.pathname "}),e.jsx(n.span,{style:{color:"#6A737D"},children:"// /product/42"})]}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"  pageContext.routeParams.id "}),e.jsx(n.span,{style:{color:"#6A737D"},children:"// 42"})]}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"  pageContext.headers "}),e.jsx(n.span,{style:{color:"#6A737D"},children:"// { cookie: 'user-id=1337', ... }"})]}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"  // Common custom properties"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"  // Commonly added custom properties"})}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"  pageContext.user "}),e.jsx(n.span,{style:{color:"#6A737D"},children:"// { name: 'John', id: 1337 }"})]}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"  pageContext.initialStoreState "}),e.jsx(n.span,{style:{color:"#6A737D"},children:"// { time: 1718872184291 }"})]}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"}"})})]})})}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["The ",e.jsx(n.code,{children:"data()"})," hook is explained at ",e.jsx(s,{href:"/data-fetching"}),"."]}),`
+`,e.jsxs(n.p,{children:["The ",e.jsx(n.code,{children:"+data"})," hook is explained at ",e.jsx(s,{href:"/data-fetching"}),"."]}),`
 `]}),`
 `,e.jsx(n.p,{children:"It includes:"}),`
 `,e.jsxs(n.ul,{children:[`
@@ -20,10 +20,10 @@ import{j as e,L as a,o as t,i}from"../chunks/chunk-BURd2QqB.js";import{L as s}fr
 `]}),`
 `,e.jsx(n.p,{children:"It's accessible to all:"}),`
 `,e.jsxs(n.ul,{children:[`
-`,e.jsxs(n.li,{children:[e.jsx(s,{href:"/hooks",children:"Vike hooks"}),", such as ",e.jsx(s,{href:"/data",children:e.jsx(n.code,{children:"data()"})}),"."]}),`
-`,e.jsxs(n.li,{children:["UI components, see ",e.jsx(s,{href:"/usePageContext",children:e.jsx(n.code,{children:"usePageContext()"})}),"."]}),`
+`,e.jsxs(n.li,{children:[e.jsx(s,{href:"/hooks",children:"Vike hooks"}),", such as ",e.jsx(s,{href:"/data",children:e.jsx(n.code,{children:"+data"})}),"."]}),`
+`,e.jsxs(n.li,{children:["UI components, by using ",e.jsx(s,{href:"/usePageContext",children:e.jsx(n.code,{children:"usePageContext()"})}),"."]}),`
 `]}),`
-`,e.jsxs(n.p,{children:["You can also access ",e.jsx(n.code,{children:"pageContext"})," from the client-side by using ",e.jsx(s,{href:"/passToClient",children:e.jsx(n.code,{children:"passToClient"})}),"."]}),`
+`,e.jsxs(n.p,{children:["You can access ",e.jsx(n.code,{children:"pageContext"})," from the client-side by using ",e.jsx(s,{href:"/passToClient",children:e.jsx(n.code,{children:"passToClient"})}),"."]}),`
 `,e.jsx("h2",{id:"built-in",children:"Built-in"}),`
 `,e.jsx(n.p,{children:"Built-in properties:"}),`
 `,e.jsxs(n.ul,{children:[`
@@ -128,8 +128,9 @@ import{j as e,L as a,o as t,i}from"../chunks/chunk-BURd2QqB.js";import{L as s}fr
 `,e.jsxs(n.p,{children:["You can define custom ",e.jsx(n.code,{children:"pageContext"})," properties. (See ",e.jsx(s,{href:"#typescript"})," for how to define their types.)"]}),`
 `,e.jsxs(n.ul,{children:[`
 `,e.jsxs(n.li,{children:[`
-`,e.jsxs(n.p,{children:["At your ",e.jsxs(s,{href:"/renderPage",children:["Vike server middleware ",e.jsx(n.code,{children:"renderPage()"})]}),":"]}),`
-`,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"app."}),e.jsx(n.span,{style:{color:"#6F42C1"},children:"get"}),e.jsx(n.span,{style:{color:"#24292E"},children:"("}),e.jsx(n.span,{style:{color:"#032F62"},children:"'*'"}),e.jsx(n.span,{style:{color:"#24292E"},children:", "}),e.jsx(n.span,{style:{color:"#D73A49"},children:"async"}),e.jsx(n.span,{style:{color:"#24292E"},children:" ("}),e.jsx(n.span,{style:{color:"#E36209"},children:"req"}),e.jsx(n.span,{style:{color:"#24292E"},children:") "}),e.jsx(n.span,{style:{color:"#D73A49"},children:"=>"}),e.jsx(n.span,{style:{color:"#24292E"},children:" {"})]}),`
+`,e.jsxs(n.p,{children:["At ",e.jsx(s,{href:"/renderPage",children:e.jsx(n.code,{children:"renderPage()"})}),":"]}),`
+`,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// Your Vike server middleware integration"})}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"app."}),e.jsx(n.span,{style:{color:"#6F42C1"},children:"get"}),e.jsx(n.span,{style:{color:"#24292E"},children:"("}),e.jsx(n.span,{style:{color:"#032F62"},children:"'*'"}),e.jsx(n.span,{style:{color:"#24292E"},children:", "}),e.jsx(n.span,{style:{color:"#D73A49"},children:"async"}),e.jsx(n.span,{style:{color:"#24292E"},children:" ("}),e.jsx(n.span,{style:{color:"#E36209"},children:"req"}),e.jsx(n.span,{style:{color:"#24292E"},children:") "}),e.jsx(n.span,{style:{color:"#D73A49"},children:"=>"}),e.jsx(n.span,{style:{color:"#24292E"},children:" {"})]}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"  const"}),e.jsx(n.span,{style:{color:"#005CC5"},children:" pageContextInit"}),e.jsx(n.span,{style:{color:"#D73A49"},children:" ="}),e.jsx(n.span,{style:{color:"#24292E"},children:" {"})]}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"    urlOriginal: req.url,"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"    headersOriginal: req.headers,"})}),`
@@ -142,8 +143,8 @@ import{j as e,L as a,o as t,i}from"../chunks/chunk-BURd2QqB.js";import{L as s}fr
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"    user: req.user,"})}),`
 `,e.jsx(n.span,{"data-line":"",children:" "}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"    // Or any other value:"})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"    // pageContext.anyCustomProp"})}),`
-`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"    anyCustomProp: "}),e.jsx(n.span,{style:{color:"#032F62"},children:"'some-value'"})]}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"    // pageContext.someCustomProp"})}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"    someCustomProp: "}),e.jsx(n.span,{style:{color:"#032F62"},children:"'some-value'"})]}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"  }"})}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"  const"}),e.jsx(n.span,{style:{color:"#005CC5"},children:" pageContext"}),e.jsx(n.span,{style:{color:"#D73A49"},children:" ="}),e.jsx(n.span,{style:{color:"#D73A49"},children:" await"}),e.jsx(n.span,{style:{color:"#6F42C1"},children:" renderPage"}),e.jsx(n.span,{style:{color:"#24292E"},children:"(pageContextInit)"})]}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"  // ..."})}),`
@@ -153,46 +154,36 @@ import{j as e,L as a,o as t,i}from"../chunks/chunk-BURd2QqB.js";import{L as s}fr
 `]}),`
 `]}),`
 `,e.jsxs(n.li,{children:[`
-`,e.jsxs(n.p,{children:["Using the upcoming ",e.jsxs(n.a,{href:"https://github.com/vikejs/vike/issues/962",children:["hook ",e.jsx(n.code,{children:"onBoot()"})," (#962)"]}),". It isn't implement yet, add a comment to the GitHub issue if you need it. (We expect ",e.jsx(n.code,{children:"onBoot()"})," to be particularly useful for ",e.jsx(s,{href:"/pre-rendering",children:"pre-rendered"})," apps.)"]}),`
-`]}),`
-`,e.jsxs(n.li,{children:[`
-`,e.jsxs(n.p,{children:["Using the ",e.jsx(n.a,{href:"/onBeforeRender",children:e.jsx(n.code,{children:"onBeforeRender()"})})," hook:"]}),`
-`,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"export"}),e.jsx(n.span,{style:{color:"#D73A49"},children:" async"}),e.jsx(n.span,{style:{color:"#D73A49"},children:" function"}),e.jsx(n.span,{style:{color:"#6F42C1"},children:" onBeforeRender"}),e.jsx(n.span,{style:{color:"#24292E"},children:"() {"})]}),`
-`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"  return"}),e.jsx(n.span,{style:{color:"#24292E"},children:" {"})]}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"    pageContext: {"})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"      // ***************************************"})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"      // **** Custom pageContext properties ****"})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"      // ***************************************"})}),`
-`,e.jsx(n.span,{"data-line":"",children:" "}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"      // Common use case: make the state management's initial state available."})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"      // pageContext.initialStoreState – initial store state"})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"      initialStoreState: pageRendered.store.state,"})}),`
-`,e.jsx(n.span,{"data-line":"",children:" "}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"      // pageContext.anyCustomProp"})}),`
-`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"      anyCustomProp: "}),e.jsx(n.span,{style:{color:"#032F62"},children:"'some-value'"})]}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"    }"})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"  }"})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"}"})})]})})}),`
-`,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["Setting ",e.jsx(n.code,{children:"pageContext.initialStoreState"})," is a common use case for integrating state management tools, see ",e.jsx(s,{href:"/stores"}),"."]}),`
-`]}),`
-`]}),`
-`,e.jsxs(n.li,{children:[`
-`,e.jsxs(n.p,{children:["Using the ",e.jsx(s,{href:"/onRenderHtml",children:e.jsx(n.code,{children:"onRenderHtml()"})})," hook:"]}),`
-`,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"function"}),e.jsx(n.span,{style:{color:"#6F42C1"},children:" onRenderHtml"}),e.jsx(n.span,{style:{color:"#24292E"},children:"() {"})]}),`
-`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"  return"}),e.jsx(n.span,{style:{color:"#24292E"},children:" {"})]}),`
-`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"    documentHtml: "}),e.jsx(n.span,{style:{color:"#6F42C1"},children:"escapeInject"}),e.jsx(n.span,{style:{color:"#032F62"},children:"`<html><!--...--></html>`"}),e.jsx(n.span,{style:{color:"#24292E"},children:","})]}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"    pageContext: {"})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"      // ***************************************"})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"      // **** Custom pageContext properties ****"})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"      // ***************************************"})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"      // pageContext.anyCustomProp"})}),`
-`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"      anyCustomProp: "}),e.jsx(n.span,{style:{color:"#032F62"},children:"'some-value'"})]}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"    }"})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"  }"})}),`
+`,e.jsxs(n.p,{children:["At any ",e.jsx(s,{href:"/",children:"Vike hook"}),"."]}),`
+`,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// +someHook.js"})}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"export"}),e.jsx(n.span,{style:{color:"#D73A49"},children:" function"}),e.jsx(n.span,{style:{color:"#6F42C1"},children:" someHook"}),e.jsx(n.span,{style:{color:"#24292E"},children:"("}),e.jsx(n.span,{style:{color:"#E36209"},children:"pageContext"}),e.jsx(n.span,{style:{color:"#24292E"},children:") {"})]}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"  pageContext.someCustomProp "}),e.jsx(n.span,{style:{color:"#D73A49"},children:"="}),e.jsx(n.span,{style:{color:"#032F62"},children:" 'some-value'"}),e.jsx(n.span,{style:{color:"#6A737D"},children:" // Add or modify custom property"})]}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"}"})})]})})}),`
 `]}),`
+`,e.jsxs(n.li,{children:[`
+`,e.jsxs(n.p,{children:["At any UI component, by using ",e.jsx(s,{href:"/usePageContext",children:e.jsx(n.code,{children:"usePageContext()"})}),"."]}),`
+`,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// Inside a UI component"})}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"const"}),e.jsx(n.span,{style:{color:"#005CC5"},children:" pageContext"}),e.jsx(n.span,{style:{color:"#D73A49"},children:" ="}),e.jsx(n.span,{style:{color:"#6F42C1"},children:" usePageContext"}),e.jsx(n.span,{style:{color:"#24292E"},children:"()"})]}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"pageContext.someCustomProp "}),e.jsx(n.span,{style:{color:"#D73A49"},children:"="}),e.jsx(n.span,{style:{color:"#032F62"},children:" 'some-value'"}),e.jsx(n.span,{style:{color:"#6A737D"},children:" // Add or modify custom property"})]})]})})}),`
 `]}),`
+`]}),`
+`,e.jsx("h2",{id:"faq",children:"FAQ"}),`
+`,e.jsxs("h3",{id:"can-i-mutate-pagecontext",children:["Can I mutate ",e.jsx("code",{children:"pageContext"}),"?"]}),`
+`,e.jsxs(n.p,{children:["Yes, it's a common practice to change/add ",e.jsx(n.code,{children:"pageContext"})," properties at any time."]}),`
+`,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// Anywhere"})}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"pageContext.someProp "}),e.jsx(n.span,{style:{color:"#D73A49"},children:"="}),e.jsx(n.span,{style:{color:"#24292E"},children:" someValue"})]})]})})}),`
+`,e.jsxs("h3",{id:"can-i-use-pagecontext-to-store-ui-state",children:["Can I use ",e.jsx("code",{children:"pageContext"})," to store UI state?"]}),`
+`,e.jsxs(n.p,{children:["No, see ",e.jsx(s,{href:"#lifecycle"}),"."]}),`
+`,e.jsx("h3",{id:"can-i-check-whether-ssr-is-enabled",children:"Can I check whether SSR is enabled?"}),`
+`,e.jsxs(n.p,{children:["On the server-side, you can tell ",e.jsx(s,{href:"/ssr",children:"whether SSR is enabled"})," by checking whether ",e.jsx(s,{href:"#:~:text=pageContext.Page,-%3A",children:e.jsx(n.code,{children:"pageContext.Page"})})," is set:"]}),`
+`,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// +onAfterRenderHtml.js"})}),`
+`,e.jsx(n.span,{"data-line":"",children:" "}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"export"}),e.jsx(n.span,{style:{color:"#D73A49"},children:" function"}),e.jsx(n.span,{style:{color:"#6F42C1"},children:" onAfterRenderHtml"}),e.jsx(n.span,{style:{color:"#24292E"},children:"("}),e.jsx(n.span,{style:{color:"#E36209"},children:"pageContext"}),e.jsx(n.span,{style:{color:"#24292E"},children:") {"})]}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"  const"}),e.jsx(n.span,{style:{color:"#005CC5"},children:" isSSR"}),e.jsx(n.span,{style:{color:"#D73A49"},children:" ="}),e.jsx(n.span,{style:{color:"#D73A49"},children:" !!"}),e.jsx(n.span,{style:{color:"#24292E"},children:"pageContext.Page"})]}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"  if"}),e.jsx(n.span,{style:{color:"#24292E"},children:" (isSSR) {"})]}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"    // ..."})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"  }"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"}"})})]})})}),`
 `,e.jsx("h2",{id:"typescript",children:"TypeScript"}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"ts","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"ts","data-theme":"github-light",style:{display:"grid"},children:[e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"import"}),e.jsx(n.span,{style:{color:"#D73A49"},children:" type"}),e.jsx(n.span,{style:{color:"#24292E"},children:" {"})]}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"  // For code loaded in client and server"})}),`
@@ -232,14 +223,17 @@ import{j as e,L as a,o as t,i}from"../chunks/chunk-BURd2QqB.js";import{L as s}fr
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"  PageContextServer"})}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"} "}),e.jsx(n.span,{style:{color:"#D73A49"},children:"from"}),e.jsx(n.span,{style:{color:"#032F62"},children:" 'vike/types'"})]})]})})}),`
 `,e.jsx("h2",{id:"lifecycle",children:"Lifecycle"}),`
-`,e.jsxs(n.p,{children:["The main purpose of ",e.jsx(n.code,{children:"pageContext"})," is to hold the information that is needed for rendering the page."]}),`
-`,e.jsxs(n.p,{children:["On the server-side, upon a new incoming HTTP request, a new ",e.jsx(n.code,{children:"pageContext"})," object is created and used for rendering the HTML that is included in the HTTP response. The ",e.jsx(n.code,{children:"pageContext"})," object is discarded after the HTML response is sent."]}),`
+`,e.jsx(n.p,{children:e.jsx(n.strong,{children:"Server-side"})}),`
+`,e.jsxs(n.p,{children:["On the server-side, upon an HTTP request, a new ",e.jsx(n.code,{children:"pageContext"})," object is created. It's used for rendering the HTML included in the HTTP response. The ",e.jsx(n.code,{children:"pageContext"})," object is discarded after the HTTP response is sent."]}),`
+`,e.jsx(n.p,{children:e.jsx(n.strong,{children:"Client-side"})}),`
 `,e.jsxs(n.p,{children:["On the client-side, upon ",e.jsx(s,{text:"client-side page navigation",href:"/client-routing"}),", the ",e.jsx(n.code,{children:"pageContext"})," object of the previous page is discarded and a new ",e.jsx(n.code,{children:"pageContext"})," object is created."]}),`
-`,e.jsxs(n.p,{children:["At build-time, upon ",e.jsx(s,{text:"pre-rendering",href:"/pre-rendering"}),", a ",e.jsx(n.code,{children:"pageContext"})," object is created for each URL and saved at ",e.jsx(n.code,{children:"dist/client/${url}/index.pageContext.json"}),"."]}),`
-`,e.jsxs(n.p,{children:["Vike adds information to ",e.jsx(n.code,{children:"pageContext"})," only while rendering the page, and we recommend to treat ",e.jsx(n.code,{children:"pageContext"})," as immutable after the rendering of the page has finished. Consequently:"]}),`
-`,e.jsxs(n.ul,{children:[`
-`,e.jsxs(n.li,{children:["We recommend against using ",e.jsx(n.code,{children:"pageContext"})," to store UI state. (Use a proper ",e.jsx(s,{text:"state management tool",href:"/stores"})," instead.)"]}),`
-`,e.jsxs(n.li,{children:["If you use ",e.jsx(s,{text:"pre-rendering",href:"/pre-rendering"}),", then the ",e.jsx(n.code,{children:"pageContext"})," object of each URL is set in stone already at build-time."]}),`
+`,e.jsxs(n.blockquote,{children:[`
+`,e.jsxs(n.p,{children:["Vike adds information to ",e.jsx(n.code,{children:"pageContext"})," only while rendering the page. We recommend to treat ",e.jsx(n.code,{children:"pageContext"})," as immutable after the page rendering has finished. For example, don't use ",e.jsx(n.code,{children:"pageContext"})," as a UI store (use a proper ",e.jsx(s,{href:"/stores",children:"state management tool"})," instead)."]}),`
+`]}),`
+`,e.jsx(n.p,{children:e.jsx(n.strong,{children:"Pre-rendering"})}),`
+`,e.jsxs(n.p,{children:["If a page is ",e.jsx(s,{href:"/pre-rendering",children:"pre-rendered"}),", its ",e.jsxs(s,{href:"/pageContext.json",children:["initial ",e.jsx(n.code,{children:"pageContext"})," value"]})," is determined at build-time and saved at ",e.jsx(n.code,{children:"dist/client/${url}/index.pageContext.json"}),"."]}),`
+`,e.jsxs(n.blockquote,{children:[`
+`,e.jsxs(n.p,{children:["Consequently, the initial ",e.jsx(n.code,{children:"pageContext"})," value of a pre-rendered page is set in stone at build-time."]}),`
 `]}),`
 `,e.jsx("h2",{id:"see-also",children:"See also"}),`
 `,e.jsxs(n.ul,{children:[`

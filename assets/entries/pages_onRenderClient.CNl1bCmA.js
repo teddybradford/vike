@@ -2,7 +2,7 @@ import{j as e,L as o,o as i,i as d}from"../chunks/chunk-BURd2QqB.js";import{L as
 `,e.jsxs(n.p,{children:["The ",e.jsx(n.code,{children:"onRenderClient()"})," hook defines how pages are ",e.jsx(s,{text:"hydrated",href:"/hydration"})," and rendered on the client-side."]}),`
 `,e.jsxs(n.p,{children:["The ",e.jsx(n.code,{children:"onRenderClient()"})," and ",e.jsx(s,{href:"/onRenderHtml",children:e.jsx(n.code,{children:"onRenderHtml()"})})," hooks are essentially the glue code between Vike and the UI framework (React/Vue/Solid/...)."]}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["If you use a ",e.jsx(r,{}),", then you don't need to define ",e.jsx(n.code,{children:"onRenderClient()"})," as it's already defined by ",e.jsx(r,{name:!0,noLink:!0}),"."]}),`
+`,e.jsxs(n.p,{children:["If you use a ",e.jsx(r,{}),", then you don't need to (and shouldn't) define ",e.jsx(n.code,{children:"onRenderClient()"})," as it's already defined by ",e.jsx(r,{name:!0,noLink:!0}),"."]}),`
 `]}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// +onRenderClient.js"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// Environment: browser"})}),`

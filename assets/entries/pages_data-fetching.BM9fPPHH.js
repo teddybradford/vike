@@ -1,10 +1,16 @@
 import{j as e,L as l,o,i as r}from"../chunks/chunk-BURd2QqB.js";import{L as s}from"../chunks/chunk-BvJCXD7Y.js";/* empty css                      */import{U as t}from"../chunks/chunk-CCPW8xzl.js";/* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-BKvOB9xx.js";/* empty css                      */const d=[{pageSectionId:"initial-data",pageSectionLevel:2,pageSectionTitle:"Initial data"},{pageSectionId:"data-hook",pageSectionLevel:3,pageSectionTitle:"`data()` hook"},{pageSectionId:"tools",pageSectionLevel:3,pageSectionTitle:"Tools"},{pageSectionId:"data-mutation-subsequent-data",pageSectionLevel:2,pageSectionTitle:"Data mutation & subsequent data"},{pageSectionId:"rpc",pageSectionLevel:3,pageSectionTitle:"RPC"},{pageSectionId:"api-routes",pageSectionLevel:3,pageSectionTitle:"API routes"},{pageSectionId:"graphql",pageSectionLevel:3,pageSectionTitle:"GraphQL"},{pageSectionId:"pre-rendering-ssg",pageSectionLevel:2,pageSectionTitle:"Pre-rendering (SSG)"},{pageSectionId:"global-data",pageSectionLevel:2,pageSectionTitle:"Global data"},{pageSectionId:"state-management",pageSectionLevel:2,pageSectionTitle:"State management"},{pageSectionId:"extensions",pageSectionLevel:3,pageSectionTitle:"Extensions"},{pageSectionId:"custom-integration",pageSectionLevel:3,pageSectionTitle:"Custom integration"},{pageSectionId:"see-also",pageSectionLevel:2,pageSectionTitle:"See also"}];function i(a){const n={a:"a",blockquote:"blockquote",code:"code",figure:"figure",li:"li",p:"p",pre:"pre",span:"span",ul:"ul",...a.components};return e.jsxs(e.Fragment,{children:[e.jsxs(n.p,{children:["The usual recommendation is to use Vike's ",e.jsx(n.code,{children:"data()"})," hook for fetching initial data, and another dedicated tool for data mutations and subsequent data (such as pagination data)."]}),`
 `,e.jsx("h2",{id:"initial-data",children:"Initial data"}),`
 `,e.jsxs(n.p,{children:["For fetching the initial data of a page you can use Vike's ",e.jsx(n.code,{children:"data()"})," hook, or you can use tools such as TanStack Query instead."]}),`
+`,e.jsxs(n.ul,{children:[`
+`,e.jsxs(n.li,{children:[`
 `,e.jsx(s,{href:"#data-hook"}),`
 `,e.jsx("br",{}),`
+`]}),`
+`,e.jsxs(n.li,{children:[`
 `,e.jsx(s,{href:"#tools"}),`
 `,e.jsx("br",{}),`
+`]}),`
+`]}),`
 `,e.jsxs("h3",{id:"data-hook",children:[e.jsx("code",{children:"data()"})," hook"]}),`
 `,e.jsxs(n.p,{children:["You can fetch the initial data of a page by using the ",e.jsxs(s,{href:"/data",children:["Vike hook ",e.jsx(n.code,{children:"data()"})]})," together with the ",e.jsxs(s,{href:"/useData",children:["component hook ",e.jsx(n.code,{children:"useData()"})]}),"."]}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// /pages/movies/@id/+data.js"})}),`
