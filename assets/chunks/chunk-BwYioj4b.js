@@ -1,0 +1,1 @@
+import{j as i}from"./chunk-_oGb8edM.js";import{L as n}from"./chunk-C3zH-B_-.js";/* empty css              */function o(){return i.jsxs(i.Fragment,{children:["contradicts ",i.jsx(n,{href:"/lazy-transpiling",children:"Vite's lazy-transpiling approach"})," and it would, therefore, significantly slow down development speed"]})}export{o as V};
