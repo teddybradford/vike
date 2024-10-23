@@ -1,3 +1,0 @@
-import{j as t}from"./chunk-_oGb8edM.js";import{L as i}from"./chunk-C3zH-B_-.js";/* empty css              */import{U as r}from"./chunk-Bq-0BRX_.js";/* empty css              */function o(n){const e={blockquote:"blockquote",p:"p",...n.components};return t.jsxs(e.blockquote,{children:[`
-`,t.jsxs(e.p,{children:["The ",t.jsx(r,{plural:!0})," use Client Routing. If you don't use such Vike extension, then Vike does Server Routing by default while you can ",t.jsx(i,{href:"/clientRouting",children:"opt into Client Routing"}),"."]}),`
-`]})}function x(n={}){const{wrapper:e}=n.components||{};return e?t.jsx(e,{...n,children:t.jsx(o,{...n})}):o(n)}export{x as M};

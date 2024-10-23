@@ -1,0 +1,23 @@
+import{j as e,L as a,o}from"../chunks/chunk-BsuEwop9.js";import{L as n}from"../chunks/chunk-D3qePV9B.js";/* empty css                      */import{C as s}from"../chunks/chunk-BfYGKl_i.js";/* empty css                      */import{E as l}from"../chunks/chunk-DbSBhcSM.js";/* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-u42NeO_H.js";/* empty css                      *//* empty css                      */const d=[];function r(i){const t={a:"a",li:"li",p:"p",ul:"ul",...i.components};return e.jsxs(e.Fragment,{children:[e.jsxs(t.p,{children:["You can use Vike with ",e.jsx(t.a,{href:"https://github.com/facebook/relay",children:"Relay"}),"."]}),`
+`,e.jsx(s,{children:e.jsxs(t.p,{children:["There isn't a ",e.jsx(n,{href:"/extensions",children:"Vike extension"})," for Relay yet, but ",e.jsx(t.a,{href:"https://github.com/vikejs/vike/issues/1715",children:"contributions welcome to create one"}),"."]})}),`
+`,e.jsx(t.p,{children:"To manually integrate Relay, see:"}),`
+`,e.jsxs(t.ul,{children:[`
+`,e.jsxs(t.li,{children:[`
+`,e.jsx(n,{href:"/integration#data-fetching"}),`
+`]}),`
+`,e.jsx(t.li,{children:e.jsx(t.a,{href:"https://github.com/facebook/relay/issues/3468#issuecomment-824872147",children:"GitHub> facebook/relay > #3468 - SSR docs (comment)"})}),`
+`,e.jsxs(t.li,{children:[e.jsx(t.a,{href:"https://github.com/tobias-tengler/nextjs-relay-streaming-ssr",children:"nextjs-relay-streaming-ssr"}),", which has an explanation in its Readme on how it works."]}),`
+`]}),`
+`,e.jsx(t.p,{children:"For using Relay with React Streaming, see:"}),`
+`,e.jsxs(t.ul,{children:[`
+`,e.jsxs(t.li,{children:[`
+`,e.jsx(n,{href:"/streaming#initial-data-after-stream-end"}),`
+`]}),`
+`,e.jsx(t.li,{children:e.jsx(t.a,{href:"https://github.com/facebook/relay/issues/3762",children:"Relay - #3762 React 18 docs"})}),`
+`]}),`
+`,e.jsx(t.p,{children:"Example of a deep Relay integration with React 18's new SSR Suspense Render-as-you-Fetch architecture:"}),`
+`,e.jsxs(t.ul,{children:[`
+`,e.jsxs(t.li,{children:[`
+`,e.jsx(l,{timestamp:"2022.08",repo:"XiNiHa/vilay"}),`
+`]}),`
+`]})]})}function c(i={}){const{wrapper:t}=i.components||{};return t?e.jsx(t,{...i,children:e.jsx(r,{...i})}):r(i)}const h=Object.freeze(Object.defineProperty({__proto__:null,default:c,pageSectionsExport:d},Symbol.toStringTag,{value:"Module"})),T={isClientRuntimeLoaded:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:!0}},onBeforeRenderEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:{server:!0}}},dataEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:null}},Layout:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/Layout",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:a}},hydrationCanBeAborted:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/config",fileExportPathToShowToUser:["default","hydrationCanBeAborted"]},valueSerialized:{type:"js-serialized",value:!0}},onRenderClient:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/renderer/onRenderClient",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:o}},Page:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/relay/+Page.mdx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:h}}};export{T as configValuesSerialized};
