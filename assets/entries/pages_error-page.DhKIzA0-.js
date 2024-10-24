@@ -31,7 +31,7 @@ you call `,e.jsx(n,{href:"/render",text:e.jsx(s.code,{children:"throw render(abo
 `,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"    // Fallback error message"})}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#24292E"},children:"    msg "}),e.jsx(s.span,{style:{color:"#D73A49"},children:"="}),e.jsx(s.span,{style:{color:"#24292E"},children:" pageContext.is404 "}),e.jsx(s.span,{style:{color:"#D73A49"},children:"?"})]}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#032F62"},children:`      "This page doesn't exist."`}),e.jsx(s.span,{style:{color:"#D73A49"},children:" :"})]}),`
-`,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#032F62"},children:'      "Something went wrong. Sincere apologies. Try again (later)."'})}),`
+`,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#032F62"},children:'      "Something went wrong. Try again (later)."'})}),`
 `,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#24292E"},children:"  }"})}),`
 `,e.jsx(s.span,{"data-line":"",children:" "}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"  return"}),e.jsx(s.span,{style:{color:"#24292E"},children:" <"}),e.jsx(s.span,{style:{color:"#6F42C1"},children:"p"}),e.jsx(s.span,{style:{color:"#24292E"},children:">{msg}"}),e.jsx(s.span,{style:{color:"#D73A49"},children:"</"}),e.jsx(s.span,{style:{color:"#24292E"},children:"p"}),e.jsx(s.span,{style:{color:"#D73A49"},children:">"})]}),`
