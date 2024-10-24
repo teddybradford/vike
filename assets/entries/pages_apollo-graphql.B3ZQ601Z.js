@@ -1,0 +1,20 @@
+import{j as e,L as a,o as n}from"../chunks/chunk-BDl3L7LG.js";import{L as i}from"../chunks/chunk-C57YDwx2.js";/* empty css                      */import{C as s}from"../chunks/chunk-BvVMv946.js";/* empty css                      */import{U as d}from"../chunks/chunk-BqRrYk9k.js";import{E as r}from"../chunks/chunk-DGu_U3vc.js";/* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-u42NeO_H.js";/* empty css                      *//* empty css                      */const p=[];function l(o){const t={a:"a",blockquote:"blockquote",code:"code",li:"li",p:"p",ul:"ul",...o.components};return e.jsxs(e.Fragment,{children:[e.jsxs(t.p,{children:["You can use Vike with ",e.jsx(t.a,{href:"https://www.apollographql.com",children:"Apollo GraphQL"}),"."]}),`
+`,e.jsxs(t.blockquote,{children:[`
+`,e.jsxs(t.p,{children:["You can use ",e.jsx(t.a,{href:"https://github.com/vikejs/vike-react/tree/main/packages/vike-react-apollo",children:e.jsx(t.code,{children:"vike-react-apollo"})})," instead of manually integrating Apollo yourself."]}),`
+`]}),`
+`,e.jsx(s,{children:e.jsxs(t.p,{children:["There isn't a ",e.jsx(i,{href:"/extensions",children:"Vike extension"})," for Apollo with ",e.jsx(t.code,{children:"vike-vue"})," yet, but ",e.jsx(t.a,{href:"https://github.com/vikejs/vike/issues/1715",children:"contributions welcome to create one"}),"."]})}),`
+`,e.jsx(t.p,{children:"To manually integrate Apollo, see:"}),`
+`,e.jsxs(t.ul,{children:[`
+`,e.jsxs(t.li,{children:[`
+`,e.jsx(i,{href:"/integration#data-fetching"}),`
+`]}),`
+`,e.jsx(t.li,{children:e.jsx(t.a,{href:"https://www.apollographql.com/docs/react/performance/server-side-rendering/",children:"Apollo > Server-side rendering"})}),`
+`]}),`
+`,e.jsxs(t.p,{children:["Examples of integrating Apollo without using ",e.jsx(d,{name:!0}),":"]}),`
+`,e.jsxs(t.ul,{children:[`
+`,e.jsxs(t.li,{children:[e.jsx(r,{timestamp:"2024.07",repo:"brillout/vike-apollo-react"})," - With React"]}),`
+`,e.jsxs(t.li,{children:[e.jsx(r,{timestamp:"2024.07",repo:"brillout/vike-apollo-vue"})," - With Vue"]}),`
+`]}),`
+`,e.jsxs(t.blockquote,{children:[`
+`,e.jsxs(t.p,{children:["You can also have a look at ",e.jsxs(t.a,{href:"https://github.com/vikejs/vike-react/tree/main/packages/vike-react-apollo",children:["the source code of ",e.jsx(t.code,{children:"vike-react-apollo"})]}),"."]}),`
+`]})]})}function c(o={}){const{wrapper:t}=o.components||{};return t?e.jsx(t,{...o,children:e.jsx(l,{...o})}):l(o)}const u=Object.freeze(Object.defineProperty({__proto__:null,default:c,pageSectionsExport:p},Symbol.toStringTag,{value:"Module"})),A={isClientRuntimeLoaded:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:!0}},onBeforeRenderEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:{server:!0}}},dataEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:null}},Layout:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/Layout",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:a}},hydrationCanBeAborted:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/config",fileExportPathToShowToUser:["default","hydrationCanBeAborted"]},valueSerialized:{type:"js-serialized",value:!0}},onRenderClient:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/renderer/onRenderClient",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:n}},Page:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/apollo-graphql/+Page.mdx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:u}}};export{A as configValuesSerialized};
