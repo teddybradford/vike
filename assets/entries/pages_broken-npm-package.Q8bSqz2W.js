@@ -77,7 +77,7 @@ import{j as e,L as l,o as t,i}from"../chunks/chunk-CPkdUwBw.js";import{L as s}fr
 `,e.jsx("h2",{id:"why",children:"Why"}),`
 `,e.jsx(n.p,{children:"You may ask yourself how it's possible that an npm package can publish invalid JavaScript code that doesn't get fixed for months."}),`
 `,e.jsxs(n.p,{children:["The main reason is that some frameworks such as Next.js transpile the server-side code of npm packages, whereas Vite transpiles only the client-side code of npm packages. When server-side code contains invalid JavaScript then Node.js crashes and throws one of ",e.jsx(s,{href:"#common-errors",children:"these errors"}),", while transpilers are more tolerant and transform invalid JavaScript (that Node.js isn't able to execute) into valid JavaScript (that Node.js is able to execute)."]}),`
-`,e.jsx(n.p,{children:"By default, Vite doesn't transpile the server-side code of npm packages for a much faster DX, so that Node.js directly executes the server-side code without involving a slow transpilition process."}),`
+`,e.jsx(n.p,{children:"By default, Vite doesn't transpile the server-side code of npm packages for a much faster DX, so that Node.js directly executes the server-side code without involving a slow transpilation process."}),`
 `,e.jsxs(n.p,{children:["That's why ",e.jsxs(s,{href:"#workaround",children:["adding an npm package to ",e.jsx(n.code,{children:"ssr.noExternal"})]}),` is usually a workaround when the npm package contains invalid JavaScript.
 By adding an npm package to `,e.jsx(n.code,{children:"ssr.noExternal"}),", you replicate the behavior of frameworks like Next.js."]}),`
 `,e.jsxs(n.blockquote,{children:[`
