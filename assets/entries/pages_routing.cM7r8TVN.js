@@ -55,6 +55,9 @@ import{j as e,L as r,o as i,i as t}from"../chunks/chunk-B2Nsy3Ql.js";import{L as
 `,e.jsxs(n.blockquote,{children:[`
 `,e.jsxs(n.p,{children:["The directory ",e.jsx(n.code,{children:"src/"})," is ignored by Filesystem Routing."]}),`
 `]}),`
+`,e.jsxs(n.blockquote,{children:[`
+`,e.jsxs(n.p,{children:["The directory ",e.jsx(n.code,{children:"src/"})," ",e.jsx(s,{href:"/filesystem-routing#ignored-directories",children:"isn't ignored by config inheritance"}),": make sure to define ",e.jsx(n.em,{children:"all"})," your ",e.jsx(n.code,{children:"+"})," files inside ",e.jsx(n.code,{children:"src/"}),"."]}),`
+`]}),`
 `,e.jsx("h3",{id:"domain-driven-file-structure",children:"Domain-driven file structure"}),`
 `,e.jsxs(n.p,{children:["For advanced apps, you may want to consider a ",e.jsx(n.em,{children:"domain-driven file structure"}),"."]}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"yaml","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"yaml","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# Domain: marketing"})}),`
