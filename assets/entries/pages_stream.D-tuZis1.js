@@ -24,7 +24,7 @@ import{j as e,L as r,o as t,i as l}from"../chunks/chunk-B2Nsy3Ql.js";import{L as
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"export"}),e.jsx(n.span,{style:{color:"#D73A49"},children:" default"}),e.jsx(n.span,{style:{color:"#24292E"},children:" {"})]}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"  stream: "}),e.jsx(n.span,{style:{color:"#005CC5"},children:"false"})]}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"}"})})]})})}),`
-`,e.jsxs(n.p,{children:["For an improved file and config organization, you can consider using a ",e.jsx(s,{href:"/file-structure#domain-driven",children:"domain-driven file structure"}),"."]}),`
+`,e.jsxs(n.p,{children:["For an improved file and config organization, you can consider using a ",e.jsx(s,{href:"/routing#domain-driven-file-structure",children:"domain-driven file structure"}),"."]}),`
 `,e.jsxs("h2",{id:"without-vike-react-vue-solid",children:["Without ",e.jsx("code",{children:"vike-{react,vue,solid}"})]}),`
 `,e.jsxs(n.p,{children:["In case you don't use a ",e.jsx(o,{}),", you can:"]}),`
 `,e.jsxs(n.ul,{children:[`

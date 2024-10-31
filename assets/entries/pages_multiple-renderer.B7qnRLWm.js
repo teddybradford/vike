@@ -20,7 +20,7 @@ then we may want to define multiple `,e.jsx(n.code,{children:"renderer/"}),"."]}
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6F42C1"},children:"admin-panel/renderer/+onRenderHtml.js"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6F42C1"},children:"admin-panel/renderer/+onRenderClient.js"})})]})})}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["We call such structure a ",e.jsx(r,{text:"domain-driven file structure",href:"/file-structure#domain-driven"}),"."]}),`
+`,e.jsxs(n.p,{children:["We call such structure a ",e.jsx(r,{text:"domain-driven file structure",href:"/routing#domain-driven-file-structure"}),"."]}),`
 `]}),`
 `,e.jsx("h2",{id:"partial",children:"Partial"}),`
 `,e.jsxs(n.p,{children:["We can also override only a subset of ",e.jsx(n.code,{children:"renderer/"}),"."]}),`

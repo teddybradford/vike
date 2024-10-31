@@ -1,4 +1,4 @@
-import{j as e,L as l,o as i,i as r}from"../chunks/chunk-B2Nsy3Ql.js";import{L as n}from"../chunks/chunk-raIxkx1Y.js";/* empty css                      */import{W as o}from"../chunks/chunk-DvyJGiE9.js";/* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-u42NeO_H.js";/* empty css                      *//* empty css                      */const d=[{pageSectionId:"see-also",pageSectionLevel:2,pageSectionTitle:"See also"}];function a(s){const t={code:"code",figure:"figure",li:"li",p:"p",pre:"pre",span:"span",ul:"ul",...s.components};return e.jsxs(e.Fragment,{children:[e.jsxs(t.p,{children:["The ",e.jsx(t.code,{children:"filesystemRoutingRoot"})," setting allows you to change the ",e.jsx(n,{href:"/filesystem-routing",children:"Filesystem Routing"})," URL. It's usually used for ",e.jsx(n,{href:"/file-structure#domain-driven",children:"domain-driven file structure"}),"."]}),`
+import{j as e,L as l,o as i,i as r}from"../chunks/chunk-B2Nsy3Ql.js";import{L as n}from"../chunks/chunk-raIxkx1Y.js";/* empty css                      */import{W as o}from"../chunks/chunk-DvyJGiE9.js";/* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-u42NeO_H.js";/* empty css                      *//* empty css                      */const d=[{pageSectionId:"see-also",pageSectionLevel:2,pageSectionTitle:"See also"}];function a(s){const t={code:"code",figure:"figure",li:"li",p:"p",pre:"pre",span:"span",ul:"ul",...s.components};return e.jsxs(e.Fragment,{children:[e.jsxs(t.p,{children:["The ",e.jsx(t.code,{children:"filesystemRoutingRoot"})," setting allows you to change the ",e.jsx(n,{href:"/filesystem-routing",children:"Filesystem Routing"})," URL. It's usually used for ",e.jsx(n,{href:"/routing#domain-driven-file-structure",children:"domain-driven file structure"}),"."]}),`
 `,e.jsxs(o,{children:["Don't use ",e.jsx(t.code,{children:"filesystemRoutingRoot"})," to change the Base URL, see ",e.jsx(n,{href:"/base-url"})," instead."]}),`
 `,e.jsx(t.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(t.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(t.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(t.span,{"data-line":"",children:e.jsx(t.span,{style:{color:"#6A737D"},children:"// /marketing/+config.js"})}),`
 `,e.jsx(t.span,{"data-line":"",children:" "}),`
@@ -13,7 +13,7 @@ import{j as e,L as l,o as i,i as r}from"../chunks/chunk-B2Nsy3Ql.js";import{L as
 `,e.jsx("h2",{id:"see-also",children:"See also"}),`
 `,e.jsxs(t.ul,{children:[`
 `,e.jsxs(t.li,{children:[`
-`,e.jsx(n,{href:"/file-structure#domain-driven"}),`
+`,e.jsx(n,{href:"/routing#domain-driven-file-structure"}),`
 `]}),`
 `,e.jsxs(t.li,{children:[`
 `,e.jsx(n,{href:"/filesystem-routing"}),`

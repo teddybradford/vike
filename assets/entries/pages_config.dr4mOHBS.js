@@ -92,7 +92,7 @@ import{j as e,L as i,o as r,i as t}from"../chunks/chunk-B2Nsy3Ql.js";import{L as
 `,e.jsxs(n.p,{children:["Cumulative configurations, such as ",e.jsx(s,{href:"/Layout",children:e.jsx(n.code,{children:"<Layout>"})}),", don't get overridden. See ",e.jsxs(n.a,{href:"https://github.com/vikejs/vike/issues/1692",children:["#1692 - [Cumulative configs] New settings ",e.jsx(n.code,{children:"override"})," and ",e.jsx(n.code,{children:"default"})]}),"."]}),`
 `]}),`
 `,e.jsx("h3",{id:"domain-driven-file-structure",children:"Domain-driven File Structure"}),`
-`,e.jsxs(n.p,{children:["You can use a ",e.jsx(s,{href:"/file-structure#domain-driven",children:"domain-driven file structure"})," for better organization and for improved configuration inheritance."]}),`
+`,e.jsxs(n.p,{children:["You can use a ",e.jsx(s,{href:"/routing#domain-driven-file-structure",children:"domain-driven file structure"})," for better organization and for improved configuration inheritance."]}),`
 `,e.jsx("h2",{id:"pointer-imports",children:"Pointer imports"}),`
 `,e.jsx(n.p,{children:"Internally, Vike transforms this:"}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// /pages/+config.js"})}),`
@@ -200,6 +200,6 @@ import{j as e,L as i,o as r,i as t}from"../chunks/chunk-B2Nsy3Ql.js";import{L as
 `,e.jsx(s,{href:"/filesystem-routing"}),`
 `]}),`
 `,e.jsxs(n.li,{children:[`
-`,e.jsx(s,{href:"/file-structure#domain-driven"}),`
+`,e.jsx(s,{href:"/routing#domain-driven-file-structure"}),`
 `]}),`
 `]})]})}function h(l={}){const{wrapper:n}=l.components||{};return n?e.jsx(n,{...l,children:e.jsx(a,{...l})}):a(l)}const p=Object.freeze(Object.defineProperty({__proto__:null,default:h,pageSectionsExport:c},Symbol.toStringTag,{value:"Module"})),v={isClientRuntimeLoaded:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:!0}},onBeforeRenderEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:{server:!0}}},dataEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:null}},Layout:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/Layout",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:i}},hydrationCanBeAborted:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/config",fileExportPathToShowToUser:["default","hydrationCanBeAborted"]},valueSerialized:{type:"js-serialized",value:!0}},onRenderClient:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/renderer/onRenderClient",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:r}},TopNavigation:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/+TopNavigation.tsx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:t}},Page:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/config/+Page.mdx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:p}}};export{v as configValuesSerialized};

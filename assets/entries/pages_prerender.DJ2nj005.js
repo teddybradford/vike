@@ -35,7 +35,7 @@ For example a news page that displays the latest news fetched from a database sh
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"}"})})]})})}),`
 `,e.jsx("h3",{id:"different-defaults",children:"Different defaults"}),`
 `,e.jsxs(n.p,{children:["You can define ",e.jsx(n.code,{children:"prerender"})," in ",e.jsx(s,{href:"/config#inheritance",children:"higher levels so it applies to more/all pages"}),"."]}),`
-`,e.jsxs(n.p,{children:["This is especially handy with ",e.jsx(s,{text:"Domain-Driven File Structure",href:"/file-structure#domain-driven"}),":"]}),`
+`,e.jsxs(n.p,{children:["This is especially handy with ",e.jsx(s,{text:"Domain-Driven File Structure",href:"/routing#domain-driven-file-structure"}),":"]}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// /pages/marketing/+prerender.js"})}),`
 `,e.jsx(n.span,{"data-line":"",children:" "}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// Using Domain-Driven File Structure, +prerender.js applies to"})}),`

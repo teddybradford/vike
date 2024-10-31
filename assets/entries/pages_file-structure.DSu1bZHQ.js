@@ -1,13 +1,13 @@
-import{j as e,L as r,o as i,i as d}from"../chunks/chunk-B2Nsy3Ql.js";import{L as s}from"../chunks/chunk-raIxkx1Y.js";/* empty css                      *//* empty css                      *//* empty css                      */import{U as t}from"../chunks/chunk-Blu7WSIj.js";/* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-u42NeO_H.js";/* empty css                      */const o=[{pageSectionId:"basic",pageSectionLevel:2,pageSectionTitle:"Basic"},{pageSectionId:"domain-driven",pageSectionLevel:2,pageSectionTitle:"Domain-driven"},{pageSectionId:"src-pages",pageSectionLevel:2,pageSectionTitle:"`src/pages/`"},{pageSectionId:"renderer",pageSectionLevel:2,pageSectionTitle:"`renderer/`"},{pageSectionId:"see-also",pageSectionLevel:2,pageSectionTitle:"See also"}];function l(a){const n={blockquote:"blockquote",code:"code",em:"em",figure:"figure",li:"li",p:"p",pre:"pre",span:"span",ul:"ul",...a.components};return e.jsxs(e.Fragment,{children:[e.jsxs(n.p,{children:["For advanced apps we recommend a domain-driven file structure using multiple ",e.jsx(n.code,{children:"pages/"})," directories."]}),`
-`,e.jsxs(n.p,{children:["For basic apps we recommend using a single ",e.jsx(n.code,{children:"pages/"})," directory."]}),`
+import{j as e,L as r,o as i,i as t}from"../chunks/chunk-B2Nsy3Ql.js";import{L as a}from"../chunks/chunk-raIxkx1Y.js";/* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-u42NeO_H.js";/* empty css                      */const d=[{pageSectionId:"basic",pageSectionLevel:2,pageSectionTitle:"Basic"},{pageSectionId:"domain-driven",pageSectionLevel:2,pageSectionTitle:"Domain-driven"},{pageSectionId:"see-also",pageSectionLevel:2,pageSectionTitle:"See also"}];function l(s){const n={code:"code",em:"em",figure:"figure",li:"li",p:"p",pre:"pre",span:"span",ul:"ul",...s.components};return e.jsxs(e.Fragment,{children:[e.jsxs(n.p,{children:["For simple apps, you can define a basic file structure with a single ",e.jsx(n.code,{children:"pages/"})," directory."]}),`
+`,e.jsxs(n.p,{children:["For advanced apps, you may want to define several ",e.jsx(n.code,{children:"pages/"})," directories for what we call a ",e.jsx(n.em,{children:"domain-driven file structure"}),"."]}),`
 `,e.jsx("h2",{id:"basic",children:"Basic"}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"yaml","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"yaml","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# Landing page"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"/pages/index/+Page.js"})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"/pages/index/SomeComponentForLandingPage.js"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"/pages/index/components/SomeComponentForLandingPage.js"})}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#032F62"},children:"/pages/index/**/*"}),e.jsx(n.span,{style:{color:"#6A737D"},children:" # More files specific to the landing page"})]}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# About page"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"/pages/about/+Page.js"})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"/pages/about/SomeComponentForAboutPage.js"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"/pages/about/components/SomeComponentForAboutPage.js"})}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#032F62"},children:"/pages/about/**/*"}),e.jsx(n.span,{style:{color:"#6A737D"},children:" # More files specific to the about page"})]}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# Other pages"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"/pages/**/+Page.js"})}),`
@@ -21,7 +21,6 @@ import{j as e,L as r,o as i,i as d}from"../chunks/chunk-B2Nsy3Ql.js";import{L as
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# Server code (Express.js/Fastify/...)"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"/server/"})})]})})}),`
 `,e.jsx("h2",{id:"domain-driven",children:"Domain-driven"}),`
-`,e.jsxs(n.p,{children:["You can have what we call a ",e.jsx(n.em,{children:"domain-driven file structure"}),"."]}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"yaml","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"yaml","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# ==========================="})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# ======= Marketing ========="})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# ==========================="})}),`
@@ -61,50 +60,22 @@ import{j as e,L as r,o as i,i as d}from"../chunks/chunk-B2Nsy3Ql.js";import{L as
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"products/database/fetchProduct.js"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"products/database/fetchProductList.js"})}),`
 `,e.jsx(n.span,{"data-line":"",children:" "}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# Shared across all domains"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# ============================="})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# ======= Shared/Misc ========="})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# ============================="})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# Components shared across all domains"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"components/"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# Server code"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"server/"})})]})})}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// /products/pages/product/+route.js"})}),`
 `,e.jsx(n.span,{"data-line":"",children:" "}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"export"}),e.jsx(n.span,{style:{color:"#D73A49"},children:" default"}),e.jsx(n.span,{style:{color:"#032F62"},children:" '/product/@id'"})]})]})})}),`
-`,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["The directory ",e.jsx(n.code,{children:"(marketing)/"})," is used for ",e.jsx(s,{href:"/routing#groups",children:"grouping"})," and is ignored by ",e.jsx(s,{href:"/filesystem-routing",children:"Filesystem Routing"}),"."]}),`
-`,e.jsxs(n.p,{children:["Alternatively, you can have ",e.jsx(n.code,{children:"marketing/"})," (without parentheses) and ",e.jsxs(s,{href:"/filesystemRoutingRoot",children:["set ",e.jsx(n.code,{children:"marketing/+filesystemRoutingRoot.js"})]})," to change the Filesystem Routing URL from ",e.jsx(n.code,{children:"/marketing"})," to ",e.jsx(n.code,{children:"/"}),"."]}),`
-`]}),`
-`,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["See ",e.jsx(s,{href:"/config#inheritance"}),"."]}),`
-`]}),`
-`,e.jsxs(n.p,{children:["Example: ",e.jsx(s,{href:"/examples/file-structure-domain-driven/"}),"."]}),`
-`,e.jsx("h2",{id:"src-pages",children:e.jsx("code",{children:"src/pages/"})}),`
-`,e.jsxs(n.p,{children:["You can embed ",e.jsx(n.code,{children:"pages/"})," in ",e.jsx(n.code,{children:"src/"}),":"]}),`
-`,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"yaml","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"yaml","data-theme":"github-light",style:{display:"grid"},children:[e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#032F62"},children:"/src/pages/index/+Page.js"}),e.jsx(n.span,{style:{color:"#6A737D"},children:" # => URL /"})]}),`
-`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#032F62"},children:"/src/pages/about/+Page.js"}),e.jsx(n.span,{style:{color:"#6A737D"},children:" # => URL /about"})]})]})})}),`
-`,e.jsx("h2",{id:"renderer",children:e.jsx("code",{children:"renderer/"})}),`
-`,e.jsxs(n.p,{children:["If you don't use a ",e.jsx(t,{})," then we recommend placing your UI framework integration in a ",e.jsx(n.code,{children:"renderer/"})," directory."]}),`
-`,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"yaml","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"yaml","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# Same as above"})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"/pages/"})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"/components/"})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"/server/"})}),`
-`,e.jsx(n.span,{"data-line":"",children:" "}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# Code that specifies how pages are rendered"})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"/renderer/+onRenderHtml.js"})}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"/renderer/+onRenderClient.js"})}),`
-`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#032F62"},children:"/renderer/Layout.{jsx,vue}"}),e.jsx(n.span,{style:{color:"#6A737D"},children:"  # React/Vue/... component that wraps the `Page` component"})]}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"/renderer/Layout.css"})}),`
-`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#032F62"},children:"/renderer/Header.{jsx,vue}"}),e.jsx(n.span,{style:{color:"#6A737D"},children:" # Website header used for every page"})]}),`
-`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#032F62"},children:"/renderer/Footer.{jsx,vue}"}),e.jsx(n.span,{style:{color:"#6A737D"},children:" # Website footer used for every page"})]}),`
-`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#032F62"},children:"/renderer/logo.svg"}),e.jsx(n.span,{style:{color:"#6A737D"},children:" # Website logo (favicon and used by <Header>)"})]})]})})}),`
-`,e.jsxs(n.p,{children:["The hooks ",e.jsx(n.code,{children:"/renderer/+onRender{Html,Client}.js"})," apply as default to all pages ",e.jsx(n.code,{children:"/pages/**/+Page.js"}),"."]}),`
-`,e.jsxs(n.p,{children:["The ",e.jsx(n.code,{children:"renderer/"})," directory doesn't add any functionality: defining the hooks ",e.jsx(n.code,{children:"+onRender{Html,Client}.js"})," at ",e.jsx(n.code,{children:"/renderer/"})," is equivalent to defining them at ",e.jsx(n.code,{children:"/pages/"})," or ",e.jsx(n.code,{children:"/"}),". It's just an optional convenience for moving rendering logic outside of ",e.jsx(n.code,{children:"pages/"}),": in order to avoid cluttering the ",e.jsx(n.code,{children:"pages/"})," directory and to organize and put all rendering code in one place."]}),`
 `,e.jsx("h2",{id:"see-also",children:"See also"}),`
 `,e.jsxs(n.ul,{children:[`
 `,e.jsxs(n.li,{children:[`
-`,e.jsx(s,{href:"/routing"}),`
+`,e.jsx(a,{href:"/routing#filesystem-routing"}),`
 `]}),`
 `,e.jsxs(n.li,{children:[`
-`,e.jsx(s,{href:"/filesystem-routing"}),`
+`,e.jsx(a,{href:"/filesystem-routing"}),`
 `]}),`
-`,e.jsxs(n.li,{children:[`
-`,e.jsx(s,{href:"/config#inheritance"}),`
-`]}),`
-`]})]})}function c(a={}){const{wrapper:n}=a.components||{};return n?e.jsx(n,{...a,children:e.jsx(l,{...a})}):l(a)}const p=Object.freeze(Object.defineProperty({__proto__:null,default:c,pageSectionsExport:o},Symbol.toStringTag,{value:"Module"})),v={isClientRuntimeLoaded:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:!0}},onBeforeRenderEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:{server:!0}}},dataEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:null}},Layout:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/Layout",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:r}},hydrationCanBeAborted:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/config",fileExportPathToShowToUser:["default","hydrationCanBeAborted"]},valueSerialized:{type:"js-serialized",value:!0}},onRenderClient:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/renderer/onRenderClient",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:i}},TopNavigation:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/+TopNavigation.tsx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:d}},Page:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/file-structure/+Page.mdx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:p}}};export{v as configValuesSerialized};
+`]})]})}function o(s={}){const{wrapper:n}=s.components||{};return n?e.jsx(n,{...s,children:e.jsx(l,{...s})}):l(s)}const c=Object.freeze(Object.defineProperty({__proto__:null,default:o,pageSectionsExport:d},Symbol.toStringTag,{value:"Module"})),D={isClientRuntimeLoaded:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:!0}},onBeforeRenderEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:{server:!0}}},dataEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:null}},Layout:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/Layout",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:r}},hydrationCanBeAborted:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/config",fileExportPathToShowToUser:["default","hydrationCanBeAborted"]},valueSerialized:{type:"js-serialized",value:!0}},onRenderClient:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/renderer/onRenderClient",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:i}},TopNavigation:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/+TopNavigation.tsx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:t}},Page:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/file-structure/+Page.mdx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:c}}};export{D as configValuesSerialized};

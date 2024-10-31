@@ -1,4 +1,4 @@
-import{j as e,L as r,o as i,i as t}from"../chunks/chunk-B2Nsy3Ql.js";import{L as s}from"../chunks/chunk-raIxkx1Y.js";/* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-u42NeO_H.js";/* empty css                      */const o=[{pageSectionId:"filesystem-routing",pageSectionLevel:2,pageSectionTitle:"Filesystem Routing"},{pageSectionId:"parameterized-routes",pageSectionLevel:3,pageSectionTitle:"Parameterized routes"},{pageSectionId:"groups",pageSectionLevel:3,pageSectionTitle:"Groups"},{pageSectionId:"more-information",pageSectionLevel:3,pageSectionTitle:"More information"},{pageSectionId:"route-string",pageSectionLevel:2,pageSectionTitle:"Route String"},{pageSectionId:"route-function",pageSectionLevel:2,pageSectionTitle:"Route Function"},{pageSectionId:"route-guards",pageSectionLevel:2,pageSectionTitle:"Route Guards"},{pageSectionId:"react-router-vue-router",pageSectionLevel:2,pageSectionTitle:"React Router / Vue Router"},{pageSectionId:"see-also",pageSectionLevel:2,pageSectionTitle:"See also"}];function a(l){const n={blockquote:"blockquote",code:"code",em:"em",figure:"figure",li:"li",p:"p",pre:"pre",span:"span",ul:"ul",...l.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.p,{children:"Overview of how to define the route of your pages."}),`
+import{j as e,L as r,o as i,i as t}from"../chunks/chunk-B2Nsy3Ql.js";import{L as s}from"../chunks/chunk-raIxkx1Y.js";/* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-u42NeO_H.js";/* empty css                      */const o=[{pageSectionId:"filesystem-routing",pageSectionLevel:2,pageSectionTitle:"Filesystem Routing"},{pageSectionId:"parameterized-routes",pageSectionLevel:3,pageSectionTitle:"Parameterized routes"},{pageSectionId:"groups",pageSectionLevel:3,pageSectionTitle:"Groups"},{pageSectionId:"src",pageSectionLevel:3,pageSectionTitle:"`src/`"},{pageSectionId:"domain-driven-file-structure",pageSectionLevel:3,pageSectionTitle:"Domain-driven file structure"},{pageSectionId:"route-string",pageSectionLevel:2,pageSectionTitle:"Route String"},{pageSectionId:"route-function",pageSectionLevel:2,pageSectionTitle:"Route Function"},{pageSectionId:"route-guards",pageSectionLevel:2,pageSectionTitle:"Route Guards"},{pageSectionId:"react-router-vue-router",pageSectionLevel:2,pageSectionTitle:"React Router / Vue Router"},{pageSectionId:"see-also",pageSectionLevel:2,pageSectionTitle:"See also"}];function a(l){const n={blockquote:"blockquote",code:"code",em:"em",figure:"figure",li:"li",p:"p",pre:"pre",span:"span",ul:"ul",...l.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.p,{children:"Overview of how to define the URL of your pages."}),`
 `,e.jsx("h2",{id:"filesystem-routing",children:"Filesystem Routing"}),`
 `,e.jsxs(n.p,{children:["Vike supports ",e.jsx(n.em,{children:"Filesystem Routing"}),": the URL of a page is determined by where the page is located on your filesystem."]}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"bash","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"bash","data-theme":"github-light",style:{display:"grid"},children:[e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#6F42C1"},children:"FILESYSTEM"}),e.jsx(n.span,{style:{color:"#032F62"},children:"                     URL"})]}),`
@@ -7,10 +7,15 @@ import{j as e,L as r,o as i,i as t}from"../chunks/chunk-B2Nsy3Ql.js";import{L as
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#6F42C1"},children:"pages/about/+Page.js"}),e.jsx(n.span,{style:{color:"#032F62"},children:"           /about"})]}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#6F42C1"},children:"pages/jobs/+Page.js"}),e.jsx(n.span,{style:{color:"#032F62"},children:"            /jobs"})]})]})})}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["The directories ",e.jsx(n.code,{children:"pages/"}),", ",e.jsx(n.code,{children:"index/"})," and ",e.jsx(n.code,{children:"src/"})," are ignored."]}),`
+`,e.jsxs(n.p,{children:["The directories ",e.jsx(n.code,{children:"pages/"})," and ",e.jsx(n.code,{children:"index/"})," are ignored by Filesystem Routing."]}),`
+`]}),`
+`,e.jsxs(n.blockquote,{children:[`
+`,e.jsxs(n.p,{children:[e.jsx(n.code,{children:"+"})," files are explained at ",e.jsx(s,{href:"/config#files",doNotInferSectionTitle:!0}),"."]}),`
+`]}),`
+`,e.jsxs(n.blockquote,{children:[`
+`,e.jsxs(n.p,{children:["For detailed information about Filesystem Routing, see ",e.jsx(s,{href:"/filesystem-routing"}),"."]}),`
 `]}),`
 `,e.jsx("h3",{id:"parameterized-routes",children:"Parameterized routes"}),`
-`,e.jsx(n.p,{children:"You can define parameterized routes:"}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"bash","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"bash","data-theme":"github-light",style:{display:"grid"},children:[e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#6F42C1"},children:"FILESYSTEM"}),e.jsx(n.span,{style:{color:"#032F62"},children:"                     URL"})]}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"========================       "}),e.jsx(n.span,{style:{color:"#032F62"},children:"======================="})]}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#6F42C1"},children:"pages/movie/@id/+Page.js"}),e.jsx(n.span,{style:{color:"#032F62"},children:"       /movie/1,"}),e.jsx(n.span,{style:{color:"#032F62"},children:" /movie/2,"}),e.jsx(n.span,{style:{color:"#032F62"},children:" ..."})]})]})})}),`
@@ -26,9 +31,9 @@ import{j as e,L as r,o as i,i as t}from"../chunks/chunk-B2Nsy3Ql.js";import{L as
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"pages/admin-panel/index/+Page.js       /admin-panel"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"pages/admin-panel/users/+Page.js       /admin-panel/users"})})]})})}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["The directory ",e.jsx(n.code,{children:"(marketing)"})," is ignored because it's wrapped by parentheses."]}),`
+`,e.jsxs(n.p,{children:["Any directory inside parentheses such as ",e.jsx(n.code,{children:"(marketing)"})," is ignored by Filesystem Routing."]}),`
 `]}),`
-`,e.jsx(n.p,{children:"Beyond improved organization, it allows you to apply different configurations to different pages:"}),`
+`,e.jsx(n.p,{children:"It also enables you to easily set different configurations for different pages:"}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"yaml","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"yaml","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# Define a layout for all marketing pages"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"pages/(marketing)/+Layout.js"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"pages/(marketing)/index/+Page.js"})}),`
@@ -41,7 +46,17 @@ import{j as e,L as r,o as i,i as t}from"../chunks/chunk-B2Nsy3Ql.js";import{L as
 `,e.jsxs(n.blockquote,{children:[`
 `,e.jsxs(n.p,{children:["See ",e.jsx(s,{href:"/config#inheritance"}),"."]}),`
 `]}),`
-`,e.jsxs(n.p,{children:["You can also have a ",e.jsx(n.em,{children:"domain-driven file structure"}),":"]}),`
+`,e.jsx("h3",{id:"src",children:e.jsx("code",{children:"src/"})}),`
+`,e.jsxs(n.p,{children:["If you prefer, you can define your files within a ",e.jsx(n.code,{children:"src/"})," directory:"]}),`
+`,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"yaml","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"yaml","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"FILESYSTEM                     URL"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"========================       ======"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"src/pages/index/+Page.js       /"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"src/pages/about/+Page.js       /about"})})]})})}),`
+`,e.jsxs(n.blockquote,{children:[`
+`,e.jsxs(n.p,{children:["The directory ",e.jsx(n.code,{children:"src/"})," is ignored by Filesystem Routing."]}),`
+`]}),`
+`,e.jsx("h3",{id:"domain-driven-file-structure",children:"Domain-driven file structure"}),`
+`,e.jsxs(n.p,{children:["For advanced apps, you may want to consider a ",e.jsx(n.em,{children:"domain-driven file structure"}),"."]}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"yaml","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"yaml","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# Domain: marketing"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"(marketing)/pages/+Layout.js"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"(marketing)/pages/index/+Page.js"})}),`
@@ -55,13 +70,7 @@ import{j as e,L as r,o as i,i as t}from"../chunks/chunk-B2Nsy3Ql.js";import{L as
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"admin-panel/components/Charts.js"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"admin-panel/database/fetchUsers.js"})})]})})}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["See ",e.jsx(s,{href:"/file-structure#domain-driven"}),"."]}),`
-`]}),`
-`,e.jsx("h3",{id:"more-information",children:"More information"}),`
-`,e.jsxs(n.ul,{children:[`
-`,e.jsxs(n.li,{children:[`
-`,e.jsx(s,{href:"/filesystem-routing"}),`
-`]}),`
+`,e.jsxs(n.p,{children:["If you aren't familiar with file structures, see ",e.jsx(s,{href:"/file-structure"}),"."]}),`
 `]}),`
 `,e.jsx("h2",{id:"route-string",children:"Route String"}),`
 `,e.jsx(n.p,{children:"Instead of Filesystem Routing, you can define a Route String."}),`
@@ -138,12 +147,6 @@ import{j as e,L as r,o as i,i as t}from"../chunks/chunk-B2Nsy3Ql.js";import{L as
 `,e.jsx("h2",{id:"see-also",children:"See also"}),`
 `,e.jsxs(n.ul,{children:[`
 `,e.jsxs(n.li,{children:[`
-`,e.jsx(s,{href:"/file-structure"}),`
-`]}),`
-`,e.jsxs(n.li,{children:[`
-`,e.jsx(s,{href:"/base-url"}),`
-`]}),`
-`,e.jsxs(n.li,{children:[`
 `,e.jsx(s,{href:"/filesystem-routing"}),`
 `]}),`
 `,e.jsxs(n.li,{children:[`
@@ -157,6 +160,9 @@ import{j as e,L as r,o as i,i as t}from"../chunks/chunk-B2Nsy3Ql.js";import{L as
 `]}),`
 `,e.jsxs(n.li,{children:[`
 `,e.jsx(s,{href:"/guard"}),`
+`]}),`
+`,e.jsxs(n.li,{children:[`
+`,e.jsx(s,{href:"/base-url"}),`
 `]}),`
 `,e.jsxs(n.li,{children:[`
 `,e.jsx(s,{href:"/vue-router"}),`
