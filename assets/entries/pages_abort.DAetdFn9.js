@@ -15,7 +15,7 @@ import{j as e,L as d,o,i as s}from"../chunks/chunk-C8GxokWD.js";import{L as n}fr
 `,e.jsxs(r.li,{children:[e.jsx(r.code,{children:"navigate()"})," only works on the client-side and shouldn't be called during the rendering of a page."]}),`
 `,e.jsxs(r.li,{children:[e.jsx(r.code,{children:"throw redirect()"})," works on both client- and server-side but only works during the rendering a page."]}),`
 `]}),`
-`,e.jsxs(r.p,{children:["In a nuthsell: if you want to abort the rendering of a page then use ",e.jsx(r.code,{children:"throw redirect()"}),", otherwise use ",e.jsx(r.code,{children:"navigate()"}),"."]}),`
+`,e.jsxs(r.p,{children:["In a nutshell: if you want to abort the rendering of a page then use ",e.jsx(r.code,{children:"throw redirect()"}),", otherwise use ",e.jsx(r.code,{children:"navigate()"}),"."]}),`
 `,e.jsx(r.p,{children:"For example:"}),`
 `,e.jsxs(r.ul,{children:[`
 `,e.jsxs(r.li,{children:["For redirecting the user upon a form submit action, use ",e.jsx(r.code,{children:"navigate()"}),". (Since the page is already rendered and thus ",e.jsx(r.code,{children:"throw redirect()"})," doesn't make sense as there is no pending page rendering to abort.)"]}),`
