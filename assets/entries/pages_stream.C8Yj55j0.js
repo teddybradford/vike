@@ -3,7 +3,7 @@ import{j as e,L as r,o as t,i as l}from"../chunks/chunk-CD2jCSau.js";import{L as
 `,e.jsxs(d,{children:["the ",e.jsx(n.code,{children:"stream"})," setting"]}),`
 `,e.jsx(n.p,{children:"Disable/enable HTML Streaming."}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:[e.jsx(n.strong,{children:"What is HTML Streaming?"})," If you're unfamiliar with HTML streaming then check out ",e.jsx(n.a,{href:"https://github.com/reactwg/react-18/discussions/37",children:"Dan Abramov's explanation of SSR, HTML streaming, and Progressive Rendering"}),". Although it explains it in the context of React, we recommend reading it even if you use a UI framework other than React."]}),`
+`,e.jsxs(n.p,{children:[e.jsx(n.strong,{children:"What is HTML Streaming?"})," If you're unfamiliar with HTML streaming then check out ",e.jsx(n.a,{href:"https://github.com/reactwg/react-18/discussions/37",children:"Dan Abramov's explanation of SSR, HTML streaming, and Progressive Rendering"}),". Although it explains it in the context of React, we also recommend reading it if you use a UI framework other than React."]}),`
 `]}),`
 `,e.jsx(n.p,{children:"Disable for all your pages:"}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// /pages/+config.js"})}),`
