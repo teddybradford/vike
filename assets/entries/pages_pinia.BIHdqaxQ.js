@@ -9,7 +9,7 @@ import{j as e,L as r,o as l,i as s}from"../chunks/chunk-Bs97Kyb4.js";import{L as
 `]}),`
 `,e.jsx(i.li,{children:e.jsx(i.a,{href:"https://pinia.vuejs.org/ssr/",children:"Pinia > Server Side Rendering (SSR)"})}),`
 `]}),`
-`,e.jsxs(i.p,{children:["Examples of integrating Pinia without using ",e.jsx(n,{href:"/vike-react",children:e.jsx(i.code,{children:"vike-react"})}),":"]}),`
+`,e.jsxs(i.p,{children:["Examples of integrating Pinia without using ",e.jsx(n,{href:"/vike-vue",children:e.jsx(i.code,{children:"vike-vue"})}),":"]}),`
 `,e.jsxs(i.ul,{children:[`
 `,e.jsxs(i.li,{children:[`
 `,e.jsx(o,{timestamp:"2024.03",repo:"IT4Change/boilerplate-frontend"}),`
