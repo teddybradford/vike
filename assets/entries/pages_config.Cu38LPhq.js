@@ -63,14 +63,15 @@ import{j as e,L as i,o as r,i as t}from"../chunks/chunk-Ob4EiYc1.js";import{L as
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# Layout for the product page"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"pages/product/@id/+Layout.jsx"})})]})})}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["The directory ",e.jsx(n.code,{children:"(marketing)"})," is used for ",e.jsx(s,{href:"/routing#groups",children:"grouping"})," and is ignored by ",e.jsx(s,{href:"/filesystem-routing",children:"Filesystem Routing"}),"."]}),`
+`,e.jsxs(n.p,{children:["The directory ",e.jsx(n.code,{children:"(marketing)"})," is ignored by ",e.jsx(s,{href:"/filesystem-routing",children:"Filesystem Routing"}),": it's used for ",e.jsx(s,{href:"/routing#groups",children:"grouping"}),"."]}),`
 `]}),`
+`,e.jsx(n.p,{children:"Where:"}),`
 `,e.jsxs(n.ul,{children:[`
 `,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"pages/(marketing)/+Layout.jsx"})," applies to all pages living at ",e.jsx(n.code,{children:"pages/(marketing)/**"})]}),`
 `,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"pages/admin-panel/+Layout.jsx"})," applies to all pages living at ",e.jsx(n.code,{children:"pages/admin-panel/**"})]}),`
 `,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"pages/product/@id/+Layout.jsx"})," applies to one page ",e.jsx(n.code,{children:"pages/product/@id/+Page.jsx"}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["Technically ",e.jsx(n.code,{children:"pages/product/@id/+Layout.jsx"})," applies to all pages at ",e.jsx(n.code,{children:"/pages/product/@id/**"})," but there is only one page living there."]}),`
+`,e.jsxs(n.p,{children:["Technically, ",e.jsx(n.code,{children:"pages/product/@id/+Layout.jsx"})," applies to all pages at ",e.jsx(n.code,{children:"/pages/product/@id/**"})," but there is only one page living there."]}),`
 `]}),`
 `]}),`
 `]}),`
