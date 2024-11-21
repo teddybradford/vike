@@ -133,10 +133,10 @@ import{j as e,L as i,o as r,i as t}from"../chunks/chunk-Ob4EiYc1.js";import{L as
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"  extends: [vue]"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"}"})})]})})}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["While it's in principle possible, ",e.jsx(n.a,{href:"https://github.com/vikejs/vike/issues/1813",children:"there is currently a small blocker"})," for being able to use ",e.jsx(n.code,{children:"vike-vue"})," and ",e.jsx(n.code,{children:"vike-react"})," within the same app."]}),`
+`,e.jsxs(n.p,{children:["While it's in principle possible, ",e.jsx(n.a,{href:"https://github.com/vikejs/vike/issues/1813",children:"there is currently a blocker"})," for being able to use ",e.jsx(n.code,{children:"vike-vue"})," and ",e.jsx(n.code,{children:"vike-react"})," within the same app."]}),`
 `]}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:[e.jsx(n.code,{children:"vike-telefunc"})," doesn't exist yet: it's the upcoming integration enabling using RPC for fetching initial data (instead of ",e.jsx(s,{href:"/data",children:e.jsx("code",{children:"+data"})}),")."]}),`
+`,e.jsxs(n.p,{children:[e.jsx(n.code,{children:"vike-telefunc"})," doesn't exist yet: it's the upcoming integration that will enable you to use RPC for fetching initial data (instead of using ",e.jsx(s,{href:"/data",children:e.jsx("code",{children:"+data"})}),")."]}),`
 `]}),`
 `,e.jsx("h2",{id:"pointer-imports",children:"Pointer imports"}),`
 `,e.jsx(n.p,{children:"Internally, Vike transforms this:"}),`
