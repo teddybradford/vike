@@ -1,4 +1,4 @@
-import{j as e,L as i,o as r,i as t}from"../chunks/chunk-Ob4EiYc1.js";import{L as s}from"../chunks/chunk-Cb6If-mG.js";/* empty css                      */import{a as o}from"../chunks/chunk-BAY8jWIN.js";/* empty css                      */import{F as d}from"../chunks/chunk-CmczicXr.js";/* empty css                      *//* empty css                      */import"../chunks/chunk-BhjItjud.js";/* empty css                      *//* empty css                      *//* empty css                      */const c=[{pageSectionId:"files",pageSectionLevel:2,pageSectionTitle:"`+` files"},{pageSectionId:"inheritance",pageSectionLevel:2,pageSectionTitle:"Inheritance"},{pageSectionId:"defaults",pageSectionLevel:3,pageSectionTitle:"Defaults"},{pageSectionId:"domain-driven-file-structure",pageSectionLevel:3,pageSectionTitle:"Domain-driven File Structure"},{pageSectionId:"pointer-imports",pageSectionLevel:2,pageSectionTitle:"Pointer imports"},{pageSectionId:"config-code-isn-t-runtime-code",pageSectionLevel:4,pageSectionTitle:"Config code isn't runtime code"},{pageSectionId:"forbidden-runtime-code",pageSectionLevel:4,pageSectionTitle:"Forbidden runtime code"},{pageSectionId:"manually-mark-pointer-imports",pageSectionLevel:4,pageSectionTitle:"Manually mark pointer imports"},{pageSectionId:"see-also",pageSectionLevel:2,pageSectionTitle:"See also"}];function a(l){const n={a:"a",blockquote:"blockquote",code:"code",em:"em",figure:"figure",li:"li",p:"p",pre:"pre",span:"span",ul:"ul",...l.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.p,{children:"Everything there is to know about how config files work."}),`
+import{j as e,L as i,o as r,i as t}from"../chunks/chunk-Ob4EiYc1.js";import{L as s}from"../chunks/chunk-Cb6If-mG.js";/* empty css                      */import{a as o}from"../chunks/chunk-BAY8jWIN.js";/* empty css                      */import{F as d}from"../chunks/chunk-CmczicXr.js";/* empty css                      *//* empty css                      */import"../chunks/chunk-BhjItjud.js";/* empty css                      *//* empty css                      *//* empty css                      */const c=[{pageSectionId:"files",pageSectionLevel:2,pageSectionTitle:"`+` files"},{pageSectionId:"inheritance",pageSectionLevel:2,pageSectionTitle:"Inheritance"},{pageSectionId:"defaults",pageSectionLevel:3,pageSectionTitle:"Defaults"},{pageSectionId:"domain-driven-file-structure",pageSectionLevel:3,pageSectionTitle:"Domain-driven File Structure"},{pageSectionId:"powerful",pageSectionLevel:3,pageSectionTitle:"Powerful"},{pageSectionId:"pointer-imports",pageSectionLevel:2,pageSectionTitle:"Pointer imports"},{pageSectionId:"config-code-isn-t-runtime-code",pageSectionLevel:4,pageSectionTitle:"Config code isn't runtime code"},{pageSectionId:"forbidden-runtime-code",pageSectionLevel:4,pageSectionTitle:"Forbidden runtime code"},{pageSectionId:"manually-mark-pointer-imports",pageSectionLevel:4,pageSectionTitle:"Manually mark pointer imports"},{pageSectionId:"see-also",pageSectionLevel:2,pageSectionTitle:"See also"}];function a(l){const n={a:"a",blockquote:"blockquote",code:"code",em:"em",figure:"figure",li:"li",p:"p",pre:"pre",span:"span",ul:"ul",...l.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.p,{children:"Everything there is to know about how config files work."}),`
 `,e.jsx(n.p,{children:"For the list of configurations, see instead:"}),`
 `,e.jsxs(n.ul,{children:[`
 `,e.jsxs(n.li,{children:[`
@@ -94,6 +94,50 @@ import{j as e,L as i,o as r,i as t}from"../chunks/chunk-Ob4EiYc1.js";import{L as
 `]}),`
 `,e.jsx("h3",{id:"domain-driven-file-structure",children:"Domain-driven File Structure"}),`
 `,e.jsxs(n.p,{children:["You can use a ",e.jsx(s,{href:"/routing#domain-driven-file-structure",children:"domain-driven file structure"})," for better organization and for improved configuration inheritance."]}),`
+`,e.jsx("h3",{id:"powerful",children:"Powerful"}),`
+`,e.jsx(n.p,{children:"You can use config inheritance to have multiple and completely different stacks within the same app."}),`
+`,e.jsx(n.p,{children:"For example:"}),`
+`,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// pages/admin/+config.js"})}),`
+`,e.jsx(n.span,{"data-line":"",children:" "}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// Configuration that applies to all admin pages."})}),`
+`,e.jsx(n.span,{"data-line":"",children:" "}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"import"}),e.jsx(n.span,{style:{color:"#24292E"},children:" vue "}),e.jsx(n.span,{style:{color:"#D73A49"},children:"from"}),e.jsx(n.span,{style:{color:"#032F62"},children:" 'vike-vue/config'"})]}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"import"}),e.jsx(n.span,{style:{color:"#24292E"},children:" telefunc "}),e.jsx(n.span,{style:{color:"#D73A49"},children:"from"}),e.jsx(n.span,{style:{color:"#032F62"},children:" 'vike-telefunc/config'"})]}),`
+`,e.jsx(n.span,{"data-line":"",children:" "}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// Vue + SPA + RPC"})}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"export"}),e.jsx(n.span,{style:{color:"#D73A49"},children:" default"}),e.jsx(n.span,{style:{color:"#24292E"},children:" {"})]}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"  ssr: "}),e.jsx(n.span,{style:{color:"#005CC5"},children:"false"}),e.jsx(n.span,{style:{color:"#24292E"},children:","})]}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"  extends: [vue, telefunc]"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"}"})})]})})}),`
+`,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// pages/product/@id/+config.js"})}),`
+`,e.jsx(n.span,{"data-line":"",children:" "}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// Configuration that applies to the product page."})}),`
+`,e.jsx(n.span,{"data-line":"",children:" "}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"import"}),e.jsx(n.span,{style:{color:"#24292E"},children:" react "}),e.jsx(n.span,{style:{color:"#D73A49"},children:"from"}),e.jsx(n.span,{style:{color:"#032F62"},children:" 'vike-react/config'"})]}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"import"}),e.jsx(n.span,{style:{color:"#24292E"},children:" graphql "}),e.jsx(n.span,{style:{color:"#D73A49"},children:"from"}),e.jsx(n.span,{style:{color:"#032F62"},children:" 'vike-react-apollo/config'"})]}),`
+`,e.jsx(n.span,{"data-line":"",children:" "}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// React + SSR + GraphQL"})}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"export"}),e.jsx(n.span,{style:{color:"#D73A49"},children:" default"}),e.jsx(n.span,{style:{color:"#24292E"},children:" {"})]}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"  ssr: "}),e.jsx(n.span,{style:{color:"#005CC5"},children:"true"}),e.jsx(n.span,{style:{color:"#24292E"},children:","})]}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"  extends: [react, graphql]"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"}"})})]})})}),`
+`,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// pages/(marketing)/+config.js"})}),`
+`,e.jsx(n.span,{"data-line":"",children:" "}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// Configuration that applies to all marketing pages."})}),`
+`,e.jsx(n.span,{"data-line":"",children:" "}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"import"}),e.jsx(n.span,{style:{color:"#24292E"},children:" vue "}),e.jsx(n.span,{style:{color:"#D73A49"},children:"from"}),e.jsx(n.span,{style:{color:"#032F62"},children:" 'vike-vue/config'"})]}),`
+`,e.jsx(n.span,{"data-line":"",children:" "}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// Vue + SSR"})}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"export"}),e.jsx(n.span,{style:{color:"#D73A49"},children:" default"}),e.jsx(n.span,{style:{color:"#24292E"},children:" {"})]}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"  ssr: "}),e.jsx(n.span,{style:{color:"#005CC5"},children:"true"}),e.jsx(n.span,{style:{color:"#24292E"},children:","})]}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"  extends: [vue]"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"}"})})]})})}),`
+`,e.jsxs(n.blockquote,{children:[`
+`,e.jsxs(n.p,{children:["While it's in principle possible, ",e.jsx(n.a,{href:"https://github.com/vikejs/vike/issues/1813",children:"there is currently a small blocker"})," for being able to use ",e.jsx(n.code,{children:"vike-vue"})," and ",e.jsx(n.code,{children:"vike-react"})," within the same app."]}),`
+`]}),`
+`,e.jsxs(n.blockquote,{children:[`
+`,e.jsxs(n.p,{children:[e.jsx(n.code,{children:"vike-telefunc"})," doesn't exist yet: it's the upcoming integration enabling using RPC for fetching initial data (instead of ",e.jsx(s,{href:"/data",children:e.jsx("code",{children:"+data"})}),")."]}),`
+`]}),`
 `,e.jsx("h2",{id:"pointer-imports",children:"Pointer imports"}),`
 `,e.jsx(n.p,{children:"Internally, Vike transforms this:"}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// /pages/+config.js"})}),`
