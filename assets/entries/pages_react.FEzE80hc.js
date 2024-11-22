@@ -56,9 +56,6 @@ import{j as e,L as s,o as a,i as o}from"../chunks/chunk-Ob4EiYc1.js";import{L as
 `,e.jsx(n,{href:"/nextjs"}),`
 `]}),`
 `,e.jsxs(t.li,{children:[`
-`,e.jsx(n,{href:"/optional-control"}),`
-`]}),`
-`,e.jsxs(t.li,{children:[`
 `,e.jsx(n,{href:"/vue"}),`
 `]}),`
 `,e.jsxs(t.li,{children:[`
