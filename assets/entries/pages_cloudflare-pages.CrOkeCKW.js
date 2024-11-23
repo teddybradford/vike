@@ -2,7 +2,7 @@ import{j as e,L as r,o,i}from"../chunks/chunk-Ob4EiYc1.js";import{L as a}from"..
 `,e.jsxs(s.p,{children:["The ",e.jsx(s.a,{href:"https://github.com/vikejs/vike-cloudflare",children:"vike-cloudflare"})," package enables zero-configuration deployment to ",e.jsx(s.a,{href:"https://pages.cloudflare.com",children:"Cloudflare Pages"}),"."]}),`
 `,e.jsxs(s.p,{children:["It will deploy prerendered routes as static files, and dynamic routes as ",e.jsx(s.a,{href:"https://developers.cloudflare.com/pages/functions/advanced-mode/",children:"Pages Functions"}),"."]}),`
 `,e.jsxs(s.blockquote,{children:[`
-`,e.jsxs(s.p,{children:["Instead of using ",e.jsx(s.code,{children:"vike-cloudflare"})," you can manally integrate Cloudflare Pages yourself, see ",e.jsx(a,{href:"/cloudflare-workers#cloudflare-pages",doNotInferSectionTitle:!0}),"."]}),`
+`,e.jsxs(s.p,{children:["Instead of using ",e.jsx(s.code,{children:"vike-cloudflare"})," you can manually integrate Cloudflare Pages yourself, see ",e.jsx(a,{href:"/cloudflare-workers#cloudflare-pages",doNotInferSectionTitle:!0}),"."]}),`
 `]}),`
 `,e.jsx("h3",{id:"without-a-server",children:"Without a server"}),`
 `,e.jsx(s.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(s.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(s.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"// vite.config.js"})}),`

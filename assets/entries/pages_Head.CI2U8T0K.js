@@ -109,7 +109,7 @@ import{j as e,L as a,o as c,i}from"../chunks/chunk-Ob4EiYc1.js";import{L as n}fr
 `,e.jsx("h3",{id:"only-renders-for-the-first-page-s-html",children:"Only renders for the first page's HTML"}),`
 `,e.jsxs(s.p,{children:["The ",e.jsx(s.code,{children:"<Head>"})," component is only used when rendering the HTML of the first page the user visits: the tags set by ",e.jsx(s.code,{children:"<Head>"})," aren't updated upon ",e.jsx(n,{href:"/client-routing",children:"client-side page navigation"}),"."]}),`
 `,e.jsx("h3",{id:"limitation",children:"Limitation"}),`
-`,e.jsxs(s.p,{children:["The most notable limitation is that the ",e.jsx(s.code,{children:"+Head"})," setting cannot be used to set the ",e.jsx(s.code,{children:"<title>"})," value, because the title isn't updated when navigating to a page with a different tilte."]}),`
+`,e.jsxs(s.p,{children:["The most notable limitation is that the ",e.jsx(s.code,{children:"+Head"})," setting cannot be used to set the ",e.jsx(s.code,{children:"<title>"})," value, because the title isn't updated when navigating to a page with a different title."]}),`
 `,e.jsxs(s.blockquote,{children:[`
 `,e.jsxs(s.p,{children:["See ",e.jsx(n,{href:"#example",children:"example below"})," for a more detailed explanation."]}),`
 `]}),`

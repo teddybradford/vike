@@ -2,7 +2,7 @@ import{j as e,L as a,o,i as t}from"../chunks/chunk-Ob4EiYc1.js";import{L as r}fr
 `,e.jsxs(s.blockquote,{children:[`
 `,e.jsxs(s.p,{children:["It's a powerful way to scale your teams, and to ensure a cohesive stack throughout your company. See ",e.jsx(r,{href:"/why#build-your-own-framework"}),"."]}),`
 `]}),`
-`,e.jsx(s.p,{children:"Your framework can include everything (frontend, backend, data fetching, authentication, deployement, error tracking, analytics, ...) so that your Product Developers can focus on what they do best: building user interfaces."}),`
+`,e.jsx(s.p,{children:"Your framework can include everything (frontend, backend, data fetching, authentication, deployment, error tracking, analytics, ...) so that your Product Developers can focus on what they do best: building user interfaces."}),`
 `,e.jsx("h2",{id:"getting-started",children:"Getting started"}),`
 `,e.jsx("h3",{id:"first-step",children:"First step"}),`
 `,e.jsxs(s.p,{children:["We recommend getting started by creating a regular Vike app. Once you are satisfied with your stack then progressively move code from the user-land (code inside the app's Git repository) to your framework (code inside ",e.jsx(s.code,{children:"node_modules/my-framework/"}),")."]}),`

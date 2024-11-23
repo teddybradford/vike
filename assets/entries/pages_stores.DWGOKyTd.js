@@ -19,7 +19,7 @@ import{j as e,L as r,o as a,i}from"../chunks/chunk-Ob4EiYc1.js";import{L as s}fr
 `,e.jsx(s,{href:"/examples#stores",children:"... more"}),`
 `]}),`
 `]}),`
-`,e.jsx(n.p,{children:"The documention on this page is about manually integrating stores."}),`
+`,e.jsx(n.p,{children:"The documentation on this page is about manually integrating stores."}),`
 `,e.jsx(d,{children:e.jsxs(n.p,{children:["Instead of manually integrating stores, we generally recommend using ",e.jsx(s,{href:"/extensions",children:"Vike extensions"})," such as ",e.jsx(n.a,{href:"https://github.com/vikejs/vike-vue/tree/main/packages/vike-vue-pinia#readme",children:e.jsx(n.code,{children:"vike-vue-pinia"})}),"."]})}),`
 `,e.jsx(o,{children:e.jsxs(n.p,{children:["Contribution welcome to ",e.jsx(n.a,{href:"https://github.com/vikejs/vike/issues/1715",children:"create Vike extensions"})," integrating stores."]})}),`
 `,e.jsx("h2",{id:"ssr",children:"SSR"}),`

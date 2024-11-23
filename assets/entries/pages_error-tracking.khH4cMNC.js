@@ -7,7 +7,7 @@ import{j as e,L as a,o as i,i as o}from"../chunks/chunk-Ob4EiYc1.js";import{L as
 `,e.jsxs(n.p,{children:["You can use ",e.jsx(r,{href:"/client",children:e.jsx(n.code,{children:"+client.js"})})," in order to make sure that your error tracker is initialized before any other code executes."]}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// pages/+client.js"})}),`
 `,e.jsx(n.span,{"data-line":"",children:" "}),`
-`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// This is a good place to initialize an error tracker scuh as Sentry"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// This is a good place to initialize an error tracker such as Sentry"})}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"Sentry."}),e.jsx(n.span,{style:{color:"#6F42C1"},children:"init"}),e.jsx(n.span,{style:{color:"#24292E"},children:"()"})]}),`
 `,e.jsx(n.span,{"data-line":"",children:" "}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// Custom tracking"})}),`

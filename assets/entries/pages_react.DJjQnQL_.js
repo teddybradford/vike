@@ -11,7 +11,7 @@ import{j as e,L as s,o as a,i as o}from"../chunks/chunk-Ob4EiYc1.js";import{L as
 `,e.jsxs(t.ul,{children:[`
 `,e.jsxs(t.li,{children:[e.jsx(n,{href:"/boilerplates/boilerplate-react-ts"})," - Classic integration, using ",e.jsx(n,{href:"/client-routing",children:"Client Routing"}),"."]}),`
 `,e.jsxs(t.li,{children:[e.jsx(n,{href:"/examples/react-minimal"})," - Minimalistic integration, using ",e.jsx(n,{href:"/server-routing",children:"Server Routing"}),"."]}),`
-`,e.jsxs(t.li,{children:[e.jsxs(t.a,{href:"https://github.com/vikejs/vike-react/tree/main/packages/vike-react",children:[e.jsx(t.code,{children:"vike-react"})," source code"]})," - Full-featured integeration."]}),`
+`,e.jsxs(t.li,{children:[e.jsxs(t.a,{href:"https://github.com/vikejs/vike-react/tree/main/packages/vike-react",children:[e.jsx(t.code,{children:"vike-react"})," source code"]})," - Full-featured integration."]}),`
 `,e.jsxs(t.li,{children:[e.jsx(n,{href:"/examples/render-modes"})," - Integration supporting all ",e.jsx(n,{href:"/render-modes",children:"render modes"})," (SSR, SPA, and HTML-only)."]}),`
 `]}),`
 `,e.jsxs(t.blockquote,{children:[`

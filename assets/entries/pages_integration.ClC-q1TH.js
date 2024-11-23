@@ -26,7 +26,7 @@ import{j as e,L as r,o as i,i as t}from"../chunks/chunk-Ob4EiYc1.js";import{L as
 `,e.jsxs(n.p,{children:["That way you can install tools such as ",e.jsx(n.a,{href:"https://developers.google.com/analytics",children:"Google Analytics"}),", ",e.jsx(n.a,{href:"https://plausible.io",children:"Plausible"}),", or ",e.jsx(n.a,{href:"https://segment.com",children:"Segment"}),"."]}),`
 `,e.jsxs(n.p,{children:["You can also load and/or initialize analytics code only after the hydration ends by using the ",e.jsx(l,{href:"/onHydrationEnd",children:"+onHydrationEnd"})," hook."]}),`
 `,e.jsx("h2",{id:"component-libraries",children:"Component libraries"}),`
-`,e.jsx(n.p,{children:"Some compnent libraries need initialization, most notably vanilla component libraries such as Bootstrap."}),`
+`,e.jsx(n.p,{children:"Some component libraries need initialization, most notably vanilla component libraries such as Bootstrap."}),`
 `,e.jsx(n.p,{children:"To initialize code, you can use"}),`
 `,e.jsxs(n.ul,{children:[`
 `,e.jsxs(n.li,{children:[`

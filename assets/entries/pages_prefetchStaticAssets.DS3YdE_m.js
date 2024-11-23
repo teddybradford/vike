@@ -22,7 +22,7 @@ This means that static assets are often already loaded before even the user clic
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#24292E"},children:"  prefetchStaticAssets: "}),e.jsx(s.span,{style:{color:"#005CC5"},children:"false"})]}),`
 `,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#24292E"},children:"}"})})]})})}),`
 `,e.jsxs(s.blockquote,{children:[`
-`,e.jsxs(s.p,{children:["Viewport prefetching is disabled in development. (Because preloading pages that eargly ",e.jsx(o,{}),".)"]}),`
+`,e.jsxs(s.p,{children:["Viewport prefetching is disabled in development. (Because preloading pages that early ",e.jsx(o,{}),".)"]}),`
 `]}),`
 `,e.jsxs(s.blockquote,{children:[`
 `,e.jsxs(s.p,{children:["Only static assets are prefetched: the ",e.jsx(s.code,{children:"pageContext"})," of pages isn't prefetched, see ",e.jsx(s.a,{href:"https://github.com/vikejs/vike/issues/246",children:"#246"}),"."]}),`

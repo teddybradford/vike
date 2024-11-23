@@ -9,7 +9,7 @@ import{j as e,L as r,o as s,i as a}from"../chunks/chunk-Ob4EiYc1.js";import{L as
 `,e.jsx(p,{list:["vike-solid"]}),`
 `,e.jsx(i.p,{children:"Official example:"}),`
 `,e.jsxs(i.ul,{children:[`
-`,e.jsxs(i.li,{children:[e.jsxs(i.a,{href:"https://github.com/vikejs/vike-solid/tree/main/vike-solid",children:[e.jsx(i.code,{children:"vike-solid"})," source code"]})," - Full-featured integeration."]}),`
+`,e.jsxs(i.li,{children:[e.jsxs(i.a,{href:"https://github.com/vikejs/vike-solid/tree/main/vike-solid",children:[e.jsx(i.code,{children:"vike-solid"})," source code"]})," - Full-featured integration."]}),`
 `]}),`
 `,e.jsx(i.p,{children:"Community examples:"}),`
 `,e.jsxs(i.ul,{children:[`

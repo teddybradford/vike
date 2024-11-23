@@ -2,7 +2,7 @@ import{j as s,L as a,o,i as c}from"../chunks/chunk-Ob4EiYc1.js";import{L as l}fr
 `,s.jsx(i,{noCustomGuide:!0,children:s.jsx(e.code,{children:"useConfig()"})}),`
 `,s.jsxs(e.p,{children:["The ",s.jsx(e.code,{children:"useConfig()"})," hook enables you to set configurations inside UI components, as well as inside Vike hooks such as ",s.jsx(l,{href:"/data",children:s.jsx(e.code,{children:"+data"})}),"."]}),`
 `,s.jsxs(e.blockquote,{children:[`
-`,s.jsxs(e.p,{children:["This hook is unusual because it can also be used inside Vike hooks. We call it a ",s.jsx(e.em,{children:"universal hook"}),". So far ",s.jsx(e.code,{children:"useConfig()"})," is the only unviversal hook."]}),`
+`,s.jsxs(e.p,{children:["This hook is unusual because it can also be used inside Vike hooks. We call it a ",s.jsx(e.em,{children:"universal hook"}),". So far ",s.jsx(e.code,{children:"useConfig()"})," is the only universal hook."]}),`
 `]}),`
 `,s.jsx(e.p,{children:"It currently supports following configs:"}),`
 `,s.jsxs(e.ul,{children:[`

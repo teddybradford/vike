@@ -10,7 +10,7 @@ import{j as e,L as s,o as a,i as l}from"../chunks/chunk-Ob4EiYc1.js";/* empty cs
 `,e.jsx(t.span,{"data-line":"",children:e.jsx(t.span,{style:{color:"#6F42C1"},children:"dist/client/robots.txt"})})]})})}),`
 `,e.jsx(t.p,{children:"Note how Vite:"}),`
 `,e.jsxs(t.ul,{children:[`
-`,e.jsxs(t.li,{children:["Adds the content hash ",e.jsx(t.code,{children:"b0c3b30b"})," for improved cachability."]}),`
+`,e.jsxs(t.li,{children:["Adds the content hash ",e.jsx(t.code,{children:"b0c3b30b"})," for improved cacheability."]}),`
 `,e.jsxs(t.li,{children:["Copies all files living under ",e.jsx(t.code,{children:"public/"})," to ",e.jsx(t.code,{children:"dist/client/"}),"."]}),`
 `]}),`
 `,e.jsx("h2",{id:"server-static-middleware",children:"Server static middleware"}),`
