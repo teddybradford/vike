@@ -45,7 +45,7 @@ import{j as e,b as r,L as t,o,i}from"../chunks/chunk-Ob4EiYc1.js";import{L as n}
 `,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#032F62"},children:"      </body>"})}),`
 `,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#032F62"},children:"    </html>`"})}),`
 `,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#24292E"},children:"}"})})]})})}),`
-`,e.jsx(s.p,{children:"Node.js platforms (Vercel, AWS EC2, AWS Lambda, ...):"}),`
+`,e.jsx(s.p,{children:"Node.js(-like) environments (Node.js/Bun/Deno server, Vercel, AWS EC2, AWS Lambda, ...):"}),`
 `,e.jsx(s.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(s.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(s.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"// server.js"})}),`
 `,e.jsx(s.span,{"data-line":"",children:" "}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"import"}),e.jsx(s.span,{style:{color:"#24292E"},children:" { renderPage } "}),e.jsx(s.span,{style:{color:"#D73A49"},children:"from"}),e.jsx(s.span,{style:{color:"#032F62"},children:" 'vike/server'"})]}),`
@@ -54,9 +54,14 @@ import{j as e,b as r,L as t,o,i}from"../chunks/chunk-Ob4EiYc1.js";import{L as n}
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"  const"}),e.jsx(s.span,{style:{color:"#005CC5"},children:" pageContextInit"}),e.jsx(s.span,{style:{color:"#D73A49"},children:" ="}),e.jsx(s.span,{style:{color:"#24292E"},children:" { urlOriginal: req.url }"})]}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"  const"}),e.jsx(s.span,{style:{color:"#005CC5"},children:" pageContext"}),e.jsx(s.span,{style:{color:"#D73A49"},children:" ="}),e.jsx(s.span,{style:{color:"#D73A49"},children:" await"}),e.jsx(s.span,{style:{color:"#6F42C1"},children:" renderPage"}),e.jsx(s.span,{style:{color:"#24292E"},children:"(pageContextInit)"})]}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"  const"}),e.jsx(s.span,{style:{color:"#24292E"},children:" { "}),e.jsx(s.span,{style:{color:"#005CC5"},children:"httpResponse"}),e.jsx(s.span,{style:{color:"#24292E"},children:" } "}),e.jsx(s.span,{style:{color:"#D73A49"},children:"="}),e.jsx(s.span,{style:{color:"#24292E"},children:" pageContext"})]}),`
-`,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"  // httpResponse.pipe() works with Node.js Streams as well as Web Streams"})}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#24292E"},children:"  httpResponse."}),e.jsx(s.span,{style:{color:"#6F42C1"},children:"pipe"}),e.jsx(s.span,{style:{color:"#24292E"},children:"(res)"})]}),`
 `,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#24292E"},children:"})"})})]})})}),`
+`,e.jsxs(s.blockquote,{children:[`
+`,e.jsxs(s.p,{children:["For Node.js(-like) environments we recommend using a Node.js Writable Stream with ",e.jsx(s.code,{children:"pageContext.httpResponse.pipe()"}),' because it allows the stream to be flushed. In other words: the stream provided by your UI framework can say "now is a good time to flush the stream buffer and send it to the user".']}),`
+`,e.jsx(s.p,{children:"Web Streams (both Writables and Readables) and Node.js Readable Streams don't have this flushing capability."}),`
+`,e.jsx(s.p,{children:"As far as we know, only React leverages the flush capability. Thus, this recommendation may be irrelevant if you use a UI framework other than React."}),`
+`,e.jsxs(s.p,{children:["If you don't follow this recommendation, then you can use ",e.jsx(s.code,{children:"pageContext.httpResponse.getReadableNodeStream()"})," instead of ",e.jsx(s.code,{children:"pageContext.httpResponse.pipe()"})]}),`
+`]}),`
 `,e.jsx(s.p,{children:"Edge platforms (e.g. Cloudflare Workers):"}),`
 `,e.jsx(s.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(s.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(s.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"// worker.js"})}),`
 `,e.jsx(s.span,{"data-line":"",children:" "}),`
@@ -70,26 +75,24 @@ import{j as e,b as r,L as t,o,i}from"../chunks/chunk-Ob4EiYc1.js";import{L as n}
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"  const"}),e.jsx(s.span,{style:{color:"#005CC5"},children:" pageContextInit"}),e.jsx(s.span,{style:{color:"#D73A49"},children:" ="}),e.jsx(s.span,{style:{color:"#24292E"},children:" { urlOriginal: event.request.url }"})]}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"  const"}),e.jsx(s.span,{style:{color:"#005CC5"},children:" pageContext"}),e.jsx(s.span,{style:{color:"#D73A49"},children:" ="}),e.jsx(s.span,{style:{color:"#D73A49"},children:" await"}),e.jsx(s.span,{style:{color:"#6F42C1"},children:" renderPage"}),e.jsx(s.span,{style:{color:"#24292E"},children:"(pageContextInit)"})]}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"  const"}),e.jsx(s.span,{style:{color:"#24292E"},children:" { "}),e.jsx(s.span,{style:{color:"#005CC5"},children:"httpResponse"}),e.jsx(s.span,{style:{color:"#24292E"},children:" } "}),e.jsx(s.span,{style:{color:"#D73A49"},children:"="}),e.jsx(s.span,{style:{color:"#24292E"},children:" pageContext"})]}),`
-`,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"  // httpResponse.getReadableWebStream() only works with Web Streams"})}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"  const"}),e.jsx(s.span,{style:{color:"#005CC5"},children:" readable"}),e.jsx(s.span,{style:{color:"#D73A49"},children:" ="}),e.jsx(s.span,{style:{color:"#24292E"},children:" httpResponse."}),e.jsx(s.span,{style:{color:"#6F42C1"},children:"getReadableWebStream"}),e.jsx(s.span,{style:{color:"#24292E"},children:"()"})]}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"  const"}),e.jsx(s.span,{style:{color:"#24292E"},children:" { "}),e.jsx(s.span,{style:{color:"#E36209"},children:"statusCode"}),e.jsx(s.span,{style:{color:"#24292E"},children:": "}),e.jsx(s.span,{style:{color:"#005CC5"},children:"status"}),e.jsx(s.span,{style:{color:"#24292E"},children:", "}),e.jsx(s.span,{style:{color:"#005CC5"},children:"headers"}),e.jsx(s.span,{style:{color:"#24292E"},children:" } "}),e.jsx(s.span,{style:{color:"#D73A49"},children:"="}),e.jsx(s.span,{style:{color:"#24292E"},children:" httpResponse"})]}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"  return"}),e.jsx(s.span,{style:{color:"#D73A49"},children:" new"}),e.jsx(s.span,{style:{color:"#6F42C1"},children:" Response"}),e.jsx(s.span,{style:{color:"#24292E"},children:"(readable, { headers, status })"})]}),`
 `,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#24292E"},children:"}"})})]})})}),`
-`,e.jsxs(s.p,{children:["In general, we recommend using ",e.jsx(s.code,{children:"pageContext.httpResponse.pipe()"})," because ",e.jsx(s.code,{children:"pipe()"}),' is able to flush streams. In other words: the stream provided by your UI framework can say "now is a good time to flush the buffer and send it to the user".']}),`
 `,e.jsxs(s.blockquote,{children:[`
-`,e.jsx(s.p,{children:"As far as we know, only React leverages the flush capability. Thus, the recommendation may be irrelevant if you use a UI framework other than React."}),`
+`,e.jsxs(s.p,{children:["If you have a Web Writbale Stream then use ",e.jsx(s.code,{children:"httpResponse.pipe()"})," (it also works with Web Streams)."]}),`
 `]}),`
-`,e.jsxs(s.p,{children:["If your server doesn't expose a writable stream then you cannot use ",e.jsx(s.code,{children:"pipe()"}),". In that case you can fallback to:"]}),`
-`,e.jsxs(s.ul,{children:[`
-`,e.jsx(s.li,{children:e.jsx(s.code,{children:"pageContext.httpResponse.getReadableWebStream()"})}),`
-`,e.jsx(s.li,{children:e.jsx(s.code,{children:"pageContext.httpResponse.getReadableNodeStream()"})}),`
-`]}),`
-`,e.jsxs(s.p,{children:["For example, Cloudflare Workers doesn't expose any writable stream and the only option is to use ",e.jsx(s.code,{children:"getReadableWebStream()"}),"."]}),`
 `,e.jsx("h2",{id:"api",children:"API"}),`
 `,e.jsxs(s.ul,{children:[`
-`,e.jsxs(s.li,{children:[e.jsx(n,{href:"#basics",children:e.jsx(s.strong,{children:e.jsx(s.code,{children:"pageContext.httpResponse.pipe()"})})}),": The recommended way of integrating the stream into your server."]}),`
-`,e.jsxs(s.li,{children:[e.jsx(n,{href:"#basics",children:e.jsx(s.strong,{children:e.jsx(s.code,{children:"pageContext.httpResponse.getReadableWebStream()"})})}),": Only use if you cannot use ",e.jsx(s.code,{children:"pipe()"}),"."]}),`
-`,e.jsxs(s.li,{children:[e.jsx(n,{href:"#basics",children:e.jsx(s.strong,{children:e.jsx(s.code,{children:"pageContext.httpResponse.getReadableNodeStream()"})})}),": Only use if you cannot use ",e.jsx(s.code,{children:"pipe()"}),"."]}),`
+`,e.jsxs(s.li,{children:[`
+`,e.jsx(n,{href:"#basics",children:e.jsx(s.strong,{children:e.jsx(s.code,{children:"pageContext.httpResponse.pipe()"})})}),`
+`]}),`
+`,e.jsxs(s.li,{children:[`
+`,e.jsx(n,{href:"#basics",children:e.jsx(s.strong,{children:e.jsx(s.code,{children:"pageContext.httpResponse.getReadableWebStream()"})})}),`
+`]}),`
+`,e.jsxs(s.li,{children:[`
+`,e.jsx(n,{href:"#basics",children:e.jsx(s.strong,{children:e.jsx(s.code,{children:"pageContext.httpResponse.getReadableNodeStream()"})})}),`
+`]}),`
 `,e.jsxs(s.li,{children:[e.jsx(n,{href:"#enableeagerstreaming",children:e.jsx(s.strong,{children:e.jsx(s.code,{children:"enableEagerStreaming"})})}),": Start the stream as soon as possible."]}),`
 `,e.jsxs(s.li,{children:[e.jsx(n,{href:"#stamppipe",children:e.jsx(s.strong,{children:e.jsx(s.code,{children:"stampPipe()"})})}),": Only needed if your UI framework provides a stream pipe."]}),`
 `,e.jsxs(s.li,{children:[e.jsx(n,{href:"#pagecontext-httpresponse-getbody",children:e.jsx(s.strong,{children:e.jsx(s.code,{children:"pageContext.httpResponse.getBody()"})})}),": Convert the stream into a string."]}),`
