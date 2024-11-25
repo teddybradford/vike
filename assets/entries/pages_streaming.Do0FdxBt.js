@@ -57,10 +57,10 @@ import{j as e,b as r,L as t,o,i}from"../chunks/chunk-Ob4EiYc1.js";import{L as n}
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#24292E"},children:"  httpResponse."}),e.jsx(s.span,{style:{color:"#6F42C1"},children:"pipe"}),e.jsx(s.span,{style:{color:"#24292E"},children:"(res)"})]}),`
 `,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#24292E"},children:"})"})})]})})}),`
 `,e.jsxs(s.blockquote,{children:[`
-`,e.jsxs(s.p,{children:["For Node.js(-like) environments we recommend using a Node.js Writable Stream with ",e.jsx(s.code,{children:"pageContext.httpResponse.pipe()"}),' because it allows the stream to be flushed. In other words: the stream provided by your UI framework can say "now is a good time to flush the stream buffer and send it to the user".']}),`
+`,e.jsxs(s.p,{children:["For Node.js(-like) environments we recommend using a Node.js Writable Stream with ",e.jsx(s.code,{children:"pageContext.httpResponse.pipe()"}),' because it allows the stream to be flushed. In other words: your UI framework can say "now is a good time to flush the stream buffer and send it to the user".']}),`
 `,e.jsx(s.p,{children:"Web Streams (both Writables and Readables) and Node.js Readable Streams don't have this flushing capability."}),`
-`,e.jsx(s.p,{children:"As far as we know, only React leverages the flush capability. Thus, this recommendation may be irrelevant if you use a UI framework other than React."}),`
-`,e.jsxs(s.p,{children:["If you don't follow this recommendation, then you can use ",e.jsx(s.code,{children:"pageContext.httpResponse.getReadableNodeStream()"})," instead of ",e.jsx(s.code,{children:"pageContext.httpResponse.pipe()"})]}),`
+`,e.jsx(s.p,{children:"As far as we know, only React leverages the flushing capability. Thus, this recommendation may be irrelevant if you use a UI framework other than React."}),`
+`,e.jsxs(s.p,{children:["If you don't follow this recommendation, then you can use ",e.jsx(s.code,{children:"pageContext.httpResponse.getReadableNodeStream()"})," instead."]}),`
 `]}),`
 `,e.jsx(s.p,{children:"Edge platforms (e.g. Cloudflare Workers):"}),`
 `,e.jsx(s.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(s.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(s.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"// worker.js"})}),`
@@ -80,7 +80,7 @@ import{j as e,b as r,L as t,o,i}from"../chunks/chunk-Ob4EiYc1.js";import{L as n}
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"  return"}),e.jsx(s.span,{style:{color:"#D73A49"},children:" new"}),e.jsx(s.span,{style:{color:"#6F42C1"},children:" Response"}),e.jsx(s.span,{style:{color:"#24292E"},children:"(readable, { headers, status })"})]}),`
 `,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#24292E"},children:"}"})})]})})}),`
 `,e.jsxs(s.blockquote,{children:[`
-`,e.jsxs(s.p,{children:["If you have a Web Writbale Stream then use ",e.jsx(s.code,{children:"httpResponse.pipe()"})," (it also works with Web Streams)."]}),`
+`,e.jsxs(s.p,{children:["If you have a Web Writable Stream then use ",e.jsx(s.code,{children:"httpResponse.pipe()"})," (it also works with Web Streams)."]}),`
 `]}),`
 `,e.jsx("h2",{id:"api",children:"API"}),`
 `,e.jsxs(s.ul,{children:[`
