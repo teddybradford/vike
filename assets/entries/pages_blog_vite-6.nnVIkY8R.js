@@ -4,7 +4,7 @@ import{j as e,L as r,o as n,i as l}from"../chunks/chunk-B9vS3oLs.js";import{L as
 `,e.jsx(t.p,{children:e.jsx(t.strong,{children:"Edit for reddit folks:"})}),`
 `,e.jsxs(t.ul,{children:[`
 `,e.jsxs(t.li,{children:[e.jsx(t.a,{href:"/",children:"Vike"})," (with ",e.jsx(t.strong,{children:"k"}),") is a framework like Next.js/Nuxt that is built on top of ",e.jsx(t.a,{href:"https://vite.dev",children:"Vite"})," (with ",e.jsx(t.strong,{children:"t"}),") which is a bundler like webpack. Both projects are unaffiliated (atlthough we often collaborate)."]}),`
-`,e.jsx(t.li,{children:"The Vite 6 announcement post (see link above) doesn't explain why Vite 6 is such an important release; this blog post gives a high-level explanation of what Vite 6 unlocks."}),`
+`,e.jsx(t.li,{children:"The Vite 6 announcement post (see link above) doesn't explain the benefits of the Environment API for users; this blog post gives a high-level explanation of what it unlocks."}),`
 `]}),`
 `]}),`
 `,e.jsx("h2",{id:"what-does-it-mean-for-users",children:"What does it mean for users?"}),`
