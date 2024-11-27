@@ -3,7 +3,7 @@ import{j as e,L as i,o as n,i as a}from"../chunks/chunk-B9vS3oLs.js";import{L as
 `,e.jsx("h2",{id:"what-does-it-mean-for-users",children:"What does it mean for users?"}),`
 `,e.jsxs(t.p,{children:["The most notable benefit is that you'll be able to develop directly against edge environments. For example, you'll be able to develop your ",e.jsx(t.a,{href:"https://github.com/cloudflare/workerd",children:"workerd"})," code (your Cloudflare Worker) while getting the full Vite experience such as HMR."]}),`
 `,e.jsx(t.p,{children:"In other words, you will develop code that works equally well between dev and prod. You'll get a unified stack."}),`
-`,e.jsx(t.p,{children:"This is major milestone for edge deployment, as you will develop for the edge as conveniently as for a Node.js/Bun/Deno server."}),`
+`,e.jsx(t.p,{children:"This is major milestone for edge deployment, as you will develop for the edge (Cloudflare Workers, Vercel Edge, ...) as conveniently as for a Node.js/Bun/Deno server."}),`
 `,e.jsxs(t.blockquote,{children:[`
 `,e.jsx(t.p,{children:"The Environment API has been developed with tight feedback from the Cloudflare Workers team."}),`
 `]}),`
