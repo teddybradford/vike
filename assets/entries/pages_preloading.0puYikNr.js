@@ -1,4 +1,4 @@
-import{j as e,L as t,o as a,i as o}from"../chunks/chunk-BmDL4gbL.js";import{L as l}from"../chunks/chunk-CfId5D-w.js";/* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-OYyQQBLV.js";/* empty css                      *//* empty css                      */const i=[{pageSectionId:"early-hints",pageSectionLevel:2,pageSectionTitle:"Early hints"},{pageSectionId:"injectfilter",pageSectionLevel:2,pageSectionTitle:"`injectFilter()`"},{pageSectionId:"assets-manifest",pageSectionLevel:2,pageSectionTitle:"Assets Manifest"},{pageSectionId:"see-also",pageSectionLevel:2,pageSectionTitle:"See also"}];function r(n){const s={a:"a",blockquote:"blockquote",code:"code",figure:"figure",li:"li",p:"p",pre:"pre",span:"span",strong:"strong",ul:"ul",...n.components};return e.jsxs(e.Fragment,{children:[e.jsxs(s.blockquote,{children:[`
+import{j as e,L as t,o as a,i as o}from"../chunks/chunk-BmDL4gbL.js";import{L as n}from"../chunks/chunk-CfId5D-w.js";/* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-OYyQQBLV.js";/* empty css                      *//* empty css                      */const i=[{pageSectionId:"early-hints",pageSectionLevel:2,pageSectionTitle:"Early hints"},{pageSectionId:"injectfilter",pageSectionLevel:2,pageSectionTitle:"`injectFilter()`"},{pageSectionId:"assets-manifest",pageSectionLevel:2,pageSectionTitle:"Assets Manifest"},{pageSectionId:"see-also",pageSectionLevel:2,pageSectionTitle:"See also"}];function r(l){const s={a:"a",blockquote:"blockquote",code:"code",figure:"figure",li:"li",p:"p",pre:"pre",span:"span",strong:"strong",ul:"ul",...l.components};return e.jsxs(e.Fragment,{children:[e.jsxs(s.blockquote,{children:[`
 `,e.jsxs(s.p,{children:[e.jsx(s.strong,{children:"What is preloading?"})," Preloading denotes the practice of loading assets (JavaScript, CSS, images, etc.) before the browser discovers them in HTML/CSS/JavaScript code. That way you can reduce the network round trips required before the browser starts discovering and loading all dependencies."]}),`
 `]}),`
 `,e.jsx(s.p,{children:"By default, Vike automatically inject tags to your HTML such as:"}),`
@@ -7,10 +7,10 @@ import{j as e,L as t,o as a,i as o}from"../chunks/chunk-BmDL4gbL.js";import{L as
 `,e.jsx(s.li,{children:e.jsx(s.code,{children:'<link rel="stylesheet" type="text/css" href="style.css">'})}),`
 `,e.jsx(s.li,{children:e.jsx(s.code,{children:'<link rel="preload" href="font.ttf" as="font" type="font/ttf">'})}),`
 `]}),`
-`,e.jsxs(s.p,{children:["It does so using a preload strategy that works for most users, but you can use ",e.jsx(l,{href:"#injectfilter"})," to implement a custom preload strategy."]}),`
-`,e.jsxs(s.p,{children:["To improve preloading performance, you can use ",e.jsx(l,{href:"#early-hints"})," which Vike automatically generates."]}),`
+`,e.jsxs(s.p,{children:["It does so using a preload strategy that works for most users, but you can use ",e.jsx(n,{href:"#injectfilter"})," to implement a custom preload strategy."]}),`
+`,e.jsxs(s.p,{children:["To improve preloading performance, you can use ",e.jsx(n,{href:"#early-hints"})," which Vike automatically generates."]}),`
 `,e.jsxs(s.blockquote,{children:[`
-`,e.jsxs(s.p,{children:["See also ",e.jsx(l,{href:"/prefetchStaticAssets"}),"."]}),`
+`,e.jsxs(s.p,{children:["See also ",e.jsx(n,{href:"/prefetchStaticAssets"}),"."]}),`
 `]}),`
 `,e.jsx("h2",{id:"early-hints",children:"Early hints"}),`
 `,e.jsxs(s.p,{children:["You can use ",e.jsx(s.code,{children:"pageContext.httpResponse.earlyHints"})," for adding early hints (",e.jsx(s.code,{children:"103 Early Hint"}),")."]}),`
@@ -45,7 +45,7 @@ import{j as e,L as t,o as a,i as o}from"../chunks/chunk-BmDL4gbL.js";import{L as
 `,e.jsx(s.li,{children:e.jsx(s.a,{href:"https://developer.chrome.com/blog/early-hints/",children:"developer.chrome.com > Early Hints"})}),`
 `,e.jsx(s.li,{children:e.jsx(s.a,{href:"https://nodejs.org/dist/latest-v19.x/docs/api/http.html#responsewriteearlyhintshints-callback",children:"Node.js 18 Support"})}),`
 `,e.jsxs(s.li,{children:[`
-`,e.jsx(l,{href:"/nginx#early-hints"}),`
+`,e.jsx(n,{href:"/nginx#early-hints"}),`
 `]}),`
 `]}),`
 `,e.jsx("h2",{id:"injectfilter",children:e.jsx("code",{children:"injectFilter()"})}),`
@@ -75,24 +75,27 @@ import{j as e,L as t,o as a,i as o}from"../chunks/chunk-BmDL4gbL.js";import{L as
 `,e.jsx(s.span,{"data-line":"",children:" "}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"  return"}),e.jsx(s.span,{style:{color:"#24292E"},children:" { documentHtml, injectFilter }"})]}),`
 `,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#24292E"},children:"}"})})]})})}),`
-`,e.jsxs(s.p,{children:["See ",e.jsx(l,{href:"/injectFilter"}),"."]}),`
+`,e.jsxs(s.p,{children:["See ",e.jsx(n,{href:"/injectFilter"}),"."]}),`
 `,e.jsx("h2",{id:"assets-manifest",children:"Assets Manifest"}),`
-`,e.jsxs(s.p,{children:["By using ",e.jsxs(l,{href:"/getGlobalContext",children:[e.jsx(s.code,{children:"getGlobalContextSync()"})," or ",e.jsx(s.code,{children:"getGlobalContextAsync()"})]}),`, you can access the so-called "assets manifest": the dependency graph of your app's static assets.`]}),`
+`,e.jsxs(s.p,{children:["By using ",e.jsxs(n,{href:"/getGlobalContext",children:[e.jsx(s.code,{children:"getGlobalContextSync()"})," or ",e.jsx(s.code,{children:"getGlobalContextAsync()"})]}),`, you can access the so-called "assets manifest": the dependency graph of your app's static assets.`]}),`
 `,e.jsxs(s.blockquote,{children:[`
 `,e.jsx(s.p,{children:"The assets manifest is only available in production."}),`
 `]}),`
 `,e.jsx("h2",{id:"see-also",children:"See also"}),`
 `,e.jsxs(s.ul,{children:[`
 `,e.jsxs(s.li,{children:[`
-`,e.jsx(l,{href:"/injectFilter"}),`
+`,e.jsx(n,{href:"/injectFilter"}),`
 `]}),`
 `,e.jsxs(s.li,{children:[`
-`,e.jsx(l,{href:"/prefetchStaticAssets"}),`
+`,e.jsx(n,{href:"/prefetch"}),`
 `]}),`
 `,e.jsxs(s.li,{children:[`
-`,e.jsx(l,{href:"/streaming"}),`
+`,e.jsx(n,{href:"/prefetchStaticAssets"}),`
 `]}),`
 `,e.jsxs(s.li,{children:[`
-`,e.jsx(l,{href:"/getGlobalContext"}),`
+`,e.jsx(n,{href:"/streaming"}),`
 `]}),`
-`]})]})}function c(n={}){const{wrapper:s}=n.components||{};return s?e.jsx(s,{...n,children:e.jsx(r,{...n})}):r(n)}const d=Object.freeze(Object.defineProperty({__proto__:null,default:c,pageSectionsExport:i},Symbol.toStringTag,{value:"Module"})),A={isClientRuntimeLoaded:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:!0}},onBeforeRenderEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:{server:!0}}},dataEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:null}},Layout:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/Layout",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:t}},hydrationCanBeAborted:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/config",fileExportPathToShowToUser:["default","hydrationCanBeAborted"]},valueSerialized:{type:"js-serialized",value:!0}},onRenderClient:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/renderer/onRenderClient",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:a}},TopNavigation:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/+TopNavigation.tsx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:o}},Page:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/preloading/+Page.mdx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:d}}};export{A as configValuesSerialized};
+`,e.jsxs(s.li,{children:[`
+`,e.jsx(n,{href:"/getGlobalContext"}),`
+`]}),`
+`]})]})}function c(l={}){const{wrapper:s}=l.components||{};return s?e.jsx(s,{...l,children:e.jsx(r,{...l})}):r(l)}const d=Object.freeze(Object.defineProperty({__proto__:null,default:c,pageSectionsExport:i},Symbol.toStringTag,{value:"Module"})),A={isClientRuntimeLoaded:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:!0}},onBeforeRenderEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:{server:!0}}},dataEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:null}},Layout:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/Layout",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:t}},hydrationCanBeAborted:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/config",fileExportPathToShowToUser:["default","hydrationCanBeAborted"]},valueSerialized:{type:"js-serialized",value:!0}},onRenderClient:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/renderer/onRenderClient",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:a}},TopNavigation:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/+TopNavigation.tsx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:o}},Page:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/preloading/+Page.mdx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:d}}};export{A as configValuesSerialized};
