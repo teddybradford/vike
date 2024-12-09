@@ -3,7 +3,7 @@ import{j as e,L as t,o as r,i as a}from"../chunks/chunk-CKKSsm7N.js";import"../c
 `,e.jsxs(o.p,{children:["Vike will soon introduce what we call an ",e.jsx(o.em,{children:"Open Source Pricing"}),": a new kind of business model that keeps Vike open source, as well as accessible (so that everyone, regardless of financial resources, can use Vike)."]}),`
 `,e.jsxs(o.ul,{children:[`
 `,e.jsxs(o.li,{children:["The entire code ",e.jsx(o.strong,{children:"stays 100% open source"})," (MIT License)."]}),`
-`,e.jsxs(o.li,{children:["Everything ",e.jsx(o.strong,{children:"stays 100% gratis for engineers"}),". You don't need any license key and you get the full Vike experience without any restriction, just like any other open soure tool."]}),`
+`,e.jsxs(o.li,{children:["Everything ",e.jsx(o.strong,{children:"stays 100% gratis for engineers"}),". You don't need any license key and you get the full Vike experience without any restriction, just like any other open source tool."]}),`
 `,e.jsxs(o.li,{children:[e.jsx(o.strong,{children:"Companies pay a small amount:"}),`
 `,e.jsxs(o.ul,{children:[`
 `,e.jsxs(o.li,{children:[e.jsx(o.strong,{children:"Pay what you can"}),". Companies can choose the amount they want to pay while we trust them to make a fair choice. (If too many pay too little, we may switch to a fixed pricing.)"]}),`
