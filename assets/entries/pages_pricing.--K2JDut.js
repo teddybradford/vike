@@ -3,16 +3,16 @@ import{j as e,L as i,o as r,i as a}from"../chunks/chunk-DRQwrONA.js";import"../c
 `,e.jsxs(o.p,{children:["Vike will soon introduce what we call an ",e.jsx(o.em,{children:"Open Source Pricing"}),": a new kind of business model that keeps Vike open source, as well as accessible (so that everyone, regardless of financial resources, can use Vike)."]}),`
 `,e.jsxs(o.ul,{children:[`
 `,e.jsxs(o.li,{children:["The entire code ",e.jsx(o.strong,{children:"stays 100% open source"})," (MIT License)."]}),`
-`,e.jsxs(o.li,{children:["Everything ",e.jsx(o.strong,{children:"stays 100% gratis for engineers"}),". You don't need any license key and you get the full Vike experience without any restriction, just like any other open source tool."]}),`
+`,e.jsxs(o.li,{children:["Everything ",e.jsx(o.strong,{children:"stays 100% gratis for engineers"}),". You don't need any license key and you can use Vike without any restrictions, just like any other open source tool."]}),`
 `,e.jsxs(o.li,{children:[e.jsx(o.strong,{children:"Companies pay a small amount:"}),`
 `,e.jsxs(o.ul,{children:[`
-`,e.jsxs(o.li,{children:[e.jsx(o.strong,{children:"Pay what you can"}),". Companies can choose the amount they want to pay while we trust them to make a fair choice. (If too many pay too little, we may switch to a fixed pricing.)"]}),`
-`,e.jsxs(o.li,{children:[e.jsx(o.strong,{children:"Free trial"}),". If your Vike app is new or small, Vike is gratis and you don't need any license key: everything works just like any other open source tool."]}),`
-`,e.jsxs(o.li,{children:[e.jsx(o.strong,{children:"Apply for a free license key"}),".  You can apply for a free license key if your team cannot afford one or didn't incorporate a company yet. Write two or three sentences explaining your situation and we'll give you a free license key valid for six months (you can apply again after six months)."]}),`
+`,e.jsxs(o.li,{children:[e.jsx(o.strong,{children:"Pay what you can"}),". Companies choose the amount they want to pay while we trust them to make a fair choice. (If too many pay too little, we may switch to a fixed pricing.)"]}),`
+`,e.jsxs(o.li,{children:[e.jsx(o.strong,{children:"Free trial"}),". For new and small Vike apps, Vike is 100% gratis and you don't need any license key: everything works just like any other open source tool."]}),`
+`,e.jsxs(o.li,{children:[e.jsx(o.strong,{children:"Apply for a free license key"}),".  You can apply for a free license key if your team cannot afford one or didn't incorporate a company yet. Write two or three sentences explaining your situation and we'll give out a free license key valid for six months (you can apply again after six months)."]}),`
 `]}),`
 `]}),`
 `]}),`
-`,e.jsx(o.p,{children:"The Open Source Pricing is a major milestone for Vike's growth. It preserves what makes open source special while ensuring Vike's priorities are aligned with your interests through a transparent and sustainable relationship."}),`
+`,e.jsx(o.p,{children:"The Open Source Pricing is a major milestone for Vike's growth. It preserves what makes open source special while ensuring Vike's priorities are aligned with the interests of its users — through a transparent and sustainable relationship."}),`
 `,e.jsx("h3",{id:"how-does-it-work",children:"How does it work?"}),`
 `,e.jsx(o.p,{children:"For new or small projects nothing changes: you can use Vike just like any other open source tool for free and without any license key."}),`
 `,e.jsxs(o.p,{children:["For larger projects, Vike shows a pesky toaster in production ",e.jsx(o.code,{children:"Get your license key at ..."})," which you can remove by purchasing a license key and installing it with ",e.jsx(o.code,{children:"$ vike add-key 4f7DK1q29X5WJ6G3b9t1"}),"."]}),`
