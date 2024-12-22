@@ -50,7 +50,7 @@ import{j as e,a as t,L as k,o as S,i as v}from"../chunks/chunk-C75gEwxg.js";impo
 `,e.jsx(n.p,{children:"No, Vike stays 100% gratis for companies sponsoring Vike (Bronze, Silver, Gold, and Platinum). Reach out and we will give you a free license key."}),`
 `,e.jsx("h3",{id:"is-vike-still-free-software",children:"Is Vike still Free Software?"}),`
 `,e.jsxs(n.p,{children:['Vike is still free as in "free speech" (not as in free beer). See the explanation ',e.jsx(n.a,{href:"https://www.gnu.org/philosophy/free-sw.en.html",children:"by the Free Software Foundation"})," and ",e.jsx(n.a,{href:"https://en.wikipedia.org/wiki/Free_software",children:"by Wikipedia"}),"."]}),`
-`,e.jsxs(n.p,{children:["Our passion for Libre Software was the reason we invented the Open Source Pricing. We believe ",e.jsx(d,{doNotInferSectionTitle:!0,href:"#why-not-another-business-model",children:"other business models are fundamentally flawed"}),"."]}),`
+`,e.jsxs(n.p,{children:["We believe in Libre Software and that's we invented the Open Source Pricing: ",e.jsx(d,{doNotInferSectionTitle:!0,href:"#why-not-another-business-model",children:"other business models are fundamentally flawed"}),"."]}),`
 `,e.jsx(n.p,{children:"Code remains not only 100% open source but also 100% accessible: we believe money (and the lack thereof) should never be a showstopper for using code."}),`
 `,e.jsx("h3",{id:"why-not-another-business-model",children:"Why not another business model?"}),`
 `,e.jsx(n.p,{children:"We believe other business models are flawed in fundamental ways."}),`
