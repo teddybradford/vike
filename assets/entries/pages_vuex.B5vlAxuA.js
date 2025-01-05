@@ -2,7 +2,7 @@ import{j as e,L as a,o as n,i as l}from"../chunks/chunk-B3EBmq93.js";import{L as
 `,e.jsx(t.p,{children:"To manually integrate Vuex, see:"}),`
 `,e.jsxs(t.ul,{children:[`
 `,e.jsxs(t.li,{children:[`
-`,e.jsx(i,{href:"/stores#ssr",doNotInferSectionTitle:!0}),`
+`,e.jsx(i,{href:"/store#ssr",doNotInferSectionTitle:!0}),`
 `]}),`
 `,e.jsx(t.li,{children:e.jsx(t.a,{href:"https://vuejs.org/guide/scaling-up/ssr.html#cross-request-state-pollution",children:"Vue > SSR > Cross-Request State Pollution"})}),`
 `]}),`

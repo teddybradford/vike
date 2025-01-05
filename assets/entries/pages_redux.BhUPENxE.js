@@ -2,7 +2,7 @@ import{j as e,L as n,o as l,i as s}from"../chunks/chunk-B3EBmq93.js";import{L as
 `,e.jsx(t.p,{children:"To manually integrate Redux, see:"}),`
 `,e.jsxs(t.ul,{children:[`
 `,e.jsxs(t.li,{children:[`
-`,e.jsx(i,{href:"/stores#ssr",doNotInferSectionTitle:!0}),`
+`,e.jsx(i,{href:"/store#ssr",doNotInferSectionTitle:!0}),`
 `]}),`
 `,e.jsx(t.li,{children:e.jsx(t.a,{href:"https://redux.js.org/recipes/server-rendering",children:"Redux > SSR Recipe"})}),`
 `]}),`

@@ -115,7 +115,7 @@ import{j as e,L as l,o,i as r}from"../chunks/chunk-B3EBmq93.js";import{L as s}fr
 `,e.jsxs(n.p,{children:[e.jsx(n.a,{href:"https://github.com/vikejs/vike/issues/1715",children:"Contributions welcome to create extensions"}),"."]}),`
 `]}),`
 `,e.jsx("h3",{id:"custom-integration",children:"Custom integration"}),`
-`,e.jsxs(n.p,{children:["For complete control over integration, instead of using an extension, you can manually integrate a store yourself. See ",e.jsx(s,{href:"/stores"}),"."]}),`
+`,e.jsxs(n.p,{children:["For complete control over integration, instead of using an extension, you can manually integrate a store yourself. See ",e.jsx(s,{href:"/store"}),"."]}),`
 `,e.jsx("h2",{id:"see-also",children:"See also"}),`
 `,e.jsxs(n.ul,{children:[`
 `,e.jsxs(n.li,{children:[`

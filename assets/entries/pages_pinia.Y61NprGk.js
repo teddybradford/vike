@@ -3,7 +3,7 @@ import{j as e,L as r,o as l,i as s}from"../chunks/chunk-B3EBmq93.js";import{L as
 `,e.jsx(i.p,{children:"To manually integrate Pinia, see:"}),`
 `,e.jsxs(i.ul,{children:[`
 `,e.jsxs(i.li,{children:[`
-`,e.jsx(n,{href:"/stores#ssr",doNotInferSectionTitle:!0}),`
+`,e.jsx(n,{href:"/store#ssr",doNotInferSectionTitle:!0}),`
 `]}),`
 `,e.jsx(i.li,{children:e.jsx(i.a,{href:"https://pinia.vuejs.org/ssr/",children:"Pinia > Server Side Rendering (SSR)"})}),`
 `]}),`
@@ -22,7 +22,7 @@ import{j as e,L as r,o as l,i as s}from"../chunks/chunk-B3EBmq93.js";import{L as
 `,e.jsx("h2",{id:"see-also",children:"See also"}),`
 `,e.jsxs(i.ul,{children:[`
 `,e.jsxs(i.li,{children:[`
-`,e.jsx(n,{href:"/stores#ssr",doNotInferSectionTitle:!0}),`
+`,e.jsx(n,{href:"/store#ssr",doNotInferSectionTitle:!0}),`
 `]}),`
 `,e.jsx(i.li,{children:e.jsx(i.a,{href:"https://pinia.vuejs.org/ssr/",children:"Pinia > Server Side Rendering (SSR)"})}),`
 `]})]})}function u(t={}){const{wrapper:i}=t.components||{};return i?e.jsx(i,{...t,children:e.jsx(a,{...t})}):a(t)}const c=Object.freeze(Object.defineProperty({__proto__:null,default:u,pageSectionsExport:p},Symbol.toStringTag,{value:"Module"})),E={isClientRuntimeLoaded:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:!0}},onBeforeRenderEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:{server:!0}}},dataEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:null}},Layout:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/Layout",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:r}},hydrationCanBeAborted:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/config",fileExportPathToShowToUser:["default","hydrationCanBeAborted"]},valueSerialized:{type:"js-serialized",value:!0}},onRenderClient:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/renderer/onRenderClient",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:l}},TopNavigation:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/+TopNavigation.tsx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:s}},Page:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/pinia/+Page.mdx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:c}}};export{E as configValuesSerialized};
