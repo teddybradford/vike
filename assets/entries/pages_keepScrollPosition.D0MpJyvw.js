@@ -2,7 +2,7 @@ import{j as e,L as t,o as r,i}from"../chunks/chunk-B3EBmq93.js";import{L as l}fr
 `,"Type: ",e.jsx(n.code,{children:"boolean | string | string[] | ((pageContext: PageContextClient) => boolean | string | string[])"}),e.jsx(n.br,{}),`
 `,"Default value: ",e.jsx(n.code,{children:"false"})]}),`
 `,e.jsxs(n.p,{children:["The ",e.jsx(n.code,{children:"keepScrollPosition"})," setting enables you to control whether the page scrolls to the top upon navigation."]}),`
-`,e.jsxs(n.p,{children:["It's commonly used for nested layouts such as tabs, see ",e.jsx(l,{href:"/Layout#nested-layouts"}),"."]}),`
+`,e.jsxs(n.p,{children:["It's commonly used for nested layouts such as tabs, see ",e.jsx(l,{href:"/Layout#nested"}),"."]}),`
 `,e.jsxs(n.p,{children:["For a control on a link-by-link basis, see ",e.jsx(l,{href:"/clientRouting#settings",children:e.jsx(n.code,{children:'<a href="/some-url" keep-scroll-position />'})}),"."]}),`
 `,e.jsx("h2",{id:"basics",children:"Basics"}),`
 `,e.jsxs(n.p,{children:["By default, the page is scrolled to the top upon navigation. But if you set ",e.jsx(n.code,{children:"keepScrollPosition"})," to ",e.jsx(n.code,{children:"true"})," then the page's scroll position is preserved instead."]}),`
@@ -61,7 +61,7 @@ pages/product/@id/reviews/+Page.js
 `,e.jsx("h2",{id:"see-also",children:"See also"}),`
 `,e.jsxs(n.ul,{children:[`
 `,e.jsxs(n.li,{children:[`
-`,e.jsx(l,{href:"/Layout#nested-layouts"}),`
+`,e.jsx(l,{href:"/Layout#nested"}),`
 `]}),`
 `,e.jsxs(n.li,{children:[`
 `,e.jsx(l,{href:"/clientRouting#settings"}),`

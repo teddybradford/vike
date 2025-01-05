@@ -26,7 +26,7 @@ Client-side Routing can be worth it for having smooth page navigations giving su
 `,e.jsx(t.p,{children:"For example, on music players such as Spotify, the currently listened song should not be interrupted when the user navigates to a new page. Server Routing cannot preserve client-side state and, therefore, Client Routing is needed."}),`
 `,e.jsx(t.p,{children:e.jsx(t.em,{children:"Requirement: Client-side Routing."})}),`
 `,e.jsx("h3",{id:"nested-layouts",children:"Nested Layouts"}),`
-`,e.jsxs(t.p,{children:["Similarly to the previous section, when using ",e.jsx(n,{text:"Nested Layouts",href:"/Layout#nested-layouts"}),", the state of the outer page is preserved, which means Nested Layouts cannot be implemented using Server Routing."]}),`
+`,e.jsxs(t.p,{children:["Similarly to the previous section, when using ",e.jsx(n,{text:"Nested Layouts",href:"/Layout#nested"}),", the state of the outer page is preserved, which means Nested Layouts cannot be implemented using Server Routing."]}),`
 `,e.jsx(t.p,{children:e.jsx(t.em,{children:"Requirement: Client-side Routing."})}),`
 `,e.jsx("h3",{id:"third-party-api",children:"Third-party API"}),`
 `,e.jsx(t.p,{children:`For example, if you use Shopify's or Facebook's GraphQL API,

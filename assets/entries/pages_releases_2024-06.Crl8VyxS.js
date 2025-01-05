@@ -49,7 +49,7 @@ import{j as e,L as d,o,i as a}from"../chunks/chunk-B3EBmq93.js";import{L as i}fr
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"pages/product/@id/pricing/+Page.js"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"# Nested view"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#032F62"},children:"pages/product/@id/reviews/+Page.js"})})]})})}),`
-`,e.jsxs(n.p,{children:["See ",e.jsx(i,{href:"/Layout#nested-layouts"}),"."]}),`
+`,e.jsxs(n.p,{children:["See ",e.jsx(i,{href:"/Layout#nested"}),"."]}),`
 `,e.jsx(s,{children:e.jsxs(n.p,{children:["Authors: ",e.jsx(n.a,{href:"https://github.com/Blankeos",children:e.jsx(n.code,{children:"Blankeos"})}),", ",e.jsx(n.a,{href:"https://github.com/brillout",children:e.jsx(n.code,{children:"brillout"})})]})}),`
 `,e.jsx("h2",{id:"pages-marketing",children:e.jsx("code",{children:"pages/(marketing)/"})}),`
 `,e.jsx(n.p,{children:"You can now organize your pages into groups:"}),`
