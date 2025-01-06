@@ -59,7 +59,7 @@ import{j as e,L as o,o as a,i as l}from"../chunks/chunk-B4V7wIR1.js";import{L as
 `,e.jsx(n.p,{children:"If it turns out that your issue is caused by a Vike flaw, we will consider it a blocker on Vike's side and prioritize resolving it accordingly."}),`
 `,e.jsxs(n.p,{children:["In general, Vike ",e.jsx(s,{href:"#can-i-use-vike-to-achieve-what-i-want",children:"aims to be highly flexible"})," and resolving blockers is important to us, ideally by design and at the very least by providing help."]}),`
 `,e.jsx("h2",{id:"can-i-use-vike-to-achieve-what-i-want",children:"Can I use Vike to achieve what I want?"}),`
-`,e.jsxs(n.p,{children:["Vike prides itself on being a highly adaptable frontend framework. See for example the ",e.jsx(s,{href:"#can-i-use-vike-in-production",children:"use case of some of Vike sponsors"}),"."]}),`
+`,e.jsxs(n.p,{children:["Vike prides itself on being a highly adaptable frontend framework. See for example the ",e.jsx(s,{href:"/use-cases",children:"use case of some of Vike sponsors"}),"."]}),`
 `,e.jsx(n.p,{children:"Vike supports all common use cases:"}),`
 `,e.jsxs(n.ul,{children:[`
 `,e.jsxs(n.li,{children:[e.jsx(s,{href:"/ui-frameworks",children:"Any UI framework"})," (React, Vue, Solid, etc.), ",e.jsx(s,{href:"/integration",children:"any UI tool"})," (state management, data fetching, CSS framework, etc.)."]}),`
