@@ -36,7 +36,7 @@ import{j as e,a as o,L as k,o as v,i as S}from"../chunks/chunk-BK1_KbKq.js";impo
 `,e.jsx("br",{}),`
 `,e.jsx(t,{doNotInferSectionTitle:!0,href:"#how-does-it-work"}),`
 `,e.jsx("br",{}),`
-`,e.jsx(t,{doNotInferSectionTitle:!0,href:"#what-is-considered-a-small-app-vs-a-larger-app"}),`
+`,e.jsx(t,{doNotInferSectionTitle:!0,href:"#when-is-an-app-considered-small-or-large"}),`
 `,e.jsx("br",{}),`
 `,e.jsx(t,{doNotInferSectionTitle:!0,href:"#do-sponsors-have-to-pay"}),`
 `,e.jsx("br",{}),`
