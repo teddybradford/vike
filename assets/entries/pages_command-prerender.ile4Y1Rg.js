@@ -3,10 +3,10 @@ import{j as e,L as o,o as a,i as l}from"../chunks/chunk-BK1_KbKq.js";import{L as
 `,e.jsxs(r.blockquote,{children:[`
 `,e.jsxs(r.p,{children:["Use ",e.jsx(t,{href:"/prerender#disableautorun"})," if you don't want pre-rendering to be run twice."]}),`
 `]}),`
-`,e.jsx(r.p,{children:"The Vike CLI doesn't have any option, instead:"}),`
+`,e.jsx(r.p,{children:"The Vike CLI doesn't have any option, instead use:"}),`
 `,e.jsxs(r.ul,{children:[`
-`,e.jsxs(r.li,{children:["Use the ",e.jsxs(t,{href:"/prerender",children:[e.jsx(r.code,{children:"prerender"})," setting"]}),", or"]}),`
-`,e.jsxs(r.li,{children:["use the ",e.jsxs(t,{href:"/prerender-programmatic",children:[e.jsx(r.code,{children:"prerender()"})," API"]}),"."]}),`
+`,e.jsxs(r.li,{children:["the ",e.jsxs(t,{href:"/prerender",children:[e.jsx(r.code,{children:"prerender"})," setting"]}),", or"]}),`
+`,e.jsxs(r.li,{children:["the ",e.jsxs(t,{href:"/prerender-programmatic",children:[e.jsx(r.code,{children:"prerender()"})," API"]}),"."]}),`
 `]}),`
 `,e.jsx("h2",{id:"see-also",children:"See also"}),`
 `,e.jsxs(r.ul,{children:[`
