@@ -1,0 +1,59 @@
+import{j as e,L as a,o as r,i as o}from"../chunks/chunk-CUJVd1ox.js";import{L as s}from"../chunks/chunk-Cm3UaQpR.js";/* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-DMg5Rc46.js";/* empty css                      */const t=[{pageSectionId:"options",pageSectionLevel:2,pageSectionTitle:"Options"},{pageSectionId:"see-also",pageSectionLevel:2,pageSectionTitle:"See also"}];function i(l){const n={a:"a",blockquote:"blockquote",code:"code",figure:"figure",li:"li",p:"p",pre:"pre",span:"span",ul:"ul",...l.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"import"}),e.jsx(n.span,{style:{color:"#24292E"},children:" { dev, build, preview, prerender } "}),e.jsx(n.span,{style:{color:"#D73A49"},children:"from"}),e.jsx(n.span,{style:{color:"#032F62"},children:" 'vike/api'"})]}),`
+`,e.jsx(n.span,{"data-line":"",children:" "}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// Same as CLI `$ vike dev`"})}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"await"}),e.jsx(n.span,{style:{color:"#6F42C1"},children:" dev"}),e.jsx(n.span,{style:{color:"#24292E"},children:"()"})]}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"console."}),e.jsx(n.span,{style:{color:"#6F42C1"},children:"log"}),e.jsx(n.span,{style:{color:"#24292E"},children:"("}),e.jsx(n.span,{style:{color:"#032F62"},children:"'Dev server is ready'"}),e.jsx(n.span,{style:{color:"#24292E"},children:")"})]}),`
+`,e.jsx(n.span,{"data-line":"",children:" "}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// Same as CLI `$ vike build`"})}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"await"}),e.jsx(n.span,{style:{color:"#6F42C1"},children:" build"}),e.jsx(n.span,{style:{color:"#24292E"},children:"()"})]}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"console."}),e.jsx(n.span,{style:{color:"#6F42C1"},children:"log"}),e.jsx(n.span,{style:{color:"#24292E"},children:"("}),e.jsx(n.span,{style:{color:"#032F62"},children:"'Build is done'"}),e.jsx(n.span,{style:{color:"#24292E"},children:")"})]}),`
+`,e.jsx(n.span,{"data-line":"",children:" "}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// Same as CLI `$ vike preview`"})}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"await"}),e.jsx(n.span,{style:{color:"#6F42C1"},children:" preview"}),e.jsx(n.span,{style:{color:"#24292E"},children:"()"})]}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"console."}),e.jsx(n.span,{style:{color:"#6F42C1"},children:"log"}),e.jsx(n.span,{style:{color:"#24292E"},children:"("}),e.jsx(n.span,{style:{color:"#032F62"},children:"'Preview server is ready'"}),e.jsx(n.span,{style:{color:"#24292E"},children:")"})]}),`
+`,e.jsx(n.span,{"data-line":"",children:" "}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// Same as CLI `$ vike prerender`"})}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"await"}),e.jsx(n.span,{style:{color:"#6F42C1"},children:" prerender"}),e.jsx(n.span,{style:{color:"#24292E"},children:"()"})]}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"console."}),e.jsx(n.span,{style:{color:"#6F42C1"},children:"log"}),e.jsx(n.span,{style:{color:"#24292E"},children:"("}),e.jsx(n.span,{style:{color:"#032F62"},children:"'Pre-rendering is done'"}),e.jsx(n.span,{style:{color:"#24292E"},children:")"})]})]})})}),`
+`,e.jsx("h2",{id:"options",children:"Options"}),`
+`,e.jsxs(n.p,{children:["All API functions have the option ",e.jsx(n.code,{children:"{ viteConfig: { /*...*/ }}"}),". (It's the only option.)"]}),`
+`,e.jsxs(n.blockquote,{children:[`
+`,e.jsxs(n.p,{children:["We generally recommend to define your Vite settings in your ",e.jsx(n.code,{children:"vite.config.js"})," file instead of using the ",e.jsx(n.code,{children:"viteConfig"})," option. The API automatically loads your ",e.jsx(n.code,{children:"vite.config.js"})," file (just like the CLI)."]}),`
+`]}),`
+`,e.jsxs(n.p,{children:["If you want to define Vite settings outside of your app (typically when ",e.jsx(s,{href:"/build-your-own-framework",children:"building your own framework"}),") you can do this:"]}),`
+`,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"import"}),e.jsx(n.span,{style:{color:"#24292E"},children:" { dev } "}),e.jsx(n.span,{style:{color:"#D73A49"},children:"from"}),e.jsx(n.span,{style:{color:"#032F62"},children:" 'vike/api'"})]}),`
+`,e.jsx(n.span,{"data-line":"",children:" "}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"await"}),e.jsx(n.span,{style:{color:"#6F42C1"},children:" dev"}),e.jsx(n.span,{style:{color:"#24292E"},children:"({"})]}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"  viteConfig: {"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"    // vite.config.js can live in node_modules/my-framework/src/vite.config.ts"})}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"    configFile: "}),e.jsx(n.span,{style:{color:"#032F62"},children:"'./path/to/vite.config.js'"}),e.jsx(n.span,{style:{color:"#24292E"},children:","})]}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"    // The app's root can be somewhere completely else than vite.config.js"})}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"    root: "}),e.jsx(n.span,{style:{color:"#032F62"},children:"'./path/to/app/'"})]}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"    // Some Vite settings overriding vite.config.js"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"    /* ... */"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"  }"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"})"})}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"console."}),e.jsx(n.span,{style:{color:"#6F42C1"},children:"log"}),e.jsx(n.span,{style:{color:"#24292E"},children:"("}),e.jsx(n.span,{style:{color:"#032F62"},children:"'Dev server is ready'"}),e.jsx(n.span,{style:{color:"#24292E"},children:")"})]})]})})}),`
+`,e.jsx(n.p,{children:"If you want to define your entire Vite config programmatically:"}),`
+`,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"import"}),e.jsx(n.span,{style:{color:"#24292E"},children:" { build } "}),e.jsx(n.span,{style:{color:"#D73A49"},children:"from"}),e.jsx(n.span,{style:{color:"#032F62"},children:" 'vike/api'"})]}),`
+`,e.jsx(n.span,{"data-line":"",children:" "}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"await"}),e.jsx(n.span,{style:{color:"#6F42C1"},children:" build"}),e.jsx(n.span,{style:{color:"#24292E"},children:"({"})]}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"  viteConfig: {"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"    // Don't load any vite.config.js"})}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"    configFile: "}),e.jsx(n.span,{style:{color:"#005CC5"},children:"false"}),e.jsx(n.span,{style:{color:"#24292E"},children:","})]}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"    // All Vite settings"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"    /* ... */"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"  }"})}),`
+`,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"})"})}),`
+`,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"console."}),e.jsx(n.span,{style:{color:"#6F42C1"},children:"log"}),e.jsx(n.span,{style:{color:"#24292E"},children:"("}),e.jsx(n.span,{style:{color:"#032F62"},children:"'Build is done'"}),e.jsx(n.span,{style:{color:"#24292E"},children:")"})]})]})})}),`
+`,e.jsxs(n.p,{children:["See also: ",e.jsxs(n.a,{href:"https://vitejs.dev/guide/api-javascript.html#inlineconfig",children:["Vite > JavaScript API > ",e.jsx(n.code,{children:"InlineConfig"})]})]}),`
+`,e.jsx("h2",{id:"see-also",children:"See also"}),`
+`,e.jsxs(n.ul,{children:[`
+`,e.jsx(n.li,{children:e.jsx(n.a,{href:"https://vite.dev/guide/api-javascript",children:"Vite > JavaScript API"})}),`
+`,e.jsxs(n.li,{children:[`
+`,e.jsx(s,{href:"/cli"}),`
+`]}),`
+`,e.jsxs(n.li,{children:[`
+`,e.jsx(s,{href:"/build-your-own-framework"}),`
+`]}),`
+`]})]})}function d(l={}){const{wrapper:n}=l.components||{};return n?e.jsx(n,{...l,children:e.jsx(i,{...l})}):i(l)}const c=Object.freeze(Object.defineProperty({__proto__:null,default:d,pageSectionsExport:t},Symbol.toStringTag,{value:"Module"})),A={isClientRuntimeLoaded:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:!0}},onBeforeRenderEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:{server:!0}}},dataEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:null}},Layout:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/Layout",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:a}},hydrationCanBeAborted:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/config",fileExportPathToShowToUser:["default","hydrationCanBeAborted"]},valueSerialized:{type:"js-serialized",value:!0}},onRenderClient:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/renderer/onRenderClient",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:r}},TopNavigation:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/+TopNavigation.tsx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:o}},Page:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/api/+Page.mdx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:c}}};export{A as configValuesSerialized};
