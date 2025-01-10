@@ -15,7 +15,7 @@ import{j as e,L as r,o as s,i as d}from"../chunks/chunk-CUJVd1ox.js";import{L as
 `,e.jsxs(n.ul,{children:[`
 `,e.jsxs(n.li,{children:["Upon starting your server in production, make sure to set ",e.jsx(n.code,{children:"process.env.NODE_ENV"}),". (E.g. ",e.jsx(n.code,{children:"$ NODE_ENV='production' node server/index.js"}),".)"]}),`
 `,e.jsxs(n.li,{children:["Upon building (",e.jsx(n.code,{children:"$ vike build"}),"), Vite automatically sets ",e.jsx(n.code,{children:"process.env.NODE_ENV"})," to ",e.jsx(n.code,{children:"'production'"}),"."]}),`
-`,e.jsxs(n.li,{children:["Upon manually triggering pre-rendering (",e.jsx(t,{href:"/command-prerender",children:e.jsx(n.code,{children:"$ vike prerender"})}),"), Vike automatically sets ",e.jsx(n.code,{children:"process.env.NODE_ENV"})," to ",e.jsx(n.code,{children:"'production'"}),"."]}),`
+`,e.jsxs(n.li,{children:["Upon manually triggering pre-rendering (",e.jsx(t,{href:"/cli",children:e.jsx(n.code,{children:"$ vike prerender"})}),"), Vike automatically sets ",e.jsx(n.code,{children:"process.env.NODE_ENV"})," to ",e.jsx(n.code,{children:"'production'"}),"."]}),`
 `]}),`
 `]}),`
 `]}),`

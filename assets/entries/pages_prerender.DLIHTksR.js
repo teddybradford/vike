@@ -137,10 +137,10 @@ But some static hosts prefer the other way.`}),`
 `,e.jsx(n.p,{children:"You can then manually trigger pre-rendering using:"}),`
 `,e.jsxs(n.ul,{children:[`
 `,e.jsxs(n.li,{children:[`
-`,e.jsx(s,{href:"/command-prerender"}),`
+`,e.jsx(s,{href:"/cli"}),`
 `]}),`
 `,e.jsxs(n.li,{children:[`
-`,e.jsx(s,{href:"/prerender-programmatic"}),`
+`,e.jsx(s,{href:"/api#prerender",doNotInferSectionTitle:!0}),`
 `]}),`
 `]}),`
 `,e.jsx("h2",{id:"see-also",children:"See also"}),`

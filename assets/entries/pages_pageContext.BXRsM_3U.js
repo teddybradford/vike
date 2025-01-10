@@ -243,6 +243,9 @@ import{j as e,L as a,o as t,i}from"../chunks/chunk-CUJVd1ox.js";import{L as s}fr
 `,e.jsxs(n.blockquote,{children:[`
 `,e.jsxs(n.p,{children:["Consequently, the initial ",e.jsx(n.code,{children:"pageContext"})," value of a pre-rendered page is set in stone at build-time."]}),`
 `]}),`
+`,e.jsxs(n.blockquote,{children:[`
+`,e.jsxs(n.p,{children:["Upon pre-redering, a different ",e.jsx(n.code,{children:"pageContext"})," object is created for each page."]}),`
+`]}),`
 `,e.jsx("h2",{id:"see-also",children:"See also"}),`
 `,e.jsxs(n.ul,{children:[`
 `,e.jsxs(n.li,{children:[`

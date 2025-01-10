@@ -30,7 +30,7 @@ that you can deploy to so-called "static hosts" such as `,e.jsx(n,{href:"/github
 `,e.jsx(d,{}),`
 `,e.jsxs(r.p,{children:["By default, all pages are pre-rendered. To pre-render only some pages, use the ",e.jsx(n,{href:"/prerender#partial",text:e.jsxs(e.Fragment,{children:[e.jsx(r.code,{children:"partial"})," option"]})})," with ",e.jsx(n,{href:"/prerender#toggle",text:e.jsx(r.code,{children:"prerender: false"})}),"."]}),`
 `,e.jsxs(r.p,{children:["If you pre-render all your pages, then you can use Vike's CLI instead of a server (",e.jsx(r.code,{children:"$ vike dev"})," and ",e.jsx(r.code,{children:"$ vike preview"}),"). See linked examples below."]}),`
-`,e.jsxs(r.p,{children:["You can programmatically invoke the pre-rendering process, see ",e.jsx(n,{href:"/prerender-programmatic"}),"."]}),`
+`,e.jsxs(r.p,{children:["You can programmatically invoke the pre-rendering process, see ",e.jsx(n,{href:"/api#prerender",doNotInferSectionTitle:!0}),"."]}),`
 `,e.jsx(r.p,{children:"React Example:"}),`
 `,e.jsxs(r.ul,{children:[`
 `,e.jsxs(r.li,{children:[e.jsx(s,{path:"/examples/react-full/vite.config.ts"})," (see setting ",e.jsx("code",{children:"prerender"})," option to ",e.jsx(r.code,{children:"true"}),")"]}),`
@@ -81,15 +81,15 @@ that you can deploy to so-called "static hosts" such as `,e.jsx(n,{href:"/github
 `,e.jsx(n,{href:"/prerender"}),`
 `]}),`
 `,e.jsxs(r.li,{children:[`
-`,e.jsx(n,{href:"/prerender-programmatic"}),`
-`]}),`
-`,e.jsxs(r.li,{children:[`
 `,e.jsx(n,{href:"/onBeforePrerenderStart"}),`
 `]}),`
 `,e.jsxs(r.li,{children:[`
 `,e.jsx(n,{href:"/onPrerenderStart"}),`
 `]}),`
 `,e.jsxs(r.li,{children:[`
-`,e.jsx(n,{href:"/command-prerender"}),`
+`,e.jsx(n,{href:"/api#prerender",doNotInferSectionTitle:!0}),`
+`]}),`
+`,e.jsxs(r.li,{children:[`
+`,e.jsx(n,{href:"/cli"}),`
 `]}),`
 `]})]})}function h(t={}){const{wrapper:r}=t.components||{};return r?e.jsx(r,{...t,children:e.jsx(i,{...t})}):i(t)}const p=Object.freeze(Object.defineProperty({__proto__:null,default:h,pageSectionsExport:c},Symbol.toStringTag,{value:"Module"})),k={isClientRuntimeLoaded:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:!0}},onBeforeRenderEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:{server:!0}}},dataEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:null}},Layout:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/Layout",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:o}},hydrationCanBeAborted:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/config",fileExportPathToShowToUser:["default","hydrationCanBeAborted"]},valueSerialized:{type:"js-serialized",value:!0}},onRenderClient:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/renderer/onRenderClient",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:a}},TopNavigation:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/+TopNavigation.tsx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:l}},Page:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/pre-rendering/+Page.mdx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:p}}};export{k as configValuesSerialized};

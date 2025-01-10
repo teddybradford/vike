@@ -24,15 +24,15 @@ import{j as e,L as s,o as t,i as d}from"../chunks/chunk-CUJVd1ox.js";import{L as
 `,e.jsxs(n.ul,{children:[`
 `,e.jsxs(n.li,{children:["Run ",e.jsx(n.code,{children:"$ vike build"}),", to build the client-side (",e.jsx(n.code,{children:"dist/client/"}),")."]}),`
 `,e.jsxs(n.li,{children:["Run ",e.jsx(n.code,{children:"$ vike build --ssr"}),", to build the server-side (",e.jsx(n.code,{children:"dist/server/"}),")."]}),`
-`,e.jsxs(n.li,{children:["Run the pre-rendering programmatically, see ",e.jsx(l,{href:"/prerender-programmatic"}),"."]}),`
+`,e.jsxs(n.li,{children:["Run the pre-rendering programmatically, see ",e.jsx(l,{href:"/api#prerender",doNotInferSectionTitle:!0}),"."]}),`
 `]}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["If your goal is only to ",e.jsx(l,{href:"/prerender-programmatic",children:"programmatically run pre-rendering"})," then consider using ",e.jsx(l,{href:"/prerender#disableautorun",children:e.jsx("code",{children:"prerender.disableAutoRun"})})," instead."]}),`
+`,e.jsxs(n.p,{children:["If your goal is only to ",e.jsx(l,{href:"/api#prerender",children:"programmatically run pre-rendering"})," then consider using ",e.jsx(l,{href:"/prerender#disableautorun",children:e.jsx("code",{children:"prerender.disableAutoRun"})})," instead."]}),`
 `]}),`
 `,e.jsx("h2",{id:"see-also",children:"See also"}),`
 `,e.jsxs(n.ul,{children:[`
 `,e.jsxs(n.li,{children:[`
-`,e.jsx(l,{href:"/prerender-programmatic"}),`
+`,e.jsx(l,{href:"/api#prerender",doNotInferSectionTitle:!0}),`
 `]}),`
 `,e.jsxs(n.li,{children:[`
 `,e.jsx(l,{href:"/prerender#disableautorun"}),`
