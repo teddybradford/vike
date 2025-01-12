@@ -18,7 +18,7 @@ import{j as e,a as t,L as k,o as S,i as v}from"../chunks/chunk-glUwZz9m.js";impo
 `,e.jsxs(n.li,{children:[`
 `,e.jsx(p,{name:"Proprietary | Closed Source",children:"closed sourced, not forkable, usually expensive."}),`
 `]}),`
-`]})]})}function N(i={}){const{wrapper:n}=i.components||{};return n?e.jsx(n,{...i,children:e.jsx(f,{...i})}):f(i)}const D=[{pageSectionId:"pricing",pageSectionLevel:4,pageSectionTitle:"Pricing"},{pageSectionId:"open-source-pricing",pageSectionLevel:4,pageSectionTitle:"Open Source Pricing"},{pageSectionId:"when-is-an-app-considered-small-or-large",pageSectionLevel:3,pageSectionTitle:'When is an app considered "small" or "large"?'},{pageSectionId:"do-sponsors-have-to-pay",pageSectionLevel:3,pageSectionTitle:"Do sponsors have to pay?"},{pageSectionId:"how-does-it-work",pageSectionLevel:3,pageSectionTitle:"How does it work?"},{pageSectionId:"why-zero-investors",pageSectionLevel:3,pageSectionTitle:"Why zero-investors?"},{pageSectionId:"is-vike-still-free-software",pageSectionLevel:3,pageSectionTitle:"Is Vike still Free Software?"},{pageSectionId:"why-not-another-business-model",pageSectionLevel:3,pageSectionTitle:"Why not another business model?"}];function y(i){const n={a:"a",blockquote:"blockquote",code:"code",em:"em",li:"li",p:"p",strong:"strong",ul:"ul",...i.components};return e.jsxs(e.Fragment,{children:[e.jsx(T,{children:"The Open Source Pricing isn't implemented yet."}),`
+`]})]})}function N(i={}){const{wrapper:n}=i.components||{};return n?e.jsx(n,{...i,children:e.jsx(f,{...i})}):f(i)}const D=[{pageSectionId:"pricing",pageSectionLevel:4,pageSectionTitle:"Pricing"},{pageSectionId:"open-source-pricing",pageSectionLevel:4,pageSectionTitle:"Open Source Pricing"},{pageSectionId:"when-is-an-app-considered-small-or-large",pageSectionLevel:2,pageSectionTitle:'When is an app considered "small" or "large"?'},{pageSectionId:"do-sponsors-have-to-pay",pageSectionLevel:2,pageSectionTitle:"Do sponsors have to pay?"},{pageSectionId:"how-does-it-work",pageSectionLevel:2,pageSectionTitle:"How does it work?"},{pageSectionId:"why-zero-investors",pageSectionLevel:2,pageSectionTitle:"Why zero-investors?"},{pageSectionId:"is-vike-still-free-software",pageSectionLevel:2,pageSectionTitle:"Is Vike still Free Software?"},{pageSectionId:"why-not-another-business-model",pageSectionLevel:2,pageSectionTitle:"Why not another business model?"}];function y(i){const n={a:"a",blockquote:"blockquote",code:"code",em:"em",li:"li",p:"p",strong:"strong",ul:"ul",...i.components};return e.jsxs(e.Fragment,{children:[e.jsx(T,{children:"The Open Source Pricing isn't implemented yet."}),`
 `,e.jsx("div",{style:{display:"flex",justifyContent:"center",marginTop:37,marginBottom:30},children:e.jsx("img",{src:P,style:{maxWidth:"100%"}})}),`
 `,e.jsxs(n.p,{children:["Vike will soon introduce what we call an ",e.jsx(n.em,{children:"Open Source Pricing"}),": a new kind of business model that keeps Vike open source, as well as accessible (so that everyone, regardless of financial resources, can use Vike)."]}),`
 `,e.jsxs(n.ul,{children:[`
@@ -47,7 +47,7 @@ import{j as e,a as t,L as k,o as S,i as v}from"../chunks/chunk-glUwZz9m.js";impo
 `,e.jsx("br",{}),`
 `,e.jsx(o,{doNotInferSectionTitle:!0,href:"#why-not-another-business-model"}),`
 `,e.jsx("br",{}),`
-`,e.jsx("h3",{id:"when-is-an-app-considered-small-or-large",children:'When is an app considered "small" or "large"?'}),`
+`,e.jsx("h2",{id:"when-is-an-app-considered-small-or-large",children:'When is an app considered "small" or "large"?'}),`
 `,e.jsx(n.p,{children:'An app is considered "large" if it has three or more developers who have committed regularly over the past three months.'}),`
 `,e.jsx(n.p,{children:"Consequently:"}),`
 `,e.jsxs(n.ul,{children:[`
@@ -57,9 +57,9 @@ import{j as e,a as t,L as k,o as S,i as v}from"../chunks/chunk-glUwZz9m.js";impo
 `,e.jsx(n.li,{children:"Small contributors, such as a designer making occasional commits, are free."}),`
 `]}),`
 `,e.jsx(n.p,{children:"You can apply for a free license key if your app is considered large but your company isn't large enough to pay for a license key."}),`
-`,e.jsx("h3",{id:"do-sponsors-have-to-pay",children:"Do sponsors have to pay?"}),`
+`,e.jsx("h2",{id:"do-sponsors-have-to-pay",children:"Do sponsors have to pay?"}),`
 `,e.jsx(n.p,{children:"No, Vike stays 100% gratis for companies sponsoring Vike (Bronze, Silver, Gold, and Platinum). Reach out and we will give you a free license key."}),`
-`,e.jsx("h3",{id:"how-does-it-work",children:"How does it work?"}),`
+`,e.jsx("h2",{id:"how-does-it-work",children:"How does it work?"}),`
 `,e.jsx(n.p,{children:"For new or small projects, you can use Vike just like any other open-source tool: 100% gratis and without any license key."}),`
 `,e.jsxs(n.p,{children:["For larger projects, Vike shows a pesky toaster ",e.jsx(n.code,{children:"Get your license key at ..."})," that you can remove by purchasing a license key. (You can apply for a free license key if you have limited resources.) You install the key by running ",e.jsx(n.code,{children:"$ vike add-key 4f7D-K1q2-9X5W-J6G3-b9t1"}),"."]}),`
 `,e.jsxs(n.blockquote,{children:[`
@@ -68,15 +68,15 @@ import{j as e,a as t,L as k,o as S,i as v}from"../chunks/chunk-glUwZz9m.js";impo
 `,e.jsxs(n.p,{children:["The ",e.jsx(n.code,{children:"vike"})," npm package will adopt a proprietary license requiring companies outside the free tier to purchase a license key. Vike's Git repository stays 100% MIT-licensed."]}),`
 `,e.jsx(n.p,{children:"In theory, since Vike is 100% open source, you could fork it, remove the pesky toaster, and build your own npm package. But maintaining a fork requires effort, so you might as well apply for a free license key which is much easier. We believe a trust-based relationship is mutually beneficial, whereas going rogue is a brittle setup with potential unforeseen setbacks."}),`
 `,e.jsxs(n.p,{children:["The ",e.jsx(n.code,{children:"vike"})," npm package works 100% offline, using asymmetric encryption (to validate license keys) and reading your Git history (to distinguish small apps from larger apps). It doesn't send any telemetry nor server requests."]}),`
-`,e.jsx("h3",{id:"why-zero-investors",children:"Why zero-investors?"}),`
+`,e.jsx("h2",{id:"why-zero-investors",children:"Why zero-investors?"}),`
 `,e.jsx(n.p,{children:"If a project accepts investor funding, it will eventually have to take radical decisions to generate massive amounts of revenue — typically aiming for $100 million annually which is the kind of return investors hope for when they invest."}),`
 `,e.jsx(n.p,{children:"This is often achieved with aggressive techniques such as vendor lock-in and steep fees. At the end of day, it will inevitably result in users having to pay a hefty bill in one form or another."}),`
 `,e.jsx(n.p,{children:"In contrast, the Open Source Pricing introduces a business relationship with users that is transparent, sustainable and stable."}),`
-`,e.jsx("h3",{id:"is-vike-still-free-software",children:"Is Vike still Free Software?"}),`
+`,e.jsx("h2",{id:"is-vike-still-free-software",children:"Is Vike still Free Software?"}),`
 `,e.jsxs(n.p,{children:['Vike is still free as in "free speech" (not as in free beer), see explanations ',e.jsx(n.a,{href:"https://www.gnu.org/philosophy/free-sw.en.html",children:"by the Free Software Foundation"})," and ",e.jsx(n.a,{href:"https://en.wikipedia.org/wiki/Free_software",children:"by Wikipedia"}),"."]}),`
 `,e.jsxs(n.p,{children:["We believe in Libre Software and we invented the Open Source Pricing because ",e.jsx(o,{doNotInferSectionTitle:!0,href:"#why-not-another-business-model",children:"other business models contradict Libre Software values"}),"."]}),`
 `,e.jsx(n.p,{children:"Code remains not only 100% open source but also 100% accessible: we believe money (and the lack thereof) should never prevent anyone from using code."}),`
-`,e.jsx("h3",{id:"why-not-another-business-model",children:"Why not another business model?"}),`
+`,e.jsx("h2",{id:"why-not-another-business-model",children:"Why not another business model?"}),`
 `,e.jsx(n.p,{children:"We believe other business models are flawed in fundamental ways."}),`
 `,e.jsx(n.p,{children:"The Open Source Pricing means:"}),`
 `,e.jsxs(n.ul,{children:[`
