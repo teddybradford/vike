@@ -1,6 +1,10 @@
 import{j as e,L as r,o as i,i as t}from"../chunks/chunk-D8Wrhgp5.js";import{L as s}from"../chunks/chunk-Cl_GWVhE.js";/* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-DMg5Rc46.js";/* empty css                      */const o=[{pageSectionId:"filesystem-routing",pageSectionLevel:2,pageSectionTitle:"Filesystem Routing"},{pageSectionId:"parameterized-routes",pageSectionLevel:3,pageSectionTitle:"Parameterized routes"},{pageSectionId:"groups",pageSectionLevel:3,pageSectionTitle:"Groups"},{pageSectionId:"src",pageSectionLevel:3,pageSectionTitle:"`src/`"},{pageSectionId:"domain-driven-file-structure",pageSectionLevel:3,pageSectionTitle:"Domain-driven file structure"},{pageSectionId:"route-string",pageSectionLevel:2,pageSectionTitle:"Route String"},{pageSectionId:"route-function",pageSectionLevel:2,pageSectionTitle:"Route Function"},{pageSectionId:"route-guards",pageSectionLevel:2,pageSectionTitle:"Route Guards"},{pageSectionId:"typescript",pageSectionLevel:2,pageSectionTitle:"TypeScript"},{pageSectionId:"react-router-vue-router",pageSectionLevel:2,pageSectionTitle:"React Router / Vue Router"},{pageSectionId:"see-also",pageSectionLevel:2,pageSectionTitle:"See also"}];function a(l){const n={a:"a",blockquote:"blockquote",code:"code",em:"em",figure:"figure",li:"li",p:"p",pre:"pre",span:"span",ul:"ul",...l.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.p,{children:"Overview of how to define the URL of your pages."}),`
 `,e.jsx("h2",{id:"filesystem-routing",children:"Filesystem Routing"}),`
 `,e.jsxs(n.p,{children:["Vike supports ",e.jsx(n.em,{children:"Filesystem Routing"}),": the URL of a page is determined by where the page is located on your filesystem."]}),`
+`,e.jsxs(n.blockquote,{children:[`
+`,e.jsxs(n.p,{children:["For detailed information see ",e.jsx(s,{href:"/filesystem-routing"})," instead."]}),`
+`]}),`
+`,e.jsx(n.p,{children:"For example:"}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"bash","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"bash","data-theme":"github-light",style:{display:"grid"},children:[e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#6F42C1"},children:"FILESYSTEM"}),e.jsx(n.span,{style:{color:"#032F62"},children:"                     URL"})]}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#24292E"},children:"====================           "}),e.jsx(n.span,{style:{color:"#032F62"},children:"======"})]}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#6F42C1"},children:"pages/index/+Page.js"}),e.jsx(n.span,{style:{color:"#032F62"},children:"           /"})]}),`
@@ -11,9 +15,6 @@ import{j as e,L as r,o as i,i as t}from"../chunks/chunk-D8Wrhgp5.js";import{L as
 `]}),`
 `,e.jsxs(n.blockquote,{children:[`
 `,e.jsxs(n.p,{children:[e.jsx(n.code,{children:"+"})," files are explained at ",e.jsx(s,{href:"/config#files",doNotInferSectionTitle:!0}),"."]}),`
-`]}),`
-`,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["For detailed information about Filesystem Routing, see ",e.jsx(s,{href:"/filesystem-routing"}),"."]}),`
 `]}),`
 `,e.jsx("h3",{id:"parameterized-routes",children:"Parameterized routes"}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"bash","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"bash","data-theme":"github-light",style:{display:"grid"},children:[e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#6F42C1"},children:"FILESYSTEM"}),e.jsx(n.span,{style:{color:"#032F62"},children:"                     URL"})]}),`
@@ -86,12 +87,7 @@ import{j as e,L as r,o as i,i as t}from"../chunks/chunk-D8Wrhgp5.js";import{L as
 `,e.jsxs(n.blockquote,{children:[`
 `,e.jsxs(n.p,{children:["The parameter ",e.jsx(n.code,{children:"id"})," is available at ",e.jsx(s,{href:"/pageContext",children:e.jsx(n.code,{children:"pageContext.routeParams.id"})}),"."]}),`
 `]}),`
-`,e.jsx(n.p,{children:"More information at:"}),`
-`,e.jsxs(n.ul,{children:[`
-`,e.jsxs(n.li,{children:[`
-`,e.jsx(s,{href:"/route-string"}),`
-`]}),`
-`]}),`
+`,e.jsxs(n.p,{children:["More information at ",e.jsx(s,{href:"/route-string"}),"."]}),`
 `,e.jsx("h2",{id:"route-function",children:"Route Function"}),`
 `,e.jsx(n.p,{children:"You can use Route Functions to get full programmatic flexibility for advanced routing logic."}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// /pages/product/edit/+route.js"})}),`
@@ -109,12 +105,7 @@ import{j as e,L as r,o as i,i as t}from"../chunks/chunk-D8Wrhgp5.js";import{L as
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"  const"}),e.jsx(n.span,{style:{color:"#24292E"},children:" [, "}),e.jsx(n.span,{style:{color:"#005CC5"},children:"id"}),e.jsx(n.span,{style:{color:"#24292E"},children:"] "}),e.jsx(n.span,{style:{color:"#D73A49"},children:"="}),e.jsx(n.span,{style:{color:"#24292E"},children:" match"})]}),`
 `,e.jsxs(n.span,{"data-line":"",children:[e.jsx(n.span,{style:{color:"#D73A49"},children:"  return"}),e.jsx(n.span,{style:{color:"#24292E"},children:" { routeParams: { id } }"})]}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#24292E"},children:"}"})})]})})}),`
-`,e.jsx(n.p,{children:"More information at:"}),`
-`,e.jsxs(n.ul,{children:[`
-`,e.jsxs(n.li,{children:[`
-`,e.jsx(s,{href:"/route-function"}),`
-`]}),`
-`]}),`
+`,e.jsxs(n.p,{children:["More information at ",e.jsx(s,{href:"/route-function"}),"."]}),`
 `,e.jsx("h2",{id:"route-guards",children:"Route Guards"}),`
 `,e.jsxs(n.p,{children:["You can use a ",e.jsx(n.code,{children:"guard()"})," hook to protect pages from unauthorized/unexpected access."]}),`
 `,e.jsx(n.figure,{"data-rehype-pretty-code-figure":"",children:e.jsx(n.pre,{style:{backgroundColor:"#fff",color:"#24292e"},tabIndex:"0","data-language":"js","data-theme":"github-light",children:e.jsxs(n.code,{"data-language":"js","data-theme":"github-light",style:{display:"grid"},children:[e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6A737D"},children:"// /pages/admin/+guard.js"})}),`
@@ -131,12 +122,7 @@ import{j as e,L as r,o as i,i as t}from"../chunks/chunk-D8Wrhgp5.js";import{L as
 `,e.jsxs(n.blockquote,{children:[`
 `,e.jsxs(n.p,{children:["This ",e.jsx(n.code,{children:"guard()"})," hook applies to all pages living at ",e.jsx(n.code,{children:"/pages/admin/**/*"}),", see ",e.jsx(s,{href:"/config#inheritance"}),"."]}),`
 `]}),`
-`,e.jsx(n.p,{children:"More information at:"}),`
-`,e.jsxs(n.ul,{children:[`
-`,e.jsxs(n.li,{children:[`
-`,e.jsx(s,{href:"/guard"}),`
-`]}),`
-`]}),`
+`,e.jsxs(n.p,{children:["More information at ",e.jsx(s,{href:"/guard"}),"."]}),`
 `,e.jsx("h2",{id:"typescript",children:"TypeScript"}),`
 `,e.jsxs(n.p,{children:["There is work-in-progress for adding type safety to routes, see ",e.jsx(n.a,{href:"https://github.com/vikejs/vike/issues/698",children:"#698 Typesafe Links"}),"."]}),`
 `,e.jsx("h2",{id:"react-router-vue-router",children:"React Router / Vue Router"}),`
