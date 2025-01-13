@@ -69,14 +69,11 @@ import{j as e,a as t,L as k,o as S,i as v}from"../chunks/chunk-glUwZz9m.js";impo
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6F42C1"},children:"/packages/my-other-app/"})}),`
 `,e.jsx(n.span,{"data-line":"",children:e.jsx(n.span,{style:{color:"#6F42C1"},children:"/packages/some-vike-component-wrapper/"})})]})})}),`
 `,e.jsxs(n.blockquote,{children:[`
-`,e.jsxs(n.p,{children:["Technically, it applies to domain names. A license key contains a list of domain names ",e.jsx(n.code,{children:"['example.org', 'example.com', ...]"})," for which the pesky toaster won't be shown. You specify that list of domain names when you purchase a license key."]}),`
-`]}),`
-`,e.jsxs(n.blockquote,{children:[`
 `,e.jsxs(n.p,{children:["See also: ",e.jsx(r,{href:"/build-your-own-framework"}),"."]}),`
 `]}),`
 `,e.jsx("h2",{id:"how-does-it-work",children:"How does it work?"}),`
 `,e.jsx(n.p,{children:"For new or small projects, you can use Vike just like any other open-source tool: 100% gratis and without any license key."}),`
-`,e.jsxs(n.p,{children:["For larger projects, Vike shows a pesky toaster ",e.jsx(n.code,{children:"Get your license key at ..."})," that you can remove by purchasing a license key. (You can apply for a free license key if you have limited resources.) You install the key by adding it to your ",e.jsx(n.code,{children:"+config.js"})," file, or by setting the ",e.jsx(n.code,{children:"VIKE_KEY"})," environment variable."]}),`
+`,e.jsxs(n.p,{children:["For larger projects, Vike shows a pesky toaster ",e.jsx(n.code,{children:"Get your license key at ..."})," in development (it's never shown in production) that you can remove by purchasing a license key. (Or you can apply for a free license key if you have limited monetary resources.) You install the key by adding it to your ",e.jsx(n.code,{children:"+config.js"})," file, or by setting the ",e.jsx(n.code,{children:"VIKE_KEY"})," environment variable."]}),`
 `,e.jsxs(n.blockquote,{children:[`
 `,e.jsxs(n.p,{children:["See also: ",e.jsx(r,{doNotInferSectionTitle:!0,href:"#when-is-an-app-considered-small-or-large"})]}),`
 `]}),`
