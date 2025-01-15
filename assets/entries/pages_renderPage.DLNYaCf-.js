@@ -25,7 +25,7 @@ import{j as e,b as r,L as o,o as i,i as t}from"../chunks/chunk-CdlJgYSQ.js";impo
 `,e.jsx(s.span,{"data-line":"",children:" "}),`
 `,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"// In this example we use Express.js but we could use any other server framework"})}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"import"}),e.jsx(s.span,{style:{color:"#24292E"},children:" express "}),e.jsx(s.span,{style:{color:"#D73A49"},children:"from"}),e.jsx(s.span,{style:{color:"#032F62"},children:" 'express'"})]}),`
-`,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"import"}),e.jsx(s.span,{style:{color:"#24292E"},children:" { renderPage } "}),e.jsx(s.span,{style:{color:"#D73A49"},children:"from"}),e.jsx(s.span,{style:{color:"#032F62"},children:" 'vike/server'"})]}),`
+`,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"import"}),e.jsx(s.span,{style:{color:"#24292E"},children:" { renderPage, createDevMiddleware } "}),e.jsx(s.span,{style:{color:"#D73A49"},children:"from"}),e.jsx(s.span,{style:{color:"#032F62"},children:" 'vike/server'"})]}),`
 `,e.jsx(s.span,{"data-line":"",children:" "}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"const"}),e.jsx(s.span,{style:{color:"#005CC5"},children:" isProduction"}),e.jsx(s.span,{style:{color:"#D73A49"},children:" ="}),e.jsx(s.span,{style:{color:"#24292E"},children:" process.env."}),e.jsx(s.span,{style:{color:"#005CC5"},children:"NODE_ENV"}),e.jsx(s.span,{style:{color:"#D73A49"},children:" ==="}),e.jsx(s.span,{style:{color:"#032F62"},children:" 'production'"})]}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"const"}),e.jsx(s.span,{style:{color:"#005CC5"},children:" root"}),e.jsx(s.span,{style:{color:"#D73A49"},children:" ="}),e.jsx(s.span,{style:{color:"#032F62"},children:" `${"}),e.jsx(s.span,{style:{color:"#24292E"},children:"__dirname"}),e.jsx(s.span,{style:{color:"#032F62"},children:"}/..`"})]}),`
@@ -36,17 +36,10 @@ import{j as e,b as r,L as o,o as i,i as t}from"../chunks/chunk-CdlJgYSQ.js";impo
 `,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"  // Create an Express.js server"})}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"  const"}),e.jsx(s.span,{style:{color:"#005CC5"},children:" app"}),e.jsx(s.span,{style:{color:"#D73A49"},children:" ="}),e.jsx(s.span,{style:{color:"#6F42C1"},children:" express"}),e.jsx(s.span,{style:{color:"#24292E"},children:"()"})]}),`
 `,e.jsx(s.span,{"data-line":"",children:" "}),`
-`,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"  // Vite integration"})}),`
+`,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"  // Dev/prod middleware"})}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"  if"}),e.jsx(s.span,{style:{color:"#24292E"},children:" ("}),e.jsx(s.span,{style:{color:"#D73A49"},children:"!"}),e.jsx(s.span,{style:{color:"#24292E"},children:"isProduction) {"})]}),`
-`,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"    // We instantiate Vite's development server and integrate its middleware to our server."})}),`
-`,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"    // ⚠️ We instantiate it only in development. (It isn't needed in production and it"})}),`
-`,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"    // would unnecessarily bloat our production server.)"})}),`
-`,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"    const"}),e.jsx(s.span,{style:{color:"#005CC5"},children:" vite"}),e.jsx(s.span,{style:{color:"#D73A49"},children:" ="}),e.jsx(s.span,{style:{color:"#D73A49"},children:" await"}),e.jsx(s.span,{style:{color:"#D73A49"},children:" import"}),e.jsx(s.span,{style:{color:"#24292E"},children:"("}),e.jsx(s.span,{style:{color:"#032F62"},children:"'vite'"}),e.jsx(s.span,{style:{color:"#24292E"},children:")"})]}),`
-`,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"    const"}),e.jsx(s.span,{style:{color:"#005CC5"},children:" viteDevMiddleware"}),e.jsx(s.span,{style:{color:"#D73A49"},children:" ="}),e.jsx(s.span,{style:{color:"#24292E"},children:" ("}),e.jsx(s.span,{style:{color:"#D73A49"},children:"await"}),e.jsx(s.span,{style:{color:"#24292E"},children:" vite."}),e.jsx(s.span,{style:{color:"#6F42C1"},children:"createServer"}),e.jsx(s.span,{style:{color:"#24292E"},children:"({"})]}),`
-`,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#24292E"},children:"      root,"})}),`
-`,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#24292E"},children:"      server: { middlewareMode: "}),e.jsx(s.span,{style:{color:"#005CC5"},children:"true"}),e.jsx(s.span,{style:{color:"#24292E"},children:" }"})]}),`
-`,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#24292E"},children:"    })).middlewares"})}),`
-`,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#24292E"},children:"    app."}),e.jsx(s.span,{style:{color:"#6F42C1"},children:"use"}),e.jsx(s.span,{style:{color:"#24292E"},children:"(viteDevMiddleware)"})]}),`
+`,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"    const"}),e.jsx(s.span,{style:{color:"#24292E"},children:" { "}),e.jsx(s.span,{style:{color:"#005CC5"},children:"devMiddleware"}),e.jsx(s.span,{style:{color:"#24292E"},children:" } "}),e.jsx(s.span,{style:{color:"#D73A49"},children:"="}),e.jsx(s.span,{style:{color:"#D73A49"},children:" await"}),e.jsx(s.span,{style:{color:"#6F42C1"},children:" createDevMiddleware"}),e.jsx(s.span,{style:{color:"#24292E"},children:"({ root })"})]}),`
+`,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#24292E"},children:"    app."}),e.jsx(s.span,{style:{color:"#6F42C1"},children:"use"}),e.jsx(s.span,{style:{color:"#24292E"},children:"(devMiddleware)"})]}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#24292E"},children:"  } "}),e.jsx(s.span,{style:{color:"#D73A49"},children:"else"}),e.jsx(s.span,{style:{color:"#24292E"},children:" {"})]}),`
 `,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"    // In production, we need to serve our static assets ourselves."})}),`
 `,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"    // (In dev, Vite's middleware serves our static assets.)"})}),`
@@ -54,11 +47,12 @@ import{j as e,b as r,L as o,o as i,i as t}from"../chunks/chunk-CdlJgYSQ.js";impo
 `,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#24292E"},children:"  }"})}),`
 `,e.jsx(s.span,{"data-line":"",children:" "}),`
 `,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"  // ..."})}),`
-`,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"  // Other middlewares (e.g. some RPC middleware such as Telefunc)"})}),`
+`,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"  // Other middlewares (authentication, REST/GraphQL/RPC middleware, ...)"})}),`
 `,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"  // ..."})}),`
 `,e.jsx(s.span,{"data-line":"",children:" "}),`
-`,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"  // Vike middleware. It should always be our last middleware (because it's a"})}),`
-`,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"  // catch-all middleware superseding any middleware placed after it)."})}),`
+`,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"  // SSR middleware."})}),`
+`,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"  // Note: it should always be the last middleware, because it's a catch-all"})}),`
+`,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"  // middleware that supersedes any middleware placed after it."})}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#24292E"},children:"  app."}),e.jsx(s.span,{style:{color:"#6F42C1"},children:"get"}),e.jsx(s.span,{style:{color:"#24292E"},children:"("}),e.jsx(s.span,{style:{color:"#032F62"},children:"'*'"}),e.jsx(s.span,{style:{color:"#24292E"},children:", "}),e.jsx(s.span,{style:{color:"#D73A49"},children:"async"}),e.jsx(s.span,{style:{color:"#24292E"},children:" ("}),e.jsx(s.span,{style:{color:"#E36209"},children:"req"}),e.jsx(s.span,{style:{color:"#24292E"},children:", "}),e.jsx(s.span,{style:{color:"#E36209"},children:"res"}),e.jsx(s.span,{style:{color:"#24292E"},children:") "}),e.jsx(s.span,{style:{color:"#D73A49"},children:"=>"}),e.jsx(s.span,{style:{color:"#24292E"},children:" {"})]}),`
 `,e.jsxs(s.span,{"data-line":"",children:[e.jsx(s.span,{style:{color:"#D73A49"},children:"    const"}),e.jsx(s.span,{style:{color:"#005CC5"},children:" pageContextInit"}),e.jsx(s.span,{style:{color:"#D73A49"},children:" ="}),e.jsx(s.span,{style:{color:"#24292E"},children:" {"})]}),`
 `,e.jsx(s.span,{"data-line":"",children:e.jsx(s.span,{style:{color:"#6A737D"},children:"      // Required: the URL of the page"})}),`
@@ -110,6 +104,9 @@ automatically injected by Vike.`]}),`
 `,e.jsxs(s.p,{children:["But, if you use Server-Side Rendering (SSR) and you don't pre-render ",e.jsx(s.em,{children:"all"})," your pages, then you need a production server and you need to use ",e.jsx(s.code,{children:"renderPage()"})," in order to embed Vike into your server. See ",e.jsx(n,{href:"/pre-rendering"}),"."]}),`
 `,e.jsx("h2",{id:"see-also",children:"See also"}),`
 `,e.jsxs(s.ul,{children:[`
+`,e.jsxs(s.li,{children:[`
+`,e.jsx(n,{href:"/createDevMiddleware"}),`
+`]}),`
 `,e.jsxs(s.li,{children:[`
 `,e.jsx(n,{href:"/headers"}),`
 `]}),`
