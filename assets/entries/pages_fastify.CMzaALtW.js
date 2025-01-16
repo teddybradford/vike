@@ -3,10 +3,10 @@ import{j as e,L as n,o as s,i as l}from"../chunks/chunk-D3ajMP3m.js";import{L as
 `,e.jsx("h2",{id:"example",children:"Example"}),`
 `,e.jsxs(t.ul,{children:[`
 `,e.jsxs(t.li,{children:[`
-`,e.jsx(i,{timestamp:"2024.01",repo:"royalswe/vike-fastify-boilerplate"}),`
+`,e.jsx(i,{timestamp:"2025.01",repo:"whyte50/vike-example-fastify"}),`
 `]}),`
 `,e.jsxs(t.li,{children:[`
-`,e.jsx(i,{timestamp:"2025.01",repo:"whyte50/vike-example-fastify"}),`
+`,e.jsx(i,{timestamp:"2024.01",repo:"royalswe/vike-fastify-boilerplate"}),`
 `]}),`
 `]}),`
 `,e.jsx("h2",{id:"html-streaming",children:"HTML Streaming"}),`
