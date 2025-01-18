@@ -31,7 +31,7 @@ pages/pages/src/(some-dir)/src/index/pages/about/+Page.js      /about
 `,e.jsxs(n.li,{children:["Files inside ",e.jsxs(n.a,{href:"https://vitejs.dev/config/shared-options.html#root",children:["Vite's ",e.jsx(n.code,{children:"root"})," directory"]}),".",`
 `,e.jsxs(n.blockquote,{children:[`
 `,e.jsxs(n.p,{children:["Consequently, all your ",e.jsxs(s,{href:"/config#files",children:[e.jsx(n.code,{children:"+"})," files"]})," need to live inside ",e.jsx(n.code,{children:"root"}),`.
-You can use a symlink (e.g. `,e.jsx(n.code,{children:"$ ln -s"}),") and set ",e.jsx(n.code,{children:'VIKE_CRAWL="{git:false}"'})," to make a directory outside of ",e.jsx(n.code,{children:"root"})," crawlable."]}),`
+To make a directory outside of `,e.jsx(n.code,{children:"root"})," crawlable, you can use a symlink (e.g. ",e.jsx(n.code,{children:"$ ln -s"}),") and set ",e.jsx(n.code,{children:'VIKE_CRAWL="{git:false}"'}),"."]}),`
 `]}),`
 `]}),`
 `,e.jsxs(n.li,{children:["Skips ",e.jsx(n.code,{children:"node_modules/"})]}),`
