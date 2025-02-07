@@ -1,0 +1,15 @@
+import{j as e,i as a,L as n,o as l}from"../chunks/chunk-Y6xZW9kv.js";import"../chunks/chunk-CSwK4aaf.js";/* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      */import{U as s}from"../chunks/chunk-Du-gcEGr.js";import{C as p}from"../chunks/chunk-B_Cz3Xwb.js";import{E as i}from"../chunks/chunk-BA2z-TOb.js";/* empty css                      *//* empty css                      */import"../chunks/chunk-DqbFh63t.js";import"../chunks/chunk-DroW0jdU.js";const d=[{pageSectionId:"examples",pageSectionLevel:2,pageSectionTitle:"Examples"}];function r(o){const t={a:"a",blockquote:"blockquote",li:"li",p:"p",ul:"ul",...o.components};return e.jsxs(e.Fragment,{children:[e.jsx(p,{url:"https://trpc.io"}),`
+`,e.jsx(s,{children:"tRPC"}),`
+`,e.jsx("h2",{id:"examples",children:"Examples"}),`
+`,e.jsxs(t.ul,{children:[`
+`,e.jsxs(t.li,{children:[e.jsx(i,{timestamp:"2024.04",repo:"Blankeos/hono-trpc"})," - Hono + tRPC + Solid + Tanstack Query + Nprogress"]}),`
+`,e.jsxs(t.li,{children:[`
+`,e.jsx(i,{timestamp:"2023.11",repo:"nabi-chan/vike-trpc-ssr"}),`
+`]}),`
+`,e.jsxs(t.li,{children:[`
+`,e.jsx(i,{timestamp:"2023.03",repo:"fortezhuo/vite-plugin-ssr-trpc"}),`
+`,e.jsxs(t.blockquote,{children:[`
+`,e.jsxs(t.p,{children:["vite-plugin-ssr was the ",e.jsx(t.a,{href:"https://vite-plugin-ssr.com/vike",children:"previous name of Vike"}),"."]}),`
+`]}),`
+`]}),`
+`]})]})}function u(o={}){const{wrapper:t}=o.components||{};return t?e.jsx(t,{...o,children:e.jsx(r,{...o})}):r(o)}const m=Object.freeze(Object.defineProperty({__proto__:null,default:u,pageSectionsExport:d},Symbol.toStringTag,{value:"Module"})),U={isClientRuntimeLoaded:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:!0}},onBeforeRenderEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:{server:!0}}},dataEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:null}},onRenderClient:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/renderer/onRenderClient",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:l}},Page:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/tRPC/+Page.mdx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:m}},hydrationCanBeAborted:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/config",fileExportPathToShowToUser:["default","hydrationCanBeAborted"]},valueSerialized:{type:"js-serialized",value:!0}},Layout:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/Layout",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:n}},TopNavigation:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/+TopNavigation.tsx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:a}}};export{U as configValuesSerialized};
