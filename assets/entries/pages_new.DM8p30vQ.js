@@ -1,0 +1,19 @@
+import{e as l,r as n,j as e,i as d,L as c,o as p}from"../chunks/chunk-MZSHs4kR.js";import{L as i}from"../chunks/chunk-ClTYxUZb.js";/* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      */import"../chunks/chunk-Dv2O2WzX.js";import{U as u}from"../chunks/chunk-CEIvqBAa.js";/* empty css                      *//* empty css                      */function h(){const o=l(),[t,s]=n.useState(o.isHydration);return n.useEffect(()=>{s(!1)},[]),t?e.jsx("div",{style:{textAlign:"center",fontSize:"2em",margin:100,paddingBottom:50},children:"Loading scaffolder..."}):e.jsx(e.Fragment,{children:e.jsx("div",{className:"container",children:e.jsx("bati-widget",{theme:"light"})})})}const f="/assets/static/bati-logo.BFdUWfho.svg",a=16;function x(){return e.jsxs("p",{style:{color:"#888",fontSize:"14px",textAlign:"center"},children:["Powered by"," ",e.jsxs("a",{href:"https://github.com/vikejs/bati",children:["Bati"," ",e.jsx("img",{src:f,style:{width:a,height:a,display:"inline-block",verticalAlign:"text-top"}})]})]})}const g=[{pageSectionId:"see-also",pageSectionLevel:2,pageSectionTitle:"See also"}];function r(o){const t={a:"a",blockquote:"blockquote",code:"code",li:"li",p:"p",strong:"strong",ul:"ul",...o.components};return e.jsxs(e.Fragment,{children:[e.jsx("div",{style:{height:30}}),`
+`,e.jsx(h,{}),`
+`,e.jsx(x,{}),`
+`,e.jsx("div",{style:{height:10}}),`
+`,e.jsxs(t.blockquote,{children:[`
+`,e.jsxs(t.p,{children:[e.jsx(t.strong,{children:"Requirement:"})," you need ",e.jsx(t.a,{href:"https://nodejs.org",children:"Node.js"})," installed (or Deno/Bun). It includes the package manager ",e.jsx(t.code,{children:"npm"})," (you can also use any other package manager)."]}),`
+`]}),`
+`,e.jsxs(t.blockquote,{children:[`
+`,e.jsxs(t.p,{children:["Scaffolded apps use Vike extensions such as ",e.jsx(u,{name:!0}),". See ",e.jsx(i,{href:"/new/core",children:"vike.dev/new/core"})," if you want to scaffold an app that directly uses Vike core (without any Vike extension)."]}),`
+`]}),`
+`,e.jsx("h2",{id:"see-also",children:"See also"}),`
+`,e.jsxs(t.ul,{children:[`
+`,e.jsxs(t.li,{children:[`
+`,e.jsx(i,{href:"/new/core"}),`
+`]}),`
+`,e.jsxs(t.li,{children:[`
+`,e.jsx(i,{href:"/add"}),`
+`]}),`
+`]})]})}function m(o={}){const{wrapper:t}=o.components||{};return t?e.jsx(t,{...o,children:e.jsx(r,{...o})}):r(o)}const j=Object.freeze(Object.defineProperty({__proto__:null,default:m,pageSectionsExport:g},Symbol.toStringTag,{value:"Module"})),D={isClientRuntimeLoaded:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:!0}},onBeforeRenderEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:{server:!0}}},dataEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:null}},onRenderClient:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/renderer/onRenderClient",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:p}},Page:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/new/+Page.mdx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:j}},hydrationCanBeAborted:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/config",fileExportPathToShowToUser:["default","hydrationCanBeAborted"]},valueSerialized:{type:"js-serialized",value:!0}},Layout:{type:"standard",definedAtData:{filePathToShowToUser:"@brillout/docpress/Layout",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:c}},TopNavigation:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/+TopNavigation.tsx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:d}}};export{D as configValuesSerialized};
